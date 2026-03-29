@@ -17,7 +17,7 @@ export async function getPresignedPostUrl(key: string) {
   });
 
   const urlData = await createPresignedPost(s3, {
-    Bucket: 'baladi-prod-baladibucket-fedmxzsx',
+    Bucket: 'nordmatengros-prod-nordmatengrosbucket-swkfhcmu',
     Key: key,
     Expires: 3600,
   });
@@ -37,7 +37,7 @@ export async function getSignedUrlForS3(key: string) {
   try {
     await s3.send(
       new HeadObjectCommand({
-        Bucket: 'baladi-prod-baladibucket-fedmxzsx',
+        Bucket: 'nordmatengros-prod-nordmatengrosbucket-swkfhcmu',
         Key: key,
       }),
     );
@@ -48,7 +48,7 @@ export async function getSignedUrlForS3(key: string) {
   const url = await getSignedUrl(
     s3,
     new GetObjectCommand({
-      Bucket: 'baladi-prod-baladibucket-fedmxzsx',
+      Bucket: 'nordmatengros-prod-nordmatengrosbucket-swkfhcmu',
       Key: key,
     }),
     { expiresIn: 604800 },

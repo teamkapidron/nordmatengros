@@ -99,7 +99,7 @@ export async function promotionPosterTemplate(
 
     await new Promise<void>((resolve) => {
       fabric.FabricImage.fromURL(
-        'https://baladi-prod-baladibucket-fedmxzsx.s3.eu-central-1.amazonaws.com/products/baladi.png',
+        'https://nordmatengros-prod-nordmatengrosbucket-swkfhcmu.s3.eu-central-1.amazonaws.com/products/baladi.png',
         {
           crossOrigin: 'anonymous',
         },
@@ -405,7 +405,7 @@ export async function multiProductPosterTemplate(
 
     await new Promise<void>((resolve) => {
       fabric.FabricImage.fromURL(
-        'https://baladi-prod-baladibucket-fedmxzsx.s3.eu-central-1.amazonaws.com/products/baladi.png',
+        'https://nordmatengros-prod-nordmatengrosbucket-swkfhcmu.s3.eu-central-1.amazonaws.com/products/baladi.png',
         {
           crossOrigin: 'anonymous',
         },

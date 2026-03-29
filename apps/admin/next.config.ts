@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname:
-          'baladi-prod-baladibucket-fedmxzsx.s3.eu-central-1.amazonaws.com',
+          'nordmatengros-prod-nordmatengrosbucket-swkfhcmu.s3.eu-central-1.amazonaws.com',
       },
     ],
     unoptimized: true,

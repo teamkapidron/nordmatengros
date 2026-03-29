@@ -268,7 +268,7 @@ export function newArrivalTemplate(
         <div class="email-container">
           <div class="header">
             <div class="logo-container">
-              <img src="https://baladi-prod-baladibucket-fedmxzsx.s3.eu-central-1.amazonaws.com/products/baladi.png" alt="Baladi Logo" class="logo-image" />
+              <img src="https://nordmatengros-prod-nordmatengrosbucket-swkfhcmu.s3.eu-central-1.amazonaws.com/products/baladi.png" alt="Baladi Logo" class="logo-image" />
               <div class="logo-text">BALADI ENGROS</div>
             </div>
           </div>
@@ -657,7 +657,7 @@ export function productPromotionTemplate(
         <div class="email-container">
           <div class="header">
             <div class="logo-container">
-              <img src="https://baladi-prod-baladibucket-fedmxzsx.s3.eu-central-1.amazonaws.com/products/baladi.png" alt="Baladi Logo" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+              <img src="https://nordmatengros-prod-nordmatengrosbucket-swkfhcmu.s3.eu-central-1.amazonaws.com/products/baladi.png" alt="Baladi Logo" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
               <div class="logo" style="display: none;">BALADI</div>
             </div>
             <div class="promotion-badge">🔥 Spesiell Kampanje</div>

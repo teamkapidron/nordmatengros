@@ -191,7 +191,7 @@ export function useProduct() {
 
       const images = payload.images?.map(
         (image) =>
-          `https://baladi-prod-baladibucket-fedmxzsx.s3.eu-central-1.amazonaws.com/products/${payload.slug}/images/${image.name}`,
+          `https://nordmatengros-prod-nordmatengrosbucket-swkfhcmu.s3.eu-central-1.amazonaws.com/products/${payload.slug}/images/${image.name}`,
       );
 
       const response = await api.post<CreateProductRequest['response']>(
@@ -249,7 +249,7 @@ export function useProduct() {
 
       const images = payload.product.images?.map(
         (image) =>
-          `https://baladi-prod-baladibucket-fedmxzsx.s3.eu-central-1.amazonaws.com/products/${payload.product.slug}/images/${image.name}`,
+          `https://nordmatengros-prod-nordmatengrosbucket-swkfhcmu.s3.eu-central-1.amazonaws.com/products/${payload.product.slug}/images/${image.name}`,
       );
 
       const response = await api.put<UpdateProductRequest['response']>(
