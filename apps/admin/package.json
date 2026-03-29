@@ -19,7 +19,7 @@
     "html2canvas": "^1.4.1",
     "jspdf": "^3.0.1",
     "lodash.debounce": "^4.0.8",
-    "next": "^15.3.0",
+    "next": "^15.3.6",
     "nuqs": "^2.4.3",
     "papaparse": "^5.5.3",
     "react": "^19.1.0",
