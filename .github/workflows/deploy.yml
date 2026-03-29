@@ -91,45 +91,53 @@ jobs:
 
       - name: Deploy API to EC2
         run: |
-          ssh ${{ vars.EC2_USER }}@${{ vars.EC2_HOST }} << EOF
+          ssh ${{ vars.EC2_USER }}@${{ vars.EC2_HOST }} bash -s << 'DEPLOY_SCRIPT'
             set -e
+
+            echo "=== Node Environment ==="
+            node -v
+            pnpm -v
+            echo "========================="
+
             cd ~/nordmatengros
             git pull origin main
 
-            cat > apps/api/.env.local <<EOT
-          MONGO_URI=${{ secrets.MONGO_URI }}
-          JWT_SECRET=${{ secrets.JWT_SECRET }}
-          JWT_EXPIRY=${{ vars.JWT_EXPIRY }}
-          COOKIE_EXPIRY=${{ vars.COOKIE_EXPIRY }}
-          COOKIE_DOMAIN=${{ vars.COOKIE_DOMAIN }}
-          SMTP_NAME=${{ vars.SMTP_NAME }}
-          SMTP_MAIL=${{ vars.SMTP_MAIL }}
-          SMTP_REPLY_TO=${{ vars.SMTP_REPLY_TO }}
-          SMTP_HOST=${{ vars.SMTP_HOST }}
-          SMTP_PORT=${{ vars.SMTP_PORT }}
-          SMTP_USERNAME=${{ secrets.SMTP_USERNAME }}
-          SMTP_PASSWORD=${{ secrets.SMTP_PASSWORD }}
-          ADMIN_API_KEY=${{ secrets.ADMIN_API_KEY }}
-          WAREHOUSE_EMAIL=${{ vars.WAREHOUSE_EMAIL }}
-          ADMIN_URL=${{ vars.ADMIN_URL }}
-          USER_URL=${{ vars.USER_URL }}
-          CONTACT_EMAIL=${{ vars.CONTACT_EMAIL }}
-          API_URL=${{ vars.API_URL }}
-          AWS_ACCESS_KEY=${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_ACCESS_SECRET=${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          EOT
+            export MONGO_URI='${{ secrets.MONGO_URI }}'
+            export JWT_SECRET='${{ secrets.JWT_SECRET }}'
+            export JWT_EXPIRY='${{ vars.JWT_EXPIRY }}'
+            export COOKIE_EXPIRY='${{ vars.COOKIE_EXPIRY }}'
+            export COOKIE_DOMAIN='${{ vars.COOKIE_DOMAIN }}'
+            export SMTP_NAME='${{ vars.SMTP_NAME }}'
+            export SMTP_MAIL='${{ vars.SMTP_MAIL }}'
+            export SMTP_REPLY_TO='${{ vars.SMTP_REPLY_TO }}'
+            export SMTP_HOST='${{ vars.SMTP_HOST }}'
+            export SMTP_PORT='${{ vars.SMTP_PORT }}'
+            export SMTP_USERNAME='${{ secrets.SMTP_USERNAME }}'
+            export SMTP_PASSWORD='${{ secrets.SMTP_PASSWORD }}'
+            export ADMIN_API_KEY='${{ secrets.ADMIN_API_KEY }}'
+            export WAREHOUSE_EMAIL='${{ vars.WAREHOUSE_EMAIL }}'
+            export ADMIN_URL='${{ vars.ADMIN_URL }}'
+            export USER_URL='${{ vars.USER_URL }}'
+            export CONTACT_EMAIL='${{ vars.CONTACT_EMAIL }}'
+            export API_URL='${{ vars.API_URL }}'
+            export AWS_ACCESS_KEY='${{ secrets.AWS_ACCESS_KEY_ID }}'
+            export AWS_ACCESS_SECRET='${{ secrets.AWS_SECRET_ACCESS_KEY }}'
+
+            # Write .env.local
+            env | grep -E '^(MONGO_URI|JWT_SECRET|JWT_EXPIRY|COOKIE_EXPIRY|COOKIE_DOMAIN|SMTP_NAME|SMTP_MAIL|SMTP_REPLY_TO|SMTP_HOST|SMTP_PORT|SMTP_USERNAME|SMTP_PASSWORD|ADMIN_API_KEY|WAREHOUSE_EMAIL|ADMIN_URL|USER_URL|CONTACT_EMAIL|API_URL|AWS_ACCESS_KEY|AWS_ACCESS_SECRET)=' > apps/api/.env.local
 
             pnpm install
             cd apps/api
-            pnpm build
+
+            echo "=== Building API ==="
+            pnpm build 2>&1 || { echo "BUILD FAILED"; exit 1; }
+            echo "=== Build Complete ==="
 
             if ! pm2 list 2>/dev/null | grep -q "api"; then
               pm2 start dist/apps/api/index.js --name api --silent
             else
               pm2 reload api --update-env --silent
             fi
-            
+
             pm2 save --silent
-            
-            exit 0
-          EOF
+          DEPLOY_SCRIPT
