@@ -1,0 +1,16 @@
+{
+  "extends": "@repo/typescript/nextjs.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@repo/ui/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "src",
+    "../../apps/admin/src/components/layouts",
+    "src/hooks/useDate",
+    "src/hooks/usePagination"
+  ],
+  "exclude": ["node_modules"]
+}

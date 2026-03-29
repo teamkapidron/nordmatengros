@@ -1,0 +1,41 @@
+{
+  "name": "user",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack --port 3001",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@repo/ui": "workspace:*",
+    "@tanstack/query-sync-storage-persister": "^5.80.7",
+    "@tanstack/react-query": "^5.75.5",
+    "@tanstack/react-query-devtools": "^5.75.5",
+    "@tanstack/react-query-persist-client": "^5.80.7",
+    "axios": "^1.9.0",
+    "lodash.debounce": "^4.0.8",
+    "next": "^15.3.0",
+    "nuqs": "^2.4.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-intersection-observer": "^9.16.0",
+    "styled-jsx": "^5.1.7",
+    "zustand": "^5.0.5"
+  },
+  "devDependencies": {
+    "@repo/eslint": "workspace:*",
+    "@repo/types": "workspace:*",
+    "@repo/typescript": "workspace:*",
+    "@types/lodash.debounce": "^4.0.9",
+    "@types/node": "^22.15.3",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.1",
+    "eslint": "^9.26.0",
+    "tailwindcss": "^4.1.5",
+    "typescript": "5.8.2"
+  }
+}

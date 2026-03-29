@@ -1,0 +1,128 @@
+name: Deployment Pipeline
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.14.0'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9.0.0
+
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.pnpm-store
+          key: pnpm-store-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-store-${{ runner.os }}-
+
+      - name: Cache Turbo + Next.js build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ github.workspace }}/.turbo
+          key: build-cache-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            build-cache-
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Set up environment variables
+        run: |
+          # Cloudflare
+          echo "CLOUDFLARE_API_TOKEN=${{ secrets.CLOUDFLARE_API_TOKEN }}" >> $GITHUB_ENV
+          echo "CLOUDFLARE_DEFAULT_ACCOUNT_ID=${{ secrets.CLOUDFLARE_DEFAULT_ACCOUNT_ID }}" >> $GITHUB_ENV
+
+      - name: Install Vercel CLI
+        run: pnpm install -g vercel
+
+      - name: Install Serverless
+        run: pnpm install -g serverless
+
+      - name: Deploy Admin to Vercel
+        run: |
+          vercel link --yes --project admin --token ${{ secrets.VERCEL_TOKEN }}
+          vercel deploy --prod --token ${{ secrets.VERCEL_TOKEN }} --scope ${{ vars.VERCEL_ORG_ID }} --no-wait --yes
+
+      - name: Deploy User to Vercel
+        run: |
+          vercel link --yes --project user --token ${{ secrets.VERCEL_TOKEN }}
+          vercel deploy --prod --token ${{ secrets.VERCEL_TOKEN }} --scope ${{ vars.VERCEL_ORG_ID }} --no-wait --yes
+
+      - name: Deploy SST to AWS (Cron, S3 Storage)
+        run: npx sst deploy --stage prod
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          MONGO_URI: ${{ secrets.MONGO_URI }}
+          SMTP_NAME: ${{ vars.SMTP_NAME }}
+          SMTP_MAIL: ${{ vars.SMTP_MAIL }}
+          SMTP_REPLY_TO: ${{ vars.SMTP_REPLY_TO }}
+          SMTP_HOST: ${{ vars.SMTP_HOST }}
+          SMTP_PORT: ${{ vars.SMTP_PORT }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+
+      - name: Set up SSH for EC2
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.EC2_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ vars.EC2_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy API to EC2
+        run: |
+          ssh ${{ vars.EC2_USER }}@${{ vars.EC2_HOST }} << EOF
+            set -e
+            cd ~/baladi
+            git pull origin main
+
+            cat > apps/api/.env.local <<EOT
+          MONGO_URI=${{ secrets.MONGO_URI }}
+          JWT_SECRET=${{ secrets.JWT_SECRET }}
+          JWT_EXPIRY=${{ vars.JWT_EXPIRY }}
+          COOKIE_EXPIRY=${{ vars.COOKIE_EXPIRY }}
+          COOKIE_DOMAIN=${{ vars.COOKIE_DOMAIN }}
+          SMTP_NAME=${{ vars.SMTP_NAME }}
+          SMTP_MAIL=${{ vars.SMTP_MAIL }}
+          SMTP_REPLY_TO=${{ vars.SMTP_REPLY_TO }}
+          SMTP_HOST=${{ vars.SMTP_HOST }}
+          SMTP_PORT=${{ vars.SMTP_PORT }}
+          SMTP_USERNAME=${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD=${{ secrets.SMTP_PASSWORD }}
+          ADMIN_API_KEY=${{ secrets.ADMIN_API_KEY }}
+          WAREHOUSE_EMAIL=${{ vars.WAREHOUSE_EMAIL }}
+          ADMIN_URL=${{ vars.ADMIN_URL }}
+          USER_URL=${{ vars.USER_URL }}
+          CONTACT_EMAIL=${{ vars.CONTACT_EMAIL }}
+          API_URL=${{ vars.API_URL }}
+          AWS_ACCESS_KEY=${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_ACCESS_SECRET=${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          EOT
+
+            pnpm install
+            cd apps/api
+            pnpm build
+
+            if ! pm2 list | grep -q "api"; then
+              pm2 start dist/apps/api/index.js --name api
+            else
+              pm2 reload api --update-env
+            fi
+            
+            pm2 save
+          EOF

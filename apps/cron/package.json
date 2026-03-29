@@ -1,0 +1,15 @@
+{
+  "name": "cron",
+  "version": "1.0.0",
+  "scripts": {},
+  "dependencies": {
+    "aws-lambda": "^1.0.7",
+    "date-fns": "^4.1.0",
+    "mongoose": "^8.14.2"
+  },
+  "devDependencies": {
+    "@repo/types": "workspace:*",
+    "@repo/typescript": "workspace:*",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "extends": "@repo/typescript/base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@repo/types/*": ["../../packages/types/src/*"]
+    }
+  },
+  "include": ["src/**/*", "env.d.ts", "index.ts"]
+}

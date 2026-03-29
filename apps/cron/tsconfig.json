@@ -1,0 +1,15 @@
+{
+  "extends": "@repo/typescript/base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@models/*": ["../api/src/models/*"],
+      "@mail/*": ["../api/src/utils/common/*"]
+    }
+  },
+  "include": ["src/**/*", "env.d.ts"]
+}

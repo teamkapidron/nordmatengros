@@ -1,0 +1,30 @@
+{
+  "name": "baladi",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "check-types": "turbo run check-types",
+    "dev": "turbo run dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
+    "add:ui": "pnpm --filter @repo/ui ui",
+    "add:admin": "pnpm --filter admin add",
+    "add:api": "pnpm --filter api add",
+    "add:user": "pnpm --filter user add",
+    "add:cron": "pnpm --filter cron add"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.149",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "turbo": "^2.5.3",
+    "typescript": "5.8.2"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "sst": "3.14.12"
+  }
+}

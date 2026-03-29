@@ -1,0 +1,21 @@
+{
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "material-icon-theme.folders.associations": {
+    ".sst": "target",
+    "eslint": "proto",
+    "cron": "aws"
+  },
+  "material-icon-theme.files.associations": {},
+  "material-icon-theme.files.customClones": [
+    {
+      "name": "user",
+      "base": "admin",
+      "color": "blue-500",
+      "folderNames": ["user", "users"]
+    }
+  ]
+}

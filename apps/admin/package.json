@@ -1,0 +1,42 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@repo/ui": "workspace:*",
+    "@tanstack/react-query": "^5.75.5",
+    "@tanstack/react-query-devtools": "^5.75.5",
+    "axios": "^1.9.0",
+    "fabric": "^6.7.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.1",
+    "lodash.debounce": "^4.0.8",
+    "next": "^15.3.0",
+    "nuqs": "^2.4.3",
+    "papaparse": "^5.5.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "styled-jsx": "^5.1.7"
+  },
+  "devDependencies": {
+    "@repo/eslint": "workspace:*",
+    "@repo/types": "workspace:*",
+    "@repo/typescript": "workspace:*",
+    "@types/lodash.debounce": "^4.0.9",
+    "@types/node": "^22.15.3",
+    "@types/papaparse": "^5.3.16",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.1",
+    "eslint": "^9.26.0",
+    "tailwindcss": "^4.1.5",
+    "typescript": "5.8.2"
+  }
+}
