@@ -1,5 +1,5 @@
 {
-  "name": "baladi",
+  "name": "nordmatengros",
   "private": true,
   "scripts": {
     "build": "turbo run build",

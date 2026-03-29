@@ -53,6 +53,11 @@ jobs:
       - name: Install Serverless
         run: pnpm install -g serverless
 
+      - name: Remove pre-installed Pulumi
+        run: |
+          rm -rf ~/.pulumi
+          sudo rm -f /usr/local/bin/pulumi*
+
       - name: Deploy Admin to Vercel
         run: |
           vercel link --yes --project admin --token ${{ secrets.VERCEL_TOKEN }}
@@ -88,7 +93,7 @@ jobs:
         run: |
           ssh ${{ vars.EC2_USER }}@${{ vars.EC2_HOST }} << EOF
             set -e
-            cd ~/baladi
+            cd ~/nordmatengros
             git pull origin main
 
             cat > apps/api/.env.local <<EOT

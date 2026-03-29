@@ -5,11 +5,11 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'http',
-        hostname: 'www.baladiengros.no',
+        hostname: 'www.nordmatengros.no',
       },
       {
         protocol: 'https',
-        hostname: 'baladiengros.no',
+        hostname: 'nordmatengros.no',
       },
       {
         protocol: 'https',

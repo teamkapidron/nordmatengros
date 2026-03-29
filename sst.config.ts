@@ -4,7 +4,7 @@ export default $config({
   app(input) {
     return {
       home: 'aws',
-      name: 'baladi',
+      name: 'nordmatengros',
       protect: ['production'].includes(input?.stage),
       removal: input?.stage === 'production' ? 'retain' : 'remove',
       providers: {

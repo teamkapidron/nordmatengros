@@ -1,7 +1,7 @@
 import { ProductResponse } from '@/hooks/useProduct/types';
 import { BulkDiscount } from '@repo/types/bulkDiscount';
 
-export const CART_STORAGE_KEY = 'baladi__cart';
+export const CART_STORAGE_KEY = 'nordmatengros__cart';
 
 export interface CartItem {
   userId: string;

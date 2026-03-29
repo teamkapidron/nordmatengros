@@ -9,15 +9,15 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'http',
-        hostname: 'www.baladiengros.no',
+        hostname: 'www.nordmatengros.com',
       },
       {
         protocol: 'https',
-        hostname: 'baladiengros.no',
+        hostname: 'nordmatengros.com',
       },
       {
         protocol: 'https',
-        hostname: 'www.baladiengros.no',
+        hostname: 'www.nordmatengros.com',
       },
       {
         protocol: 'https',
