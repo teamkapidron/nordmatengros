@@ -20,6 +20,18 @@ const nextConfig: NextConfig = {
         hostname: 'www.nordmatengros.com',
       },
       {
+        protocol: 'http',
+        hostname: 'www.nordmatengros.no',
+      },
+      {
+        protocol: 'https',
+        hostname: 'nordmatengros.no',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.nordmatengros.no',
+      },
+      {
         protocol: 'https',
         hostname:
           'nordmatengros-prod-nordmatengrosbucket-swkfhcmu.s3.eu-central-1.amazonaws.com',
