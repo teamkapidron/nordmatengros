@@ -5,6 +5,8 @@ import CustomersHeader from '@/components/dashboard/customers/customer-header';
 import CustomerMetricCards from '@/components/dashboard/customers/customer-metric-cards';
 import CustomersTable from '@/components/dashboard/customers/customer-table/customers-table';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Kunder',
 };

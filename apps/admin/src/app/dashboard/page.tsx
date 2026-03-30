@@ -11,6 +11,8 @@ import CustomerRegistrationChart from '@/components/dashboard/home/customer-regi
 import TopCustomers from '@/components/dashboard/home/top-customers';
 import TopProducts from '@/components/dashboard/home/top-products';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Dashboard',
 };

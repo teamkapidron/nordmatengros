@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 
 import EditProduct from '@/components/dashboard/products/edit/edit-product';
 
+export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
   title: 'Rediger produkt',
 };

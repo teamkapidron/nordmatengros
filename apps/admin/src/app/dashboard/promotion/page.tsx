@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 
 import PromotionBody from '@/components/dashboard/promotion/promotion-body';
 
+export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
   title: 'Produktpromosjon',
 };

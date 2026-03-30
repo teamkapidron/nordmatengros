@@ -58,8 +58,8 @@ importers:
         specifier: ^15.3.6
         version: 15.3.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       nuqs:
-        specifier: ^2.4.3
-        version: 2.4.3(next@15.3.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
+        specifier: ^2.8.9
+        version: 2.8.9(next@15.3.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
       papaparse:
         specifier: ^5.5.3
         version: 5.5.3
@@ -268,8 +268,8 @@ importers:
         specifier: ^15.3.6
         version: 15.3.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       nuqs:
-        specifier: ^2.4.3
-        version: 2.4.3(next@15.3.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
+        specifier: ^2.8.9
+        version: 2.8.9(next@15.3.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
       react:
         specifier: ^19.1.0
         version: 19.1.0
@@ -436,8 +436,8 @@ importers:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       nuqs:
-        specifier: ^2.4.3
-        version: 2.4.3(next@16.2.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
+        specifier: ^2.8.9
+        version: 2.8.9(next@16.2.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
       react:
         specifier: ^19.1.0
         version: 19.1.0
@@ -1751,6 +1751,9 @@ packages:
   '@smithy/util-waiter@4.0.5':
     resolution: {integrity: sha512-4QvC49HTteI1gfemu0I1syWovJgPvGn7CVUoN9ZFkdvr/cCFkrEL7qNCdx/2eICqDWEGnnr68oMdSIPCLAriSQ==}
     engines: {node: '>=18.0.0'}
+
+  '@standard-schema/spec@1.0.0':
+    resolution: {integrity: sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==}
 
   '@standard-schema/utils@0.3.0':
     resolution: {integrity: sha512-e7Mew686owMaPJVNNLs55PUvgz371nKgwsc4vxE49zsODpJEnxgxRo2y/OKrqueavXgZNMDVj3DdHFlaSAeU8g==}
@@ -3627,9 +3630,6 @@ packages:
     resolution: {integrity: sha512-oG62iEk+CYt5Xj2YqI5Xi9xWUeZhDI8jjQmC5oThVH5JGCTgIjr7ciJDzC7MBzYd//WvR1OTmP5Q38Q8ShQtVA==}
     engines: {node: '>= 18'}
 
-  mitt@3.0.1:
-    resolution: {integrity: sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==}
-
   mkdirp@0.5.6:
     resolution: {integrity: sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==}
     hasBin: true
@@ -3788,16 +3788,19 @@ packages:
     resolution: {integrity: sha512-AqZtDUWOMKs1G/8lwylVjrdYgqA4d9nu8hc+0gzRxlDb1I10+FHBGMXs6aiQHFdCUUlqH99MUMuLfzWDNDtfxw==}
     deprecated: This package is no longer supported.
 
-  nuqs@2.4.3:
-    resolution: {integrity: sha512-BgtlYpvRwLYiJuWzxt34q2bXu/AIS66sLU1QePIMr2LWkb+XH0vKXdbLSgn9t6p7QKzwI7f38rX3Wl9llTXQ8Q==}
+  nuqs@2.8.9:
+    resolution: {integrity: sha512-8ou6AEwsxMWSYo2qkfZtYFVzngwbKmg4c00HVxC1fF6CEJv3Fwm6eoZmfVPALB+vw8Udo7KL5uy96PFcYe1BIQ==}
     peerDependencies:
       '@remix-run/react': '>=2'
+      '@tanstack/react-router': ^1
       next: '>=14.2.0'
       react: '>=18.2.0 || ^19.0.0-0'
-      react-router: ^6 || ^7
-      react-router-dom: ^6 || ^7
+      react-router: ^5 || ^6 || ^7
+      react-router-dom: ^5 || ^6 || ^7
     peerDependenciesMeta:
       '@remix-run/react':
+        optional: true
+      '@tanstack/react-router':
         optional: true
       next:
         optional: true
@@ -6633,6 +6636,8 @@ snapshots:
       '@smithy/types': 4.3.1
       tslib: 2.8.1
 
+  '@standard-schema/spec@1.0.0': {}
+
   '@standard-schema/utils@0.3.0': {}
 
   '@swc/counter@0.1.3': {}
@@ -8750,8 +8755,6 @@ snapshots:
     dependencies:
       minipass: 7.1.2
 
-  mitt@3.0.1: {}
-
   mkdirp@0.5.6:
     dependencies:
       minimist: 1.2.8
@@ -8901,16 +8904,16 @@ snapshots:
       set-blocking: 2.0.0
     optional: true
 
-  nuqs@2.4.3(next@15.3.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0):
+  nuqs@2.8.9(next@15.3.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0):
     dependencies:
-      mitt: 3.0.1
+      '@standard-schema/spec': 1.0.0
       react: 19.1.0
     optionalDependencies:
       next: 15.3.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
 
-  nuqs@2.4.3(next@16.2.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0):
+  nuqs@2.8.9(next@16.2.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0):
     dependencies:
-      mitt: 3.0.1
+      '@standard-schema/spec': 1.0.0
       react: 19.1.0
     optionalDependencies:
       next: 16.2.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)

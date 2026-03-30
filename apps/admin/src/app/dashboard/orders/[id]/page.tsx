@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { Suspense } from 'react';
 
 import OrderDetailHeader from '@/components/dashboard/orders/order-detail/order-detail-header';

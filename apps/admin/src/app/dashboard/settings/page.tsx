@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import SettingsHeader from '@/components/dashboard/settings/settings-header';
 import SettingsTabs from '@/components/dashboard/settings/settings-tabs';
 
+export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
   title: 'Innstillinger',
 };

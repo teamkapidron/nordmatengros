@@ -5,6 +5,7 @@ import DiscountsMetrics from '@/components/dashboard/discounts/discounts-metrics
 import DiscountsTable from '@/components/dashboard/discounts/table/discounts-table';
 import BulkDiscountsCards from '@/components/dashboard/discounts/bulk-discounts-cards';
 
+export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
   title: 'Rabatter',
 };

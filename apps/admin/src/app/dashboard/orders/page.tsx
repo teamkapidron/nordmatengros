@@ -5,6 +5,8 @@ import OrderHeader from '@/components/dashboard/orders/order-header';
 import OrderMetricCards from '@/components/dashboard/orders/order-metric-card';
 import OrderTable from '@/components/dashboard/orders/order-table/order-table';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Ordrer',
 };

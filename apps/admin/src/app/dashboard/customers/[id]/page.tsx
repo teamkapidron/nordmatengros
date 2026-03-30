@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import CustomerDetailHeader from '@/components/dashboard/customers/customer-detail/customer-detail-header';
 import CustomerCompanyInfo from '@/components/dashboard/customers/customer-detail/customer-company-info';
 import CustomerVerificationStatus from '@/components/dashboard/customers/customer-detail/customer-verification-status';

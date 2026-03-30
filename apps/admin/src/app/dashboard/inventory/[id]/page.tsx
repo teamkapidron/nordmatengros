@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import ProductInventoryView from '@/components/dashboard/inventory/productInventory/product-inventory-view';
 
+export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
   title: 'Produktlager - Detaljer',
 };

@@ -5,6 +5,8 @@ import CategoriesHeader from '@/components/dashboard/categories/categories-heade
 import CategoryTree from '@/components/dashboard/categories/category-tree/category-tree';
 import ProductList from '@/components/dashboard/categories/product-list/product-list';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Kategorier',
 };
