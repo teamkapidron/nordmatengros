@@ -26,11 +26,11 @@ function CustomerRegistrationChart() {
   const chartConfig = {
     newRegistrations: {
       label: 'Nye registreringer',
-      color: 'var(--baladi-primary)',
+      color: 'var(--nordmat-primary)',
     },
     totalUsers: {
       label: 'Totale brukere',
-      color: 'var(--baladi-secondary)',
+      color: 'var(--nordmat-secondary)',
     },
   };
 
@@ -67,25 +67,25 @@ function CustomerRegistrationChart() {
   }, [customerData]);
 
   return (
-    <div className="h-full rounded-xl bg-white p-6 shadow-lg ring-1 ring-[var(--baladi-border)]">
+    <div className="h-full rounded-xl bg-white p-6 shadow-lg ring-1 ring-[var(--nordmat-border)]">
       <div className="mb-4">
-        <h3 className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+        <h3 className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
           Kunderegistrering
         </h3>
-        <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+        <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
           Spor nye brukerregistreringer og total brukervekst over tid
         </p>
       </div>
 
       {customerData.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-20 text-center">
-          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--baladi-muted)]">
-            <Users className="h-8 w-8 text-[var(--baladi-gray)]" />
+          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--nordmat-muted)]">
+            <Users className="h-8 w-8 text-[var(--nordmat-gray)]" />
           </div>
-          <h4 className="mb-2 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+          <h4 className="mb-2 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
             Ingen registreringsdata ennå
           </h4>
-          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
             Kunderegistreringsanalyse vil vises her når brukere begynner å
             registrere seg.
           </p>
@@ -93,20 +93,20 @@ function CustomerRegistrationChart() {
       ) : (
         <>
           {/* Growth Summary */}
-          <div className="mb-4 flex items-center justify-between rounded-lg bg-[var(--baladi-light)] p-3">
+          <div className="mb-4 flex items-center justify-between rounded-lg bg-[var(--nordmat-light)] p-3">
             <div className="flex items-center gap-3">
-              <div className="bg-[var(--baladi-primary)]/10 flex h-10 w-10 items-center justify-center rounded-lg">
+              <div className="bg-[var(--nordmat-primary)]/10 flex h-10 w-10 items-center justify-center rounded-lg">
                 {growthPercent >= 0 ? (
-                  <TrendingUp className="h-5 w-5 text-[var(--baladi-success)]" />
+                  <TrendingUp className="h-5 w-5 text-[var(--nordmat-success)]" />
                 ) : (
-                  <TrendingDown className="h-5 w-5 text-[var(--baladi-error)]" />
+                  <TrendingDown className="h-5 w-5 text-[var(--nordmat-error)]" />
                 )}
               </div>
               <div>
-                <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                   Brukervekst
                 </p>
-                <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                   Samlet periodisk vekst
                 </p>
               </div>
@@ -115,8 +115,8 @@ function CustomerRegistrationChart() {
               <span
                 className={`font-[family-name:var(--font-sora)] text-lg font-bold ${
                   growthPercent >= 0
-                    ? 'text-[var(--baladi-success)]'
-                    : 'text-[var(--baladi-error)]'
+                    ? 'text-[var(--nordmat-success)]'
+                    : 'text-[var(--nordmat-error)]'
                 }`}
               >
                 {growthPercent >= 0 ? '+' : ''}
@@ -132,7 +132,7 @@ function CustomerRegistrationChart() {
                   className="h-3 w-3 rounded-full"
                   style={{ backgroundColor: config.color }}
                 />
-                <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-dark)]">
+                <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-dark)]">
                   {config.label}
                 </span>
               </div>
@@ -180,7 +180,7 @@ function CustomerRegistrationChart() {
                 <CartesianGrid
                   vertical={false}
                   strokeDasharray="3 3"
-                  stroke="var(--baladi-border)"
+                  stroke="var(--nordmat-border)"
                 />
                 <XAxis
                   dataKey="date"
@@ -188,7 +188,7 @@ function CustomerRegistrationChart() {
                   axisLine={false}
                   tick={{
                     fontSize: 12,
-                    fill: 'var(--baladi-gray)',
+                    fill: 'var(--nordmat-gray)',
                     fontFamily: 'var(--font-dm-sans)',
                   }}
                 />
@@ -197,7 +197,7 @@ function CustomerRegistrationChart() {
                   axisLine={false}
                   tick={{
                     fontSize: 12,
-                    fill: 'var(--baladi-gray)',
+                    fill: 'var(--nordmat-gray)',
                     fontFamily: 'var(--font-dm-sans)',
                   }}
                 />
@@ -206,12 +206,12 @@ function CustomerRegistrationChart() {
                     if (active && payload && payload.length) {
                       const data = payload[0]?.payload;
                       return (
-                        <div className="rounded-lg border border-[var(--baladi-border)] bg-white p-3 shadow-lg">
-                          <p className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--baladi-dark)]">
+                        <div className="rounded-lg border border-[var(--nordmat-border)] bg-white p-3 shadow-lg">
+                          <p className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--nordmat-dark)]">
                             {data.date}
                           </p>
                           <div className="mt-2 space-y-1">
-                            <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                            <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                               <span
                                 className="mr-2 inline-block h-2 w-2 rounded-full"
                                 style={{
@@ -221,7 +221,7 @@ function CustomerRegistrationChart() {
                               />
                               Nye brukere: {data.newRegistrations}
                             </p>
-                            <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                            <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                               <span
                                 className="mr-2 inline-block h-2 w-2 rounded-full"
                                 style={{
@@ -267,20 +267,20 @@ function CustomerRegistrationChart() {
           </div>
 
           {/* Chart footer with summary metrics */}
-          <div className="mt-6 grid grid-cols-2 gap-4 border-t border-[var(--baladi-border)] pt-4">
-            <div className="bg-[var(--baladi-primary)]/5 rounded-lg p-3">
-              <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-primary)]">
+          <div className="mt-6 grid grid-cols-2 gap-4 border-t border-[var(--nordmat-border)] pt-4">
+            <div className="bg-[var(--nordmat-primary)]/5 rounded-lg p-3">
+              <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-primary)]">
                 Nye registreringer
               </p>
-              <p className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+              <p className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
                 {totalNewRegistrations.toLocaleString()}
               </p>
             </div>
-            <div className="bg-[var(--baladi-secondary)]/5 rounded-lg p-3">
-              <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-secondary)]">
+            <div className="bg-[var(--nordmat-secondary)]/5 rounded-lg p-3">
+              <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-secondary)]">
                 Totale brukere
               </p>
-              <p className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+              <p className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
                 {totalUsers.toLocaleString()}
               </p>
             </div>

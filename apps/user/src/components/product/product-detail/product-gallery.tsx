@@ -57,12 +57,12 @@ function ProductGallery() {
   if (isLoading) {
     return (
       <div className="space-y-4">
-        <div className="aspect-square w-full animate-pulse rounded-lg bg-[var(--baladi-light)]" />
+        <div className="aspect-square w-full animate-pulse rounded-lg bg-[var(--nordmat-light)]" />
         <div className="flex gap-4">
           {Array.from({ length: 4 }).map((_, i) => (
             <div
               key={i}
-              className="aspect-square w-20 animate-pulse rounded-md bg-[var(--baladi-light)]"
+              className="aspect-square w-20 animate-pulse rounded-md bg-[var(--nordmat-light)]"
             />
           ))}
         </div>
@@ -72,12 +72,12 @@ function ProductGallery() {
 
   return (
     <div className="space-y-4">
-      <div className="bg-[var(--baladi-light)]/30 group relative aspect-square overflow-hidden rounded-lg shadow-lg">
+      <div className="bg-[var(--nordmat-light)]/30 group relative aspect-square overflow-hidden rounded-lg shadow-lg">
         <div className="absolute left-4 top-4 z-10 flex gap-2">
           {categories.map((category) => (
             <Badge
               key={category._id}
-              className="bg-gradient-to-r from-[var(--baladi-accent)] to-[var(--baladi-secondary)] font-[family-name:var(--font-dm-sans)] text-white"
+              className="bg-gradient-to-r from-[var(--nordmat-accent)] to-[var(--nordmat-secondary)] font-[family-name:var(--font-dm-sans)] text-white"
             >
               {category.name}
             </Badge>
@@ -101,7 +101,7 @@ function ProductGallery() {
             onClick={toggleZoom}
             className="absolute bottom-4 right-4 rounded-full bg-white/90 p-2 opacity-0 shadow-md transition-all duration-200 hover:scale-105 hover:bg-white group-hover:opacity-100"
           >
-            <ZoomIn size={20} className="text-[var(--baladi-dark)]" />
+            <ZoomIn size={20} className="text-[var(--nordmat-dark)]" />
           </Button>
 
           {images.length > 1 && (
@@ -110,13 +110,13 @@ function ProductGallery() {
                 onClick={handlePreviousImage}
                 className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 opacity-0 shadow-md transition-all duration-200 hover:scale-105 hover:bg-white group-hover:opacity-100"
               >
-                <ChevronLeft size={20} className="text-[var(--baladi-dark)]" />
+                <ChevronLeft size={20} className="text-[var(--nordmat-dark)]" />
               </Button>
               <Button
                 onClick={handleNextImage}
                 className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 opacity-0 shadow-md transition-all duration-200 hover:scale-105 hover:bg-white group-hover:opacity-100"
               >
-                <ChevronRight size={20} className="text-[var(--baladi-dark)]" />
+                <ChevronRight size={20} className="text-[var(--nordmat-dark)]" />
               </Button>
             </>
           )}
@@ -138,8 +138,8 @@ function ProductGallery() {
               className={cn(
                 'relative aspect-square w-20 flex-shrink-0 overflow-hidden rounded-md border-2 transition-all duration-200',
                 selectedImageIndex === index
-                  ? 'ring-[var(--baladi-primary)]/20 border-[var(--baladi-primary)] ring-2'
-                  : 'border-[var(--baladi-border)] hover:border-[var(--baladi-primary)]',
+                  ? 'ring-[var(--nordmat-primary)]/20 border-[var(--nordmat-primary)] ring-2'
+                  : 'border-[var(--nordmat-border)] hover:border-[var(--nordmat-primary)]',
               )}
             >
               <Image

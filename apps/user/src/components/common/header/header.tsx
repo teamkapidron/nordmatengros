@@ -49,7 +49,7 @@ function Header() {
       )}
     >
       <div className="bg-white">
-        <div className="overflow-hidden border-b border-[var(--baladi-border)] bg-[var(--baladi-primary)]/80 text-white">
+        <div className="bg-[var(--nordmat-primary)]/80 overflow-hidden border-b border-[var(--nordmat-border)] text-white">
           <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
             <div className="flex items-center justify-center py-2.5 text-center">
               <div className="w-full sm:hidden">
@@ -58,7 +58,7 @@ function Header() {
                   behavior="scroll"
                   direction="left"
                   scrollamount="2"
-                  className="flex items-center text-xs whitespace-nowrap"
+                  className="flex items-center whitespace-nowrap text-xs"
                 >
                   <span className="mx-4 inline-flex items-center gap-2">
                     <Info className="h-3 w-3 flex-shrink-0" />
@@ -122,7 +122,7 @@ function Header() {
         </div>
       </div>
 
-      <div className="border-b border-[var(--baladi-border)] bg-white/95 shadow-sm backdrop-blur-md">
+      <div className="border-b border-[var(--nordmat-border)] bg-white/95 shadow-sm backdrop-blur-md">
         <header className="w-full">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between lg:h-20">
@@ -137,22 +137,22 @@ function Header() {
               <div className="flex items-center space-x-4">
                 {userCartItems.length > 0 && (
                   <>
-                    <div className="hidden items-center gap-3 rounded-lg border border-[var(--baladi-primary)]/20 bg-[var(--baladi-primary)]/10 px-3 py-2 lg:flex">
+                    <div className="border-[var(--nordmat-primary)]/20 bg-[var(--nordmat-primary)]/10 hidden items-center gap-3 rounded-lg border px-3 py-2 lg:flex">
                       <div className="flex items-center gap-2 text-xs">
-                        <span className="rounded bg-[var(--baladi-primary)]/10 px-2 py-1 font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-primary)]">
+                        <span className="bg-[var(--nordmat-primary)]/10 rounded px-2 py-1 font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-primary)]">
                           {totalWeight.toFixed(2)} kg
                         </span>
-                        <span className="rounded bg-[var(--baladi-secondary)]/10 px-2 py-1 font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-secondary)]">
+                        <span className="bg-[var(--nordmat-secondary)]/10 rounded px-2 py-1 font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-secondary)]">
                           {(totalVolume / 1000000).toFixed(2)} m³
                         </span>
                       </div>
                     </div>
 
                     <div className="flex flex-col items-center gap-1 text-xs lg:hidden">
-                      <span className="rounded bg-[var(--baladi-primary)]/10 px-1.5 py-0.5 font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-primary)]">
+                      <span className="bg-[var(--nordmat-primary)]/10 rounded px-1.5 py-0.5 font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-primary)]">
                         {totalWeight.toFixed(1)}kg
                       </span>
-                      <span className="rounded bg-[var(--baladi-secondary)]/10 px-1.5 py-0.5 font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-secondary)]">
+                      <span className="bg-[var(--nordmat-secondary)]/10 rounded px-1.5 py-0.5 font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-secondary)]">
                         {(totalVolume / 1000000).toFixed(2)}m³
                       </span>
                     </div>
@@ -163,7 +163,7 @@ function Header() {
               </div>
             </div>
 
-            <div className="border-t border-[var(--baladi-border)] py-3 lg:hidden">
+            <div className="border-t border-[var(--nordmat-border)] py-3 lg:hidden">
               <SearchSection />
             </div>
           </div>

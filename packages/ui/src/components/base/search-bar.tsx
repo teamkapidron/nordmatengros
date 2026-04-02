@@ -47,7 +47,7 @@ const SearchBar = ({
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         placeholder={placeholder}
-        className="w-full rounded-md border border-gray-300 px-3 py-2 pl-10 text-sm focus:border-[var(--baladi-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--baladi-primary)]"
+        className="w-full rounded-md border border-gray-300 px-3 py-2 pl-10 text-sm focus:border-[var(--nordmat-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--nordmat-primary)]"
       />
       <div className="absolute left-3 text-gray-400">
         <Search size={18} />
@@ -63,7 +63,7 @@ const SearchBar = ({
       )}
       <button
         onClick={handleSubmit}
-        className="absolute right-3 text-gray-500 hover:text-[var(--baladi-primary)]"
+        className="absolute right-3 text-gray-500 hover:text-[var(--nordmat-primary)]"
         type="button"
       >
         <Search size={18} />

@@ -68,7 +68,7 @@ function ProductSearchCombobox(props: ProductSearchComboboxProps) {
           role="combobox"
           aria-expanded={open}
           className={cn(
-            'w-full justify-between border-[var(--baladi-border)] bg-white text-[var(--baladi-text)] hover:bg-[var(--baladi-surface)] hover:text-[var(--baladi-text)]',
+            'w-full justify-between border-[var(--nordmat-border)] bg-white text-[var(--nordmat-text)] hover:bg-[var(--nordmat-surface)] hover:text-[var(--nordmat-text)]',
             className,
           )}
         >
@@ -80,22 +80,22 @@ function ProductSearchCombobox(props: ProductSearchComboboxProps) {
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[420px] border-[var(--baladi-border)] bg-white p-0 shadow-xl">
+      <PopoverContent className="w-[420px] border-[var(--nordmat-border)] bg-white p-0 shadow-xl">
         <Command shouldFilter={false}>
-          <div className="flex items-center border-b border-[var(--baladi-border)] px-4 py-3">
+          <div className="flex items-center border-b border-[var(--nordmat-border)] px-4 py-3">
             <CommandInput
               placeholder={placeholder ?? 'Søk etter produkt...'}
-              className="border-0 bg-transparent font-[family-name:var(--font-inter)] text-[var(--baladi-text)] placeholder:text-[var(--baladi-gray)] focus:outline-none"
+              className="border-0 bg-transparent font-[family-name:var(--font-inter)] text-[var(--nordmat-text)] placeholder:text-[var(--nordmat-gray)] focus:outline-none"
               onValueChange={handleSearchChange}
             />
           </div>
           <CommandList>
             <CommandEmpty className="flex flex-col items-center justify-center py-8">
-              <Package className="mb-3 h-12 w-12 text-[var(--baladi-gray)]/50" />
-              <p className="font-[family-name:var(--font-inter)] text-sm font-medium text-[var(--baladi-text)]">
+              <Package className="mb-3 h-12 w-12 text-[var(--nordmat-gray)]/50" />
+              <p className="font-[family-name:var(--font-inter)] text-sm font-medium text-[var(--nordmat-text)]">
                 Ingen produkter funnet
               </p>
-              <p className="font-[family-name:var(--font-inter)] text-xs text-[var(--baladi-gray)]">
+              <p className="font-[family-name:var(--font-inter)] text-xs text-[var(--nordmat-gray)]">
                 Prøv å søke med andre søkeord
               </p>
             </CommandEmpty>
@@ -105,19 +105,19 @@ function ProductSearchCombobox(props: ProductSearchComboboxProps) {
                   key={product._id}
                   value={product.name}
                   onSelect={() => handleSelect(product._id)}
-                  className="cursor-pointer p-0 font-[family-name:var(--font-inter)] text-[var(--baladi-text)]"
+                  className="cursor-pointer p-0 font-[family-name:var(--font-inter)] text-[var(--nordmat-text)]"
                 >
-                  <div className="flex w-full items-center gap-3 rounded-lg p-3 transition-all duration-200 hover:bg-gradient-to-r hover:from-[var(--baladi-primary)]/5 hover:to-[var(--baladi-secondary)]/5">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--baladi-primary)]/10 to-[var(--baladi-secondary)]/10">
-                      <Package className="h-5 w-5 text-[var(--baladi-primary)]" />
+                  <div className="flex w-full items-center gap-3 rounded-lg p-3 transition-all duration-200 hover:bg-gradient-to-r hover:from-[var(--nordmat-primary)]/5 hover:to-[var(--nordmat-secondary)]/5">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--nordmat-primary)]/10 to-[var(--nordmat-secondary)]/10">
+                      <Package className="h-5 w-5 text-[var(--nordmat-primary)]" />
                     </div>
 
                     <div className="min-w-0 flex-1">
-                      <p className="truncate font-medium text-[var(--baladi-text)]">
+                      <p className="truncate font-medium text-[var(--nordmat-text)]">
                         {product.name}
                       </p>
                       <div className="flex items-center gap-2">
-                        <span className="rounded-full bg-[var(--baladi-primary)]/10 px-2 py-0.5 text-xs font-medium text-[var(--baladi-primary)]">
+                        <span className="rounded-full bg-[var(--nordmat-primary)]/10 px-2 py-0.5 text-xs font-medium text-[var(--nordmat-primary)]">
                           {product.categories.name}
                         </span>
                       </div>
@@ -127,7 +127,7 @@ function ProductSearchCombobox(props: ProductSearchComboboxProps) {
                       className={cn(
                         'h-4 w-4 transition-opacity',
                         selectedProduct?._id === product._id
-                          ? 'text-[var(--baladi-primary)] opacity-100'
+                          ? 'text-[var(--nordmat-primary)] opacity-100'
                           : 'opacity-0',
                       )}
                     />

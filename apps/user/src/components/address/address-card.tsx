@@ -74,24 +74,24 @@ function AddressCard(props: AddressCardProps) {
   const labelConfig = {
     home: {
       icon: <Home className="h-5 w-5 text-white" />,
-      gradient: 'from-[var(--baladi-accent)] to-[var(--baladi-accent)]/80',
-      bgColor: 'bg-[var(--baladi-accent)]/5',
-      textColor: 'text-[var(--baladi-accent)]',
-      borderColor: 'border-[var(--baladi-accent)]/20',
+      gradient: 'from-[var(--nordmat-accent)] to-[var(--nordmat-accent)]/80',
+      bgColor: 'bg-[var(--nordmat-accent)]/5',
+      textColor: 'text-[var(--nordmat-accent)]',
+      borderColor: 'border-[var(--nordmat-accent)]/20',
     },
     work: {
       icon: <Building className="h-5 w-5 text-white" />,
-      gradient: 'from-[var(--baladi-info)] to-[var(--baladi-info)]/80',
-      bgColor: 'bg-[var(--baladi-info)]/5',
-      textColor: 'text-[var(--baladi-info)]',
-      borderColor: 'border-[var(--baladi-info)]/20',
+      gradient: 'from-[var(--nordmat-info)] to-[var(--nordmat-info)]/80',
+      bgColor: 'bg-[var(--nordmat-info)]/5',
+      textColor: 'text-[var(--nordmat-info)]',
+      borderColor: 'border-[var(--nordmat-info)]/20',
     },
     other: {
       icon: <Tag className="h-5 w-5 text-white" />,
-      gradient: 'from-[var(--baladi-success)] to-[var(--baladi-success)]/80',
-      bgColor: 'bg-[var(--baladi-success)]/5',
-      textColor: 'text-[var(--baladi-success)]',
-      borderColor: 'border-[var(--baladi-success)]/20',
+      gradient: 'from-[var(--nordmat-success)] to-[var(--nordmat-success)]/80',
+      bgColor: 'bg-[var(--nordmat-success)]/5',
+      textColor: 'text-[var(--nordmat-success)]',
+      borderColor: 'border-[var(--nordmat-success)]/20',
     },
   };
 
@@ -100,11 +100,11 @@ function AddressCard(props: AddressCardProps) {
 
   return (
     <div
-      className={`group relative overflow-hidden rounded-2xl border ${address.isDefault ? 'border-[var(--baladi-accent)]/30 bg-gradient-to-br from-[var(--baladi-accent)]/5 to-[var(--baladi-light)]' : `${config.borderColor} bg-white`} shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md`}
+      className={`group relative overflow-hidden rounded-2xl border ${address.isDefault ? 'border-[var(--nordmat-accent)]/30 bg-gradient-to-br from-[var(--nordmat-accent)]/5 to-[var(--nordmat-light)]' : `${config.borderColor} bg-white`} shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md`}
     >
       {address.isDefault && (
         <div className="absolute top-4 right-4 z-10">
-          <Badge className="bg-gradient-to-r from-[var(--baladi-accent)] to-[var(--baladi-accent)]/80 px-2.5 py-1 font-semibold text-white shadow-sm">
+          <Badge className="bg-gradient-to-r from-[var(--nordmat-accent)] to-[var(--nordmat-accent)]/80 px-2.5 py-1 font-semibold text-white shadow-sm">
             <Star className="mr-1.5 h-3 w-3" fill="currentColor" />
             Standard
           </Badge>
@@ -132,7 +132,7 @@ function AddressCard(props: AddressCardProps) {
                   </span>
                 </div>
               )}
-              <h3 className="line-clamp-2 font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+              <h3 className="line-clamp-2 font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
                 {address.addressLine1}
               </h3>
             </div>
@@ -140,33 +140,33 @@ function AddressCard(props: AddressCardProps) {
         </div>
 
         <div className="space-y-3">
-          <div className="flex items-start space-x-3 rounded-lg border border-[var(--baladi-border)]/50 bg-[var(--baladi-light)] p-3">
-            <div className="mt-0.5 rounded-full bg-[var(--baladi-muted)] p-1.5">
-              <MapPin className="h-3.5 w-3.5 text-[var(--baladi-gray)]" />
+          <div className="flex items-start space-x-3 rounded-lg border border-[var(--nordmat-border)]/50 bg-[var(--nordmat-light)] p-3">
+            <div className="mt-0.5 rounded-full bg-[var(--nordmat-muted)] p-1.5">
+              <MapPin className="h-3.5 w-3.5 text-[var(--nordmat-gray)]" />
             </div>
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm leading-relaxed text-[var(--baladi-dark)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm leading-relaxed text-[var(--nordmat-dark)]">
               {fullAddress}
             </p>
           </div>
 
           {address.phoneNumber && (
-            <div className="flex items-center space-x-3 rounded-lg border border-[var(--baladi-border)]/50 bg-[var(--baladi-light)] p-3">
-              <div className="rounded-full bg-[var(--baladi-muted)] p-1.5">
-                <Phone className="h-3.5 w-3.5 text-[var(--baladi-gray)]" />
+            <div className="flex items-center space-x-3 rounded-lg border border-[var(--nordmat-border)]/50 bg-[var(--nordmat-light)] p-3">
+              <div className="rounded-full bg-[var(--nordmat-muted)] p-1.5">
+                <Phone className="h-3.5 w-3.5 text-[var(--nordmat-gray)]" />
               </div>
-              <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-dark)]">
+              <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-dark)]">
                 {address.phoneNumber}
               </p>
             </div>
           )}
         </div>
 
-        <div className="mt-6 flex space-x-2 border-t border-[var(--baladi-border)] pt-4">
+        <div className="mt-6 flex space-x-2 border-t border-[var(--nordmat-border)] pt-4">
           <Button
             variant="outline"
             size="sm"
             onClick={() => setIsEditDialogOpen(true)}
-            className="flex-1 rounded-xl border-[var(--baladi-border)] font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-dark)] hover:border-[var(--baladi-primary)]/30 hover:bg-[var(--baladi-light)]"
+            className="flex-1 rounded-xl border-[var(--nordmat-border)] font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-dark)] hover:border-[var(--nordmat-primary)]/30 hover:bg-[var(--nordmat-light)]"
           >
             <Edit2 className="mr-2 h-3.5 w-3.5" />
             Rediger
@@ -177,7 +177,7 @@ function AddressCard(props: AddressCardProps) {
               variant="outline"
               size="sm"
               onClick={handleSetDefault}
-              className="flex-1 rounded-xl border-[var(--baladi-accent)]/30 font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-accent)] hover:border-[var(--baladi-accent)]/50 hover:bg-[var(--baladi-accent)]/5"
+              className="flex-1 rounded-xl border-[var(--nordmat-accent)]/30 font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-accent)] hover:border-[var(--nordmat-accent)]/50 hover:bg-[var(--nordmat-accent)]/5"
               disabled={setDefaultAddressMutation.isPending}
             >
               <Star className="mr-2 h-3.5 w-3.5" />
@@ -197,23 +197,23 @@ function AddressCard(props: AddressCardProps) {
         open={isDeleteDialogOpen}
         onOpenChange={setIsDeleteDialogOpen}
       >
-        <AlertDialogContent className="rounded-2xl border border-[var(--baladi-border)] bg-white">
+        <AlertDialogContent className="rounded-2xl border border-[var(--nordmat-border)] bg-white">
           <AlertDialogHeader>
-            <AlertDialogTitle className="font-[family-name:var(--font-sora)] text-[var(--baladi-dark)]">
+            <AlertDialogTitle className="font-[family-name:var(--font-sora)] text-[var(--nordmat-dark)]">
               Slett adresse
             </AlertDialogTitle>
-            <AlertDialogDescription className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+            <AlertDialogDescription className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
               Er du sikker på at du vil slette denne adressen? Denne handlingen
               kan ikke angres.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel className="rounded-xl border-[var(--baladi-border)] font-[family-name:var(--font-dm-sans)] text-[var(--baladi-dark)] hover:bg-[var(--baladi-light)]">
+            <AlertDialogCancel className="rounded-xl border-[var(--nordmat-border)] font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-dark)] hover:bg-[var(--nordmat-light)]">
               Avbryt
             </AlertDialogCancel>
             <AlertDialogAction
               onClick={handleDelete}
-              className="rounded-xl bg-[var(--baladi-error)] font-[family-name:var(--font-dm-sans)] hover:bg-[var(--baladi-error)]/90"
+              className="rounded-xl bg-[var(--nordmat-error)] font-[family-name:var(--font-dm-sans)] hover:bg-[var(--nordmat-error)]/90"
               disabled={deleteAddressMutation.isPending}
             >
               {deleteAddressMutation.isPending ? 'Sletter...' : 'Slett'}

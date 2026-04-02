@@ -107,15 +107,15 @@ function DiscountsMetrics() {
         return (
           <div
             key={card.title}
-            className={`group relative overflow-hidden rounded-xl border border-[var(--baladi-border)] bg-gradient-to-br ${card.bgGradient} p-6 shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-md`}
+            className={`group relative overflow-hidden rounded-xl border border-[var(--nordmat-border)] bg-gradient-to-br ${card.bgGradient} p-6 shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-md`}
           >
             <div className="relative">
               <div className="flex items-center justify-between">
                 <div className="space-y-2">
-                  <p className="text-sm font-medium text-[var(--baladi-gray)]">
+                  <p className="text-sm font-medium text-[var(--nordmat-gray)]">
                     {card.title}
                   </p>
-                  <p className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--baladi-text)]">
+                  <p className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--nordmat-text)]">
                     {card.value}
                   </p>
                 </div>

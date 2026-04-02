@@ -57,16 +57,16 @@ function DiscountsTableContent() {
   if (discounts.length === 0) {
     return (
       <div className="relative">
-        <div className="max-h-[700px] overflow-auto rounded-xl border border-[var(--baladi-border)] bg-white shadow-sm">
+        <div className="max-h-[700px] overflow-auto rounded-xl border border-[var(--nordmat-border)] bg-white shadow-sm">
           <div className="flex items-center justify-center p-12">
             <div className="text-center">
-              <div className="bg-[var(--baladi-primary)]/10 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full">
-                <DollarSign className="h-8 w-8 text-[var(--baladi-primary)]" />
+              <div className="bg-[var(--nordmat-primary)]/10 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full">
+                <DollarSign className="h-8 w-8 text-[var(--nordmat-primary)]" />
               </div>
-              <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+              <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
                 Ingen rabatter funnet
               </h3>
-              <p className="mt-2 text-sm text-[var(--baladi-gray)]">
+              <p className="mt-2 text-sm text-[var(--nordmat-gray)]">
                 Opprett din første rabatt for å begynne å tilby kampanjer til
                 kunder.
               </p>
@@ -79,23 +79,23 @@ function DiscountsTableContent() {
 
   return (
     <div className="relative">
-      <div className="max-h-[700px] overflow-auto rounded-xl border border-[var(--baladi-border)] bg-white shadow-sm">
+      <div className="max-h-[700px] overflow-auto rounded-xl border border-[var(--nordmat-border)] bg-white shadow-sm">
         <Table className="w-full">
           <TableHeader>
-            <TableRow className="border-b border-[var(--baladi-border)] bg-[var(--baladi-light)]">
-              <TableHead className="sticky top-0 z-50 bg-[var(--baladi-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-primary)]">
+            <TableRow className="border-b border-[var(--nordmat-border)] bg-[var(--nordmat-light)]">
+              <TableHead className="sticky top-0 z-50 bg-[var(--nordmat-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-primary)]">
                 Produktdetaljer
               </TableHead>
-              <TableHead className="sticky top-0 z-50 bg-[var(--baladi-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-primary)]">
+              <TableHead className="sticky top-0 z-50 bg-[var(--nordmat-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-primary)]">
                 Rabatt & Beløp
               </TableHead>
-              <TableHead className="sticky top-0 z-50 bg-[var(--baladi-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-primary)]">
+              <TableHead className="sticky top-0 z-50 bg-[var(--nordmat-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-primary)]">
                 Gyldig Periode
               </TableHead>
-              <TableHead className="sticky top-0 z-50 bg-[var(--baladi-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-primary)]">
+              <TableHead className="sticky top-0 z-50 bg-[var(--nordmat-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-primary)]">
                 Status
               </TableHead>
-              <TableHead className="sticky top-0 z-50 bg-[var(--baladi-light)] p-4 text-center font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-primary)]">
+              <TableHead className="sticky top-0 z-50 bg-[var(--nordmat-light)] p-4 text-center font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-primary)]">
                 Handlinger
               </TableHead>
             </TableRow>
@@ -107,22 +107,22 @@ function DiscountsTableContent() {
               return (
                 <TableRow
                   key={`${discount.productId}-${discount.createdAt}`}
-                  className={`border-b border-[var(--baladi-border)] transition-colors hover:bg-[var(--baladi-muted)] ${
-                    index % 2 === 0 ? 'bg-white' : 'bg-[var(--baladi-light)]'
+                  className={`border-b border-[var(--nordmat-border)] transition-colors hover:bg-[var(--nordmat-muted)] ${
+                    index % 2 === 0 ? 'bg-white' : 'bg-[var(--nordmat-light)]'
                   }`}
                 >
                   <TableCell className="p-4">
                     <div className="flex items-start space-x-4">
-                      <div className="relative h-16 w-16 overflow-hidden rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)]">
+                      <div className="relative h-16 w-16 overflow-hidden rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)]">
                         <div className="flex h-full w-full items-center justify-center">
-                          <Package className="h-6 w-6 text-[var(--baladi-gray)]" />
+                          <Package className="h-6 w-6 text-[var(--nordmat-gray)]" />
                         </div>
                       </div>
                       <div className="min-w-0 flex-1">
-                        <h3 className="truncate font-[family-name:var(--font-sora)] text-base font-semibold text-[var(--baladi-primary)]">
+                        <h3 className="truncate font-[family-name:var(--font-sora)] text-base font-semibold text-[var(--nordmat-primary)]">
                           {discount.productId.name}
                         </h3>
-                        <p className="mt-1 line-clamp-2 text-sm text-[var(--baladi-gray)]">
+                        <p className="mt-1 line-clamp-2 text-sm text-[var(--nordmat-gray)]">
                           {discount.productId?.shortDescription ||
                             discount.productId?.description ||
                             'Rabatt tilgjengelig for dette produktet'}
@@ -145,8 +145,8 @@ function DiscountsTableContent() {
                   <TableCell className="p-4">
                     <div className="space-y-2">
                       <div className="flex items-center space-x-2">
-                        <DollarSign className="h-4 w-4 text-[var(--baladi-success)]" />
-                        <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-primary)]">
+                        <DollarSign className="h-4 w-4 text-[var(--nordmat-success)]" />
+                        <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-primary)]">
                           {discount.discountValue.toLocaleString('no-NO', {
                             style: 'currency',
                             currency: 'NOK',
@@ -155,7 +155,7 @@ function DiscountsTableContent() {
                           })}
                         </span>
                       </div>
-                      <div className="text-sm text-[var(--baladi-gray)]">
+                      <div className="text-sm text-[var(--nordmat-gray)]">
                         Rabatt beløp
                       </div>
                       <span className="inline-flex items-center rounded-md bg-orange-50 px-2 py-1 text-xs font-medium text-orange-700">
@@ -170,11 +170,11 @@ function DiscountsTableContent() {
                         <div className="space-y-1">
                           {discount.validFrom && (
                             <div className="flex items-center space-x-2 rounded-full bg-blue-100 px-2.5 py-1 text-xs font-medium text-blue-800">
-                              <Calendar className="h-3 w-3 text-[var(--baladi-gray)]" />
-                              <span className="text-[var(--baladi-gray)]">
+                              <Calendar className="h-3 w-3 text-[var(--nordmat-gray)]" />
+                              <span className="text-[var(--nordmat-gray)]">
                                 Fra:
                               </span>
-                              <span className="font-medium text-[var(--baladi-primary)]">
+                              <span className="font-medium text-[var(--nordmat-primary)]">
                                 {format(
                                   new Date(discount.validFrom),
                                   'dd.MM.yyyy',
@@ -184,11 +184,11 @@ function DiscountsTableContent() {
                           )}
                           {discount.validTo && (
                             <div className="flex items-center space-x-2 rounded-full bg-orange-100 px-2.5 py-1 text-xs font-medium text-orange-800">
-                              <Calendar className="h-3 w-3 text-[var(--baladi-gray)]" />
-                              <span className="text-[var(--baladi-gray)]">
+                              <Calendar className="h-3 w-3 text-[var(--nordmat-gray)]" />
+                              <span className="text-[var(--nordmat-gray)]">
                                 Til:
                               </span>
-                              <span className="font-medium text-[var(--baladi-primary)]">
+                              <span className="font-medium text-[var(--nordmat-primary)]">
                                 {format(
                                   new Date(discount.validTo),
                                   'dd.MM.yyyy',
@@ -204,7 +204,7 @@ function DiscountsTableContent() {
                         </div>
                       )}
                       <div className="space-y-1">
-                        <div className="text-sm text-[var(--baladi-gray)]">
+                        <div className="text-sm text-[var(--nordmat-gray)]">
                           Opprettet:{' '}
                           {format(new Date(discount.createdAt), 'dd.MM.yyyy')}
                         </div>
@@ -232,7 +232,7 @@ function DiscountsTableContent() {
                         <DropdownMenuTrigger asChild>
                           <Button
                             variant="ghost"
-                            className="bg-[var(--baladi-primary)]/10 hover:bg-[var(--baladi-primary)]/20 flex h-8 w-8 items-center justify-center rounded-lg text-[var(--baladi-primary)] transition-colors"
+                            className="bg-[var(--nordmat-primary)]/10 hover:bg-[var(--nordmat-primary)]/20 flex h-8 w-8 items-center justify-center rounded-lg text-[var(--nordmat-primary)] transition-colors"
                           >
                             <span className="sr-only">Åpne meny</span>
                             <MoreHorizontal className="h-4 w-4" />

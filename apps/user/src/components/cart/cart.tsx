@@ -22,10 +22,10 @@ function Cart() {
   return (
     <main className="container mx-auto flex-grow px-4 py-8 sm:px-6 lg:px-8">
       <div className="mb-8">
-        <h1 className="font-[family-name:var(--font-sora)] text-3xl font-bold text-[var(--baladi-dark)] md:text-4xl">
+        <h1 className="font-[family-name:var(--font-sora)] text-3xl font-bold text-[var(--nordmat-dark)] md:text-4xl">
           {showCheckoutForm ? 'Kassen' : 'Handlekurv'}
         </h1>
-        <p className="mt-2 font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+        <p className="mt-2 font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
           {showCheckoutForm
             ? 'Velg leveringsadresse og tilpass bestillingen'
             : 'Gjennomgå og fullfør din bestilling'}

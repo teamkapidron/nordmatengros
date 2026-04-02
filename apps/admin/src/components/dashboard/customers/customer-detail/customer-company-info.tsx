@@ -95,22 +95,22 @@ function CustomerCompanyInfo(props: CustomerCompanyInfoProps) {
   }
 
   return (
-    <Card className="relative overflow-hidden border border-[var(--baladi-border)] bg-gradient-to-br from-white via-[var(--baladi-light)] to-white shadow-lg">
+    <Card className="relative overflow-hidden border border-[var(--nordmat-border)] bg-gradient-to-br from-white via-[var(--nordmat-light)] to-white shadow-lg">
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-[var(--baladi-accent)]"></div>
-        <div className="absolute -bottom-8 -left-8 h-36 w-36 rounded-full bg-[var(--baladi-primary)]"></div>
-        <div className="absolute right-1/4 top-1/3 h-28 w-28 rounded-full bg-[var(--baladi-secondary)]"></div>
+        <div className="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-[var(--nordmat-accent)]"></div>
+        <div className="absolute -bottom-8 -left-8 h-36 w-36 rounded-full bg-[var(--nordmat-primary)]"></div>
+        <div className="absolute right-1/4 top-1/3 h-28 w-28 rounded-full bg-[var(--nordmat-secondary)]"></div>
       </div>
 
       <div className="relative">
-        <div className="h-1 w-full bg-gradient-to-r from-[var(--baladi-accent)] via-[var(--baladi-primary)] to-[var(--baladi-secondary)]"></div>
+        <div className="h-1 w-full bg-gradient-to-r from-[var(--nordmat-accent)] via-[var(--nordmat-primary)] to-[var(--nordmat-secondary)]"></div>
 
         <div className="flex items-center justify-between p-6">
           <div className="space-y-1">
-            <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--baladi-dark)]">
+            <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--nordmat-dark)]">
               Bedriftsinformasjon
             </h2>
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               Oversikt over kundens bedriftsdetaljer og kontaktinformasjon
             </p>
           </div>
@@ -140,21 +140,21 @@ function CustomerCompanyInfo(props: CustomerCompanyInfoProps) {
           />
 
           <div className="md:col-span-2">
-            <div className="border-[var(--baladi-border)]/30 mt-4 rounded-xl border bg-gradient-to-r from-[var(--baladi-light)] to-white p-4">
+            <div className="border-[var(--nordmat-border)]/30 mt-4 rounded-xl border bg-gradient-to-r from-[var(--nordmat-light)] to-white p-4">
               <div className="mb-3 flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--baladi-info)] to-blue-600 shadow-sm">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--nordmat-info)] to-blue-600 shadow-sm">
                   <FileText className="h-4 w-4 text-white" />
                 </div>
-                <h3 className="font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-dark)]">
+                <h3 className="font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-dark)]">
                   Tilleggsinformasjon
                 </h3>
               </div>
               <div className="grid grid-cols-1 gap-4 text-sm sm:grid-cols-2">
                 <div className="space-y-1">
-                  <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-gray)]">
+                  <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-gray)]">
                     Kontotype:
                   </span>
-                  <p className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-dark)]">
+                  <p className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-dark)]">
                     {user?.userType === UserType.INTERNAL
                       ? 'Intern'
                       : user?.userType === UserType.EXTERNAL
@@ -164,10 +164,10 @@ function CustomerCompanyInfo(props: CustomerCompanyInfoProps) {
                 </div>
                 {user?.createdAt && (
                   <div className="space-y-1">
-                    <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-gray)]">
+                    <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-gray)]">
                       Registrert:
                     </span>
-                    <p className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-dark)]">
+                    <p className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-dark)]">
                       {formatDate(new Date(user.createdAt), 'MMM d, yyyy')}
                     </p>
                   </div>
@@ -177,19 +177,19 @@ function CustomerCompanyInfo(props: CustomerCompanyInfoProps) {
           </div>
 
           <div className="md:col-span-2">
-            <div className="border-[var(--baladi-border)]/30 mt-4 rounded-xl border bg-gradient-to-r from-[var(--baladi-light)] to-white p-4">
+            <div className="border-[var(--nordmat-border)]/30 mt-4 rounded-xl border bg-gradient-to-r from-[var(--nordmat-light)] to-white p-4">
               <div className="mb-3 flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--baladi-accent)] to-orange-600 shadow-sm">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--nordmat-accent)] to-orange-600 shadow-sm">
                   <Settings className="h-4 w-4 text-white" />
                 </div>
-                <h3 className="font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-dark)]">
+                <h3 className="font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-dark)]">
                   Adminhandlinger
                 </h3>
               </div>
 
               <div className="space-y-4">
                 <div className="mt-4 flex flex-col gap-2">
-                  <label className="ml-1 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-gray)]">
+                  <label className="ml-1 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-gray)]">
                     Velg kontotype:
                   </label>
                   <Select
@@ -205,13 +205,13 @@ function CustomerCompanyInfo(props: CustomerCompanyInfoProps) {
                     <SelectContent>
                       <SelectItem value={UserType.INTERNAL}>
                         <div className="flex items-center gap-2">
-                          <div className="h-2 w-2 rounded-full bg-[var(--baladi-primary)]"></div>
+                          <div className="h-2 w-2 rounded-full bg-[var(--nordmat-primary)]"></div>
                           Intern
                         </div>
                       </SelectItem>
                       <SelectItem value={UserType.EXTERNAL}>
                         <div className="flex items-center gap-2">
-                          <div className="h-2 w-2 rounded-full bg-[var(--baladi-secondary)]"></div>
+                          <div className="h-2 w-2 rounded-full bg-[var(--nordmat-secondary)]"></div>
                           Ekstern
                         </div>
                       </SelectItem>
@@ -227,7 +227,7 @@ function CustomerCompanyInfo(props: CustomerCompanyInfoProps) {
                         !selectedUserType || updateUserMutation.isPending
                       }
                       isLoading={updateUserMutation.isPending}
-                      className="hover:bg-[var(--baladi-success)]/90 bg-[var(--baladi-success)] text-white"
+                      className="hover:bg-[var(--nordmat-success)]/90 bg-[var(--nordmat-success)] text-white"
                       iconLeft={<CheckCircle className="h-4 w-4" />}
                     >
                       Godkjenn bruker
@@ -241,7 +241,7 @@ function CustomerCompanyInfo(props: CustomerCompanyInfoProps) {
                         updateUserMutation.isPending
                       }
                       isLoading={updateUserMutation.isPending}
-                      className="hover:bg-[var(--baladi-primary)]/90 bg-[var(--baladi-primary)] text-white"
+                      className="hover:bg-[var(--nordmat-primary)]/90 bg-[var(--nordmat-primary)] text-white"
                       iconLeft={<Settings className="h-4 w-4" />}
                     >
                       Oppdater kontotype
@@ -254,11 +254,11 @@ function CustomerCompanyInfo(props: CustomerCompanyInfoProps) {
                     <div
                       className={`h-2 w-2 rounded-full ${
                         user.isApprovedByAdmin
-                          ? 'bg-[var(--baladi-success)]'
-                          : 'bg-[var(--baladi-warning)]'
+                          ? 'bg-[var(--nordmat-success)]'
+                          : 'bg-[var(--nordmat-warning)]'
                       }`}
                     ></div>
-                    <span className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+                    <span className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
                       Status:{' '}
                       {user.isApprovedByAdmin
                         ? 'Godkjent'
@@ -293,18 +293,18 @@ function CompanyInfoField({
   return (
     <div className={`group space-y-3 ${className}`}>
       <div className="flex items-center gap-2">
-        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--baladi-accent)] to-orange-600 shadow-sm transition-transform duration-200 group-hover:scale-110">
+        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--nordmat-accent)] to-orange-600 shadow-sm transition-transform duration-200 group-hover:scale-110">
           <Icon className="h-4 w-4 text-white" />
         </div>
-        <label className="font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-dark)]">
+        <label className="font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-dark)]">
           {label}
         </label>
       </div>
 
-      <div className="border-[var(--baladi-border)]/50 group relative overflow-hidden rounded-lg border bg-gradient-to-r from-white to-[var(--baladi-light)] p-3 transition-all duration-200 hover:border-[var(--baladi-border)] hover:shadow-md">
-        <div className="from-[var(--baladi-accent)]/5 absolute inset-0 bg-gradient-to-r to-orange-500/5 opacity-0 transition-opacity duration-200 group-hover:opacity-100"></div>
+      <div className="border-[var(--nordmat-border)]/50 group relative overflow-hidden rounded-lg border bg-gradient-to-r from-white to-[var(--nordmat-light)] p-3 transition-all duration-200 hover:border-[var(--nordmat-border)] hover:shadow-md">
+        <div className="from-[var(--nordmat-accent)]/5 absolute inset-0 bg-gradient-to-r to-orange-500/5 opacity-0 transition-opacity duration-200 group-hover:opacity-100"></div>
         <p
-          className={`relative font-[family-name:var(--font-dm-sans)] text-[var(--baladi-dark)] ${className.includes('font-mono') ? 'font-mono' : ''}`}
+          className={`relative font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-dark)] ${className.includes('font-mono') ? 'font-mono' : ''}`}
         >
           {value}
         </p>

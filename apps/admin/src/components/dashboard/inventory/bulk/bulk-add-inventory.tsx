@@ -16,7 +16,7 @@ export default function BulkAddInventory() {
 
   return (
     <div className="space-y-6 p-6">
-      <div className="relative overflow-hidden rounded-xl border border-[var(--baladi-border)] bg-gradient-to-br from-[var(--baladi-primary)] via-[var(--baladi-primary)] to-[var(--baladi-secondary)] p-6 shadow-lg">
+      <div className="relative overflow-hidden rounded-xl border border-[var(--nordmat-border)] bg-gradient-to-br from-[var(--nordmat-primary)] via-[var(--nordmat-primary)] to-[var(--nordmat-secondary)] p-6 shadow-lg">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute -right-4 -top-4 h-32 w-32 rounded-full bg-white/20"></div>
           <div className="absolute -bottom-8 -left-8 h-40 w-40 rounded-full bg-white/10"></div>
@@ -52,22 +52,22 @@ export default function BulkAddInventory() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-[var(--baladi-accent)] via-white/50 to-[var(--baladi-accent)]"></div>
+        <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-[var(--nordmat-accent)] via-white/50 to-[var(--nordmat-accent)]"></div>
       </div>
 
-      <div className="rounded-xl border border-[var(--baladi-border)] bg-white p-6 shadow-sm">
+      <div className="rounded-xl border border-[var(--nordmat-border)] bg-white p-6 shadow-sm">
         <div className="mb-4 flex items-center gap-3">
-          <div className="bg-[var(--baladi-info)]/10 flex h-8 w-8 items-center justify-center rounded-lg">
-            <FileText className="h-4 w-4 text-[var(--baladi-info)]" />
+          <div className="bg-[var(--nordmat-info)]/10 flex h-8 w-8 items-center justify-center rounded-lg">
+            <FileText className="h-4 w-4 text-[var(--nordmat-info)]" />
           </div>
-          <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-primary)]">
+          <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-primary)]">
             Instruksjoner
           </h3>
         </div>
 
-        <div className="space-y-3 font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+        <div className="space-y-3 font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
           <div className="flex items-start gap-2">
-            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--baladi-primary)] text-xs font-bold text-white">
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--nordmat-primary)] text-xs font-bold text-white">
               1
             </span>
             <span>
@@ -76,7 +76,7 @@ export default function BulkAddInventory() {
             </span>
           </div>
           <div className="flex items-start gap-2">
-            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--baladi-primary)] text-xs font-bold text-white">
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--nordmat-primary)] text-xs font-bold text-white">
               2
             </span>
             <span>
@@ -85,13 +85,13 @@ export default function BulkAddInventory() {
             </span>
           </div>
           <div className="flex items-start gap-2">
-            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--baladi-primary)] text-xs font-bold text-white">
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--nordmat-primary)] text-xs font-bold text-white">
               3
             </span>
             <span>Last opp CSV-filen for validering og forhåndsvisning</span>
           </div>
           <div className="flex items-start gap-2">
-            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--baladi-primary)] text-xs font-bold text-white">
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--nordmat-primary)] text-xs font-bold text-white">
               4
             </span>
             <span>
@@ -99,7 +99,7 @@ export default function BulkAddInventory() {
             </span>
           </div>
           <div className="flex items-start gap-2">
-            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--baladi-primary)] text-xs font-bold text-white">
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--nordmat-primary)] text-xs font-bold text-white">
               5
             </span>
             <span>

@@ -57,20 +57,20 @@ const ProductPriceDisplay = memo(
       <div className="space-y-4 rounded-lg py-4">
         <div className="flex items-center gap-4">
           <div className="flex items-baseline gap-2">
-            <span className="font-[family-name:var(--font-sora)] text-3xl font-bold text-[var(--baladi-primary)]">
+            <span className="font-[family-name:var(--font-sora)] text-3xl font-bold text-[var(--nordmat-primary)]">
               {formatPrice(price)} kr
             </span>
           </div>
-          <div className="rounded-lg border border-[var(--baladi-secondary)]/20 bg-gradient-to-r from-[var(--baladi-secondary)]/10 to-[var(--baladi-accent)]/10 px-3 py-2">
-            <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-secondary)]">
+          <div className="rounded-lg border border-[var(--nordmat-secondary)]/20 bg-gradient-to-r from-[var(--nordmat-secondary)]/10 to-[var(--nordmat-accent)]/10 px-3 py-2">
+            <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-secondary)]">
               {formatPrice(pricePerUnit)} kr
             </span>
-            <span className="ml-1 font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <span className="ml-1 font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               per enhet
             </span>
           </div>
         </div>
-        <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+        <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
           Pris inkluderer {vat}% MVA
         </p>
       </div>
@@ -88,7 +88,7 @@ const ProductSpecificationRow = memo(
   ({ icon, label, value }: ProductSpecificationRowProps) => (
     <div className="flex items-center gap-3">
       {icon}
-      <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-dark)]">
+      <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-dark)]">
         <strong>{label}:</strong> {value}
       </span>
     </div>
@@ -105,26 +105,26 @@ const ProductSpecifications = memo(
   ({ product, volume, isAuthenticated }: ProductSpecificationsProps) => (
     <div className="space-y-3">
       <ProductSpecificationRow
-        icon={<Package2 size={18} className="text-[var(--baladi-primary)]" />}
+        icon={<Package2 size={18} className="text-[var(--nordmat-primary)]" />}
         label="Kartong"
         value={`${product.noOfUnits} enheter`}
       />
 
       <ProductSpecificationRow
-        icon={<Scale size={18} className="text-[var(--baladi-primary)]" />}
+        icon={<Scale size={18} className="text-[var(--nordmat-primary)]" />}
         label="Vekt"
         value={`${product.weight} kg`}
       />
 
       <ProductSpecificationRow
-        icon={<Ruler size={18} className="text-[var(--baladi-primary)]" />}
+        icon={<Ruler size={18} className="text-[var(--nordmat-primary)]" />}
         label="Volum"
         value={`${volume} m³`}
       />
 
       {product.barcode && (
         <ProductSpecificationRow
-          icon={<Barcode size={18} className="text-[var(--baladi-primary)]" />}
+          icon={<Barcode size={18} className="text-[var(--nordmat-primary)]" />}
           label="Barcode"
           value={product.barcode}
         />
@@ -132,7 +132,7 @@ const ProductSpecifications = memo(
 
       {product.supplier?.countryOfOrigin && (
         <ProductSpecificationRow
-          icon={<Truck size={18} className="text-[var(--baladi-primary)]" />}
+          icon={<Truck size={18} className="text-[var(--nordmat-primary)]" />}
           label="Opprinnelsesland"
           value={product.supplier.countryOfOrigin}
         />
@@ -140,7 +140,7 @@ const ProductSpecifications = memo(
 
       {isAuthenticated && product.bestBeforeDate && (
         <ProductSpecificationRow
-          icon={<Calendar size={18} className="text-[var(--baladi-primary)]" />}
+          icon={<Calendar size={18} className="text-[var(--nordmat-primary)]" />}
           label="Utløpsdato"
           value={formatDate(product.bestBeforeDate)}
         />
@@ -159,10 +159,10 @@ const BulkDiscountDisplay = memo(
     if (!bulkDiscounts?.length || !hasVolumeDiscount) return null;
 
     return (
-      <div className="rounded-lg bg-gradient-to-r from-[var(--baladi-primary)]/10 to-[var(--baladi-accent)]/10 p-4">
+      <div className="rounded-lg bg-gradient-to-r from-[var(--nordmat-primary)]/10 to-[var(--nordmat-accent)]/10 p-4">
         <div className="mb-3 flex items-center gap-3">
-          <TrendingDown size={20} className="text-[var(--baladi-primary)]" />
-          <h4 className="font-[family-name:var(--font-sora)] font-semibold text-[var(--baladi-dark)]">
+          <TrendingDown size={20} className="text-[var(--nordmat-primary)]" />
+          <h4 className="font-[family-name:var(--font-sora)] font-semibold text-[var(--nordmat-dark)]">
             Mengderabatter tilgjengelig!
           </h4>
         </div>
@@ -177,19 +177,19 @@ const BulkDiscountDisplay = memo(
                 className="flex items-center justify-between py-1"
               >
                 <div className="flex items-center gap-2">
-                  <Percent size={14} className="text-[var(--baladi-primary)]" />
-                  <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-dark)]">
+                  <Percent size={14} className="text-[var(--nordmat-primary)]" />
+                  <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-dark)]">
                     {discount.minQuantity}+ enheter
                   </span>
                 </div>
-                <span className="rounded-full bg-[var(--baladi-accent)] px-2 py-1 font-[family-name:var(--font-sora)] text-xs font-bold text-white">
+                <span className="rounded-full bg-[var(--nordmat-accent)] px-2 py-1 font-[family-name:var(--font-sora)] text-xs font-bold text-white">
                   {discount.discountPercentage}% rabatt
                 </span>
               </div>
             ))}
         </div>
 
-        <p className="mt-3 font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+        <p className="mt-3 font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
           Rabattene gjelder automatisk ved kassen
         </p>
       </div>
@@ -224,7 +224,7 @@ const QuantitySelector = memo(
           size="lg"
         />
       </div>
-      <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+      <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
         {availableStock > 0 ? 'På lager' : 'Ikke på lager'}
       </span>
     </div>
@@ -461,21 +461,21 @@ function useProductInfo(slug: string) {
 const ProductInfoSkeleton = memo(() => (
   <div className="space-y-6">
     <div className="space-y-4">
-      <div className="h-8 w-3/4 animate-pulse rounded bg-[var(--baladi-light)]" />
-      <div className="h-6 w-full animate-pulse rounded bg-[var(--baladi-light)]" />
-      <div className="h-6 w-2/3 animate-pulse rounded bg-[var(--baladi-light)]" />
+      <div className="h-8 w-3/4 animate-pulse rounded bg-[var(--nordmat-light)]" />
+      <div className="h-6 w-full animate-pulse rounded bg-[var(--nordmat-light)]" />
+      <div className="h-6 w-2/3 animate-pulse rounded bg-[var(--nordmat-light)]" />
     </div>
 
     <div className="space-y-2">
-      <div className="h-10 w-48 animate-pulse rounded bg-[var(--baladi-light)]" />
-      <div className="h-5 w-32 animate-pulse rounded bg-[var(--baladi-light)]" />
+      <div className="h-10 w-48 animate-pulse rounded bg-[var(--nordmat-light)]" />
+      <div className="h-5 w-32 animate-pulse rounded bg-[var(--nordmat-light)]" />
     </div>
 
     <div className="space-y-4">
-      <div className="h-12 w-full animate-pulse rounded bg-[var(--baladi-light)]" />
+      <div className="h-12 w-full animate-pulse rounded bg-[var(--nordmat-light)]" />
       <div className="flex gap-4">
-        <div className="h-12 w-32 animate-pulse rounded bg-[var(--baladi-light)]" />
-        <div className="h-12 flex-1 animate-pulse rounded bg-[var(--baladi-light)]" />
+        <div className="h-12 w-32 animate-pulse rounded bg-[var(--nordmat-light)]" />
+        <div className="h-12 flex-1 animate-pulse rounded bg-[var(--nordmat-light)]" />
       </div>
     </div>
   </div>
@@ -511,10 +511,10 @@ function ProductInfo() {
   return (
     <div className="space-y-6">
       <div className="space-y-3">
-        <h1 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--baladi-dark)] lg:text-3xl">
+        <h1 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--nordmat-dark)] lg:text-3xl">
           {product.name}
         </h1>
-        <p className="font-[family-name:var(--font-dm-sans)] leading-relaxed text-[var(--baladi-gray)]">
+        <p className="font-[family-name:var(--font-dm-sans)] leading-relaxed text-[var(--nordmat-gray)]">
           {product.shortDescription}
         </p>
       </div>

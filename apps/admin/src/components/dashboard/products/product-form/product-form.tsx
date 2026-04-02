@@ -160,7 +160,7 @@ function ProductForm(props: ProductFormProps) {
 
   return (
     <div className="mx-auto max-w-7xl space-y-8">
-      <div className="rounded-xl border border-[var(--baladi-border)] bg-gradient-to-r from-[var(--baladi-primary)] to-[var(--baladi-secondary)] p-6 shadow-lg">
+      <div className="rounded-xl border border-[var(--nordmat-border)] bg-gradient-to-r from-[var(--nordmat-primary)] to-[var(--nordmat-secondary)] p-6 shadow-lg">
         <h1 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-white">
           {defaultValues ? 'Rediger Produkt' : 'Opprett Nytt Produkt'}
         </h1>
@@ -174,12 +174,12 @@ function ProductForm(props: ProductFormProps) {
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div className="space-y-6 lg:col-span-2">
-              <div className="rounded-xl border border-[var(--baladi-border)] bg-white p-6 shadow-sm">
+              <div className="rounded-xl border border-[var(--nordmat-border)] bg-white p-6 shadow-sm">
                 <div className="mb-6 flex items-center space-x-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
                     <Package className="h-5 w-5 text-blue-600" />
                   </div>
-                  <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--baladi-primary)]">
+                  <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--nordmat-primary)]">
                     Grunnleggende Informasjon
                   </h2>
                 </div>
@@ -190,15 +190,15 @@ function ProductForm(props: ProductFormProps) {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Produktnavn *
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Package className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <Package className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Input
                               placeholder="Skriv inn produktnavn"
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                               onChange={(e) => {
                                 field.onChange(e);
@@ -221,20 +221,20 @@ function ProductForm(props: ProductFormProps) {
                     name="slug"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           URL Slug
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Hash className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <Hash className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Input
                               placeholder="produkt-slug"
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                             />
                           </div>
                         </FormControl>
-                        <p className="text-xs text-[var(--baladi-gray)]">
+                        <p className="text-xs text-[var(--nordmat-gray)]">
                           Automatisk generert fra produktnavn
                         </p>
                         <FormMessage />
@@ -247,13 +247,13 @@ function ProductForm(props: ProductFormProps) {
                     name="shortDescription"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Kort Beskrivelse
                         </FormLabel>
                         <FormControl>
                           <Input
                             placeholder="Kort produktbeskrivelse"
-                            className="h-12 rounded-lg border-[var(--baladi-border)] focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                            className="h-12 rounded-lg border-[var(--nordmat-border)] focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                             {...field}
                             value={field.value || ''}
                           />
@@ -268,15 +268,15 @@ function ProductForm(props: ProductFormProps) {
                     name="description"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Fullstendig Beskrivelse
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <FileText className="absolute top-3 left-3 h-4 w-4 text-[var(--baladi-gray)]" />
+                            <FileText className="absolute top-3 left-3 h-4 w-4 text-[var(--nordmat-gray)]" />
                             <Textarea
                               placeholder="Detaljert produktbeskrivelse"
-                              className="min-h-[120px] rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="min-h-[120px] rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                               value={field.value || ''}
                             />
@@ -289,12 +289,12 @@ function ProductForm(props: ProductFormProps) {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-[var(--baladi-border)] bg-white p-6 shadow-sm">
+              <div className="rounded-xl border border-[var(--nordmat-border)] bg-white p-6 shadow-sm">
                 <div className="mb-6 flex items-center space-x-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100">
                     <Tag className="h-5 w-5 text-emerald-600" />
                   </div>
-                  <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--baladi-primary)]">
+                  <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--nordmat-primary)]">
                     Kategorier
                   </h2>
                 </div>
@@ -304,7 +304,7 @@ function ProductForm(props: ProductFormProps) {
                   name="categories"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                      <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                         Velg Kategorier *
                       </FormLabel>
                       <FormControl>
@@ -316,10 +316,10 @@ function ProductForm(props: ProductFormProps) {
                           variant="default"
                           animation={0.2}
                           maxCount={5}
-                          className="h-12 rounded-lg border-[var(--baladi-border)] focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                          className="h-12 rounded-lg border-[var(--nordmat-border)] focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                         />
                       </FormControl>
-                      <p className="text-xs text-[var(--baladi-gray)]">
+                      <p className="text-xs text-[var(--nordmat-gray)]">
                         Velg en eller flere kategorier som best beskriver
                         produktet ditt
                       </p>
@@ -329,12 +329,12 @@ function ProductForm(props: ProductFormProps) {
                 />
               </div>
 
-              <div className="rounded-xl border border-[var(--baladi-border)] bg-white p-6 shadow-sm">
+              <div className="rounded-xl border border-[var(--nordmat-border)] bg-white p-6 shadow-sm">
                 <div className="mb-6 flex items-center space-x-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-pink-100">
                     <ImageIcon className="h-5 w-5 text-pink-600" />
                   </div>
-                  <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--baladi-primary)]">
+                  <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--nordmat-primary)]">
                     Produktbilder
                   </h2>
                 </div>
@@ -344,21 +344,21 @@ function ProductForm(props: ProductFormProps) {
                   name="images"
                   render={() => (
                     <FormItem>
-                      <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                      <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                         Last opp Bilder
                       </FormLabel>
                       <FormControl>
                         <div className="space-y-4">
                           <div
                             onClick={triggerFileInput}
-                            className="flex h-32 cursor-pointer items-center justify-center rounded-lg border-2 border-dashed border-[var(--baladi-border)] bg-gray-50 transition-colors hover:border-[var(--baladi-primary)] hover:bg-[var(--baladi-primary)]/5"
+                            className="flex h-32 cursor-pointer items-center justify-center rounded-lg border-2 border-dashed border-[var(--nordmat-border)] bg-gray-50 transition-colors hover:border-[var(--nordmat-primary)] hover:bg-[var(--nordmat-primary)]/5"
                           >
                             <div className="text-center">
-                              <Upload className="mx-auto h-8 w-8 text-[var(--baladi-gray)]" />
-                              <p className="mt-2 text-sm font-medium text-[var(--baladi-primary)]">
+                              <Upload className="mx-auto h-8 w-8 text-[var(--nordmat-gray)]" />
+                              <p className="mt-2 text-sm font-medium text-[var(--nordmat-primary)]">
                                 Klikk for å laste opp bilder
                               </p>
-                              <p className="text-xs text-[var(--baladi-gray)]">
+                              <p className="text-xs text-[var(--nordmat-gray)]">
                                 PNG, JPG, JPEG opptil 10MB hver
                               </p>
                             </div>
@@ -376,7 +376,7 @@ function ProductForm(props: ProductFormProps) {
                           {(form.getValues('images')?.length ?? 0) > 0 && (
                             <div className="space-y-3">
                               <div className="flex items-center justify-between">
-                                <p className="text-sm font-medium text-[var(--baladi-primary)]">
+                                <p className="text-sm font-medium text-[var(--nordmat-primary)]">
                                   Opplastede Bilder (
                                   {form.getValues('images')?.length ?? 0})
                                 </p>
@@ -385,7 +385,7 @@ function ProductForm(props: ProductFormProps) {
                                   variant="outline"
                                   size="sm"
                                   onClick={triggerFileInput}
-                                  className="h-8 border-[var(--baladi-border)] text-[var(--baladi-primary)] hover:bg-[var(--baladi-primary)] hover:text-white"
+                                  className="h-8 border-[var(--nordmat-border)] text-[var(--nordmat-primary)] hover:bg-[var(--nordmat-primary)] hover:text-white"
                                 >
                                   <Plus className="mr-1 h-3 w-3" />
                                   Legg til Flere
@@ -397,7 +397,7 @@ function ProductForm(props: ProductFormProps) {
                                   (image, index) => (
                                     <div
                                       key={index}
-                                      className="group relative aspect-square overflow-hidden rounded-lg border border-[var(--baladi-border)] bg-gray-100"
+                                      className="group relative aspect-square overflow-hidden rounded-lg border border-[var(--nordmat-border)] bg-gray-100"
                                     >
                                       <Image
                                         src={URL.createObjectURL(image)}
@@ -430,7 +430,7 @@ function ProductForm(props: ProductFormProps) {
                           )}
                         </div>
                       </FormControl>
-                      <p className="text-xs text-[var(--baladi-gray)]">
+                      <p className="text-xs text-[var(--nordmat-gray)]">
                         Last opp høykvalitetsbilder av produktet ditt. Det
                         første bildet vil bli brukt som hovedproduktbilde.
                       </p>
@@ -440,12 +440,12 @@ function ProductForm(props: ProductFormProps) {
                 />
               </div>
 
-              <div className="rounded-xl border border-[var(--baladi-border)] bg-white p-6 shadow-sm">
+              <div className="rounded-xl border border-[var(--nordmat-border)] bg-white p-6 shadow-sm">
                 <div className="mb-6 flex items-center space-x-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-100">
                     <Landmark className="h-5 w-5 text-green-600" />
                   </div>
-                  <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--baladi-primary)]">
+                  <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--nordmat-primary)]">
                     Priser
                   </h2>
                 </div>
@@ -456,18 +456,18 @@ function ProductForm(props: ProductFormProps) {
                     name="costPrice"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Kostpris (kr) *
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Landmark className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <Landmark className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Input
                               type="number"
                               step="0.01"
                               min={0}
                               placeholder="0.00"
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                               onChange={(e) =>
                                 field.onChange(Number(e.target.value))
@@ -476,7 +476,7 @@ function ProductForm(props: ProductFormProps) {
                             />
                           </div>
                         </FormControl>
-                        <p className="text-xs text-[var(--baladi-gray)]">
+                        <p className="text-xs text-[var(--nordmat-gray)]">
                           {`Pris per enhet: ${formatPrice(
                             (field.value || 0) / (form.watch('noOfUnits') || 1),
                           )}`}
@@ -491,18 +491,18 @@ function ProductForm(props: ProductFormProps) {
                     name="salePrice"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Salgspris (kr) *
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Landmark className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-success)]" />
+                            <Landmark className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-success)]" />
                             <Input
                               type="number"
                               step="0.01"
                               min={0}
                               placeholder="0.00"
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                               onChange={(e) =>
                                 field.onChange(Number(e.target.value))
@@ -511,7 +511,7 @@ function ProductForm(props: ProductFormProps) {
                             />
                           </div>
                         </FormControl>
-                        <p className="text-xs text-[var(--baladi-gray)]">
+                        <p className="text-xs text-[var(--nordmat-gray)]">
                           {`Pris per enhet: ${formatPrice(
                             (field.value || 0) / (form.watch('noOfUnits') || 1),
                           )}`}
@@ -526,12 +526,12 @@ function ProductForm(props: ProductFormProps) {
                     name="costPrice"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Kostpris inkl. MVA (kr)
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Landmark className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <Landmark className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Input
                               type="number"
                               disabled
@@ -539,7 +539,7 @@ function ProductForm(props: ProductFormProps) {
                                 (field.value || 0) *
                                 (1 + form.watch('vat') / 100)
                               ).toFixed(2)}
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                             />
                           </div>
                         </FormControl>
@@ -553,12 +553,12 @@ function ProductForm(props: ProductFormProps) {
                     name="salePrice"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Salgspris inkl. MVA (kr)
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Landmark className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-success)]" />
+                            <Landmark className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-success)]" />
                             <Input
                               type="number"
                               disabled
@@ -566,7 +566,7 @@ function ProductForm(props: ProductFormProps) {
                                 (field.value || 0) *
                                 (1 + form.watch('vat') / 100)
                               ).toFixed(2)}
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                             />
                           </div>
                         </FormControl>
@@ -580,18 +580,18 @@ function ProductForm(props: ProductFormProps) {
                     name="vat"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           MVA (%) *
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Percent className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <Percent className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Select
                               onValueChange={field.onChange}
                               defaultValue={field.value.toString()}
                             >
                               <FormControl>
-                                <SelectTrigger className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]">
+                                <SelectTrigger className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]">
                                   <SelectValue placeholder="Velg MVA" />
                                 </SelectTrigger>
                               </FormControl>
@@ -618,17 +618,17 @@ function ProductForm(props: ProductFormProps) {
                     name="noOfUnits"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Antall Enheter *
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <BoxesIcon className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <BoxesIcon className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Input
                               type="number"
                               min={0}
                               placeholder="10"
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                               onChange={(e) => {
                                 field.onChange(Number(e.target.value));
@@ -644,12 +644,12 @@ function ProductForm(props: ProductFormProps) {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-[var(--baladi-border)] bg-white p-6 shadow-sm">
+              <div className="rounded-xl border border-[var(--nordmat-border)] bg-white p-6 shadow-sm">
                 <div className="mb-6 flex items-center space-x-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100">
                     <Tag className="h-5 w-5 text-purple-600" />
                   </div>
-                  <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--baladi-primary)]">
+                  <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--nordmat-primary)]">
                     Produktidentifikatorer
                   </h2>
                 </div>
@@ -660,15 +660,15 @@ function ProductForm(props: ProductFormProps) {
                     name="sku"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           SKU
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Tag className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <Tag className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Input
                               placeholder="Skriv inn SKU"
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                               onChange={(e) => {
                                 field.onChange(e.target.value.toUpperCase());
@@ -686,15 +686,15 @@ function ProductForm(props: ProductFormProps) {
                     name="barcode"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Strekkode
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Barcode className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <Barcode className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Input
                               placeholder="Skriv inn strekkode"
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                               value={field.value || ''}
                             />
@@ -710,18 +710,18 @@ function ProductForm(props: ProductFormProps) {
                     name="weight"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Vekt (kg)
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Weight className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <Weight className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Input
                               type="number"
                               step="0.01"
                               min={0}
                               placeholder="0.00"
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                               onChange={(e) =>
                                 field.onChange(Number(e.target.value))
@@ -737,12 +737,12 @@ function ProductForm(props: ProductFormProps) {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-[var(--baladi-border)] bg-white p-6 shadow-sm">
+              <div className="rounded-xl border border-[var(--nordmat-border)] bg-white p-6 shadow-sm">
                 <div className="mb-6 flex items-center space-x-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-100">
                     <Ruler className="h-5 w-5 text-orange-600" />
                   </div>
-                  <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--baladi-primary)]">
+                  <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--nordmat-primary)]">
                     Dimensjoner
                   </h2>
                 </div>
@@ -753,18 +753,18 @@ function ProductForm(props: ProductFormProps) {
                     name="dimensions.length"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Lengde (cm)
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Ruler className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <Ruler className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Input
                               type="number"
                               step="0.1"
                               min={0}
                               placeholder="0.0"
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                               onChange={(e) =>
                                 field.onChange(Number(e.target.value))
@@ -783,18 +783,18 @@ function ProductForm(props: ProductFormProps) {
                     name="dimensions.width"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Bredde (cm)
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Ruler className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <Ruler className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Input
                               type="number"
                               step="0.1"
                               min={0}
                               placeholder="0.0"
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                               onChange={(e) =>
                                 field.onChange(Number(e.target.value))
@@ -813,18 +813,18 @@ function ProductForm(props: ProductFormProps) {
                     name="dimensions.height"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Høyde (cm)
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Ruler className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <Ruler className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Input
                               type="number"
                               step="0.1"
                               min={0}
                               placeholder="0.0"
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                               onChange={(e) =>
                                 field.onChange(Number(e.target.value))
@@ -842,12 +842,12 @@ function ProductForm(props: ProductFormProps) {
             </div>
 
             <div className="space-y-6">
-              <div className="rounded-xl border border-[var(--baladi-border)] bg-white p-6 shadow-sm">
+              <div className="rounded-xl border border-[var(--nordmat-border)] bg-white p-6 shadow-sm">
                 <div className="mb-6 flex items-center space-x-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100">
                     <Eye className="h-5 w-5 text-gray-600" />
                   </div>
-                  <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--baladi-primary)]">
+                  <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--nordmat-primary)]">
                     Innstillinger
                   </h2>
                 </div>
@@ -858,7 +858,7 @@ function ProductForm(props: ProductFormProps) {
                     name="visibility"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Synlighet
                         </FormLabel>
                         <Select
@@ -866,8 +866,8 @@ function ProductForm(props: ProductFormProps) {
                           defaultValue={field.value}
                         >
                           <FormControl className="relative">
-                            <SelectTrigger className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]">
-                              <Eye className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <SelectTrigger className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]">
+                              <Eye className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                               <SelectValue placeholder="Velg synlighet" />
                             </SelectTrigger>
                           </FormControl>
@@ -890,19 +890,19 @@ function ProductForm(props: ProductFormProps) {
                     control={form.control}
                     name="isActive"
                     render={({ field }) => (
-                      <FormItem className="flex flex-row items-center space-y-0 space-x-3 rounded-lg border border-[var(--baladi-border)] p-4">
+                      <FormItem className="flex flex-row items-center space-y-0 space-x-3 rounded-lg border border-[var(--nordmat-border)] p-4">
                         <FormControl>
                           <Checkbox
                             checked={field.value}
                             onCheckedChange={field.onChange}
-                            className="border-[var(--baladi-border)] data-[state=checked]:bg-[var(--baladi-primary)]"
+                            className="border-[var(--nordmat-border)] data-[state=checked]:bg-[var(--nordmat-primary)]"
                           />
                         </FormControl>
                         <div className="space-y-1 leading-none">
-                          <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                          <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                             Aktivt Produkt
                           </FormLabel>
-                          <p className="text-sm text-[var(--baladi-gray)]">
+                          <p className="text-sm text-[var(--nordmat-gray)]">
                             Produktet vil være synlig og tilgjengelig
                           </p>
                         </div>
@@ -914,19 +914,19 @@ function ProductForm(props: ProductFormProps) {
                     control={form.control}
                     name="hasVolumeDiscount"
                     render={({ field }) => (
-                      <FormItem className="flex flex-row items-center space-y-0 space-x-3 rounded-lg border border-[var(--baladi-border)] p-4">
+                      <FormItem className="flex flex-row items-center space-y-0 space-x-3 rounded-lg border border-[var(--nordmat-border)] p-4">
                         <FormControl>
                           <Checkbox
                             checked={field.value}
                             onCheckedChange={field.onChange}
-                            className="border-[var(--baladi-border)] data-[state=checked]:bg-[var(--baladi-primary)]"
+                            className="border-[var(--nordmat-border)] data-[state=checked]:bg-[var(--nordmat-primary)]"
                           />
                         </FormControl>
                         <div className="space-y-1 leading-none">
-                          <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                          <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                             Er dette produktet egnet for volumrabatt?
                           </FormLabel>
-                          <p className="text-sm text-[var(--baladi-gray)]">
+                          <p className="text-sm text-[var(--nordmat-gray)]">
                             Produktet kan tilbys med rabatt ved kjøp av større
                             mengder
                           </p>
@@ -937,12 +937,12 @@ function ProductForm(props: ProductFormProps) {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-[var(--baladi-border)] bg-white p-6 shadow-sm">
+              <div className="rounded-xl border border-[var(--nordmat-border)] bg-white p-6 shadow-sm">
                 <div className="mb-6 flex items-center space-x-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-100">
                     <Building className="h-5 w-5 text-indigo-600" />
                   </div>
-                  <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--baladi-primary)]">
+                  <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--nordmat-primary)]">
                     Leverandørinformasjon
                   </h2>
                 </div>
@@ -953,15 +953,15 @@ function ProductForm(props: ProductFormProps) {
                     name="supplier.name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Leverandørnavn
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <User className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <User className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Input
                               placeholder="Leverandørnavn"
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                               value={field.value}
                             />
@@ -977,15 +977,15 @@ function ProductForm(props: ProductFormProps) {
                     name="supplier.number"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Leverandørnummer
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Hash className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <Hash className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Input
                               placeholder="Leverandørnummer"
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                               value={field.value || ''}
                             />
@@ -1001,15 +1001,15 @@ function ProductForm(props: ProductFormProps) {
                     name="supplier.location"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Lokasjon
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <MapPin className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <MapPin className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Input
                               placeholder="Leverandørens lokasjon"
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                               value={field.value || ''}
                             />
@@ -1025,15 +1025,15 @@ function ProductForm(props: ProductFormProps) {
                     name="supplier.countryOfOrigin"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           Opprinnelsesland
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Globe className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <Globe className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Input
                               placeholder="Opprinnelsesland"
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                               value={field.value || ''}
                             />
@@ -1049,15 +1049,15 @@ function ProductForm(props: ProductFormProps) {
                     name="supplier.hsCode"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                        <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                           HS Code
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Barcode className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                            <Barcode className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                             <Input
                               placeholder="HS kode"
-                              className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                              className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                               {...field}
                               value={field.value || ''}
                             />
@@ -1076,7 +1076,7 @@ function ProductForm(props: ProductFormProps) {
             <Button
               type="submit"
               size="lg"
-              className="h-12 rounded-lg bg-[var(--baladi-primary)] px-8 font-[family-name:var(--font-sora)] font-semibold text-white shadow-lg transition-all hover:bg-[var(--baladi-primary)]/90 hover:shadow-xl focus:ring-2 focus:ring-[var(--baladi-primary)]/20"
+              className="h-12 rounded-lg bg-[var(--nordmat-primary)] px-8 font-[family-name:var(--font-sora)] font-semibold text-white shadow-lg transition-all hover:bg-[var(--nordmat-primary)]/90 hover:shadow-xl focus:ring-2 focus:ring-[var(--nordmat-primary)]/20"
               disabled={isPending}
             >
               {isPending ? (

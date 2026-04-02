@@ -285,9 +285,9 @@ export function inventoryAlertTemplate(props: InventoryAlertTemplateProps) {
         </div>
         
         <div class="footer">
-            <p><strong>Baladi Admin System</strong></p>
+            <p><strong>Nordmat Admin System</strong></p>
             <p>Denne e-posten ble sendt automatisk fra vårt lagersystem.</p>
-            <p>For spørsmål, kontakt <a href="mailto:support@baladi.no">support@baladi.no</a></p>
+            <p>For spørsmål, kontakt <a href="mailto:support@nordmatengros.no">support@nordmatengros.no</a></p>
         </div>
     </div>
 </body>

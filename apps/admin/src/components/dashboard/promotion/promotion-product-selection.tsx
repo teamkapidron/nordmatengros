@@ -75,15 +75,15 @@ function PromotionProductSelection(props: PromotionProductSelectionProps) {
       <CardHeader className="pb-4">
         <div className="flex items-center justify-between">
           <div>
-            <CardTitle className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+            <CardTitle className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
               Velg Produkter for Produktkampanjeplakat
             </CardTitle>
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               Velg produkter å fremheve i din neste kampanjeplakat
             </p>
           </div>
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--baladi-primary)]/10">
-            <ShoppingBag className="h-5 w-5 text-[var(--baladi-primary)]" />
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--nordmat-primary)]/10">
+            <ShoppingBag className="h-5 w-5 text-[var(--nordmat-primary)]" />
           </div>
         </div>
       </CardHeader>
@@ -91,7 +91,7 @@ function PromotionProductSelection(props: PromotionProductSelectionProps) {
       <CardContent className="space-y-4">
         <div className="space-y-2">
           <div className="relative">
-            <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+            <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
             <Input
               type="text"
               placeholder="Søk etter produkter..."
@@ -104,13 +104,13 @@ function PromotionProductSelection(props: PromotionProductSelectionProps) {
                 variant="ghost"
                 size="sm"
                 onClick={() => setSearchQuery('')}
-                className="absolute top-1/2 right-1 h-6 w-6 -translate-y-1/2 p-0 text-[var(--baladi-gray)] hover:text-[var(--baladi-dark)]"
+                className="absolute top-1/2 right-1 h-6 w-6 -translate-y-1/2 p-0 text-[var(--nordmat-gray)] hover:text-[var(--nordmat-dark)]"
               >
                 <X className="h-4 w-4" />
               </Button>
             )}
           </div>
-          <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+          <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
             Skriv minst 1 tegn for å begynne søket
           </p>
         </div>
@@ -119,8 +119,8 @@ function PromotionProductSelection(props: PromotionProductSelectionProps) {
           <Card
             className={`${
               selectedCount >= maxSelection
-                ? 'border-[var(--baladi-warning)]/20 bg-[var(--baladi-warning)]/5'
-                : 'border-[var(--baladi-success)]/20 bg-[var(--baladi-success)]/5'
+                ? 'border-[var(--nordmat-warning)]/20 bg-[var(--nordmat-warning)]/5'
+                : 'border-[var(--nordmat-success)]/20 bg-[var(--nordmat-success)]/5'
             }`}
           >
             <CardContent className="p-4">
@@ -129,15 +129,15 @@ function PromotionProductSelection(props: PromotionProductSelectionProps) {
                   <CheckCircle
                     className={`h-5 w-5 ${
                       selectedCount >= maxSelection
-                        ? 'text-[var(--baladi-warning)]'
-                        : 'text-[var(--baladi-success)]'
+                        ? 'text-[var(--nordmat-warning)]'
+                        : 'text-[var(--nordmat-success)]'
                     }`}
                   />
                   <span
                     className={`font-[family-name:var(--font-dm-sans)] text-sm font-medium ${
                       selectedCount >= maxSelection
-                        ? 'text-[var(--baladi-warning)]'
-                        : 'text-[var(--baladi-success)]'
+                        ? 'text-[var(--nordmat-warning)]'
+                        : 'text-[var(--nordmat-success)]'
                     }`}
                   >
                     {selectedCount} av {maxSelection} produkt
@@ -154,7 +154,7 @@ function PromotionProductSelection(props: PromotionProductSelectionProps) {
                 </Badge>
               </div>
               {selectedCount >= maxSelection && (
-                <p className="mt-2 font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-warning)]">
+                <p className="mt-2 font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-warning)]">
                   Maksimalt antall produkter valgt. Fjern en for å velge en
                   annen.
                 </p>
@@ -167,10 +167,10 @@ function PromotionProductSelection(props: PromotionProductSelectionProps) {
           <Card>
             <CardContent className="p-8">
               <div className="flex flex-col items-center justify-center text-center">
-                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--baladi-primary)]/10">
-                  <Search className="h-8 w-8 animate-pulse text-[var(--baladi-primary)]" />
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--nordmat-primary)]/10">
+                  <Search className="h-8 w-8 animate-pulse text-[var(--nordmat-primary)]" />
                 </div>
-                <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                   Søker etter produkter...
                 </p>
               </div>
@@ -191,9 +191,9 @@ function PromotionProductSelection(props: PromotionProductSelectionProps) {
                     : 'cursor-not-allowed opacity-60'
                 } ${
                   isSelected
-                    ? 'border-[var(--baladi-primary)] bg-[var(--baladi-primary)]/5'
+                    ? 'border-[var(--nordmat-primary)] bg-[var(--nordmat-primary)]/5'
                     : canSelect
-                      ? 'hover:border-[var(--baladi-primary)]/30'
+                      ? 'hover:border-[var(--nordmat-primary)]/30'
                       : 'border-gray-200'
                 }`}
                 onClick={() => canSelect && toggleProductSelection(product._id)}
@@ -212,8 +212,8 @@ function PromotionProductSelection(props: PromotionProductSelectionProps) {
                       />
                     </div>
 
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--baladi-secondary)]/10">
-                      <Package className="h-6 w-6 text-[var(--baladi-secondary)]" />
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--nordmat-secondary)]/10">
+                      <Package className="h-6 w-6 text-[var(--nordmat-secondary)]" />
                     </div>
 
                     <div className="min-w-0 flex-1">
@@ -221,12 +221,12 @@ function PromotionProductSelection(props: PromotionProductSelectionProps) {
                         <div className="min-w-0 flex-1">
                           <label
                             htmlFor={`product-${product._id}`}
-                            className="line-clamp-2 cursor-pointer font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]"
+                            className="line-clamp-2 cursor-pointer font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]"
                           >
                             {product.name}
                           </label>
 
-                          <p className="mt-1 line-clamp-2 text-xs text-[var(--baladi-gray)]">
+                          <p className="mt-1 line-clamp-2 text-xs text-[var(--nordmat-gray)]">
                             {product.shortDescription}
                           </p>
 
@@ -239,7 +239,7 @@ function PromotionProductSelection(props: PromotionProductSelectionProps) {
                         </div>
 
                         {isSelected && (
-                          <Badge className="ml-2 bg-[var(--baladi-primary)] text-white">
+                          <Badge className="ml-2 bg-[var(--nordmat-primary)] text-white">
                             Valgt
                           </Badge>
                         )}
@@ -255,19 +255,19 @@ function PromotionProductSelection(props: PromotionProductSelectionProps) {
             <Card>
               <CardContent className="p-12">
                 <div className="flex flex-col items-center justify-center text-center">
-                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--baladi-gray)]/10">
+                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--nordmat-gray)]/10">
                     {searchQuery ? (
-                      <Search className="h-8 w-8 text-[var(--baladi-gray)]" />
+                      <Search className="h-8 w-8 text-[var(--nordmat-gray)]" />
                     ) : (
-                      <Package className="h-8 w-8 text-[var(--baladi-gray)]" />
+                      <Package className="h-8 w-8 text-[var(--nordmat-gray)]" />
                     )}
                   </div>
-                  <h4 className="mb-2 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+                  <h4 className="mb-2 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
                     {searchQuery
                       ? 'Ingen produkter funnet'
                       : 'Søk etter produkter'}
                   </h4>
-                  <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                  <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                     {searchQuery
                       ? `Ingen produkter matcher "${searchQuery}". Prøv et annet søkeord.`
                       : 'Bruk søkefeltet ovenfor for å finne produkter å fremheve i kampanjeplakat'}
@@ -279,16 +279,16 @@ function PromotionProductSelection(props: PromotionProductSelectionProps) {
         </div>
 
         {selectedCount > 0 && (
-          <Card className="bg-[var(--baladi-light)]">
+          <Card className="bg-[var(--nordmat-light)]">
             <CardContent className="p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                  <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                     {selectedCount >= maxSelection
                       ? 'Kampanjeplakat klar'
                       : 'Klar til å fremheve i kampanjeplakat'}
                   </p>
-                  <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                  <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                     {selectedCount} av {maxSelection} produkt
                     {selectedCount > 1 ? 'er' : ''} vil bli inkludert
                   </p>
@@ -297,7 +297,7 @@ function PromotionProductSelection(props: PromotionProductSelectionProps) {
                   variant="ghost"
                   size="sm"
                   onClick={() => setSelectedProducts([])}
-                  className="text-[var(--baladi-primary)] hover:text-[var(--baladi-primary)]/80"
+                  className="text-[var(--nordmat-primary)] hover:text-[var(--nordmat-primary)]/80"
                 >
                   Fjern Valg
                 </Button>

@@ -58,7 +58,7 @@ function Carousel(props: CarouselProps) {
   return (
     <div className="relative overflow-hidden shadow-2xl">
       <div
-        className="relative overflow-hidden bg-gradient-to-br from-[var(--baladi-primary)] via-[var(--baladi-secondary)] to-[var(--baladi-primary-dark)]"
+        className="relative overflow-hidden bg-gradient-to-br from-[var(--nordmat-primary)] via-[var(--nordmat-secondary)] to-[var(--nordmat-primary-dark)]"
         style={{
           height: `var(--carousel-height, ${height.mobile})`,
         }}
@@ -100,10 +100,10 @@ function Carousel(props: CarouselProps) {
                   <Button
                     asChild
                     size="lg"
-                    className="hover:shadow-3xl group relative overflow-hidden rounded-full bg-white px-8 py-4 font-[family-name:var(--font-dm-sans)] text-lg font-semibold text-[var(--baladi-primary)] shadow-2xl transition-all duration-300 hover:scale-105"
+                    className="hover:shadow-3xl group relative overflow-hidden rounded-full bg-white px-8 py-4 font-[family-name:var(--font-dm-sans)] text-lg font-semibold text-[var(--nordmat-primary)] shadow-2xl transition-all duration-300 hover:scale-105"
                   >
                     <Link href={slide.ctaLink}>
-                      <div className="absolute inset-0 bg-gradient-to-r from-[var(--baladi-light)] to-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-[var(--nordmat-light)] to-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
                       <div className="relative flex items-center gap-2">
                         <span>{slide.ctaText}</span>
@@ -173,7 +173,7 @@ function Carousel(props: CarouselProps) {
       {autoPlayInterval > 0 && (
         <div className="absolute bottom-0 left-0 right-0 z-30 h-1 bg-white/20">
           <div
-            className="h-full bg-gradient-to-r from-[var(--baladi-accent)] to-white transition-all duration-100 ease-linear"
+            className="h-full bg-gradient-to-r from-[var(--nordmat-accent)] to-white transition-all duration-100 ease-linear"
             style={{
               width: '100%',
               animation: `slideProgress ${autoPlayInterval}ms linear infinite`,

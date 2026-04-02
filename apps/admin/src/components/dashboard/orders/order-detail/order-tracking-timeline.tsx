@@ -62,19 +62,19 @@ function OrderTrackingTimeline(props: OrderTrackingTimelineProps) {
   );
 
   return (
-    <Card className="border-[var(--baladi-border)] shadow-lg">
-      <CardHeader className="border-b border-[var(--baladi-border)]">
-        <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--baladi-dark)]">
+    <Card className="border-[var(--nordmat-border)] shadow-lg">
+      <CardHeader className="border-b border-[var(--nordmat-border)]">
+        <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--nordmat-dark)]">
           Ordre Sporing
         </h2>
-        <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+        <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
           Følg fremdriften til din ordre
         </p>
       </CardHeader>
 
       <CardContent className="p-8">
         <div className="relative">
-          <div className="absolute left-8 top-0 h-full w-0.5 bg-gradient-to-b from-[var(--baladi-border)] to-[var(--baladi-muted)]"></div>
+          <div className="absolute left-8 top-0 h-full w-0.5 bg-gradient-to-b from-[var(--nordmat-border)] to-[var(--nordmat-muted)]"></div>
 
           <div className="space-y-10">
             {orderStatuses.map((step, index) => {
@@ -89,14 +89,14 @@ function OrderTrackingTimeline(props: OrderTrackingTimelineProps) {
                       isActive
                         ? isPast
                           ? 'border-green-200 bg-gradient-to-br from-green-400 to-green-600 text-white shadow-lg shadow-green-200'
-                          : 'border-[var(--baladi-primary)]/30 shadow-[var(--baladi-primary)]/30 bg-gradient-to-br from-[var(--baladi-primary)] to-[var(--baladi-secondary)] text-white shadow-lg'
-                        : 'border-[var(--baladi-border)] bg-[var(--baladi-muted)] text-[var(--baladi-gray)]'
+                          : 'border-[var(--nordmat-primary)]/30 shadow-[var(--nordmat-primary)]/30 bg-gradient-to-br from-[var(--nordmat-primary)] to-[var(--nordmat-secondary)] text-white shadow-lg'
+                        : 'border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] text-[var(--nordmat-gray)]'
                     }`}
                   >
                     {getStatusIcon(step.status)}
 
                     {isCurrent && (
-                      <div className="absolute inset-0 animate-pulse rounded-full border-4 border-[var(--baladi-primary)] opacity-75"></div>
+                      <div className="absolute inset-0 animate-pulse rounded-full border-4 border-[var(--nordmat-primary)] opacity-75"></div>
                     )}
                   </div>
 
@@ -104,15 +104,15 @@ function OrderTrackingTimeline(props: OrderTrackingTimelineProps) {
                     <div
                       className={`rounded-lg p-4 transition-all duration-300 ${
                         isActive
-                          ? 'from-[var(--baladi-primary)]/5 to-[var(--baladi-secondary)]/5 bg-gradient-to-r'
-                          : 'bg-[var(--baladi-muted)]/50'
+                          ? 'from-[var(--nordmat-primary)]/5 to-[var(--nordmat-secondary)]/5 bg-gradient-to-r'
+                          : 'bg-[var(--nordmat-muted)]/50'
                       }`}
                     >
                       <h3
                         className={`font-[family-name:var(--font-sora)] text-lg font-bold transition-colors duration-300 ${
                           isActive
-                            ? 'text-[var(--baladi-dark)]'
-                            : 'text-[var(--baladi-gray)]'
+                            ? 'text-[var(--nordmat-dark)]'
+                            : 'text-[var(--nordmat-gray)]'
                         }`}
                       >
                         {step.label}
@@ -121,8 +121,8 @@ function OrderTrackingTimeline(props: OrderTrackingTimelineProps) {
                       <p
                         className={`mt-1 font-[family-name:var(--font-dm-sans)] text-sm transition-colors duration-300 ${
                           isActive
-                            ? 'text-[var(--baladi-gray)]'
-                            : 'text-[var(--baladi-gray)]/70'
+                            ? 'text-[var(--nordmat-gray)]'
+                            : 'text-[var(--nordmat-gray)]/70'
                         }`}
                       >
                         {step.description}
@@ -130,8 +130,8 @@ function OrderTrackingTimeline(props: OrderTrackingTimelineProps) {
 
                       {isActive && order?.createdAt && (
                         <div className="mt-3 flex items-center gap-2">
-                          <div className="h-2 w-2 rounded-full bg-[var(--baladi-primary)]"></div>
-                          <p className="font-[family-name:var(--font-dm-sans)] text-xs font-medium text-[var(--baladi-primary)]">
+                          <div className="h-2 w-2 rounded-full bg-[var(--nordmat-primary)]"></div>
+                          <p className="font-[family-name:var(--font-dm-sans)] text-xs font-medium text-[var(--nordmat-primary)]">
                             {isCurrent
                               ? `Oppdatert ${formatDate(new Date(order.createdAt), "MMM d, yyyy 'kl.' HH:mm")}`
                               : 'Fullført'}

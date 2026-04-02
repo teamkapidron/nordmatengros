@@ -41,29 +41,29 @@ function ProductTableContent() {
 
   return (
     <div className="relative">
-      <div className="max-h-[700px] overflow-auto rounded-xl border border-[var(--baladi-border)] bg-white shadow-sm">
+      <div className="max-h-[700px] overflow-auto rounded-xl border border-[var(--nordmat-border)] bg-white shadow-sm">
         <Table className="w-full">
           <TableHeader>
-            <TableRow className="border-b border-[var(--baladi-border)] bg-[var(--baladi-light)]">
-              <TableHead className="sticky top-0 z-50 bg-[var(--baladi-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-primary)]">
+            <TableRow className="border-b border-[var(--nordmat-border)] bg-[var(--nordmat-light)]">
+              <TableHead className="sticky top-0 z-50 bg-[var(--nordmat-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-primary)]">
                 Produktdetaljer
               </TableHead>
-              <TableHead className="sticky top-0 z-50 bg-[var(--baladi-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-primary)]">
+              <TableHead className="sticky top-0 z-50 bg-[var(--nordmat-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-primary)]">
                 Priser & SKU
               </TableHead>
-              <TableHead className="sticky top-0 z-50 bg-[var(--baladi-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-primary)]">
+              <TableHead className="sticky top-0 z-50 bg-[var(--nordmat-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-primary)]">
                 Lager
               </TableHead>
-              <TableHead className="sticky top-0 z-50 bg-[var(--baladi-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-primary)]">
+              <TableHead className="sticky top-0 z-50 bg-[var(--nordmat-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-primary)]">
                 Leverandør
               </TableHead>
-              <TableHead className="sticky top-0 z-50 bg-[var(--baladi-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-primary)]">
+              <TableHead className="sticky top-0 z-50 bg-[var(--nordmat-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-primary)]">
                 Kategorier
               </TableHead>
-              <TableHead className="sticky top-0 z-50 bg-[var(--baladi-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-primary)]">
+              <TableHead className="sticky top-0 z-50 bg-[var(--nordmat-light)] p-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-primary)]">
                 Status
               </TableHead>
-              <TableHead className="sticky top-0 z-50 bg-[var(--baladi-light)] p-4 text-center font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-primary)]">
+              <TableHead className="sticky top-0 z-50 bg-[var(--nordmat-light)] p-4 text-center font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-primary)]">
                 Handlinger
               </TableHead>
             </TableRow>
@@ -83,8 +83,8 @@ function ProductTableContent() {
               return (
                 <TableRow
                   key={product._id}
-                  className={`cursor-pointer border-b border-[var(--baladi-border)] transition-colors hover:bg-[var(--baladi-muted)] ${
-                    index % 2 === 0 ? 'bg-white' : 'bg-[var(--baladi-light)]'
+                  className={`cursor-pointer border-b border-[var(--nordmat-border)] transition-colors hover:bg-[var(--nordmat-muted)] ${
+                    index % 2 === 0 ? 'bg-white' : 'bg-[var(--nordmat-light)]'
                   }`}
                   onClick={() => {
                     router.push(`/dashboard/products/edit/${product.slug}`);
@@ -92,7 +92,7 @@ function ProductTableContent() {
                 >
                   <TableCell className="p-4">
                     <div className="flex items-start space-x-4">
-                      <div className="relative h-16 w-16 overflow-hidden rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)]">
+                      <div className="relative h-16 w-16 overflow-hidden rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)]">
                         {product.images && product.images.length > 0 ? (
                           <Image
                             alt={product.name}
@@ -103,15 +103,15 @@ function ProductTableContent() {
                           />
                         ) : (
                           <div className="flex h-full w-full items-center justify-center">
-                            <Package className="h-6 w-6 text-[var(--baladi-gray)]" />
+                            <Package className="h-6 w-6 text-[var(--nordmat-gray)]" />
                           </div>
                         )}
                       </div>
                       <div className="min-w-0 flex-1">
-                        <h3 className="truncate font-[family-name:var(--font-sora)] text-base font-semibold text-[var(--baladi-primary)]">
+                        <h3 className="truncate font-[family-name:var(--font-sora)] text-base font-semibold text-[var(--nordmat-primary)]">
                           {product.name}
                         </h3>
-                        <p className="mt-1 line-clamp-2 text-sm text-[var(--baladi-gray)]">
+                        <p className="mt-1 line-clamp-2 text-sm text-[var(--nordmat-gray)]">
                           {product.shortDescription ||
                             product.description ||
                             'Ingen beskrivelse tilgjengelig'}
@@ -142,7 +142,7 @@ function ProductTableContent() {
                             <span className="text-sm text-gray-600">
                               Med MVA:
                             </span>
-                            <span className="font-[family-name:var(--font-sora)] text-base font-semibold text-[var(--baladi-primary)]">
+                            <span className="font-[family-name:var(--font-sora)] text-base font-semibold text-[var(--nordmat-primary)]">
                               {formatPrice(priceWithVat)} kr
                             </span>
                           </div>
@@ -205,14 +205,14 @@ function ProductTableContent() {
                         <span className="font-medium">{stockStatus.label}</span>
                       </div>
                       <div className="space-y-1">
-                        <div className="text-sm text-[var(--baladi-gray)]">
+                        <div className="text-sm text-[var(--nordmat-gray)]">
                           Enheter: {product.noOfUnits}
                         </div>
-                        <div className="text-xs text-[var(--baladi-gray)]">
+                        <div className="text-xs text-[var(--nordmat-gray)]">
                           Vekt: {product.weight}kg
                         </div>
                         {product.dimensions && (
-                          <div className="text-xs text-[var(--baladi-gray)]">
+                          <div className="text-xs text-[var(--nordmat-gray)]">
                             Dimensjoner: {product.dimensions.length}×
                             {product.dimensions.width}×
                             {product.dimensions.height}
@@ -315,7 +315,7 @@ function ProductTableContent() {
                             .map((category, idx) => (
                               <span
                                 key={idx}
-                                className="inline-flex items-center rounded-md bg-[var(--baladi-primary)]/10 px-2.5 py-1 text-xs font-medium text-[var(--baladi-primary)]"
+                                className="inline-flex items-center rounded-md bg-[var(--nordmat-primary)]/10 px-2.5 py-1 text-xs font-medium text-[var(--nordmat-primary)]"
                               >
                                 <Tag className="mr-1 h-3 w-3" />
                                 {category.name}
@@ -328,7 +328,7 @@ function ProductTableContent() {
                           )}
                         </div>
                       ) : (
-                        <span className="text-sm text-[var(--baladi-gray)]">
+                        <span className="text-sm text-[var(--nordmat-gray)]">
                           Ingen kategorier
                         </span>
                       )}
@@ -365,7 +365,7 @@ function ProductTableContent() {
                     <div className="flex items-center justify-center space-x-2">
                       <Link
                         href={`/dashboard/products/edit/${product.slug}`}
-                        className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--baladi-primary)]/10 text-[var(--baladi-primary)] transition-colors hover:bg-[var(--baladi-primary)]/20"
+                        className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--nordmat-primary)]/10 text-[var(--nordmat-primary)] transition-colors hover:bg-[var(--nordmat-primary)]/20"
                         title="Rediger Produkt"
                       >
                         <EditIcon className="h-4 w-4" />
@@ -388,18 +388,18 @@ function getStockStatus(stock: number) {
   if (stock === 0)
     return {
       label: 'Utsolgt',
-      color: 'text-[var(--baladi-error)] bg-red-50',
+      color: 'text-[var(--nordmat-error)] bg-red-50',
       badge: 'bg-red-100 text-red-800',
     };
   if (stock < 10)
     return {
       label: `Lav Lagerbeholdning (${stock})`,
-      color: 'text-[var(--baladi-warning)] bg-amber-50',
+      color: 'text-[var(--nordmat-warning)] bg-amber-50',
       badge: 'bg-amber-100 text-amber-800',
     };
   return {
     label: stock.toString(),
-    color: 'text-[var(--baladi-success)] bg-green-50',
+    color: 'text-[var(--nordmat-success)] bg-green-50',
     badge: 'bg-green-100 text-green-800',
   };
 }

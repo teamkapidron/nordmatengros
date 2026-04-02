@@ -11,7 +11,7 @@ import Footer from '@/components/common/footer/footer';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: `Produktdetaljer | Baladi Engros`,
+    title: `Produktdetaljer | Nordmat Engros`,
   };
 }
 

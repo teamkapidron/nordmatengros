@@ -58,18 +58,18 @@ function OnboardingForm() {
             name="companyName"
             render={({ field }) => (
               <FormItem className="space-y-2">
-                <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
-                  <Building2 className="h-4 w-4 text-[var(--baladi-gray)]" />
+                <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
+                  <Building2 className="h-4 w-4 text-[var(--nordmat-gray)]" />
                   Bedriftsnavn
                 </FormLabel>
                 <FormControl>
                   <Input
                     {...field}
                     placeholder="Skriv inn navnet på bedriften din"
-                    className="w-full rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)] px-4 py-3 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--baladi-primary)] focus:bg-white focus:ring-2 focus:ring-[var(--baladi-primary)]/20"
+                    className="w-full rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] px-4 py-3 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--nordmat-primary)] focus:bg-white focus:ring-2 focus:ring-[var(--nordmat-primary)]/20"
                   />
                 </FormControl>
-                <FormMessage className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-error)]" />
+                <FormMessage className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-error)]" />
               </FormItem>
             )}
           />
@@ -79,8 +79,8 @@ function OnboardingForm() {
             name="organizationNumber"
             render={({ field }) => (
               <FormItem className="space-y-2">
-                <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
-                  <Hash className="h-4 w-4 text-[var(--baladi-gray)]" />
+                <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
+                  <Hash className="h-4 w-4 text-[var(--nordmat-gray)]" />
                   Organisasjonsnummer
                 </FormLabel>
                 <FormControl>
@@ -88,10 +88,10 @@ function OnboardingForm() {
                     {...field}
                     type="number"
                     placeholder="123456789"
-                    className="w-full rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)] px-4 py-3 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--baladi-primary)] focus:bg-white focus:ring-2 focus:ring-[var(--baladi-primary)]/20"
+                    className="w-full rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] px-4 py-3 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--nordmat-primary)] focus:bg-white focus:ring-2 focus:ring-[var(--nordmat-primary)]/20"
                   />
                 </FormControl>
-                <FormMessage className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-error)]" />
+                <FormMessage className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-error)]" />
               </FormItem>
             )}
           />
@@ -101,8 +101,8 @@ function OnboardingForm() {
             name="phoneNumber"
             render={({ field }) => (
               <FormItem className="space-y-2">
-                <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
-                  <Phone className="h-4 w-4 text-[var(--baladi-gray)]" />
+                <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
+                  <Phone className="h-4 w-4 text-[var(--nordmat-gray)]" />
                   Telefonnummer
                 </FormLabel>
                 <FormControl>
@@ -110,10 +110,10 @@ function OnboardingForm() {
                     {...field}
                     type="tel"
                     placeholder="+47 123 45 678"
-                    className="w-full rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)] px-4 py-3 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--baladi-primary)] focus:bg-white focus:ring-2 focus:ring-[var(--baladi-primary)]/20"
+                    className="w-full rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] px-4 py-3 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--nordmat-primary)] focus:bg-white focus:ring-2 focus:ring-[var(--nordmat-primary)]/20"
                   />
                 </FormControl>
-                <FormMessage className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-error)]" />
+                <FormMessage className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-error)]" />
               </FormItem>
             )}
           />
@@ -123,18 +123,18 @@ function OnboardingForm() {
             name="address"
             render={({ field }) => (
               <FormItem className="space-y-2">
-                <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
-                  <MapPin className="h-4 w-4 text-[var(--baladi-gray)]" />
+                <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
+                  <MapPin className="h-4 w-4 text-[var(--nordmat-gray)]" />
                   Gateadresse
                 </FormLabel>
                 <FormControl>
                   <Input
                     {...field}
                     placeholder="f.eks. Storgata 1"
-                    className="w-full rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)] px-4 py-3 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--baladi-primary)] focus:bg-white focus:ring-2 focus:ring-[var(--baladi-primary)]/20"
+                    className="w-full rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] px-4 py-3 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--nordmat-primary)] focus:bg-white focus:ring-2 focus:ring-[var(--nordmat-primary)]/20"
                   />
                 </FormControl>
-                <FormMessage className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-error)]" />
+                <FormMessage className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-error)]" />
               </FormItem>
             )}
           />
@@ -145,18 +145,18 @@ function OnboardingForm() {
               name="postalCode"
               render={({ field }) => (
                 <FormItem className="space-y-2">
-                  <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
-                    <Hash className="h-4 w-4 text-[var(--baladi-gray)]" />
+                  <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
+                    <Hash className="h-4 w-4 text-[var(--nordmat-gray)]" />
                     Postnummer
                   </FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       placeholder="f.eks. 0150"
-                      className="w-full rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)] px-4 py-3 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--baladi-primary)] focus:bg-white focus:ring-2 focus:ring-[var(--baladi-primary)]/20"
+                      className="w-full rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] px-4 py-3 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--nordmat-primary)] focus:bg-white focus:ring-2 focus:ring-[var(--nordmat-primary)]/20"
                     />
                   </FormControl>
-                  <FormMessage className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-error)]" />
+                  <FormMessage className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-error)]" />
                 </FormItem>
               )}
             />
@@ -166,26 +166,26 @@ function OnboardingForm() {
               name="city"
               render={({ field }) => (
                 <FormItem className="space-y-2">
-                  <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
-                    <Building2 className="h-4 w-4 text-[var(--baladi-gray)]" />
+                  <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
+                    <Building2 className="h-4 w-4 text-[var(--nordmat-gray)]" />
                     By
                   </FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       placeholder="f.eks. Oslo"
-                      className="w-full rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)] px-4 py-3 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--baladi-primary)] focus:bg-white focus:ring-2 focus:ring-[var(--baladi-primary)]/20"
+                      className="w-full rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] px-4 py-3 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--nordmat-primary)] focus:bg-white focus:ring-2 focus:ring-[var(--nordmat-primary)]/20"
                     />
                   </FormControl>
-                  <FormMessage className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-error)]" />
+                  <FormMessage className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-error)]" />
                 </FormItem>
               )}
             />
           </div>
 
           <div className="flex items-center justify-center">
-            <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
-              <span className="text-[var(--baladi-error)]">*</span> Alle felt er
+            <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
+              <span className="text-[var(--nordmat-error)]">*</span> Alle felt er
               påkrevd for videre behandling
             </p>
           </div>
@@ -193,7 +193,7 @@ function OnboardingForm() {
           <Button
             type="submit"
             disabled={onboardingMutation.isPending}
-            className="group relative w-full overflow-hidden rounded-lg bg-[var(--baladi-primary)] px-6 py-4 font-[family-name:var(--font-dm-sans)] text-base font-semibold text-white shadow-md transition-all duration-200 hover:bg-[var(--baladi-secondary)] hover:shadow-lg focus:ring-4 focus:ring-[var(--baladi-primary)]/30 focus:outline-none disabled:cursor-not-allowed disabled:opacity-70"
+            className="group relative w-full overflow-hidden rounded-lg bg-[var(--nordmat-primary)] px-6 py-4 font-[family-name:var(--font-dm-sans)] text-base font-semibold text-white shadow-md transition-all duration-200 hover:bg-[var(--nordmat-secondary)] hover:shadow-lg focus:ring-4 focus:ring-[var(--nordmat-primary)]/30 focus:outline-none disabled:cursor-not-allowed disabled:opacity-70"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 transition-opacity duration-200 group-hover:opacity-100"></div>
 

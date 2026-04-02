@@ -116,7 +116,7 @@ export function pickingListTemplate(order: OrderResponse) {
     <div class="top-info">
       <div>
         <h1>Plukkeliste</h1>
-        <div><strong>Baladi Engros</strong></div>
+        <div><strong>Nordmat Engros</strong></div>
       </div>
       <div style="text-align: right;">
         <strong>Dato:</strong> ${new Date().toLocaleDateString()}
@@ -277,7 +277,7 @@ export function freightLabelTemplate(order: OrderResponse) {
   <div class="label">
     <div class="section">
       <h2>Frakt Fra</h2>
-      <div><strong>Baladi Engros</strong></div>
+      <div><strong>Nordmat Engros</strong></div>
       <div>Andersrudveien 1</div>
       <div>1914 Ytre Enebakk</div>
       <div>Norge</div>

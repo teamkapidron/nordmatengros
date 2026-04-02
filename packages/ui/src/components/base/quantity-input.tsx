@@ -66,26 +66,26 @@ const QuantityInput = React.forwardRef<HTMLDivElement, QuantityInputProps>(
       <div
         ref={ref}
         className={cn(
-          'relative flex items-center overflow-hidden rounded-lg border border-[var(--baladi-border)] bg-white shadow-sm transition-all duration-200',
-          'focus-within:ring-[var(--baladi-primary)]/20 focus-within:border-[var(--baladi-primary)] focus-within:ring-2',
+          'relative flex items-center overflow-hidden rounded-lg border border-[var(--nordmat-border)] bg-white shadow-sm transition-all duration-200',
+          'focus-within:ring-[var(--nordmat-primary)]/20 focus-within:border-[var(--nordmat-primary)] focus-within:ring-2',
           container,
           disabled && 'cursor-not-allowed opacity-60',
           className,
         )}
       >
         {/* Decorative gradient line */}
-        <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-[var(--baladi-primary)] via-[var(--baladi-secondary)] to-[var(--baladi-primary)] opacity-30" />
+        <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-[var(--nordmat-primary)] via-[var(--nordmat-secondary)] to-[var(--nordmat-primary)] opacity-30" />
 
         <button
           type="button"
           onClick={handleDecrement}
           disabled={value <= min || disabled}
           className={cn(
-            'group relative flex h-full cursor-pointer items-center justify-center border-r border-[var(--baladi-border)] bg-gradient-to-b from-[var(--baladi-muted)] to-white transition-all duration-200',
-            'hover:from-[var(--baladi-primary)]/10 hover:to-[var(--baladi-primary)]/5 hover:border-[var(--baladi-primary)]/30',
-            'active:from-[var(--baladi-primary)]/20 active:to-[var(--baladi-primary)]/10 active:scale-95',
-            'disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:from-[var(--baladi-muted)] disabled:hover:to-white',
-            'focus:ring-[var(--baladi-primary)]/20 focus:outline-none focus:ring-2 focus:ring-offset-1',
+            'group relative flex h-full cursor-pointer items-center justify-center border-r border-[var(--nordmat-border)] bg-gradient-to-b from-[var(--nordmat-muted)] to-white transition-all duration-200',
+            'hover:from-[var(--nordmat-primary)]/10 hover:to-[var(--nordmat-primary)]/5 hover:border-[var(--nordmat-primary)]/30',
+            'active:from-[var(--nordmat-primary)]/20 active:to-[var(--nordmat-primary)]/10 active:scale-95',
+            'disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:from-[var(--nordmat-muted)] disabled:hover:to-white',
+            'focus:ring-[var(--nordmat-primary)]/20 focus:outline-none focus:ring-2 focus:ring-offset-1',
             button,
           )}
           aria-label="Decrease quantity"
@@ -93,20 +93,20 @@ const QuantityInput = React.forwardRef<HTMLDivElement, QuantityInputProps>(
           <div className="flex h-6 w-6 items-center justify-center rounded-full bg-white/50 transition-all duration-200 group-hover:bg-white group-hover:shadow-sm group-active:scale-90">
             <Minus
               size={icon}
-              className="group-disabled:text-[var(--baladi-gray)]/50 text-[var(--baladi-gray)] transition-colors duration-200 group-hover:text-[var(--baladi-primary)]"
+              className="group-disabled:text-[var(--nordmat-gray)]/50 text-[var(--nordmat-gray)] transition-colors duration-200 group-hover:text-[var(--nordmat-primary)]"
             />
           </div>
         </button>
 
         <div
           className={cn(
-            'to-[var(--baladi-muted)]/30 flex h-full items-center justify-center bg-gradient-to-b from-white font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--baladi-dark)]',
+            'to-[var(--nordmat-muted)]/30 flex h-full items-center justify-center bg-gradient-to-b from-white font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--nordmat-dark)]',
             valueWidth,
           )}
         >
           <span className="relative">
             {value}
-            <div className="bg-[var(--baladi-primary)]/5 absolute inset-0 rounded opacity-0 transition-opacity duration-200" />
+            <div className="bg-[var(--nordmat-primary)]/5 absolute inset-0 rounded opacity-0 transition-opacity duration-200" />
           </span>
         </div>
 
@@ -115,11 +115,11 @@ const QuantityInput = React.forwardRef<HTMLDivElement, QuantityInputProps>(
           onClick={handleIncrement}
           disabled={value >= max || disabled}
           className={cn(
-            'group relative flex h-full cursor-pointer items-center justify-center border-l border-[var(--baladi-border)] bg-gradient-to-b from-[var(--baladi-muted)] to-white transition-all duration-200',
-            'hover:from-[var(--baladi-primary)]/10 hover:to-[var(--baladi-primary)]/5 hover:border-[var(--baladi-primary)]/30',
-            'active:from-[var(--baladi-primary)]/20 active:to-[var(--baladi-primary)]/10 active:scale-95',
-            'disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:from-[var(--baladi-muted)] disabled:hover:to-white',
-            'focus:ring-[var(--baladi-primary)]/20 focus:outline-none focus:ring-2 focus:ring-offset-1',
+            'group relative flex h-full cursor-pointer items-center justify-center border-l border-[var(--nordmat-border)] bg-gradient-to-b from-[var(--nordmat-muted)] to-white transition-all duration-200',
+            'hover:from-[var(--nordmat-primary)]/10 hover:to-[var(--nordmat-primary)]/5 hover:border-[var(--nordmat-primary)]/30',
+            'active:from-[var(--nordmat-primary)]/20 active:to-[var(--nordmat-primary)]/10 active:scale-95',
+            'disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:from-[var(--nordmat-muted)] disabled:hover:to-white',
+            'focus:ring-[var(--nordmat-primary)]/20 focus:outline-none focus:ring-2 focus:ring-offset-1',
             button,
           )}
           aria-label="Increase quantity"
@@ -127,7 +127,7 @@ const QuantityInput = React.forwardRef<HTMLDivElement, QuantityInputProps>(
           <div className="flex h-6 w-6 items-center justify-center rounded-full bg-white/50 transition-all duration-200 group-hover:bg-white group-hover:shadow-sm group-active:scale-90">
             <Plus
               size={icon}
-              className="group-disabled:text-[var(--baladi-gray)]/50 text-[var(--baladi-gray)] transition-colors duration-200 group-hover:text-[var(--baladi-primary)]"
+              className="group-disabled:text-[var(--nordmat-gray)]/50 text-[var(--nordmat-gray)] transition-colors duration-200 group-hover:text-[var(--nordmat-primary)]"
             />
           </div>
         </button>

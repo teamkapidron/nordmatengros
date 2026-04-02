@@ -68,44 +68,44 @@ function OrderSummary({ order }: OrderSummaryProps) {
     <div className="space-y-6">
       <div className="rounded-lg bg-white p-6 shadow-sm">
         <div className="mb-4 flex items-center gap-3">
-          <div className="bg-[var(--baladi-primary)]/10 flex h-8 w-8 items-center justify-center rounded-full">
-            <Receipt size={16} className="text-[var(--baladi-primary)]" />
+          <div className="bg-[var(--nordmat-primary)]/10 flex h-8 w-8 items-center justify-center rounded-full">
+            <Receipt size={16} className="text-[var(--nordmat-primary)]" />
           </div>
-          <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+          <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
             Bestillingssammendrag
           </h3>
         </div>
 
         <div className="space-y-3">
           <div className="flex justify-between font-[family-name:var(--font-dm-sans)]">
-            <span className="text-[var(--baladi-gray)]">
+            <span className="text-[var(--nordmat-gray)]">
               Subtotal (ekskl. mva)
             </span>
-            <span className="font-medium text-[var(--baladi-dark)]">
+            <span className="font-medium text-[var(--nordmat-dark)]">
               {formatPrice(subtotal)} kr
             </span>
           </div>
 
           <div className="flex justify-between font-[family-name:var(--font-dm-sans)]">
-            <span className="text-[var(--baladi-gray)]">MVA</span>
-            <span className="font-medium text-[var(--baladi-dark)]">
+            <span className="text-[var(--nordmat-gray)]">MVA</span>
+            <span className="font-medium text-[var(--nordmat-dark)]">
               {formatPrice(totalVatAmount)} kr
             </span>
           </div>
 
           <div className="flex justify-between font-[family-name:var(--font-dm-sans)]">
-            <span className="text-[var(--baladi-gray)]">
+            <span className="text-[var(--nordmat-gray)]">
               Subtotal (inkl. mva)
             </span>
-            <span className="font-medium text-[var(--baladi-dark)]">
+            <span className="font-medium text-[var(--nordmat-dark)]">
               {formatPrice(subtotalWithVat)} kr
             </span>
           </div>
 
           {totalDiscount > 0 && (
             <div className="flex justify-between font-[family-name:var(--font-dm-sans)]">
-              <span className="text-[var(--baladi-success)]">Rabatt</span>
-              <span className="font-medium text-[var(--baladi-success)]">
+              <span className="text-[var(--nordmat-success)]">Rabatt</span>
+              <span className="font-medium text-[var(--nordmat-success)]">
                 -{formatPrice(totalDiscount)} kr
               </span>
             </div>
@@ -113,8 +113,8 @@ function OrderSummary({ order }: OrderSummaryProps) {
 
           {totalBulkDiscount > 0 && (
             <div className="flex justify-between font-[family-name:var(--font-dm-sans)]">
-              <span className="text-[var(--baladi-success)]">Mengderabatt</span>
-              <span className="font-medium text-[var(--baladi-success)]">
+              <span className="text-[var(--nordmat-success)]">Mengderabatt</span>
+              <span className="font-medium text-[var(--nordmat-success)]">
                 -{formatPrice(totalBulkDiscount)} kr
               </span>
             </div>
@@ -123,10 +123,10 @@ function OrderSummary({ order }: OrderSummaryProps) {
           <Separator />
 
           <div className="flex justify-between">
-            <span className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+            <span className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
               Totalt å betale
             </span>
-            <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-primary)]">
+            <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-primary)]">
               {formatPrice(finalTotal)} kr
             </span>
           </div>

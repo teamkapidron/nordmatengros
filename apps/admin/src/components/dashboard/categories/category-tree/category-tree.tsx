@@ -70,16 +70,16 @@ function CategoryTree() {
   );
 
   return (
-    <div className="rounded-xl border border-[var(--baladi-border)] bg-white shadow-sm">
-      <div className="border-b border-[var(--baladi-border)] p-4">
+    <div className="rounded-xl border border-[var(--nordmat-border)] bg-white shadow-sm">
+      <div className="border-b border-[var(--nordmat-border)] p-4">
         <div className="mb-4 flex items-center justify-between">
-          <h2 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-primary)]">
+          <h2 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-primary)]">
             Kategorier
           </h2>
           <CreateCategoryDialog>
             <Button
               size="sm"
-              className="hover:bg-[var(--baladi-primary)]/90 h-8 bg-[var(--baladi-primary)]"
+              className="hover:bg-[var(--nordmat-primary)]/90 h-8 bg-[var(--nordmat-primary)]"
             >
               <Plus className="mr-1 h-3 w-3" />
               Legg til
@@ -88,12 +88,12 @@ function CategoryTree() {
         </div>
 
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
           <Input
             placeholder="Søk kategorier..."
             value={searchQuery}
             onChange={handleSearchChange}
-            className="h-9 border-[var(--baladi-border)] pl-9 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+            className="h-9 border-[var(--nordmat-border)] pl-9 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
           />
         </div>
       </div>

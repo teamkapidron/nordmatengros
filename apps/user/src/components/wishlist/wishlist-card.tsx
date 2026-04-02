@@ -43,7 +43,7 @@ function WishlistCard(props: WishlistCardProps) {
         <Button
           size="sm"
           variant="outline"
-          className="group/btn absolute top-3 right-3 h-9 w-9 border-gray-200 bg-white/90 p-0 backdrop-blur-sm hover:border-red-200 hover:bg-red-50"
+          className="group/btn absolute right-3 top-3 h-9 w-9 border-gray-200 bg-white/90 p-0 backdrop-blur-sm hover:border-red-200 hover:bg-red-50"
           onClick={handleRemoveFromWishlist}
           disabled={removeFromFavoritesMutation.isPending}
         >
@@ -52,7 +52,7 @@ function WishlistCard(props: WishlistCardProps) {
       </div>
 
       <div className="space-y-3 p-4">
-        <h3 className="line-clamp-2 font-[family-name:var(--font-sora)] text-lg leading-tight font-semibold text-gray-900">
+        <h3 className="line-clamp-2 font-[family-name:var(--font-sora)] text-lg font-semibold leading-tight text-gray-900">
           {product.name}
         </h3>
 
@@ -81,7 +81,7 @@ function WishlistCard(props: WishlistCardProps) {
 
         <div className="flex items-center justify-between border-t border-gray-100 pt-2">
           <div className="space-y-1">
-            <p className="text-baladi-primary font-[family-name:var(--font-sora)] text-lg font-bold">
+            <p className="text-nordmat-primary font-[family-name:var(--font-sora)] text-lg font-bold">
               {formatPrice(product.price)} kr
             </p>
           </div>
@@ -89,7 +89,7 @@ function WishlistCard(props: WishlistCardProps) {
           <Link href={`/product/${product.slug}`} target="_blank">
             <Button
               size="sm"
-              className="group/link bg-gradient-to-r from-[var(--baladi-primary)] to-[var(--baladi-secondary)] text-white hover:shadow-lg"
+              className="group/link bg-gradient-to-r from-[var(--nordmat-primary)] to-[var(--nordmat-secondary)] text-white hover:shadow-lg"
             >
               <ExternalLink className="mr-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-0.5" />
               Se produkt

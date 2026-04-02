@@ -77,11 +77,11 @@ function ProductList() {
   const totalItems = data?.totalProducts || 0;
 
   return (
-    <div className="rounded-xl border border-[var(--baladi-border)] bg-white shadow-sm">
-      <div className="border-b border-[var(--baladi-border)] p-4">
+    <div className="rounded-xl border border-[var(--nordmat-border)] bg-white shadow-sm">
+      <div className="border-b border-[var(--nordmat-border)] p-4">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
-            <h2 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-primary)]">
+            <h2 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-primary)]">
               {selectedCategoryData?.name ?? 'Alle Produkter'}
             </h2>
             <div className="mt-1 flex items-center gap-2">
@@ -100,7 +100,7 @@ function ProductList() {
             <Link href="/dashboard/products/new">
               <Button
                 size="sm"
-                className="h-8 bg-[var(--baladi-primary)] hover:bg-[var(--baladi-primary)]/90"
+                className="h-8 bg-[var(--nordmat-primary)] hover:bg-[var(--nordmat-primary)]/90"
               >
                 <Plus className="mr-1 h-3 w-3" />
                 Legg til Produkt
@@ -113,11 +113,11 @@ function ProductList() {
       <div className="p-4">
         {products.length === 0 ? (
           <div className="py-8 text-center">
-            <Package className="mx-auto mb-4 h-12 w-12 text-[var(--baladi-gray)]" />
-            <h3 className="mb-2 font-[family-name:var(--font-sora)] text-lg font-medium text-[var(--baladi-dark)]">
+            <Package className="mx-auto mb-4 h-12 w-12 text-[var(--nordmat-gray)]" />
+            <h3 className="mb-2 font-[family-name:var(--font-sora)] text-lg font-medium text-[var(--nordmat-dark)]">
               Ingen produkter funnet
             </h3>
-            <p className="mb-4 text-[var(--baladi-gray)]">
+            <p className="mb-4 text-[var(--nordmat-gray)]">
               {selectedCategoryData?.name
                 ? `Ingen produkter i "${selectedCategoryData.name}" kategori.`
                 : 'Ingen produkter matcher dine nåværende filtre.'}
@@ -138,11 +138,11 @@ function ProductList() {
 
       {/* Pagination Section */}
       {totalItems > 0 && (
-        <div className="border-t border-[var(--baladi-border)] bg-[var(--baladi-light)] px-4 py-4">
+        <div className="border-t border-[var(--nordmat-border)] bg-[var(--nordmat-light)] px-4 py-4">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
-                <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-gray)]">
+                <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-gray)]">
                   Vis:
                 </span>
                 <Select
@@ -161,10 +161,10 @@ function ProductList() {
               </div>
 
               <div className="flex items-center gap-2">
-                <div className="flex h-6 w-6 items-center justify-center rounded bg-[var(--baladi-primary)]/10">
-                  <ShoppingBag className="h-3.5 w-3.5 text-[var(--baladi-primary)]" />
+                <div className="flex h-6 w-6 items-center justify-center rounded bg-[var(--nordmat-primary)]/10">
+                  <ShoppingBag className="h-3.5 w-3.5 text-[var(--nordmat-primary)]" />
                 </div>
-                <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                   Viser {(currentPage - 1) * pageSize + 1} til{' '}
                   {Math.min(currentPage * pageSize, totalItems)} av {totalItems}{' '}
                   produkter
@@ -175,7 +175,7 @@ function ProductList() {
             {totalPages > 1 && (
               <div className="flex items-center gap-1">
                 <button
-                  className="flex h-8 w-8 items-center justify-center rounded-lg border border-[var(--baladi-border)] bg-white transition-all duration-300 hover:border-[var(--baladi-primary)] hover:bg-[var(--baladi-primary)] hover:text-white disabled:opacity-50 disabled:hover:bg-white disabled:hover:text-[var(--baladi-gray)]"
+                  className="flex h-8 w-8 items-center justify-center rounded-lg border border-[var(--nordmat-border)] bg-white transition-all duration-300 hover:border-[var(--nordmat-primary)] hover:bg-[var(--nordmat-primary)] hover:text-white disabled:opacity-50 disabled:hover:bg-white disabled:hover:text-[var(--nordmat-gray)]"
                   disabled={currentPage === 1}
                   onClick={() => handlePageChange(currentPage - 1)}
                   title="Forrige side"
@@ -201,8 +201,8 @@ function ProductList() {
                       onClick={() => handlePageChange(pageNum)}
                       className={`h-8 min-w-8 rounded-lg px-3 font-[family-name:var(--font-sora)] text-sm font-medium transition-all duration-300 ${
                         pageNum === currentPage
-                          ? 'bg-[var(--baladi-primary)] text-white shadow-md'
-                          : 'border border-[var(--baladi-border)] bg-white text-[var(--baladi-dark)] hover:border-[var(--baladi-primary)] hover:bg-[var(--baladi-primary)] hover:text-white'
+                          ? 'bg-[var(--nordmat-primary)] text-white shadow-md'
+                          : 'border border-[var(--nordmat-border)] bg-white text-[var(--nordmat-dark)] hover:border-[var(--nordmat-primary)] hover:bg-[var(--nordmat-primary)] hover:text-white'
                       }`}
                       title={`Side ${pageNum}`}
                     >
@@ -220,12 +220,12 @@ function ProductList() {
                       type="text"
                       value={pageInput}
                       onChange={handlePageInputChange}
-                      className="h-8 w-12 rounded-lg border border-[var(--baladi-border)] bg-white px-2 text-center font-[family-name:var(--font-dm-sans)] text-sm shadow-sm transition-all duration-300 hover:border-[var(--baladi-primary)]/50 focus:border-[var(--baladi-primary)] focus:ring-2 focus:ring-[var(--baladi-primary)]/20 focus:outline-none"
+                      className="h-8 w-12 rounded-lg border border-[var(--nordmat-border)] bg-white px-2 text-center font-[family-name:var(--font-dm-sans)] text-sm shadow-sm transition-all duration-300 hover:border-[var(--nordmat-primary)]/50 focus:border-[var(--nordmat-primary)] focus:ring-2 focus:ring-[var(--nordmat-primary)]/20 focus:outline-none"
                       placeholder="Gå"
                     />
                     <button
                       type="submit"
-                      className="h-8 rounded-lg border border-[var(--baladi-border)] bg-white px-2 font-[family-name:var(--font-dm-sans)] text-xs font-medium transition-all duration-300 hover:border-[var(--baladi-primary)] hover:bg-[var(--baladi-primary)] hover:text-white"
+                      className="h-8 rounded-lg border border-[var(--nordmat-border)] bg-white px-2 font-[family-name:var(--font-dm-sans)] text-xs font-medium transition-all duration-300 hover:border-[var(--nordmat-primary)] hover:bg-[var(--nordmat-primary)] hover:text-white"
                     >
                       Gå
                     </button>
@@ -233,7 +233,7 @@ function ProductList() {
                 )}
 
                 <button
-                  className="flex h-8 w-8 items-center justify-center rounded-lg border border-[var(--baladi-border)] bg-white transition-all duration-300 hover:border-[var(--baladi-primary)] hover:bg-[var(--baladi-primary)] hover:text-white disabled:opacity-50 disabled:hover:bg-white disabled:hover:text-[var(--baladi-gray)]"
+                  className="flex h-8 w-8 items-center justify-center rounded-lg border border-[var(--nordmat-border)] bg-white transition-all duration-300 hover:border-[var(--nordmat-primary)] hover:bg-[var(--nordmat-primary)] hover:text-white disabled:opacity-50 disabled:hover:bg-white disabled:hover:text-[var(--nordmat-gray)]"
                   disabled={currentPage === totalPages}
                   onClick={() => handlePageChange(currentPage + 1)}
                   title="Neste side"
@@ -246,7 +246,7 @@ function ProductList() {
 
           {totalPages > 1 && (
             <div className="mt-3 text-center">
-              <span className="font-[family-name:var(--font-sora)] text-sm font-medium text-[var(--baladi-dark)]">
+              <span className="font-[family-name:var(--font-sora)] text-sm font-medium text-[var(--nordmat-dark)]">
                 Side {currentPage} av {totalPages}
               </span>
             </div>

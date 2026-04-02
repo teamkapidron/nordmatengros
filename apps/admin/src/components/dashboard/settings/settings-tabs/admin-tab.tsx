@@ -78,10 +78,10 @@ function AdminTab() {
 
   return (
     <div className="space-y-8">
-      <div className="relative overflow-hidden rounded-2xl border border-[var(--baladi-border)] bg-gradient-to-br from-white via-[var(--baladi-light)]/20 to-blue-50/30 p-8 shadow-sm">
+      <div className="relative overflow-hidden rounded-2xl border border-[var(--nordmat-border)] bg-gradient-to-br from-white via-[var(--nordmat-light)]/20 to-blue-50/30 p-8 shadow-sm">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute -top-8 -right-8 h-32 w-32 rounded-full bg-blue-500"></div>
-          <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-[var(--baladi-primary)]"></div>
+          <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-[var(--nordmat-primary)]"></div>
         </div>
 
         <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
@@ -91,10 +91,10 @@ function AdminTab() {
                 <Users className="h-8 w-8 text-white" />
               </div>
               <div>
-                <h3 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--baladi-dark)]">
+                <h3 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--nordmat-dark)]">
                   Administrator oversikt
                 </h3>
-                <p className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+                <p className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
                   Administrer systemadministratorer og deres tilganger
                 </p>
               </div>
@@ -112,7 +112,7 @@ function AdminTab() {
 
           <Button
             onClick={() => setShowAddForm(!showAddForm)}
-            className="h-12 bg-gradient-to-r from-[var(--baladi-primary)] to-[var(--baladi-secondary)] px-6 font-[family-name:var(--font-dm-sans)] font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
+            className="h-12 bg-gradient-to-r from-[var(--nordmat-primary)] to-[var(--nordmat-secondary)] px-6 font-[family-name:var(--font-dm-sans)] font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
           >
             <Plus className="mr-2 h-5 w-5" />
             Legg til administrator
@@ -121,15 +121,15 @@ function AdminTab() {
       </div>
 
       {showAddForm && (
-        <Card className="overflow-hidden border-[var(--baladi-border)] py-0 shadow-lg">
-          <CardHeader className="border-b border-[var(--baladi-border)] bg-gradient-to-r from-green-50 to-emerald-50 pt-4">
-            <CardTitle className="flex items-center gap-3 font-[family-name:var(--font-sora)] text-xl text-[var(--baladi-dark)]">
+        <Card className="overflow-hidden border-[var(--nordmat-border)] py-0 shadow-lg">
+          <CardHeader className="border-b border-[var(--nordmat-border)] bg-gradient-to-r from-green-50 to-emerald-50 pt-4">
+            <CardTitle className="flex items-center gap-3 font-[family-name:var(--font-sora)] text-xl text-[var(--nordmat-dark)]">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100">
                 <Plus className="h-5 w-5 text-emerald-600" />
               </div>
               Legg til ny administrator
             </CardTitle>
-            <CardDescription className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+            <CardDescription className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
               Fyll ut informasjonen nedenfor for å legge til en ny administrator
               til systemet
             </CardDescription>
@@ -146,7 +146,7 @@ function AdminTab() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--baladi-dark)]">
+                        <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--nordmat-dark)]">
                           Fullt navn
                         </FormLabel>
                         <FormControl>
@@ -155,7 +155,7 @@ function AdminTab() {
                             placeholder="Skriv inn fullt navn"
                             className="h-12 font-[family-name:var(--font-dm-sans)]"
                             iconLeft={
-                              <Users className="h-5 w-5 text-[var(--baladi-gray)]" />
+                              <Users className="h-5 w-5 text-[var(--nordmat-gray)]" />
                             }
                           />
                         </FormControl>
@@ -169,7 +169,7 @@ function AdminTab() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--baladi-dark)]">
+                        <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--nordmat-dark)]">
                           E-postadresse
                         </FormLabel>
                         <FormControl>
@@ -179,7 +179,7 @@ function AdminTab() {
                             placeholder="Skriv inn e-postadresse"
                             className="h-12 font-[family-name:var(--font-dm-sans)]"
                             iconLeft={
-                              <Mail className="h-5 w-5 text-[var(--baladi-gray)]" />
+                              <Mail className="h-5 w-5 text-[var(--nordmat-gray)]" />
                             }
                           />
                         </FormControl>
@@ -204,7 +204,7 @@ function AdminTab() {
                   </div>
                 </div>
 
-                <div className="flex justify-end gap-3 border-t border-[var(--baladi-border)] pt-6">
+                <div className="flex justify-end gap-3 border-t border-[var(--nordmat-border)] pt-6">
                   <Button
                     type="button"
                     variant="outline"
@@ -233,18 +233,18 @@ function AdminTab() {
         </Card>
       )}
 
-      <Card className="overflow-hidden border-[var(--baladi-border)] py-0 shadow-lg">
-        <CardHeader className="border-b border-[var(--baladi-border)] bg-gradient-to-r from-gray-50 via-slate-50 to-gray-50 pt-6 pb-6">
+      <Card className="overflow-hidden border-[var(--nordmat-border)] py-0 shadow-lg">
+        <CardHeader className="border-b border-[var(--nordmat-border)] bg-gradient-to-r from-gray-50 via-slate-50 to-gray-50 pt-6 pb-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-slate-600 to-slate-700 shadow-lg">
                 <Users className="h-6 w-6 text-white" />
               </div>
               <div>
-                <CardTitle className="mb-1 font-[family-name:var(--font-sora)] text-2xl text-[var(--baladi-dark)]">
+                <CardTitle className="mb-1 font-[family-name:var(--font-sora)] text-2xl text-[var(--nordmat-dark)]">
                   Alle administratorer
                 </CardTitle>
-                <CardDescription className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+                <CardDescription className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
                   <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
                   {admins?.admins.length} aktive administratorer i systemet
                 </CardDescription>
@@ -290,7 +290,7 @@ function AdminTab() {
                     <TableCell className="px-8 py-6">
                       <div className="flex items-center gap-4">
                         <div className="relative">
-                          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--baladi-primary)] via-blue-600 to-indigo-600 text-white shadow-lg ring-2 ring-white transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl">
+                          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--nordmat-primary)] via-blue-600 to-indigo-600 text-white shadow-lg ring-2 ring-white transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl">
                             <span className="font-[family-name:var(--font-sora)] text-lg font-bold">
                               {admin.name.charAt(0)}
                             </span>
@@ -301,11 +301,11 @@ function AdminTab() {
                         </div>
                         <div className="space-y-2">
                           <div>
-                            <p className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)] transition-colors group-hover:text-blue-700">
+                            <p className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)] transition-colors group-hover:text-blue-700">
                               {admin.name}
                             </p>
                             <div className="mt-1 flex items-center gap-2">
-                              <div className="flex items-center gap-1.5 text-[var(--baladi-gray)]">
+                              <div className="flex items-center gap-1.5 text-[var(--nordmat-gray)]">
                                 <Mail className="h-3.5 w-3.5" />
                                 <p className="font-[family-name:var(--font-dm-sans)] text-sm">
                                   {admin.email}
@@ -355,7 +355,7 @@ function AdminTab() {
                             <Clock className="h-4 w-4 text-gray-600" />
                           </div>
                           <div>
-                            <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                            <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                               {new Date(admin.createdAt).toLocaleDateString(
                                 'no-NO',
                                 {
@@ -398,16 +398,16 @@ function AdminTab() {
                 <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-gray-100 to-gray-200 shadow-lg">
                   <Users className="h-10 w-10 text-gray-400" />
                 </div>
-                <h3 className="mb-2 font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--baladi-dark)]">
+                <h3 className="mb-2 font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--nordmat-dark)]">
                   Ingen administratorer funnet
                 </h3>
-                <p className="mx-auto mb-6 max-w-md font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+                <p className="mx-auto mb-6 max-w-md font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
                   Det ser ut til at det ikke er noen administratorer registrert
                   i systemet ennå.
                 </p>
                 <Button
                   onClick={() => setShowAddForm(true)}
-                  className="bg-gradient-to-r from-[var(--baladi-primary)] to-blue-600 text-white shadow-lg transition-all duration-300 hover:from-blue-600 hover:to-indigo-600 hover:shadow-xl"
+                  className="bg-gradient-to-r from-[var(--nordmat-primary)] to-blue-600 text-white shadow-lg transition-all duration-300 hover:from-blue-600 hover:to-indigo-600 hover:shadow-xl"
                 >
                   <Plus className="mr-2 h-4 w-4" />
                   Legg til første administrator

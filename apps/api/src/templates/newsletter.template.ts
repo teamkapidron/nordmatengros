@@ -35,7 +35,7 @@ export function newArrivalTemplate(
           body {
             font-family: 'DM Sans', sans-serif;
             line-height: 1.6;
-            color: #0f172a;
+            color: #002156;
             background: #f8fafc;
             margin: 0;
             padding: 20px;
@@ -51,7 +51,7 @@ export function newArrivalTemplate(
           }
 
           .header {
-            background: linear-gradient(135deg, #183c6c 0%, #4b7bbe 100%);
+            background: linear-gradient(135deg, #054d9b 0%, #2db0ea 100%);
             padding: 32px 24px;
             text-align: center;
             position: relative;
@@ -100,7 +100,7 @@ export function newArrivalTemplate(
             font-family: 'Sora', sans-serif;
             font-size: 20px;
             font-weight: 600;
-            color: #183c6c;
+            color: #054d9b;
             margin-bottom: 12px;
           }
 
@@ -119,7 +119,7 @@ export function newArrivalTemplate(
             font-family: 'Sora', sans-serif;
             font-size: 18px;
             font-weight: 600;
-            color: #183c6c;
+            color: #054d9b;
             margin-bottom: 16px;
             text-align: center;
           }
@@ -158,7 +158,7 @@ export function newArrivalTemplate(
             font-family: 'DM Sans', sans-serif;
             font-size: 14px;
             font-weight: 500;
-            color: #0f172a;
+            color: #002156;
             margin-bottom: 4px;
             line-height: 1.3;
           }
@@ -182,7 +182,7 @@ export function newArrivalTemplate(
 
           .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #183c6c 0%, #4b7bbe 100%);
+            background: linear-gradient(135deg, #054d9b 0%, #2db0ea 100%);
             color: white;
             text-decoration: none;
             padding: 12px 24px;
@@ -268,8 +268,8 @@ export function newArrivalTemplate(
         <div class="email-container">
           <div class="header">
             <div class="logo-container">
-              <img src="https://nordmatengros-prod-nordmatengrosbucket-swkfhcmu.s3.eu-central-1.amazonaws.com/products/baladi.png" alt="Baladi Logo" class="logo-image" />
-              <div class="logo-text">BALADI ENGROS</div>
+              <img src="https://baladi-prod-baladibucket-fedmxzsx.s3.eu-central-1.amazonaws.com/products/baladi.png" alt="Nordmat Logo" class="logo-image" />
+              <div class="logo-text">NORDMAT ENGROS</div>
             </div>
           </div>
 
@@ -329,12 +329,12 @@ export function newArrivalTemplate(
 
           <div class="footer">
             <div class="footer-text">
-              Takk for at du velger Baladi Engros. Vi er forpliktet til å bringe deg
+              Takk for at du velger Nordmat Engros. Vi er forpliktet til å bringe deg
               de fineste produktene med eksepsjonell kvalitet.
             </div>
 
             <div class="unsubscribe">
-              © ${new Date().getFullYear()} Baladi Engros. Alle rettigheter reservert.<br>
+              © ${new Date().getFullYear()} Nordmat Engros. Alle rettigheter reservert.<br>
               ${email ? `<a href="${process.env.API_URL}/marketing/unsubscribe?email=${email}">Avmeld</a>` : '<a href="#">Avmeld</a>'}
             </div>
           </div>
@@ -374,7 +374,7 @@ export function productPromotionTemplate(
           body {
             font-family: 'DM Sans', sans-serif;
             line-height: 1.6;
-            color: #0f172a;
+            color: #002156;
             background: #f8fafc;
             margin: 0;
             padding: 20px;
@@ -456,7 +456,7 @@ export function productPromotionTemplate(
             font-family: 'Sora', sans-serif;
             font-size: 20px;
             font-weight: 600;
-            color: #183c6c;
+            color: #054d9b;
             margin-bottom: 12px;
           }
 
@@ -507,7 +507,7 @@ export function productPromotionTemplate(
             font-family: 'Sora', sans-serif;
             font-size: 18px;
             font-weight: 600;
-            color: #183c6c;
+            color: #054d9b;
             margin-bottom: 16px;
             text-align: center;
           }
@@ -561,7 +561,7 @@ export function productPromotionTemplate(
             font-family: 'DM Sans', sans-serif;
             font-size: 14px;
             font-weight: 500;
-            color: #0f172a;
+            color: #002156;
             margin-bottom: 4px;
             line-height: 1.3;
           }
@@ -657,8 +657,8 @@ export function productPromotionTemplate(
         <div class="email-container">
           <div class="header">
             <div class="logo-container">
-              <img src="https://nordmatengros-prod-nordmatengrosbucket-swkfhcmu.s3.eu-central-1.amazonaws.com/products/baladi.png" alt="Baladi Logo" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-              <div class="logo" style="display: none;">BALADI</div>
+              <img src="https://baladi-prod-baladibucket-fedmxzsx.s3.eu-central-1.amazonaws.com/products/baladi.png" alt="Nordmat Logo" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+              <div class="logo" style="display: none;">NORDMAT</div>
             </div>
             <div class="promotion-badge">🔥 Spesiell Kampanje</div>
           </div>
@@ -728,11 +728,11 @@ export function productPromotionTemplate(
           <div class="footer">
             <div class="footer-text">
               Ikke gå glipp av disse utrolige besparelsene! Denne kampanjen varer kun i begrenset tid.
-              <br>Takk for at du er en verdsatt kunde av Baladi Engros.
+              <br>Takk for at du er en verdsatt kunde av Nordmat Engros.
             </div>
 
             <div class="unsubscribe">
-              © ${new Date().getFullYear()} Baladi Engros. Alle rettigheter reservert.<br>
+              © ${new Date().getFullYear()} Nordmat Engros. Alle rettigheter reservert.<br>
               ${email ? `<a href="${process.env.API_URL}/marketing/unsubscribe?email=${email}">Avmeld</a>` : '<a href="#">Avmeld</a>'}
             </div>
           </div>

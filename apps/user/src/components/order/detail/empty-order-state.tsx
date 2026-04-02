@@ -11,21 +11,21 @@ import { Button } from '@repo/ui/components/base/button';
 function EmptyOrderState() {
   return (
     <div className="py-16 text-center">
-      <div className="mx-auto mb-8 flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-br from-[var(--baladi-light)] to-[var(--baladi-primary)]/10">
+      <div className="mx-auto mb-8 flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-br from-[var(--nordmat-light)] to-[var(--nordmat-primary)]/10">
         <div className="relative">
-          <ShoppingBag size={48} className="text-[var(--baladi-primary)]" />
-          <div className="absolute -top-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--baladi-secondary)]">
+          <ShoppingBag size={48} className="text-[var(--nordmat-primary)]" />
+          <div className="absolute -top-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--nordmat-secondary)]">
             <Package size={12} className="text-white" />
           </div>
         </div>
       </div>
 
       <div className="mx-auto max-w-md space-y-4">
-        <h2 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--baladi-dark)]">
+        <h2 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--nordmat-dark)]">
           Ingen bestillinger ennå
         </h2>
-        <p className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
-          Du har ikke lagt inn noen bestillinger hos Baladi Engros ennå. Utforsk
+        <p className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
+          Du har ikke lagt inn noen bestillinger hos Nordmat Engros ennå. Utforsk
           vårt store utvalg av kvalitetsprodukter for din virksomhet.
         </p>
       </div>

@@ -8,18 +8,18 @@ import ProductGrid from '@/components/home/product-grid';
 import Footer from '@/components/common/footer/footer';
 
 export const metadata: Metadata = {
-  title: 'Hjem | Baladi Engros',
+  title: 'Hjem | Nordmat Engros',
 };
 
 export default function Home() {
   return (
     <Suspense>
-      <div className="min-h-screen bg-[var(--baladi-background)]">
+      <div className="min-h-screen bg-[var(--nordmat-background)]">
         <Header />
 
         <main className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
           <div className="mb-8 text-center">
-            <h1 className="mb-4 font-[family-name:var(--font-sora)] text-3xl font-bold text-[var(--baladi-dark)] md:text-4xl">
+            <h1 className="mb-4 font-[family-name:var(--font-sora)] text-3xl font-bold text-[var(--nordmat-dark)] md:text-4xl">
               Våre Produkter
             </h1>
           </div>

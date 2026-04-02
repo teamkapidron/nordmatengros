@@ -26,7 +26,7 @@ export class TripletexToken {
     const response = await makeRequest<GetTokenResponse>(url, {
       method: 'PUT',
       headers: {
-        'User-Agent': this.config.userAgent ?? 'baladi/1.0.0',
+        'User-Agent': this.config.userAgent ?? 'nordmatengros/1.0.0',
       },
       query,
     });

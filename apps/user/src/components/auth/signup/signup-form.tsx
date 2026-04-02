@@ -65,10 +65,10 @@ function SignupForm() {
     <React.Fragment>
       <div className="w-full space-y-4">
         <div className="text-center">
-          <h3 className="mb-1 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+          <h3 className="mb-1 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
             Opprett din konto
           </h3>
-          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
             Fyll ut skjemaet nedenfor for å komme i gang
           </p>
         </div>
@@ -80,18 +80,18 @@ function SignupForm() {
               name="name"
               render={({ field }) => (
                 <FormItem className="space-y-1">
-                  <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
-                    <User className="h-4 w-4 text-[var(--baladi-gray)]" />
+                  <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
+                    <User className="h-4 w-4 text-[var(--nordmat-gray)]" />
                     Fullt navn
                   </FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       placeholder="Skriv inn ditt fulle navn"
-                      className="focus:ring-[var(--baladi-primary)]/20 w-full rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)] px-3 py-2 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--baladi-primary)] focus:bg-white focus:ring-2"
+                      className="focus:ring-[var(--nordmat-primary)]/20 w-full rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] px-3 py-2 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--nordmat-primary)] focus:bg-white focus:ring-2"
                     />
                   </FormControl>
-                  <FormMessage className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-error)]" />
+                  <FormMessage className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-error)]" />
                 </FormItem>
               )}
             />
@@ -101,8 +101,8 @@ function SignupForm() {
               name="email"
               render={({ field }) => (
                 <FormItem className="space-y-1">
-                  <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
-                    <AtSign className="h-4 w-4 text-[var(--baladi-gray)]" />
+                  <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
+                    <AtSign className="h-4 w-4 text-[var(--nordmat-gray)]" />
                     E-postadresse
                   </FormLabel>
                   <FormControl>
@@ -110,10 +110,10 @@ function SignupForm() {
                       {...field}
                       type="email"
                       placeholder="din@epost.no"
-                      className="focus:ring-[var(--baladi-primary)]/20 w-full rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)] px-3 py-2 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--baladi-primary)] focus:bg-white focus:ring-2"
+                      className="focus:ring-[var(--nordmat-primary)]/20 w-full rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] px-3 py-2 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--nordmat-primary)] focus:bg-white focus:ring-2"
                     />
                   </FormControl>
-                  <FormMessage className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-error)]" />
+                  <FormMessage className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-error)]" />
                 </FormItem>
               )}
             />
@@ -123,8 +123,8 @@ function SignupForm() {
               name="password"
               render={({ field }) => (
                 <FormItem className="space-y-1">
-                  <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
-                    <Key className="h-4 w-4 text-[var(--baladi-gray)]" />
+                  <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
+                    <Key className="h-4 w-4 text-[var(--nordmat-gray)]" />
                     Passord
                   </FormLabel>
                   <FormControl>
@@ -133,14 +133,14 @@ function SignupForm() {
                         {...field}
                         type={showPassword ? 'text' : 'password'}
                         placeholder="Opprett et sterkt passord"
-                        className="focus:ring-[var(--baladi-primary)]/20 w-full rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)] px-3 py-2 pr-10 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--baladi-primary)] focus:bg-white focus:ring-2"
+                        className="focus:ring-[var(--nordmat-primary)]/20 w-full rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] px-3 py-2 pr-10 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--nordmat-primary)] focus:bg-white focus:ring-2"
                       />
                       <Button
                         type="button"
                         size="icon"
                         variant="ghost"
                         onClick={togglePassword}
-                        className="absolute right-2 top-1/2 h-6 w-6 -translate-y-1/2 text-[var(--baladi-gray)] hover:text-[var(--baladi-primary)]"
+                        className="absolute right-2 top-1/2 h-6 w-6 -translate-y-1/2 text-[var(--nordmat-gray)] hover:text-[var(--nordmat-primary)]"
                       >
                         {showPassword ? (
                           <EyeOff className="h-4 w-4" />
@@ -150,7 +150,7 @@ function SignupForm() {
                       </Button>
                     </div>
                   </FormControl>
-                  <FormMessage className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-error)]" />
+                  <FormMessage className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-error)]" />
                 </FormItem>
               )}
             />
@@ -160,8 +160,8 @@ function SignupForm() {
               name="confirmPassword"
               render={({ field }) => (
                 <FormItem className="space-y-1">
-                  <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
-                    <Key className="h-4 w-4 text-[var(--baladi-gray)]" />
+                  <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
+                    <Key className="h-4 w-4 text-[var(--nordmat-gray)]" />
                     Bekreft passord
                   </FormLabel>
                   <FormControl>
@@ -170,14 +170,14 @@ function SignupForm() {
                         {...field}
                         type={showConfirmPassword ? 'text' : 'password'}
                         placeholder="Skriv inn passordet på nytt"
-                        className="focus:ring-[var(--baladi-primary)]/20 w-full rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)] px-3 py-2 pr-10 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--baladi-primary)] focus:bg-white focus:ring-2"
+                        className="focus:ring-[var(--nordmat-primary)]/20 w-full rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] px-3 py-2 pr-10 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--nordmat-primary)] focus:bg-white focus:ring-2"
                       />
                       <Button
                         type="button"
                         size="icon"
                         variant="ghost"
                         onClick={toggleConfirmPassword}
-                        className="absolute right-2 top-1/2 h-6 w-6 -translate-y-1/2 text-[var(--baladi-gray)] hover:text-[var(--baladi-primary)]"
+                        className="absolute right-2 top-1/2 h-6 w-6 -translate-y-1/2 text-[var(--nordmat-gray)] hover:text-[var(--nordmat-primary)]"
                       >
                         {showConfirmPassword ? (
                           <EyeOff className="h-4 w-4" />
@@ -187,7 +187,7 @@ function SignupForm() {
                       </Button>
                     </div>
                   </FormControl>
-                  <FormMessage className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-error)]" />
+                  <FormMessage className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-error)]" />
                 </FormItem>
               )}
             />
@@ -195,7 +195,7 @@ function SignupForm() {
             <Button
               type="submit"
               disabled={signupMutation.isPending}
-              className="focus:ring-[var(--baladi-primary)]/30 group relative w-full overflow-hidden rounded-lg bg-[var(--baladi-primary)] px-6 py-3 font-[family-name:var(--font-dm-sans)] text-base font-semibold text-white shadow-md transition-all duration-200 hover:bg-[var(--baladi-secondary)] hover:shadow-lg focus:outline-none focus:ring-4 disabled:cursor-not-allowed disabled:opacity-70"
+              className="focus:ring-[var(--nordmat-primary)]/30 group relative w-full overflow-hidden rounded-lg bg-[var(--nordmat-primary)] px-6 py-3 font-[family-name:var(--font-dm-sans)] text-base font-semibold text-white shadow-md transition-all duration-200 hover:bg-[var(--nordmat-secondary)] hover:shadow-lg focus:outline-none focus:ring-4 disabled:cursor-not-allowed disabled:opacity-70"
             >
               <div className="relative flex items-center justify-center space-x-2">
                 {signupMutation.isPending ? (

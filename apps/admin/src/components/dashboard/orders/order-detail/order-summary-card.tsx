@@ -75,17 +75,17 @@ function OrderSummaryCard({ orderId }: OrderSummaryCardProps) {
 
   if (!order) {
     return (
-      <Card className="border-[var(--baladi-border)] shadow-lg">
-        <CardHeader className="border-b border-[var(--baladi-border)] bg-gradient-to-r from-[var(--baladi-muted)] to-white">
-          <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--baladi-dark)]">
+      <Card className="border-[var(--nordmat-border)] shadow-lg">
+        <CardHeader className="border-b border-[var(--nordmat-border)] bg-gradient-to-r from-[var(--nordmat-muted)] to-white">
+          <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--nordmat-dark)]">
             Ordre Sammendrag
           </h2>
         </CardHeader>
         <CardContent className="p-8">
           <div className="flex items-center justify-center py-12">
             <div className="text-center">
-              <div className="mx-auto h-12 w-12 animate-pulse rounded-full bg-[var(--baladi-muted)]"></div>
-              <p className="mt-4 font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+              <div className="mx-auto h-12 w-12 animate-pulse rounded-full bg-[var(--nordmat-muted)]"></div>
+              <p className="mt-4 font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
                 Laster ordre data...
               </p>
             </div>
@@ -96,17 +96,17 @@ function OrderSummaryCard({ orderId }: OrderSummaryCardProps) {
   }
 
   return (
-    <Card className="border-[var(--baladi-border)] shadow-lg">
-      <CardHeader className="border-b border-[var(--baladi-border)]">
+    <Card className="border-[var(--nordmat-border)] shadow-lg">
+      <CardHeader className="border-b border-[var(--nordmat-border)]">
         <div className="flex items-center gap-3">
-          <div className="bg-[var(--baladi-primary)]/10 flex h-8 w-8 items-center justify-center rounded-full">
-            <Receipt size={16} className="text-[var(--baladi-primary)]" />
+          <div className="bg-[var(--nordmat-primary)]/10 flex h-8 w-8 items-center justify-center rounded-full">
+            <Receipt size={16} className="text-[var(--nordmat-primary)]" />
           </div>
           <div>
-            <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--baladi-dark)]">
+            <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--nordmat-dark)]">
               Ordre Sammendrag
             </h2>
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               Detaljert informasjon om ordre #{order._id.slice(-8)}
             </p>
           </div>
@@ -116,8 +116,8 @@ function OrderSummaryCard({ orderId }: OrderSummaryCardProps) {
       <CardContent className="p-6">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <div className="space-y-6">
-            <div className="from-[var(--baladi-primary)]/5 to-[var(--baladi-secondary)]/5 rounded-lg bg-gradient-to-r p-4">
-              <h3 className="mb-4 font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+            <div className="from-[var(--nordmat-primary)]/5 to-[var(--nordmat-secondary)]/5 rounded-lg bg-gradient-to-r p-4">
+              <h3 className="mb-4 font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
                 Ordre Informasjon
               </h3>
               <div className="space-y-3">
@@ -156,11 +156,11 @@ function OrderSummaryCard({ orderId }: OrderSummaryCardProps) {
 
             {order.notes && (
               <div className="rounded-lg bg-gradient-to-r from-blue-50 to-indigo-50 p-4">
-                <h3 className="mb-3 flex items-center gap-2 font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+                <h3 className="mb-3 flex items-center gap-2 font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
                   <MessageSquare className="h-4 w-4" />
                   Kundens kommentar
                 </h3>
-                <p className="font-[family-name:var(--font-dm-sans)] text-sm italic text-[var(--baladi-gray)]">
+                <p className="font-[family-name:var(--font-dm-sans)] text-sm italic text-[var(--nordmat-gray)]">
                   &quot;{order.notes}&quot;
                 </p>
               </div>
@@ -185,7 +185,7 @@ function OrderSummaryCard({ orderId }: OrderSummaryCardProps) {
 
           <div className="space-y-6">
             <div className="rounded-lg bg-gradient-to-r from-purple-50 to-pink-50 p-4">
-              <h3 className="mb-4 font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+              <h3 className="mb-4 font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
                 Leveringsadresse
               </h3>
               <DataItem
@@ -193,7 +193,7 @@ function OrderSummaryCard({ orderId }: OrderSummaryCardProps) {
                 label="Adresse"
                 value={
                   <div className="space-y-1">
-                    <div className="font-medium text-[var(--baladi-dark)]">
+                    <div className="font-medium text-[var(--nordmat-dark)]">
                       {formatAddress(order.shippingAddress)}
                     </div>
                   </div>
@@ -202,34 +202,34 @@ function OrderSummaryCard({ orderId }: OrderSummaryCardProps) {
             </div>
 
             {pricingTotals && (
-              <div className="from-[var(--baladi-accent)]/10 rounded-lg bg-gradient-to-r to-orange-50 p-4">
-                <h3 className="mb-4 font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+              <div className="from-[var(--nordmat-accent)]/10 rounded-lg bg-gradient-to-r to-orange-50 p-4">
+                <h3 className="mb-4 font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
                   Ordre verdi
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                    <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                       Subtotal (ekskl. mva)
                     </span>
-                    <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-dark)]">
+                    <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-dark)]">
                       {formatPrice(pricingTotals.subtotal)} kr
                     </span>
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                    <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                       MVA
                     </span>
-                    <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-dark)]">
+                    <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-dark)]">
                       {formatPrice(pricingTotals.totalVatAmount)} kr
                     </span>
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                    <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                       Subtotal (inkl. mva)
                     </span>
-                    <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-dark)]">
+                    <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-dark)]">
                       {formatPrice(pricingTotals.subtotalWithVat)} kr
                     </span>
                   </div>
@@ -259,10 +259,10 @@ function OrderSummaryCard({ orderId }: OrderSummaryCardProps) {
                   <Separator />
 
                   <div className="flex items-center justify-between">
-                    <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+                    <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
                       Totalt å betale
                     </span>
-                    <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-primary)]">
+                    <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-primary)]">
                       {formatPrice(pricingTotals.finalTotal)} kr
                     </span>
                   </div>

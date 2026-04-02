@@ -28,7 +28,7 @@ function InventoryHeader() {
     });
 
   return (
-    <div className="relative overflow-hidden rounded-xl border border-[var(--baladi-border)] bg-gradient-to-br from-[var(--baladi-primary)] via-[var(--baladi-primary)] to-[var(--baladi-secondary)] p-6 shadow-lg">
+    <div className="relative overflow-hidden rounded-xl border border-[var(--nordmat-border)] bg-gradient-to-br from-[var(--nordmat-primary)] via-[var(--nordmat-primary)] to-[var(--nordmat-secondary)] p-6 shadow-lg">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute -top-4 -right-4 h-32 w-32 rounded-full bg-white/20"></div>
         <div className="absolute -bottom-8 -left-8 h-40 w-40 rounded-full bg-white/10"></div>
@@ -91,7 +91,7 @@ function InventoryHeader() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-[var(--baladi-accent)] via-white/50 to-[var(--baladi-accent)]"></div>
+      <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-[var(--nordmat-accent)] via-white/50 to-[var(--nordmat-accent)]"></div>
     </div>
   );
 }

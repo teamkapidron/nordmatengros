@@ -42,13 +42,13 @@ function CartContent() {
     return (
       <div className="rounded-lg bg-white p-8 shadow-sm">
         <div className="text-center">
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--baladi-light)]">
-            <ShoppingBag size={32} className="text-[var(--baladi-gray)]" />
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--nordmat-light)]">
+            <ShoppingBag size={32} className="text-[var(--nordmat-gray)]" />
           </div>
-          <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+          <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
             Handlekurven din er tom
           </h3>
-          <p className="mt-2 font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+          <p className="mt-2 font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
             Utforsk vårt utvalg av autentiske asiatiske og orientalske
             ingredienser
           </p>
@@ -64,14 +64,14 @@ function CartContent() {
     <div className="space-y-6">
       <div className="flex items-center justify-between rounded-lg bg-white p-6 shadow-sm">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--baladi-primary)]">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--nordmat-primary)]">
             <ShoppingBag size={20} className="text-white" />
           </div>
           <div>
-            <h2 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+            <h2 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
               Handlekurv
             </h2>
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               {userCartItems.length}{' '}
               {userCartItems.length === 1 ? 'vare' : 'varer'} i kurven
             </p>
@@ -101,7 +101,7 @@ function CartContent() {
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
                   href={`/product/${product.slug}`}
-                  className="group relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-[var(--baladi-light)]/30"
+                  className="group relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-[var(--nordmat-light)]/30"
                 >
                   <Image
                     src={product.images?.[0] || ''}
@@ -116,12 +116,12 @@ function CartContent() {
                     <div>
                       <Link
                         href={`/product/${product.slug}`}
-                        className="font-[family-name:var(--font-sora)] font-semibold text-[var(--baladi-dark)] hover:text-[var(--baladi-primary)]"
+                        className="font-[family-name:var(--font-sora)] font-semibold text-[var(--nordmat-dark)] hover:text-[var(--nordmat-primary)]"
                       >
                         {product.name}
                       </Link>
                       {product.shortDescription && (
-                        <p className="mt-1 font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                        <p className="mt-1 font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                           {product.shortDescription}
                         </p>
                       )}
@@ -138,14 +138,14 @@ function CartContent() {
                   </div>
 
                   <div className="flex flex-wrap items-center gap-4">
-                    <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                    <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                       {product.noOfUnits} enheter per kartong
                     </span>
                   </div>
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                      <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                         Antall:
                       </span>
                       <QuantityInput
@@ -162,7 +162,7 @@ function CartContent() {
                     <div className="space-y-1 text-right">
                       {item.volumeDiscount > 0 && (
                         <div className="space-y-1">
-                          <div className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)] line-through">
+                          <div className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)] line-through">
                             Opprinnelig:{' '}
                             {formatPrice(item.priceWithVat)} kr
                           </div>
@@ -173,10 +173,10 @@ function CartContent() {
                           </div>
                         </div>
                       )}
-                      <div className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-primary)]">
+                      <div className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-primary)]">
                         {formatPrice(item.totalPaymentItemAmount)} kr
                       </div>
-                      <div className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                      <div className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                         {formatPrice(item.pricePerUnit)} kr per enhet
                       </div>
                       {item.volumeDiscount > 0 && (
@@ -193,12 +193,12 @@ function CartContent() {
         })}
       </div>
 
-      <div className="rounded-lg bg-[var(--baladi-light)]/50 p-6">
+      <div className="rounded-lg bg-[var(--nordmat-light)]/50 p-6">
         <div className="text-center">
-          <h3 className="font-[family-name:var(--font-sora)] font-semibold text-[var(--baladi-dark)]">
+          <h3 className="font-[family-name:var(--font-sora)] font-semibold text-[var(--nordmat-dark)]">
             Trenger du noe mer?
           </h3>
-          <p className="mt-2 font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+          <p className="mt-2 font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
             Utforsk vårt komplette utvalg av asiatiske og orientalske
             ingredienser
           </p>

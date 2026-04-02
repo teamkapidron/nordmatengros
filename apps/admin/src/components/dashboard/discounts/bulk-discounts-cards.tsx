@@ -71,19 +71,19 @@ function BulkDiscountsCards() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h2 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--baladi-text)]">
+        <h2 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--nordmat-text)]">
           Bulk Rabatter
         </h2>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <Button className="hover:bg-[var(--baladi-primary)]/90 gap-2 rounded-lg bg-[var(--baladi-primary)] font-[family-name:var(--font-sora)]">
+            <Button className="hover:bg-[var(--nordmat-primary)]/90 gap-2 rounded-lg bg-[var(--nordmat-primary)] font-[family-name:var(--font-sora)]">
               <Plus className="h-4 w-4" />
               Legg til Bulk Rabatt
             </Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-md">
             <DialogHeader>
-              <DialogTitle className="font-[family-name:var(--font-sora)] text-[var(--baladi-text)]">
+              <DialogTitle className="font-[family-name:var(--font-sora)] text-[var(--nordmat-text)]">
                 Legg til Bulk Rabatt
               </DialogTitle>
             </DialogHeader>
@@ -98,17 +98,17 @@ function BulkDiscountsCards() {
                   name="minQuantity"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                      <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                         Minimum Antall *
                       </FormLabel>
                       <FormControl>
                         <div className="relative">
-                          <Hash className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                          <Hash className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                           <Input
                             type="number"
                             min={1}
                             placeholder="Skriv inn minimum antall"
-                            className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                            className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                             {...field}
                             onChange={(e) =>
                               field.onChange(Number(e.target.value))
@@ -127,18 +127,18 @@ function BulkDiscountsCards() {
                   name="discountPercentage"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                      <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                         Rabatt Prosent *
                       </FormLabel>
                       <FormControl>
                         <div className="relative">
-                          <Percent className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--baladi-success)]" />
+                          <Percent className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-success)]" />
                           <Input
                             type="number"
                             min={1}
                             max={100}
                             placeholder="Skriv inn rabatt prosent"
-                            className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                            className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                             {...field}
                             onChange={(e) =>
                               field.onChange(Number(e.target.value))
@@ -156,7 +156,7 @@ function BulkDiscountsCards() {
                   <Button
                     type="submit"
                     disabled={createBulkDiscountMutation.isPending}
-                    className="hover:bg-[var(--baladi-primary)]/90 h-12 w-full rounded-lg bg-[var(--baladi-primary)] font-[family-name:var(--font-sora)] font-semibold"
+                    className="hover:bg-[var(--nordmat-primary)]/90 h-12 w-full rounded-lg bg-[var(--nordmat-primary)] font-[family-name:var(--font-sora)] font-semibold"
                   >
                     {createBulkDiscountMutation.isPending
                       ? 'Oppretter...'
@@ -170,16 +170,16 @@ function BulkDiscountsCards() {
       </div>
 
       {!bulkDiscounts?.bulkDiscounts?.length ? (
-        <div className="rounded-xl border border-[var(--baladi-border)] bg-white shadow-sm">
+        <div className="rounded-xl border border-[var(--nordmat-border)] bg-white shadow-sm">
           <div className="flex items-center justify-center p-12">
             <div className="text-center">
-              <div className="bg-[var(--baladi-primary)]/10 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full">
-                <Plus className="h-8 w-8 text-[var(--baladi-primary)]" />
+              <div className="bg-[var(--nordmat-primary)]/10 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full">
+                <Plus className="h-8 w-8 text-[var(--nordmat-primary)]" />
               </div>
-              <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-text)]">
+              <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-text)]">
                 Ingen bulk rabatter funnet
               </h3>
-              <p className="mt-2 text-sm text-[var(--baladi-gray)]">
+              <p className="mt-2 text-sm text-[var(--nordmat-gray)]">
                 Opprett din første bulk rabatt for å tilby mengdebasert prising
                 til kunder.
               </p>
@@ -189,23 +189,23 @@ function BulkDiscountsCards() {
       ) : (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {bulkDiscounts.bulkDiscounts.map((discount) => (
-            <Card key={discount._id} className="border-[var(--baladi-border)]">
+            <Card key={discount._id} className="border-[var(--nordmat-border)]">
               <CardHeader>
-                <CardTitle className="text-[var(--baladi-text)]">
+                <CardTitle className="text-[var(--nordmat-text)]">
                   Min Antall:{' '}
-                  <span className="text-[var(--baladi-primary)]">
+                  <span className="text-[var(--nordmat-primary)]">
                     {discount.minQuantity}
                   </span>
                 </CardTitle>
                 <CardDescription>
                   Rabatt:{' '}
-                  <span className="font-semibold text-[var(--baladi-primary)]">
+                  <span className="font-semibold text-[var(--nordmat-primary)]">
                     {discount.discountPercentage}%
                   </span>
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-1 text-sm text-[var(--baladi-gray)]">
+                <div className="space-y-1 text-sm text-[var(--nordmat-gray)]">
                   <span
                     className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-medium ${
                       discount.isActive

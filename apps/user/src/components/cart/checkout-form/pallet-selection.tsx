@@ -36,7 +36,7 @@ function PalletSelection({ control }: PalletSelectionProps) {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Package size={20} className="text-[var(--baladi-primary)]" />
+          <Package size={20} className="text-[var(--nordmat-primary)]" />
           Pallettype
         </CardTitle>
         <CardDescription>Velg ønsket pallettype for leveransen</CardDescription>
@@ -58,22 +58,22 @@ function PalletSelection({ control }: PalletSelectionProps) {
                     <Label
                       htmlFor="EUR"
                       className={cn(
-                        'flex cursor-pointer items-center justify-between rounded-lg border-2 border-[var(--baladi-border)] p-4 peer-checked:border-[var(--baladi-primary)] peer-checked:bg-[var(--baladi-primary)]/5 hover:border-[var(--baladi-primary)]/50',
+                        'flex cursor-pointer items-center justify-between rounded-lg border-2 border-[var(--nordmat-border)] p-4 peer-checked:border-[var(--nordmat-primary)] peer-checked:bg-[var(--nordmat-primary)]/5 hover:border-[var(--nordmat-primary)]/50',
                         field.value === 'EUR' &&
-                          'border-[var(--baladi-primary)] bg-[var(--baladi-primary)]/5',
+                          'border-[var(--nordmat-primary)] bg-[var(--nordmat-primary)]/5',
                       )}
                     >
                       <div className="space-y-1">
-                        <div className="font-[family-name:var(--font-sora)] font-semibold text-[var(--baladi-dark)]">
+                        <div className="font-[family-name:var(--font-sora)] font-semibold text-[var(--nordmat-dark)]">
                           Europall
                         </div>
-                        <div className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                        <div className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                           220 cm = 1,92 m³
                         </div>
                       </div>
                       <Package
                         size={20}
-                        className="text-[var(--baladi-primary)]"
+                        className="text-[var(--nordmat-primary)]"
                       />
                     </Label>
                   </div>
@@ -87,22 +87,22 @@ function PalletSelection({ control }: PalletSelectionProps) {
                     <Label
                       htmlFor="Large"
                       className={cn(
-                        'flex cursor-pointer items-center justify-between rounded-lg border-2 border-[var(--baladi-border)] p-4 peer-checked:border-[var(--baladi-primary)] peer-checked:bg-[var(--baladi-primary)]/5 hover:border-[var(--baladi-primary)]/50',
+                        'flex cursor-pointer items-center justify-between rounded-lg border-2 border-[var(--nordmat-border)] p-4 peer-checked:border-[var(--nordmat-primary)] peer-checked:bg-[var(--nordmat-primary)]/5 hover:border-[var(--nordmat-primary)]/50',
                         field.value === 'Large' &&
-                          'border-[var(--baladi-primary)] bg-[var(--baladi-primary)]/5',
+                          'border-[var(--nordmat-primary)] bg-[var(--nordmat-primary)]/5',
                       )}
                     >
                       <div className="space-y-1">
-                        <div className="font-[family-name:var(--font-sora)] font-semibold text-[var(--baladi-dark)]">
+                        <div className="font-[family-name:var(--font-sora)] font-semibold text-[var(--nordmat-dark)]">
                           Stor pall
                         </div>
-                        <div className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                        <div className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                           220 cm = 2,4 m³
                         </div>
                       </div>
                       <Package
                         size={20}
-                        className="text-[var(--baladi-primary)]"
+                        className="text-[var(--nordmat-primary)]"
                       />
                     </Label>
                   </div>

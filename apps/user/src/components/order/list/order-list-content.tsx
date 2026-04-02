@@ -48,9 +48,9 @@ function OrderListContent() {
     <React.Fragment>
       <ScrollToTop />
       <div className="space-y-8">
-        <div className="flex flex-col gap-4 rounded-lg border border-[var(--baladi-border)] bg-white p-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-4 rounded-lg border border-[var(--nordmat-border)] bg-white p-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">
-            <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               Vis per side:
             </span>
             <Select
@@ -70,7 +70,7 @@ function OrderListContent() {
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               Side {currentPage} av {totalPages} ({myOrders?.totalOrders || 0}{' '}
               bestillinger)
             </span>
@@ -120,14 +120,14 @@ function OrderListContent() {
           ))}
         </div>
 
-        <div className="mt-12 rounded-lg bg-gradient-to-r from-[var(--baladi-light)]/50 to-[var(--baladi-primary)]/5 p-6 text-center">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[var(--baladi-primary)]/10">
-            <Plus size={24} className="text-[var(--baladi-primary)]" />
+        <div className="mt-12 rounded-lg bg-gradient-to-r from-[var(--nordmat-light)]/50 to-[var(--nordmat-primary)]/5 p-6 text-center">
+          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[var(--nordmat-primary)]/10">
+            <Plus size={24} className="text-[var(--nordmat-primary)]" />
           </div>
-          <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+          <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
             Trenger du mer?
           </h3>
-          <p className="mt-2 font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+          <p className="mt-2 font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
             Utforsk vårt store utvalg av kvalitetsprodukter for din virksomhet
           </p>
           <Button className="mt-4">

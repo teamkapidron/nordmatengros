@@ -60,16 +60,16 @@ function ProductTableFilters() {
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <div className="flex items-center gap-2">
-            <div className="bg-[var(--baladi-primary)]/10 flex h-8 w-8 items-center justify-center rounded-lg">
-              <Filter className="h-4 w-4 text-[var(--baladi-primary)]" />
+            <div className="bg-[var(--nordmat-primary)]/10 flex h-8 w-8 items-center justify-center rounded-lg">
+              <Filter className="h-4 w-4 text-[var(--nordmat-primary)]" />
             </div>
-            <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-gray)]">
+            <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-gray)]">
               Søk Produkter
             </span>
           </div>
 
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
             <Input
               type="text"
               placeholder="Søk etter produktnavn, kategori..."
@@ -82,7 +82,7 @@ function ProductTableFilters() {
 
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
-            <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-gray)]">
+            <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-gray)]">
               Vis:
             </span>
             <Select
@@ -103,7 +103,7 @@ function ProductTableFilters() {
           {totalPages > 1 && (
             <div className="flex items-center gap-1">
               <button
-                className="flex h-8 w-8 items-center justify-center rounded-lg border border-[var(--baladi-border)] bg-white transition-all duration-300 hover:border-[var(--baladi-primary)] hover:bg-[var(--baladi-primary)] hover:text-white disabled:opacity-50 disabled:hover:bg-white disabled:hover:text-[var(--baladi-gray)]"
+                className="flex h-8 w-8 items-center justify-center rounded-lg border border-[var(--nordmat-border)] bg-white transition-all duration-300 hover:border-[var(--nordmat-primary)] hover:bg-[var(--nordmat-primary)] hover:text-white disabled:opacity-50 disabled:hover:bg-white disabled:hover:text-[var(--nordmat-gray)]"
                 disabled={currentPage === 1}
                 onClick={() => handlePageChange(currentPage - 1)}
                 title="Forrige side"
@@ -129,8 +129,8 @@ function ProductTableFilters() {
                     onClick={() => handlePageChange(pageNum)}
                     className={`h-8 min-w-8 rounded-lg px-3 font-[family-name:var(--font-sora)] text-sm font-medium transition-all duration-300 ${
                       pageNum === currentPage
-                        ? 'bg-[var(--baladi-primary)] text-white shadow-md'
-                        : 'border border-[var(--baladi-border)] bg-white text-[var(--baladi-dark)] hover:border-[var(--baladi-primary)] hover:bg-[var(--baladi-primary)] hover:text-white'
+                        ? 'bg-[var(--nordmat-primary)] text-white shadow-md'
+                        : 'border border-[var(--nordmat-border)] bg-white text-[var(--nordmat-dark)] hover:border-[var(--nordmat-primary)] hover:bg-[var(--nordmat-primary)] hover:text-white'
                     }`}
                     title={`Side ${pageNum}`}
                   >
@@ -148,12 +148,12 @@ function ProductTableFilters() {
                     type="text"
                     value={pageInput}
                     onChange={handlePageInputChange}
-                    className="hover:border-[var(--baladi-primary)]/50 focus:ring-[var(--baladi-primary)]/20 h-8 w-12 rounded-lg border border-[var(--baladi-border)] bg-white px-2 text-center font-[family-name:var(--font-dm-sans)] text-sm shadow-sm transition-all duration-300 focus:border-[var(--baladi-primary)] focus:outline-none focus:ring-2"
+                    className="hover:border-[var(--nordmat-primary)]/50 focus:ring-[var(--nordmat-primary)]/20 h-8 w-12 rounded-lg border border-[var(--nordmat-border)] bg-white px-2 text-center font-[family-name:var(--font-dm-sans)] text-sm shadow-sm transition-all duration-300 focus:border-[var(--nordmat-primary)] focus:outline-none focus:ring-2"
                     placeholder="Gå"
                   />
                   <button
                     type="submit"
-                    className="h-8 rounded-lg border border-[var(--baladi-border)] bg-white px-2 font-[family-name:var(--font-dm-sans)] text-xs font-medium transition-all duration-300 hover:border-[var(--baladi-primary)] hover:bg-[var(--baladi-primary)] hover:text-white"
+                    className="h-8 rounded-lg border border-[var(--nordmat-border)] bg-white px-2 font-[family-name:var(--font-dm-sans)] text-xs font-medium transition-all duration-300 hover:border-[var(--nordmat-primary)] hover:bg-[var(--nordmat-primary)] hover:text-white"
                   >
                     Gå
                   </button>
@@ -161,7 +161,7 @@ function ProductTableFilters() {
               )}
 
               <button
-                className="flex h-8 w-8 items-center justify-center rounded-lg border border-[var(--baladi-border)] bg-white transition-all duration-300 hover:border-[var(--baladi-primary)] hover:bg-[var(--baladi-primary)] hover:text-white disabled:opacity-50 disabled:hover:bg-white disabled:hover:text-[var(--baladi-gray)]"
+                className="flex h-8 w-8 items-center justify-center rounded-lg border border-[var(--nordmat-border)] bg-white transition-all duration-300 hover:border-[var(--nordmat-primary)] hover:bg-[var(--nordmat-primary)] hover:text-white disabled:opacity-50 disabled:hover:bg-white disabled:hover:text-[var(--nordmat-gray)]"
                 disabled={currentPage === totalPages}
                 onClick={() => handlePageChange(currentPage + 1)}
                 title="Neste side"
@@ -174,19 +174,19 @@ function ProductTableFilters() {
       </div>
 
       {products && (
-        <div className="flex items-center justify-between rounded-lg bg-[var(--baladi-light)] px-4 py-2">
+        <div className="flex items-center justify-between rounded-lg bg-[var(--nordmat-light)] px-4 py-2">
           <div className="flex items-center gap-2">
-            <div className="bg-[var(--baladi-primary)]/10 flex h-6 w-6 items-center justify-center rounded">
-              <ShoppingBag className="h-3.5 w-3.5 text-[var(--baladi-primary)]" />
+            <div className="bg-[var(--nordmat-primary)]/10 flex h-6 w-6 items-center justify-center rounded">
+              <ShoppingBag className="h-3.5 w-3.5 text-[var(--nordmat-primary)]" />
             </div>
-            <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               Viser {(currentPage - 1) * pageSize + 1} til{' '}
               {Math.min(currentPage * pageSize, products.totalProducts)} av{' '}
               {products.totalProducts} produkter
             </span>
           </div>
           {totalPages > 1 && (
-            <span className="font-[family-name:var(--font-sora)] text-sm font-medium text-[var(--baladi-dark)]">
+            <span className="font-[family-name:var(--font-sora)] text-sm font-medium text-[var(--nordmat-dark)]">
               Side {currentPage} av {totalPages}
             </span>
           )}

@@ -28,8 +28,8 @@ function ProfileDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Avatar className="size-8 cursor-pointer border border-[var(--baladi-border)] text-base hover:bg-[var(--baladi-light)]">
-          <AvatarFallback className="bg-[var(--baladi-primary)]/10 text-[var(--baladi-primary)]">
+        <Avatar className="size-8 cursor-pointer border border-[var(--nordmat-border)] text-base hover:bg-[var(--nordmat-light)]">
+          <AvatarFallback className="bg-[var(--nordmat-primary)]/10 text-[var(--nordmat-primary)]">
             {user.name
               .split(' ')
               .map((n) => n[0])

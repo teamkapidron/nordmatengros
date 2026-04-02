@@ -35,7 +35,7 @@ function OrderCard({ order }: OrderCardProps) {
     <div className="group rounded-lg bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md">
       <div className="mb-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+          <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
             Bestilling #{order._id.slice(-8).toUpperCase()}
           </h3>
           <Badge
@@ -52,42 +52,42 @@ function OrderCard({ order }: OrderCardProps) {
 
       <div className="mb-4 grid grid-cols-1 gap-4 md:grid-cols-3">
         <div className="flex items-center gap-3">
-          <div className="bg-[var(--baladi-primary)]/10 flex h-8 w-8 items-center justify-center rounded-full">
-            <Calendar size={14} className="text-[var(--baladi-primary)]" />
+          <div className="bg-[var(--nordmat-primary)]/10 flex h-8 w-8 items-center justify-center rounded-full">
+            <Calendar size={14} className="text-[var(--nordmat-primary)]" />
           </div>
           <div>
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               Bestilt
             </p>
-            <p className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-dark)]">
+            <p className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-dark)]">
               {formatDate(order.createdAt)}
             </p>
           </div>
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="bg-[var(--baladi-secondary)]/10 flex h-8 w-8 items-center justify-center rounded-full">
-            <CreditCard size={14} className="text-[var(--baladi-secondary)]" />
+          <div className="bg-[var(--nordmat-secondary)]/10 flex h-8 w-8 items-center justify-center rounded-full">
+            <CreditCard size={14} className="text-[var(--nordmat-secondary)]" />
           </div>
           <div>
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               Totalbeløp
             </p>
-            <p className="font-[family-name:var(--font-sora)] font-bold text-[var(--baladi-primary)]">
+            <p className="font-[family-name:var(--font-sora)] font-bold text-[var(--nordmat-primary)]">
               {formatPrice(order.totalAmount)} kr
             </p>
           </div>
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="bg-[var(--baladi-accent)]/10 flex h-8 w-8 items-center justify-center rounded-full">
-            <MapPin size={14} className="text-[var(--baladi-accent)]" />
+          <div className="bg-[var(--nordmat-accent)]/10 flex h-8 w-8 items-center justify-center rounded-full">
+            <MapPin size={14} className="text-[var(--nordmat-accent)]" />
           </div>
           <div>
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               Leveres til
             </p>
-            <p className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-dark)]">
+            <p className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-dark)]">
               {order.shippingAddress.city}
             </p>
           </div>
@@ -96,8 +96,8 @@ function OrderCard({ order }: OrderCardProps) {
 
       <div className="mb-4">
         <div className="mb-3 flex items-center gap-2">
-          <Package size={16} className="text-[var(--baladi-gray)]" />
-          <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+          <Package size={16} className="text-[var(--nordmat-gray)]" />
+          <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
             {order.items.length} varer bestilt
           </span>
         </div>
@@ -107,7 +107,7 @@ function OrderCard({ order }: OrderCardProps) {
             {itemsToShow.map((item, index) => (
               <div
                 key={`${item.productId._id}-${index}`}
-                className="bg-[var(--baladi-light)]/30 relative h-12 w-12 overflow-hidden rounded-md border-2 border-white shadow-sm"
+                className="bg-[var(--nordmat-light)]/30 relative h-12 w-12 overflow-hidden rounded-md border-2 border-white shadow-sm"
               >
                 <Image
                   src={item.productId.images?.[0] || ''}
@@ -119,8 +119,8 @@ function OrderCard({ order }: OrderCardProps) {
               </div>
             ))}
             {remainingItems > 0 && (
-              <div className="flex h-12 w-12 items-center justify-center rounded-md border-2 border-white bg-[var(--baladi-muted)] shadow-sm">
-                <span className="font-[family-name:var(--font-dm-sans)] text-xs font-medium text-[var(--baladi-gray)]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-md border-2 border-white bg-[var(--nordmat-muted)] shadow-sm">
+                <span className="font-[family-name:var(--font-dm-sans)] text-xs font-medium text-[var(--nordmat-gray)]">
                   +{remainingItems}
                 </span>
               </div>
@@ -128,7 +128,7 @@ function OrderCard({ order }: OrderCardProps) {
           </div>
 
           <div className="min-w-0 flex-1">
-            <p className="truncate font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <p className="truncate font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               {itemsToShow.map((item, index) => (
                 <span key={item.productId._id}>
                   {item.productId.name}
@@ -141,7 +141,7 @@ function OrderCard({ order }: OrderCardProps) {
         </div>
       </div>
 
-      <div className="flex items-center justify-end border-t border-[var(--baladi-border)] pt-4">
+      <div className="flex items-center justify-end border-t border-[var(--nordmat-border)] pt-4">
         <div className="flex items-center gap-2">
           <Button>
             <Link

@@ -37,7 +37,7 @@ function DeliveryDateSelection({ control }: DeliveryDateSelectionProps) {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Calendar size={20} className="text-[var(--baladi-primary)]" />
+          <Calendar size={20} className="text-[var(--nordmat-primary)]" />
           Ønsket leveringsdato
         </CardTitle>
         <CardDescription>

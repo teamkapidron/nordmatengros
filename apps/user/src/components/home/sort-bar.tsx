@@ -52,8 +52,8 @@ function ProductsSortBar() {
   }, [isLoading, productsData]);
 
   return (
-    <div className="mb-6 flex items-center justify-between rounded-lg border border-[var(--baladi-border)] bg-white p-4 shadow-sm transition-all duration-300 hover:border-[var(--baladi-primary)]/20 hover:shadow-md">
-      <div className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+    <div className="mb-6 flex items-center justify-between rounded-lg border border-[var(--nordmat-border)] bg-white p-4 shadow-sm transition-all duration-300 hover:border-[var(--nordmat-primary)]/20 hover:shadow-md">
+      <div className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
         {statusText}
       </div>
 
@@ -64,25 +64,25 @@ function ProductsSortBar() {
               <Button
                 variant="outline"
                 size="sm"
-                className="border-[var(--baladi-border)] font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)] transition-all duration-200 hover:border-[var(--baladi-primary)] hover:bg-[var(--baladi-light)] hover:text-[var(--baladi-primary)]"
+                className="border-[var(--nordmat-border)] font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)] transition-all duration-200 hover:border-[var(--nordmat-primary)] hover:bg-[var(--nordmat-light)] hover:text-[var(--nordmat-primary)]"
               >
                 Sorter Etter
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="end"
-              className="w-48 border-[var(--baladi-border)] bg-white shadow-lg"
+              className="w-48 border-[var(--nordmat-border)] bg-white shadow-lg"
             >
               {sortOptions.map((option) => (
                 <DropdownMenuItem
                   key={option.id}
                   onClick={() => handleSortChange(option.id)}
-                  className="flex cursor-pointer items-center gap-3 px-3 py-2 font-[family-name:var(--font-dm-sans)] text-sm transition-colors hover:bg-[var(--baladi-light)] focus:bg-[var(--baladi-light)]"
+                  className="flex cursor-pointer items-center gap-3 px-3 py-2 font-[family-name:var(--font-dm-sans)] text-sm transition-colors hover:bg-[var(--nordmat-light)] focus:bg-[var(--nordmat-light)]"
                 >
-                  <span className="text-[var(--baladi-primary)]">
+                  <span className="text-[var(--nordmat-primary)]">
                     {option.icon}
                   </span>
-                  <span className="text-[var(--baladi-dark)]">
+                  <span className="text-[var(--nordmat-dark)]">
                     {option.label}
                   </span>
                 </DropdownMenuItem>

@@ -42,7 +42,7 @@ function ProductInventoryBatches({ productId }: ProductInventoryBatchesProps) {
   if (productInventoryQuery.isLoading) {
     return (
       <div className="space-y-4">
-        <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--baladi-dark)]">
+        <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--nordmat-dark)]">
           Lagerpartier
         </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -65,14 +65,14 @@ function ProductInventoryBatches({ productId }: ProductInventoryBatchesProps) {
 
   if (inventory.length === 0) {
     return (
-      <div className="rounded-xl border border-[var(--baladi-border)] bg-white p-12 text-center shadow-sm">
+      <div className="rounded-xl border border-[var(--nordmat-border)] bg-white p-12 text-center shadow-sm">
         <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
           <Package className="h-8 w-8 text-gray-400" />
         </div>
-        <h3 className="mb-2 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+        <h3 className="mb-2 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
           Ingen lagerpartier funnet
         </h3>
-        <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+        <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
           Dette produktet har for øyeblikket ingen lagerbeholdning.
         </p>
       </div>
@@ -83,17 +83,17 @@ function ProductInventoryBatches({ productId }: ProductInventoryBatchesProps) {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--baladi-dark)]">
+          <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--nordmat-dark)]">
             Lagerpartier
           </h2>
-          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
             {inventory.length} {inventory.length === 1 ? 'parti' : 'partier'}{' '}
             tilgjengelig
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <Info className="h-4 w-4 text-[var(--baladi-gray)]" />
-          <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+          <Info className="h-4 w-4 text-[var(--nordmat-gray)]" />
+          <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
             Sortert etter utløpsdato
           </span>
         </div>
@@ -307,7 +307,7 @@ function InventoryBatchCard({ item, productId }: InventoryBatchCardProps) {
               variant="outline"
               size="sm"
               onClick={() => setIsEditDialogOpen(true)}
-              className="h-8 flex-1 border-gray-300 bg-white/80 px-3 text-xs font-medium text-gray-700 transition-all duration-200 hover:border-[var(--baladi-primary)] hover:bg-white hover:text-[var(--baladi-primary)]"
+              className="h-8 flex-1 border-gray-300 bg-white/80 px-3 text-xs font-medium text-gray-700 transition-all duration-200 hover:border-[var(--nordmat-primary)] hover:bg-white hover:text-[var(--nordmat-primary)]"
             >
               <Edit2 className="mr-1.5 h-3 w-3" />
               Rediger

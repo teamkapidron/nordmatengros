@@ -28,21 +28,21 @@ function CustomerVerificationStatus(props: CustomerVerificationStatusProps) {
   }
 
   return (
-    <Card className="relative overflow-hidden border border-[var(--baladi-border)] bg-gradient-to-br from-white via-[var(--baladi-light)] to-white shadow-lg">
+    <Card className="relative overflow-hidden border border-[var(--nordmat-border)] bg-gradient-to-br from-white via-[var(--nordmat-light)] to-white shadow-lg">
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute -right-6 -top-6 h-32 w-32 rounded-full bg-[var(--baladi-primary)]"></div>
-        <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-[var(--baladi-secondary)]"></div>
+        <div className="absolute -right-6 -top-6 h-32 w-32 rounded-full bg-[var(--nordmat-primary)]"></div>
+        <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-[var(--nordmat-secondary)]"></div>
       </div>
 
       <div className="relative">
-        <div className="h-1 w-full bg-gradient-to-r from-[var(--baladi-primary)] via-[var(--baladi-accent)] to-[var(--baladi-secondary)]"></div>
+        <div className="h-1 w-full bg-gradient-to-r from-[var(--nordmat-primary)] via-[var(--nordmat-accent)] to-[var(--nordmat-secondary)]"></div>
 
         <div className="flex items-center justify-between p-6">
           <div className="space-y-1">
-            <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--baladi-dark)]">
+            <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--nordmat-dark)]">
               Kundeverifisering
             </h2>
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               Oversikt over kundens verifikasjonsstatus
             </p>
           </div>
@@ -99,8 +99,8 @@ function VerificationStatusCard({
     <div
       className={`group relative overflow-hidden rounded-xl border-2 p-4 transition-all duration-300 hover:shadow-lg ${
         isVerified
-          ? 'border-[var(--baladi-success)]/30 hover:border-[var(--baladi-success)]/50 bg-gradient-to-br from-green-50 to-emerald-50'
-          : 'border-[var(--baladi-warning)]/30 hover:border-[var(--baladi-warning)]/50 bg-gradient-to-br from-amber-50 to-orange-50'
+          ? 'border-[var(--nordmat-success)]/30 hover:border-[var(--nordmat-success)]/50 bg-gradient-to-br from-green-50 to-emerald-50'
+          : 'border-[var(--nordmat-warning)]/30 hover:border-[var(--nordmat-warning)]/50 bg-gradient-to-br from-amber-50 to-orange-50'
       }`}
     >
       <div
@@ -113,8 +113,8 @@ function VerificationStatusCard({
         <div
           className={`flex h-12 w-12 items-center justify-center rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-110 ${
             isVerified
-              ? 'bg-gradient-to-br from-[var(--baladi-success)] to-green-600'
-              : 'bg-gradient-to-br from-[var(--baladi-warning)] to-orange-600'
+              ? 'bg-gradient-to-br from-[var(--nordmat-success)] to-green-600'
+              : 'bg-gradient-to-br from-[var(--nordmat-warning)] to-orange-600'
           }`}
         >
           {type === 'email' ? (
@@ -126,22 +126,22 @@ function VerificationStatusCard({
 
         <div className="min-w-0 flex-1 space-y-2">
           <div className="flex items-center gap-2">
-            <h3 className="font-[family-name:var(--font-sora)] font-semibold text-[var(--baladi-dark)]">
+            <h3 className="font-[family-name:var(--font-sora)] font-semibold text-[var(--nordmat-dark)]">
               {title}
             </h3>
             {isVerified ? (
-              <CheckCircle className="h-4 w-4 text-[var(--baladi-success)]" />
+              <CheckCircle className="h-4 w-4 text-[var(--nordmat-success)]" />
             ) : (
-              <Clock className="h-4 w-4 text-[var(--baladi-warning)]" />
+              <Clock className="h-4 w-4 text-[var(--nordmat-warning)]" />
             )}
           </div>
 
-          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
             {subtitle}
           </p>
 
           {timestamp && (
-            <p className="text-[var(--baladi-gray)]/80 font-[family-name:var(--font-dm-sans)] text-xs">
+            <p className="text-[var(--nordmat-gray)]/80 font-[family-name:var(--font-dm-sans)] text-xs">
               {formatDate(timestamp, "MMM d, yyyy 'kl.' HH:mm")}
             </p>
           )}

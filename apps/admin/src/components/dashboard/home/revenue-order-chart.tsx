@@ -27,19 +27,19 @@ function RevenueOrdersChart() {
   const chartConfig = {
     orderCount: {
       label: 'Antall bestillinger',
-      color: 'var(--baladi-info)',
+      color: 'var(--nordmat-info)',
     },
     totalRevenue: {
       label: 'Inntekt',
-      color: 'var(--baladi-success)',
+      color: 'var(--nordmat-success)',
     },
     totalCost: {
       label: 'Kostnad',
-      color: 'var(--baladi-warning)',
+      color: 'var(--nordmat-warning)',
     },
     totalProfit: {
       label: 'Fortjeneste',
-      color: 'var(--baladi-primary)',
+      color: 'var(--nordmat-primary)',
     },
   };
 
@@ -61,21 +61,21 @@ function RevenueOrdersChart() {
   }, [revenueData]);
 
   return (
-    <div className="h-full rounded-xl bg-white p-6 shadow-lg ring-1 ring-[var(--baladi-border)]">
+    <div className="h-full rounded-xl bg-white p-6 shadow-lg ring-1 ring-[var(--nordmat-border)]">
       <div className="mb-4">
-        <h3 className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+        <h3 className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
           Daglig inntekt og bestillinger
         </h3>
-        <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+        <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
           Spor inntekt, kostnader, fortjeneste og bestillingsvolum over tid
         </p>
       </div>
 
       {revenueData.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-20 text-center">
-          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--baladi-muted)]">
+          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--nordmat-muted)]">
             <svg
-              className="h-8 w-8 text-[var(--baladi-gray)]"
+              className="h-8 w-8 text-[var(--nordmat-gray)]"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -88,10 +88,10 @@ function RevenueOrdersChart() {
               />
             </svg>
           </div>
-          <h4 className="mb-2 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+          <h4 className="mb-2 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
             Ingen inntektsdata ennå
           </h4>
-          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
             Inntekts- og bestillingsanalyse vil vises her når du begynner å
             motta bestillinger.
           </p>
@@ -105,7 +105,7 @@ function RevenueOrdersChart() {
                   className="h-3 w-3 rounded-full"
                   style={{ backgroundColor: config.color }}
                 />
-                <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-dark)]">
+                <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-dark)]">
                   {config.label}
                 </span>
               </div>
@@ -121,7 +121,7 @@ function RevenueOrdersChart() {
                 <CartesianGrid
                   vertical={false}
                   strokeDasharray="3 3"
-                  stroke="var(--baladi-border)"
+                  stroke="var(--nordmat-border)"
                 />
                 <XAxis
                   dataKey="date"
@@ -129,7 +129,7 @@ function RevenueOrdersChart() {
                   axisLine={false}
                   tick={{
                     fontSize: 12,
-                    fill: 'var(--baladi-gray)',
+                    fill: 'var(--nordmat-gray)',
                     fontFamily: 'var(--font-dm-sans)',
                   }}
                 />
@@ -140,7 +140,7 @@ function RevenueOrdersChart() {
                   axisLine={false}
                   tick={{
                     fontSize: 12,
-                    fill: 'var(--baladi-gray)',
+                    fill: 'var(--nordmat-gray)',
                     fontFamily: 'var(--font-dm-sans)',
                   }}
                 />
@@ -151,7 +151,7 @@ function RevenueOrdersChart() {
                   axisLine={false}
                   tick={{
                     fontSize: 12,
-                    fill: 'var(--baladi-gray)',
+                    fill: 'var(--nordmat-gray)',
                     fontFamily: 'var(--font-dm-sans)',
                   }}
                 />
@@ -161,12 +161,12 @@ function RevenueOrdersChart() {
                     if (active && payload && payload.length) {
                       const data = payload[0]?.payload;
                       return (
-                        <div className="rounded-lg border border-[var(--baladi-border)] bg-white p-3 shadow-lg">
-                          <p className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--baladi-dark)]">
+                        <div className="rounded-lg border border-[var(--nordmat-border)] bg-white p-3 shadow-lg">
+                          <p className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--nordmat-dark)]">
                             {data.date}
                           </p>
                           <div className="mt-2 space-y-1">
-                            <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                            <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                               <span
                                 className="mr-2 inline-block h-2 w-2 rounded-full"
                                 style={{
@@ -177,7 +177,7 @@ function RevenueOrdersChart() {
                               Inntekt:{' '}
                               {data.totalRevenue?.toLocaleString() || 0} kr
                             </p>
-                            <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                            <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                               <span
                                 className="mr-2 inline-block h-2 w-2 rounded-full"
                                 style={{
@@ -186,7 +186,7 @@ function RevenueOrdersChart() {
                               />
                               Bestillinger: {data.orderCount || 0}
                             </p>
-                            <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                            <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                               <span
                                 className="mr-2 inline-block h-2 w-2 rounded-full"
                                 style={{
@@ -196,7 +196,7 @@ function RevenueOrdersChart() {
                               Kostnad: {data.totalCost?.toLocaleString() || 0}{' '}
                               kr
                             </p>
-                            <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                            <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                               <span
                                 className="mr-2 inline-block h-2 w-2 rounded-full"
                                 style={{
@@ -270,20 +270,20 @@ function RevenueOrdersChart() {
             </ResponsiveContainer>
           </div>
 
-          <div className="mt-6 grid grid-cols-2 gap-4 border-t border-[var(--baladi-border)] pt-4">
-            <div className="bg-[var(--baladi-success)]/5 rounded-lg p-3">
-              <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-success)]">
+          <div className="mt-6 grid grid-cols-2 gap-4 border-t border-[var(--nordmat-border)] pt-4">
+            <div className="bg-[var(--nordmat-success)]/5 rounded-lg p-3">
+              <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-success)]">
                 Total inntekt
               </p>
-              <p className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+              <p className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
                 {totalMetrics.totalRevenue.toLocaleString()} kr
               </p>
             </div>
-            <div className="bg-[var(--baladi-info)]/5 rounded-lg p-3">
-              <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-info)]">
+            <div className="bg-[var(--nordmat-info)]/5 rounded-lg p-3">
+              <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-info)]">
                 Total bestillinger
               </p>
-              <p className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+              <p className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
                 {totalMetrics.orderCount.toLocaleString()}
               </p>
             </div>

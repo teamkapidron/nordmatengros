@@ -29,22 +29,22 @@ function CustomerInfo(props: CustomerInfoProps) {
   }
 
   return (
-    <Card className="relative overflow-hidden border border-[var(--baladi-border)] bg-gradient-to-br from-white via-[var(--baladi-light)] to-white shadow-lg">
+    <Card className="relative overflow-hidden border border-[var(--nordmat-border)] bg-gradient-to-br from-white via-[var(--nordmat-light)] to-white shadow-lg">
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute -right-8 -top-8 h-40 w-40 rounded-full bg-[var(--baladi-secondary)]"></div>
-        <div className="absolute -bottom-6 -left-6 h-32 w-32 rounded-full bg-[var(--baladi-primary)]"></div>
-        <div className="absolute right-1/3 top-1/2 h-20 w-20 rounded-full bg-[var(--baladi-accent)]"></div>
+        <div className="absolute -right-8 -top-8 h-40 w-40 rounded-full bg-[var(--nordmat-secondary)]"></div>
+        <div className="absolute -bottom-6 -left-6 h-32 w-32 rounded-full bg-[var(--nordmat-primary)]"></div>
+        <div className="absolute right-1/3 top-1/2 h-20 w-20 rounded-full bg-[var(--nordmat-accent)]"></div>
       </div>
 
       <div className="relative">
-        <div className="h-1 w-full bg-gradient-to-r from-[var(--baladi-secondary)] via-[var(--baladi-accent)] to-[var(--baladi-primary)]"></div>
+        <div className="h-1 w-full bg-gradient-to-r from-[var(--nordmat-secondary)] via-[var(--nordmat-accent)] to-[var(--nordmat-primary)]"></div>
 
         <div className="flex items-center justify-between p-6">
           <div className="space-y-1">
-            <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--baladi-dark)]">
+            <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--nordmat-dark)]">
               Kundeinformasjon
             </h2>
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               Oversikt over kundens personlige informasjon
             </p>
           </div>
@@ -115,17 +115,17 @@ function InfoField(props: InfoFieldProps) {
   return (
     <div className={`group space-y-3 ${className}`}>
       <div className="flex items-center gap-2">
-        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--baladi-primary)] to-[var(--baladi-secondary)] shadow-sm transition-transform duration-200 group-hover:scale-110">
+        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--nordmat-primary)] to-[var(--nordmat-secondary)] shadow-sm transition-transform duration-200 group-hover:scale-110">
           <Icon className="h-4 w-4 text-white" />
         </div>
-        <label className="font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-dark)]">
+        <label className="font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-dark)]">
           {label}
         </label>
       </div>
 
-      <div className="border-[var(--baladi-border)]/50 group relative overflow-hidden rounded-lg border bg-gradient-to-r from-white to-[var(--baladi-light)] p-3 transition-all duration-200 hover:border-[var(--baladi-border)] hover:shadow-md">
-        <div className="from-[var(--baladi-primary)]/5 to-[var(--baladi-secondary)]/5 absolute inset-0 bg-gradient-to-r opacity-0 transition-opacity duration-200 group-hover:opacity-100"></div>
-        <p className="relative font-[family-name:var(--font-dm-sans)] text-[var(--baladi-dark)]">
+      <div className="border-[var(--nordmat-border)]/50 group relative overflow-hidden rounded-lg border bg-gradient-to-r from-white to-[var(--nordmat-light)] p-3 transition-all duration-200 hover:border-[var(--nordmat-border)] hover:shadow-md">
+        <div className="from-[var(--nordmat-primary)]/5 to-[var(--nordmat-secondary)]/5 absolute inset-0 bg-gradient-to-r opacity-0 transition-opacity duration-200 group-hover:opacity-100"></div>
+        <p className="relative font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-dark)]">
           {value}
         </p>
       </div>

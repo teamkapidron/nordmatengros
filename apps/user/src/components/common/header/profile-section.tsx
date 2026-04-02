@@ -53,61 +53,61 @@ function ProfileSection() {
         <DropdownMenuTrigger asChild>
           <Button
             variant="ghost"
-            className="hover:bg-[var(--baladi-primary)]/5 hover:shadow-[var(--baladi-primary)]/20 group flex h-12 items-center gap-3 rounded-full border border-[var(--baladi-border)] bg-white/80 px-4 backdrop-blur-sm transition-all duration-300 hover:border-[var(--baladi-primary)] hover:shadow-lg"
+            className="hover:bg-[var(--nordmat-primary)]/5 hover:shadow-[var(--nordmat-primary)]/20 group flex h-12 items-center gap-3 rounded-full border border-[var(--nordmat-border)] bg-white/80 px-4 backdrop-blur-sm transition-all duration-300 hover:border-[var(--nordmat-primary)] hover:shadow-lg"
           >
-            <Avatar className="border-[var(--baladi-primary)]/20 group-hover:border-[var(--baladi-primary)]/40 h-8 w-8 border-2 transition-all duration-300">
-              <AvatarFallback className="bg-gradient-to-br from-[var(--baladi-primary)] to-[var(--baladi-secondary)] font-[family-name:var(--font-sora)] text-xs font-bold text-white">
+            <Avatar className="border-[var(--nordmat-primary)]/20 group-hover:border-[var(--nordmat-primary)]/40 h-8 w-8 border-2 transition-all duration-300">
+              <AvatarFallback className="bg-gradient-to-br from-[var(--nordmat-primary)] to-[var(--nordmat-secondary)] font-[family-name:var(--font-sora)] text-xs font-bold text-white">
                 {getInitials(displayName)}
               </AvatarFallback>
             </Avatar>
 
             <div className="hidden flex-col items-start lg:flex">
-              <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)] transition-colors duration-300 group-hover:text-[var(--baladi-primary)]">
+              <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)] transition-colors duration-300 group-hover:text-[var(--nordmat-primary)]">
                 {displayName}
               </span>
-              <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+              <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                 Min konto
               </span>
             </div>
 
             <ChevronDown
               size={16}
-              className="text-[var(--baladi-gray)] transition-all duration-300 group-hover:text-[var(--baladi-primary)] group-data-[state=open]:rotate-180"
+              className="text-[var(--nordmat-gray)] transition-all duration-300 group-hover:text-[var(--nordmat-primary)] group-data-[state=open]:rotate-180"
             />
           </Button>
         </DropdownMenuTrigger>
 
         <DropdownMenuContent
           align="end"
-          className="w-56 border-[var(--baladi-border)] bg-white/95 shadow-xl backdrop-blur-sm"
+          className="w-56 border-[var(--nordmat-border)] bg-white/95 shadow-xl backdrop-blur-sm"
           sideOffset={8}
         >
           <div className="px-3 py-2">
             <div className="flex items-center gap-3">
-              <Avatar className="border-[var(--baladi-primary)]/20 h-10 w-10 border-2">
-                <AvatarFallback className="bg-gradient-to-br from-[var(--baladi-primary)] to-[var(--baladi-secondary)] font-[family-name:var(--font-sora)] text-sm font-bold text-white">
+              <Avatar className="border-[var(--nordmat-primary)]/20 h-10 w-10 border-2">
+                <AvatarFallback className="bg-gradient-to-br from-[var(--nordmat-primary)] to-[var(--nordmat-secondary)] font-[family-name:var(--font-sora)] text-sm font-bold text-white">
                   {getInitials(displayName)}
                 </AvatarFallback>
               </Avatar>
               <div className="min-w-0 flex-1">
-                <p className="truncate font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                <p className="truncate font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                   {displayName}
                 </p>
-                <p className="truncate font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                <p className="truncate font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                   {user.email}
                 </p>
               </div>
             </div>
           </div>
 
-          <DropdownMenuSeparator className="bg-[var(--baladi-border)]" />
+          <DropdownMenuSeparator className="bg-[var(--nordmat-border)]" />
 
           <DropdownMenuItem asChild>
             <Link
               href="/order/list"
-              className="flex cursor-pointer items-center gap-3 px-3 py-2 font-[family-name:var(--font-dm-sans)] text-sm transition-colors hover:bg-[var(--baladi-light)] focus:bg-[var(--baladi-light)]"
+              className="flex cursor-pointer items-center gap-3 px-3 py-2 font-[family-name:var(--font-dm-sans)] text-sm transition-colors hover:bg-[var(--nordmat-light)] focus:bg-[var(--nordmat-light)]"
             >
-              <Package size={16} className="text-[var(--baladi-primary)]" />
+              <Package size={16} className="text-[var(--nordmat-primary)]" />
               <span>Mine bestillinger</span>
             </Link>
           </DropdownMenuItem>
@@ -115,9 +115,9 @@ function ProfileSection() {
           <DropdownMenuItem asChild>
             <Link
               href="/wishlist"
-              className="flex cursor-pointer items-center gap-3 px-3 py-2 font-[family-name:var(--font-dm-sans)] text-sm transition-colors hover:bg-[var(--baladi-light)] focus:bg-[var(--baladi-light)]"
+              className="flex cursor-pointer items-center gap-3 px-3 py-2 font-[family-name:var(--font-dm-sans)] text-sm transition-colors hover:bg-[var(--nordmat-light)] focus:bg-[var(--nordmat-light)]"
             >
-              <Heart size={16} className="text-[var(--baladi-primary)]" />
+              <Heart size={16} className="text-[var(--nordmat-primary)]" />
               <span>Ønskeliste</span>
             </Link>
           </DropdownMenuItem>
@@ -125,14 +125,14 @@ function ProfileSection() {
           <DropdownMenuItem asChild>
             <Link
               href="/address/list"
-              className="flex cursor-pointer items-center gap-3 px-3 py-2 font-[family-name:var(--font-dm-sans)] text-sm transition-colors hover:bg-[var(--baladi-light)] focus:bg-[var(--baladi-light)]"
+              className="flex cursor-pointer items-center gap-3 px-3 py-2 font-[family-name:var(--font-dm-sans)] text-sm transition-colors hover:bg-[var(--nordmat-light)] focus:bg-[var(--nordmat-light)]"
             >
-              <MapPin size={16} className="text-[var(--baladi-primary)]" />
+              <MapPin size={16} className="text-[var(--nordmat-primary)]" />
               <span>Adresser</span>
             </Link>
           </DropdownMenuItem>
 
-          <DropdownMenuSeparator className="bg-[var(--baladi-border)]" />
+          <DropdownMenuSeparator className="bg-[var(--nordmat-border)]" />
 
           <DropdownMenuItem
             onClick={handleLogout}
@@ -149,9 +149,9 @@ function ProfileSection() {
 
   return (
     <div className="flex items-center">
-      <Button className="hover:shadow-[var(--baladi-primary)]/25 group relative h-12 overflow-hidden rounded-full bg-gradient-to-r from-[var(--baladi-primary)] to-[var(--baladi-secondary)] px-6 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+      <Button className="hover:shadow-[var(--nordmat-primary)]/25 group relative h-12 overflow-hidden rounded-full bg-gradient-to-r from-[var(--nordmat-primary)] to-[var(--nordmat-secondary)] px-6 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
         <Link href="/login">
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--baladi-secondary)] to-[var(--baladi-primary)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--nordmat-secondary)] to-[var(--nordmat-primary)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
           <div className="relative flex items-center gap-2">
             <LogIn

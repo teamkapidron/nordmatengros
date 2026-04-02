@@ -49,42 +49,33 @@ function DesktopLayout(props: DesktopLayoutProps) {
           setIsCollapsed(false);
         }}
         className={cn(
-          'border-r border-[var(--baladi-sidebar-border)] bg-[var(--baladi-sidebar-bg)]',
+          'border-r border-[var(--nordmat-sidebar-border)] bg-[var(--nordmat-sidebar-bg)]',
           isCollapsed &&
             'h-screen min-w-[72px] transition-all duration-300 ease-in-out',
         )}
       >
         <div
           className={cn(
-            'flex h-16 items-center border-b border-[var(--baladi-border)] bg-white shadow-sm',
+            'flex h-16 items-center border-b border-[var(--nordmat-border)] bg-white shadow-sm',
             isCollapsed ? 'justify-center px-3' : 'justify-start px-6',
           )}
         >
           {!isCollapsed && (
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--baladi-primary)] p-2">
+              <div className="flex items-center justify-center rounded-lg p-2">
                 <Image
-                  alt="Baladi"
+                  alt="Nordmat"
                   height={500}
                   width={500}
-                  className="size-8"
-                  src="/images/brand/logo.png"
+                  src="/images/brand/icon.png"
                 />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--baladi-primary)]">
-                  Baladi
-                </span>
-                <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
-                  Administrasjonsportal
-                </span>
               </div>
             </div>
           )}
           {isCollapsed && (
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--baladi-primary)] p-2">
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--nordmat-primary)] p-2">
               <Image
-                alt="Baladi"
+                alt="Nordmat"
                 height={24}
                 width={24}
                 className="h-6 w-6"
@@ -106,8 +97,8 @@ function DesktopLayout(props: DesktopLayoutProps) {
             className={cn(
               'my-4',
               isCollapsed
-                ? 'mx-3 border-t border-[var(--baladi-sidebar-border)]'
-                : 'mx-6 border-t border-[var(--baladi-sidebar-border)]',
+                ? 'mx-3 border-t border-[var(--nordmat-sidebar-border)]'
+                : 'mx-6 border-t border-[var(--nordmat-sidebar-border)]',
             )}
           />
 
@@ -129,7 +120,7 @@ function DesktopLayout(props: DesktopLayoutProps) {
       <ResizableHandle />
 
       <ResizablePanel defaultSize={500}>
-        <div className="flex h-screen flex-col bg-[var(--baladi-light)]">
+        <div className="flex h-screen flex-col bg-[var(--nordmat-light)]">
           <TopBar />
           <div className="flex-grow overflow-y-auto p-5">{children}</div>
         </div>

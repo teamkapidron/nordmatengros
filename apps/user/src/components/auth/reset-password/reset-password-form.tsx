@@ -66,10 +66,10 @@ function ResetPasswordForm(props: ResetPasswordFormProps) {
   return (
     <div className="w-full space-y-4">
       <div className="text-center">
-        <h3 className="mb-1 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+        <h3 className="mb-1 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
           Opprett nytt passord
         </h3>
-        <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+        <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
           Velg et sterkt passord for å sikre kontoen din
         </p>
       </div>
@@ -81,8 +81,8 @@ function ResetPasswordForm(props: ResetPasswordFormProps) {
             name="password"
             render={({ field }) => (
               <FormItem className="space-y-1">
-                <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
-                  <Key className="h-4 w-4 text-[var(--baladi-gray)]" />
+                <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
+                  <Key className="h-4 w-4 text-[var(--nordmat-gray)]" />
                   Nytt passord
                 </FormLabel>
                 <FormControl>
@@ -91,14 +91,14 @@ function ResetPasswordForm(props: ResetPasswordFormProps) {
                       {...field}
                       type={showPassword ? 'text' : 'password'}
                       placeholder="Opprett et sterkt passord"
-                      className="focus:ring-[var(--baladi-primary)]/20 w-full rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)] px-3 py-2 pr-10 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--baladi-primary)] focus:bg-white focus:ring-2"
+                      className="focus:ring-[var(--nordmat-primary)]/20 w-full rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] px-3 py-2 pr-10 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--nordmat-primary)] focus:bg-white focus:ring-2"
                     />
                     <Button
                       type="button"
                       size="icon"
                       variant="ghost"
                       onClick={togglePassword}
-                      className="absolute right-2 top-1/2 h-6 w-6 -translate-y-1/2 text-[var(--baladi-gray)] hover:text-[var(--baladi-primary)]"
+                      className="absolute right-2 top-1/2 h-6 w-6 -translate-y-1/2 text-[var(--nordmat-gray)] hover:text-[var(--nordmat-primary)]"
                     >
                       {showPassword ? (
                         <EyeOff className="h-4 w-4" />
@@ -108,7 +108,7 @@ function ResetPasswordForm(props: ResetPasswordFormProps) {
                     </Button>
                   </div>
                 </FormControl>
-                <FormMessage className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-error)]" />
+                <FormMessage className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-error)]" />
               </FormItem>
             )}
           />
@@ -118,8 +118,8 @@ function ResetPasswordForm(props: ResetPasswordFormProps) {
             name="confirmPassword"
             render={({ field }) => (
               <FormItem className="space-y-1">
-                <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
-                  <Key className="h-4 w-4 text-[var(--baladi-gray)]" />
+                <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
+                  <Key className="h-4 w-4 text-[var(--nordmat-gray)]" />
                   Bekreft nytt passord
                 </FormLabel>
                 <FormControl>
@@ -128,14 +128,14 @@ function ResetPasswordForm(props: ResetPasswordFormProps) {
                       {...field}
                       type={showConfirmPassword ? 'text' : 'password'}
                       placeholder="Skriv inn passordet på nytt"
-                      className="focus:ring-[var(--baladi-primary)]/20 w-full rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)] px-3 py-2 pr-10 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--baladi-primary)] focus:bg-white focus:ring-2"
+                      className="focus:ring-[var(--nordmat-primary)]/20 w-full rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] px-3 py-2 pr-10 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--nordmat-primary)] focus:bg-white focus:ring-2"
                     />
                     <Button
                       type="button"
                       size="icon"
                       variant="ghost"
                       onClick={toggleConfirmPassword}
-                      className="absolute right-2 top-1/2 h-6 w-6 -translate-y-1/2 text-[var(--baladi-gray)] hover:text-[var(--baladi-primary)]"
+                      className="absolute right-2 top-1/2 h-6 w-6 -translate-y-1/2 text-[var(--nordmat-gray)] hover:text-[var(--nordmat-primary)]"
                     >
                       {showConfirmPassword ? (
                         <EyeOff className="h-4 w-4" />
@@ -145,19 +145,19 @@ function ResetPasswordForm(props: ResetPasswordFormProps) {
                     </Button>
                   </div>
                 </FormControl>
-                <FormMessage className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-error)]" />
+                <FormMessage className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-error)]" />
               </FormItem>
             )}
           />
 
           {/* Security Tips */}
-          <div className="rounded-lg bg-[var(--baladi-muted)] p-3">
+          <div className="rounded-lg bg-[var(--nordmat-muted)] p-3">
             <div className="flex items-start space-x-3">
-              <div className="bg-[var(--baladi-success)]/10 flex h-6 w-6 items-center justify-center rounded-full">
-                <Shield className="h-3 w-3 text-[var(--baladi-success)]" />
+              <div className="bg-[var(--nordmat-success)]/10 flex h-6 w-6 items-center justify-center rounded-full">
+                <Shield className="h-3 w-3 text-[var(--nordmat-success)]" />
               </div>
               <div>
-                <p className="font-[family-name:var(--font-dm-sans)] text-xs leading-relaxed text-[var(--baladi-gray)]">
+                <p className="font-[family-name:var(--font-dm-sans)] text-xs leading-relaxed text-[var(--nordmat-gray)]">
                   <strong>Sikkerhetstips:</strong> Bruk minst 8 tegn med store
                   og små bokstaver, tall og spesialtegn.
                 </p>
@@ -168,7 +168,7 @@ function ResetPasswordForm(props: ResetPasswordFormProps) {
           <Button
             type="submit"
             disabled={resetPasswordMutation.isPending}
-            className="focus:ring-[var(--baladi-primary)]/30 group relative w-full overflow-hidden rounded-lg bg-[var(--baladi-primary)] px-6 py-3 font-[family-name:var(--font-dm-sans)] text-base font-semibold text-white shadow-md transition-all duration-200 hover:bg-[var(--baladi-secondary)] hover:shadow-lg focus:outline-none focus:ring-4 disabled:cursor-not-allowed disabled:opacity-70"
+            className="focus:ring-[var(--nordmat-primary)]/30 group relative w-full overflow-hidden rounded-lg bg-[var(--nordmat-primary)] px-6 py-3 font-[family-name:var(--font-dm-sans)] text-base font-semibold text-white shadow-md transition-all duration-200 hover:bg-[var(--nordmat-secondary)] hover:shadow-lg focus:outline-none focus:ring-4 disabled:cursor-not-allowed disabled:opacity-70"
           >
             <div className="relative flex items-center justify-center space-x-2">
               {resetPasswordMutation.isPending ? (

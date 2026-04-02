@@ -15,19 +15,19 @@ export const metadata: Metadata = {
 
 export default function WaitForApprovalPage() {
   return (
-    <div className="flex min-h-screen w-full items-center justify-center bg-[var(--baladi-light)] p-8 sm:p-12">
+    <div className="flex min-h-screen w-full items-center justify-center bg-[var(--nordmat-light)] p-8 sm:p-12">
       <div className="w-full max-w-lg">
         <div className="mb-10 text-center">
           <div className="mb-8">
             <div className="relative mb-6 inline-flex items-center justify-center">
-              <div className="absolute inset-0 animate-pulse rounded-2xl bg-[var(--baladi-primary)]/10 blur-2xl"></div>
-              <div className="absolute -inset-6 rounded-2xl bg-gradient-to-r from-[var(--baladi-primary)]/5 to-[var(--baladi-secondary)]/5 blur-xl"></div>
-              <div className="relative overflow-hidden rounded-2xl bg-white p-4 shadow-2xl ring-1 ring-[var(--baladi-primary)]/10">
+              <div className="absolute inset-0 animate-pulse rounded-2xl bg-[var(--nordmat-primary)]/10 blur-2xl"></div>
+              <div className="absolute -inset-6 rounded-2xl bg-gradient-to-r from-[var(--nordmat-primary)]/5 to-[var(--nordmat-secondary)]/5 blur-xl"></div>
+              <div className="relative overflow-hidden rounded-2xl bg-white p-4 shadow-2xl ring-1 ring-[var(--nordmat-primary)]/10">
                 <Image
                   width={96}
                   height={96}
                   src="/images/brand/logo.png"
-                  alt="Baladi Engros"
+                  alt="Nordmat Engros"
                   className="h-24 w-auto object-contain"
                 />
               </div>
@@ -35,102 +35,102 @@ export default function WaitForApprovalPage() {
 
             <div className="mb-6">
               <div className="mb-3 flex items-center justify-center gap-2">
-                <div className="h-1 w-8 rounded-full bg-[var(--baladi-accent)]"></div>
-                <h1 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--baladi-primary)]">
-                  BALADI ENGROS
+                <div className="h-1 w-8 rounded-full bg-[var(--nordmat-accent)]"></div>
+                <h1 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--nordmat-primary)]">
+                  NORDMAT ENGROS
                 </h1>
-                <div className="h-1 w-8 rounded-full bg-[var(--baladi-accent)]"></div>
+                <div className="h-1 w-8 rounded-full bg-[var(--nordmat-accent)]"></div>
               </div>
-              <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-secondary)]">
+              <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-secondary)]">
                 Din pålitelige grossistpartner
               </p>
             </div>
 
             <div className="mb-4 flex items-center justify-center">
-              <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[var(--baladi-warning)] to-amber-500 shadow-lg">
+              <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[var(--nordmat-warning)] to-amber-500 shadow-lg">
                 <Clock className="h-8 w-8 animate-pulse text-white" />
               </div>
             </div>
 
-            <h2 className="font-[family-name:var(--font-sora)] text-4xl font-bold tracking-tight text-[var(--baladi-dark)]">
+            <h2 className="font-[family-name:var(--font-sora)] text-4xl font-bold tracking-tight text-[var(--nordmat-dark)]">
               Venter på godkjenning
             </h2>
             <div className="mt-3 flex items-center justify-center">
-              <div className="h-1 w-16 rounded-full bg-[var(--baladi-primary)]"></div>
+              <div className="h-1 w-16 rounded-full bg-[var(--nordmat-primary)]"></div>
             </div>
           </div>
-          <p className="font-[family-name:var(--font-dm-sans)] text-lg text-[var(--baladi-gray)]">
-            Takk for at du registrerte deg hos Baladi Engros
+          <p className="font-[family-name:var(--font-dm-sans)] text-lg text-[var(--nordmat-gray)]">
+            Takk for at du registrerte deg hos Nordmat Engros
           </p>
         </div>
 
         <div className="relative">
-          <div className="rounded-2xl border border-[var(--baladi-border)] bg-white p-8 shadow-lg">
+          <div className="rounded-2xl border border-[var(--nordmat-border)] bg-white p-8 shadow-lg">
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="mb-3 font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--baladi-dark)]">
+                <h3 className="mb-3 font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--nordmat-dark)]">
                   Din søknad er under behandling
                 </h3>
-                <p className="font-[family-name:var(--font-dm-sans)] leading-relaxed text-[var(--baladi-gray)]">
+                <p className="font-[family-name:var(--font-dm-sans)] leading-relaxed text-[var(--nordmat-gray)]">
                   Vi gjennomgår for øyeblikket din registrering og verifiserer
                   bedriftsinformasjonen din.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-center space-x-4 rounded-lg bg-[var(--baladi-success)]/10 p-4">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--baladi-success)] shadow-sm">
+                <div className="flex items-center space-x-4 rounded-lg bg-[var(--nordmat-success)]/10 p-4">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--nordmat-success)] shadow-sm">
                     <CheckCircle className="h-4 w-4 text-white" />
                   </div>
                   <div>
-                    <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                    <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                       Registrering fullført
                     </p>
-                    <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                    <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                       Din konto er opprettet
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4 rounded-lg bg-[var(--baladi-info)]/10 p-4">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--baladi-info)] shadow-sm">
+                <div className="flex items-center space-x-4 rounded-lg bg-[var(--nordmat-info)]/10 p-4">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--nordmat-info)] shadow-sm">
                     <Shield className="h-4 w-4 animate-pulse text-white" />
                   </div>
                   <div>
-                    <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                    <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                       Verifisering pågår
                     </p>
-                    <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                    <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                       Vi sjekker bedriftsinformasjonen din
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4 rounded-lg bg-[var(--baladi-muted)] p-4">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--baladi-gray)] shadow-sm">
+                <div className="flex items-center space-x-4 rounded-lg bg-[var(--nordmat-muted)] p-4">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--nordmat-gray)] shadow-sm">
                     <UserCheck className="h-4 w-4 text-white" />
                   </div>
                   <div>
-                    <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                    <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                       Godkjenning
                     </p>
-                    <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                    <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                       Du vil motta en e-post når kontoen er godkjent
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-lg border border-[var(--baladi-primary)]/20 bg-gradient-to-r from-[var(--baladi-primary)]/5 to-[var(--baladi-secondary)]/5 p-4">
+              <div className="rounded-lg border border-[var(--nordmat-primary)]/20 bg-gradient-to-r from-[var(--nordmat-primary)]/5 to-[var(--nordmat-secondary)]/5 p-4">
                 <div className="flex items-start space-x-3">
-                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--baladi-primary)]/10">
-                    <Mail className="h-3 w-3 text-[var(--baladi-primary)]" />
+                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--nordmat-primary)]/10">
+                    <Mail className="h-3 w-3 text-[var(--nordmat-primary)]" />
                   </div>
                   <div>
-                    <p className="mb-1 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                    <p className="mb-1 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                       Viktig informasjon
                     </p>
-                    <p className="font-[family-name:var(--font-dm-sans)] text-xs leading-relaxed text-[var(--baladi-gray)]">
+                    <p className="font-[family-name:var(--font-dm-sans)] text-xs leading-relaxed text-[var(--nordmat-gray)]">
                       Du vil motta en e-post så snart kontoen din er godkjent og
                       klar til bruk. Sjekk også søppelpost-mappen din.
                     </p>
@@ -138,17 +138,17 @@ export default function WaitForApprovalPage() {
                 </div>
               </div>
 
-              <div className="rounded-lg border border-[var(--baladi-secondary)]/20 bg-gradient-to-br from-[var(--baladi-secondary)]/10 to-[var(--baladi-accent)]/10 p-6 text-center">
-                <h4 className="mb-3 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+              <div className="rounded-lg border border-[var(--nordmat-secondary)]/20 bg-gradient-to-br from-[var(--nordmat-secondary)]/10 to-[var(--nordmat-accent)]/10 p-6 text-center">
+                <h4 className="mb-3 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
                   I mellomtiden...
                 </h4>
-                <p className="mb-4 font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                <p className="mb-4 font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                   Utforsk vårt omfattende produktkatalog og se hva vi kan tilby
                   din bedrift
                 </p>
                 <Link
                   href="/"
-                  className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-[var(--baladi-primary)] to-[var(--baladi-secondary)] px-6 py-3 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-white shadow-lg transition-all duration-200 hover:scale-105 hover:from-[var(--baladi-secondary)] hover:to-[var(--baladi-primary)] hover:shadow-xl"
+                  className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-[var(--nordmat-primary)] to-[var(--nordmat-secondary)] px-6 py-3 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-white shadow-lg transition-all duration-200 hover:scale-105 hover:from-[var(--nordmat-secondary)] hover:to-[var(--nordmat-primary)] hover:shadow-xl"
                 >
                   Se våre produkter
                   <svg
@@ -167,14 +167,14 @@ export default function WaitForApprovalPage() {
                 </Link>
               </div>
 
-              <div className="border-t border-[var(--baladi-border)] pt-4">
-                <p className="text-center font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+              <div className="border-t border-[var(--nordmat-border)] pt-4">
+                <p className="text-center font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                   Har du spørsmål om registreringen din?
                 </p>
                 <p className="mt-1 text-center font-[family-name:var(--font-dm-sans)] text-sm">
                   <Link
                     href="/contact"
-                    className="font-medium text-[var(--baladi-primary)] transition-colors duration-200 hover:text-[var(--baladi-secondary)]"
+                    className="font-medium text-[var(--nordmat-primary)] transition-colors duration-200 hover:text-[var(--nordmat-secondary)]"
                   >
                     Kontakt oss
                   </Link>
@@ -185,26 +185,26 @@ export default function WaitForApprovalPage() {
         </div>
 
         <div className="mt-8 text-center">
-          <div className="rounded-lg bg-[var(--baladi-primary)]/5 px-6 py-4">
+          <div className="rounded-lg bg-[var(--nordmat-primary)]/5 px-6 py-4">
             <div className="mb-2 flex items-center justify-center">
               <Image
                 width={32}
                 height={32}
                 src="/images/brand/logo.png"
-                alt="Baladi Engros"
+                alt="Nordmat Engros"
                 className="h-8 w-auto object-contain opacity-80"
               />
             </div>
             <div className="space-y-1">
-              <div className="flex items-center justify-center space-x-2 text-xs text-[var(--baladi-gray)]">
+              <div className="flex items-center justify-center space-x-2 text-xs text-[var(--nordmat-gray)]">
                 <span className="font-[family-name:var(--font-dm-sans)]">
                   © {new Date().getFullYear()}
                 </span>
-                <span className="font-[family-name:var(--font-sora)] font-bold text-[var(--baladi-primary)]">
-                  BALADI ENGROS
+                <span className="font-[family-name:var(--font-sora)] font-bold text-[var(--nordmat-primary)]">
+                  NORDMAT ENGROS
                 </span>
               </div>
-              <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+              <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                 Alle rettigheter forbeholdt • Din pålitelige grossistpartner
               </p>
             </div>

@@ -21,7 +21,7 @@ export default async function CustomerDetailPage(
   const { id } = await props.params;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[var(--baladi-light)] via-white to-[var(--baladi-muted)]">
+    <div className="min-h-screen bg-gradient-to-br from-[var(--nordmat-light)] via-white to-[var(--nordmat-muted)]">
       <div className="mx-auto max-w-7xl space-y-6">
         <CustomerDetailHeader customerId={id} />
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">

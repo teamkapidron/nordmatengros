@@ -9,8 +9,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Baladi Engros',
-    default: 'Baladi Engros',
+    template: '%s | Nordmat Engros',
+    default: 'Nordmat Engros',
   },
 };
 

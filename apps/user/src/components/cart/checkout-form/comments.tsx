@@ -31,7 +31,7 @@ function Comments({ control }: CommentsProps) {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <MessageSquare size={20} className="text-[var(--baladi-primary)]" />
+          <MessageSquare size={20} className="text-[var(--nordmat-primary)]" />
           Kommentar til bestillingen
         </CardTitle>
         <CardDescription>
@@ -51,7 +51,7 @@ function Comments({ control }: CommentsProps) {
                   className="min-h-[100px] resize-none"
                 />
               </FormControl>
-              <p className="mt-2 font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+              <p className="mt-2 font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                 {field.value?.length || 0}/500 tegn
               </p>
               <FormMessage />

@@ -40,25 +40,25 @@ const AddressCard = memo(
       onClick={onSelect}
       className={`relative cursor-pointer rounded-lg border-2 p-4 transition-all duration-200 ${
         isSelected
-          ? 'bg-[var(--baladi-primary)]/5 border-[var(--baladi-primary)]'
-          : 'hover:border-[var(--baladi-primary)]/50 border-[var(--baladi-border)]'
+          ? 'bg-[var(--nordmat-primary)]/5 border-[var(--nordmat-primary)]'
+          : 'hover:border-[var(--nordmat-primary)]/50 border-[var(--nordmat-border)]'
       }`}
     >
       {address.isDefault && (
-        <Badge className="absolute -top-2 right-4 bg-[var(--baladi-accent)] text-white">
+        <Badge className="absolute -top-2 right-4 bg-[var(--nordmat-accent)] text-white">
           Standard
         </Badge>
       )}
 
       <div className="space-y-2">
         <div className="flex items-center gap-2">
-          <MapPin size={16} className="text-[var(--baladi-primary)]" />
-          <span className="font-[family-name:var(--font-sora)] font-semibold text-[var(--baladi-dark)]">
+          <MapPin size={16} className="text-[var(--nordmat-primary)]" />
+          <span className="font-[family-name:var(--font-sora)] font-semibold text-[var(--nordmat-dark)]">
             {address.label || 'Adresse'}
           </span>
         </div>
 
-        <div className="space-y-1 font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+        <div className="space-y-1 font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
           <p>{address.addressLine1}</p>
           {address.addressLine2 && <p>{address.addressLine2}</p>}
           <p>
@@ -72,7 +72,7 @@ const AddressCard = memo(
       </div>
 
       {isSelected && (
-        <div className="absolute -right-1 -top-1 h-4 w-4 rounded-full bg-[var(--baladi-primary)]">
+        <div className="absolute -right-1 -top-1 h-4 w-4 rounded-full bg-[var(--nordmat-primary)]">
           <div className="flex h-full w-full items-center justify-center">
             <div className="h-2 w-2 rounded-full bg-white" />
           </div>
@@ -109,7 +109,7 @@ function AddressSelection({ control }: AddressSelectionProps) {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <MapPin size={20} className="text-[var(--baladi-primary)]" />
+          <MapPin size={20} className="text-[var(--nordmat-primary)]" />
           Leveringsadresse
         </CardTitle>
         <CardDescription>
@@ -122,7 +122,7 @@ function AddressSelection({ control }: AddressSelectionProps) {
             {[...Array(2)].map((_, i) => (
               <div
                 key={i}
-                className="h-24 w-full animate-pulse rounded-lg bg-[var(--baladi-light)]"
+                className="h-24 w-full animate-pulse rounded-lg bg-[var(--nordmat-light)]"
               />
             ))}
           </div>
@@ -149,12 +149,12 @@ function AddressSelection({ control }: AddressSelectionProps) {
             )}
           />
         ) : (
-          <div className="rounded-lg border-2 border-dashed border-[var(--baladi-border)] p-6 text-center">
+          <div className="rounded-lg border-2 border-dashed border-[var(--nordmat-border)] p-6 text-center">
             <MapPin
               size={24}
-              className="mx-auto mb-2 text-[var(--baladi-gray)]"
+              className="mx-auto mb-2 text-[var(--nordmat-gray)]"
             />
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               Du har ikke lagt til noen leveringsadresser ennå. Legg til en
               adresse for å fortsette med bestillingen.
             </p>

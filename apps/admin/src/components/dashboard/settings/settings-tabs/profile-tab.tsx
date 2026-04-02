@@ -71,32 +71,32 @@ function ProfileTab() {
 
   return (
     <div className="space-y-8">
-      <div className="relative overflow-hidden rounded-2xl border border-[var(--baladi-border)] bg-gradient-to-br from-white via-white to-[var(--baladi-light)]/20 shadow-sm">
+      <div className="relative overflow-hidden rounded-2xl border border-[var(--nordmat-border)] bg-gradient-to-br from-white via-white to-[var(--nordmat-light)]/20 shadow-sm">
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute -top-8 -right-8 h-32 w-32 rounded-full bg-[var(--baladi-primary)]"></div>
-          <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-[var(--baladi-accent)]"></div>
+          <div className="absolute -top-8 -right-8 h-32 w-32 rounded-full bg-[var(--nordmat-primary)]"></div>
+          <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-[var(--nordmat-accent)]"></div>
         </div>
 
         <div className="relative p-8">
           <div className="flex items-start gap-6">
-            <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--baladi-primary)] to-[var(--baladi-secondary)] shadow-lg">
+            <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--nordmat-primary)] to-[var(--nordmat-secondary)] shadow-lg">
               <User className="h-10 w-10 text-white" />
             </div>
 
             <div className="flex-1 space-y-4">
               <div>
-                <h2 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--baladi-dark)]">
+                <h2 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--nordmat-dark)]">
                   {user?.name}
                 </h2>
-                <p className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+                <p className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
                   {user?.email}
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <div className="flex items-center gap-2 rounded-lg bg-[var(--baladi-primary)]/10 px-3 py-2">
-                  <Shield className="h-4 w-4 text-[var(--baladi-primary)]" />
-                  <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-primary)]">
+                <div className="flex items-center gap-2 rounded-lg bg-[var(--nordmat-primary)]/10 px-3 py-2">
+                  <Shield className="h-4 w-4 text-[var(--nordmat-primary)]" />
+                  <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-primary)]">
                     Admin
                   </span>
                 </div>
@@ -113,31 +113,31 @@ function ProfileTab() {
         </div>
       </div>
 
-      <Card className="overflow-hidden border-[var(--baladi-border)] py-0 shadow-sm">
-        <CardHeader className="border-b border-[var(--baladi-border)] bg-gradient-to-r from-gray-50 to-[var(--baladi-light)]/30 pt-4">
-          <CardTitle className="flex items-center gap-3 font-[family-name:var(--font-sora)] text-xl text-[var(--baladi-dark)]">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--baladi-primary)]/10">
-              <User className="h-5 w-5 text-[var(--baladi-primary)]" />
+      <Card className="overflow-hidden border-[var(--nordmat-border)] py-0 shadow-sm">
+        <CardHeader className="border-b border-[var(--nordmat-border)] bg-gradient-to-r from-gray-50 to-[var(--nordmat-light)]/30 pt-4">
+          <CardTitle className="flex items-center gap-3 font-[family-name:var(--font-sora)] text-xl text-[var(--nordmat-dark)]">
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--nordmat-primary)]/10">
+              <User className="h-5 w-5 text-[var(--nordmat-primary)]" />
             </div>
             Kontoinformasjon
           </CardTitle>
-          <CardDescription className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+          <CardDescription className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
             Grunnleggende kontoinformasjon som administreres av systemet
           </CardDescription>
         </CardHeader>
         <CardContent className="pb-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="space-y-3">
-              <Label className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--baladi-dark)]">
+              <Label className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--nordmat-dark)]">
                 Fullt navn
               </Label>
               <div className="relative">
                 <Input
                   value={user?.name}
                   disabled
-                  className="h-12 bg-gray-50/80 font-[family-name:var(--font-dm-sans)] text-[var(--baladi-dark)] backdrop-blur-sm"
+                  className="h-12 bg-gray-50/80 font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-dark)] backdrop-blur-sm"
                   iconLeft={
-                    <User className="h-5 w-5 text-[var(--baladi-dark)]" />
+                    <User className="h-5 w-5 text-[var(--nordmat-dark)]" />
                   }
                 />
                 <div className="absolute top-1/2 right-3 -translate-y-1/2">
@@ -151,16 +151,16 @@ function ProfileTab() {
             </div>
 
             <div className="space-y-3">
-              <Label className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--baladi-dark)]">
+              <Label className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--nordmat-dark)]">
                 E-postadresse
               </Label>
               <div className="relative">
                 <Input
                   value={user?.email}
                   disabled
-                  className="h-12 bg-gray-50/80 font-[family-name:var(--font-dm-sans)] text-[var(--baladi-dark)] backdrop-blur-sm"
+                  className="h-12 bg-gray-50/80 font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-dark)] backdrop-blur-sm"
                   iconLeft={
-                    <Mail className="h-5 w-5 text-[var(--baladi-dark)]" />
+                    <Mail className="h-5 w-5 text-[var(--nordmat-dark)]" />
                   }
                 />
                 <div className="absolute top-1/2 right-3 -translate-y-1/2">
@@ -176,15 +176,15 @@ function ProfileTab() {
         </CardContent>
       </Card>
 
-      <Card className="overflow-hidden border-[var(--baladi-border)] py-0 shadow-sm">
-        <CardHeader className="border-b border-[var(--baladi-border)] bg-gradient-to-r from-amber-50 to-orange-50 pt-4">
-          <CardTitle className="flex items-center gap-3 font-[family-name:var(--font-sora)] text-xl text-[var(--baladi-dark)]">
+      <Card className="overflow-hidden border-[var(--nordmat-border)] py-0 shadow-sm">
+        <CardHeader className="border-b border-[var(--nordmat-border)] bg-gradient-to-r from-amber-50 to-orange-50 pt-4">
+          <CardTitle className="flex items-center gap-3 font-[family-name:var(--font-sora)] text-xl text-[var(--nordmat-dark)]">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100">
               <Key className="h-5 w-5 text-amber-600" />
             </div>
             Sikkerhet & Passord
           </CardTitle>
-          <CardDescription className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+          <CardDescription className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
             Oppdater passordet ditt for økt sikkerhet og beskyttelse
           </CardDescription>
         </CardHeader>
@@ -197,7 +197,7 @@ function ProfileTab() {
                   name="currentPassword"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--baladi-dark)]">
+                      <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--nordmat-dark)]">
                         Nåværende passord
                       </FormLabel>
                       <FormControl>
@@ -208,7 +208,7 @@ function ProfileTab() {
                             placeholder="Skriv inn nåværende passord"
                             className="h-12 pr-12 font-[family-name:var(--font-dm-sans)]"
                             iconLeft={
-                              <Lock className="h-5 w-5 text-[var(--baladi-gray)]" />
+                              <Lock className="h-5 w-5 text-[var(--nordmat-gray)]" />
                             }
                             iconRight={
                               <button
@@ -216,7 +216,7 @@ function ProfileTab() {
                                 onClick={() =>
                                   setShowCurrentPassword(!showCurrentPassword)
                                 }
-                                className="rounded-md p-1 text-[var(--baladi-gray)] transition-colors hover:bg-gray-100 hover:text-[var(--baladi-primary)]"
+                                className="rounded-md p-1 text-[var(--nordmat-gray)] transition-colors hover:bg-gray-100 hover:text-[var(--nordmat-primary)]"
                               >
                                 {showCurrentPassword ? (
                                   <EyeOff className="h-5 w-5" />
@@ -239,7 +239,7 @@ function ProfileTab() {
                     name="newPassword"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--baladi-dark)]">
+                        <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--nordmat-dark)]">
                           Nytt passord
                         </FormLabel>
                         <FormControl>
@@ -250,7 +250,7 @@ function ProfileTab() {
                               placeholder="Skriv inn nytt passord"
                               className="h-12 pr-12 font-[family-name:var(--font-dm-sans)]"
                               iconLeft={
-                                <Lock className="h-5 w-5 text-[var(--baladi-gray)]" />
+                                <Lock className="h-5 w-5 text-[var(--nordmat-gray)]" />
                               }
                               iconRight={
                                 <button
@@ -258,7 +258,7 @@ function ProfileTab() {
                                   onClick={() =>
                                     setShowNewPassword(!showNewPassword)
                                   }
-                                  className="rounded-md p-1 text-[var(--baladi-gray)] transition-colors hover:bg-gray-100 hover:text-[var(--baladi-primary)]"
+                                  className="rounded-md p-1 text-[var(--nordmat-gray)] transition-colors hover:bg-gray-100 hover:text-[var(--nordmat-primary)]"
                                 >
                                   {showNewPassword ? (
                                     <EyeOff className="h-5 w-5" />
@@ -280,7 +280,7 @@ function ProfileTab() {
                     name="confirmPassword"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--baladi-dark)]">
+                        <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--nordmat-dark)]">
                           Bekreft nytt passord
                         </FormLabel>
                         <FormControl>
@@ -291,7 +291,7 @@ function ProfileTab() {
                               placeholder="Bekreft nytt passord"
                               className="h-12 pr-12 font-[family-name:var(--font-dm-sans)]"
                               iconLeft={
-                                <Lock className="h-5 w-5 text-[var(--baladi-gray)]" />
+                                <Lock className="h-5 w-5 text-[var(--nordmat-gray)]" />
                               }
                               iconRight={
                                 <button
@@ -299,7 +299,7 @@ function ProfileTab() {
                                   onClick={() =>
                                     setShowConfirmPassword(!showConfirmPassword)
                                   }
-                                  className="rounded-md p-1 text-[var(--baladi-gray)] transition-colors hover:bg-gray-100 hover:text-[var(--baladi-primary)]"
+                                  className="rounded-md p-1 text-[var(--nordmat-gray)] transition-colors hover:bg-gray-100 hover:text-[var(--nordmat-primary)]"
                                 >
                                   {showConfirmPassword ? (
                                     <EyeOff className="h-5 w-5" />
@@ -318,11 +318,11 @@ function ProfileTab() {
                 </div>
               </div>
 
-              <div className="flex justify-end border-t border-[var(--baladi-border)] pt-6">
+              <div className="flex justify-end border-t border-[var(--nordmat-border)] pt-6">
                 <Button
                   type="submit"
                   disabled={updatePasswordMutation.isPending}
-                  className="h-12 bg-gradient-to-r from-[var(--baladi-primary)] to-[var(--baladi-secondary)] px-8 font-[family-name:var(--font-dm-sans)] font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
+                  className="h-12 bg-gradient-to-r from-[var(--nordmat-primary)] to-[var(--nordmat-secondary)] px-8 font-[family-name:var(--font-dm-sans)] font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   <Key className="mr-2 h-5 w-5" />
                   {updatePasswordMutation.isPending

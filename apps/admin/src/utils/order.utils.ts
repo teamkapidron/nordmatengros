@@ -51,7 +51,7 @@ function generateOrderPdfHtml(order: OrderResponse): string {
           align-items: flex-start;
           margin-bottom: 40px;
           padding-bottom: 30px;
-          border-bottom: 3px solid #183c6c;
+          border-bottom: 3px solid #054d9b;
           position: relative;
         }
         
@@ -73,14 +73,14 @@ function generateOrderPdfHtml(order: OrderResponse): string {
           font-family: 'Sora', sans-serif;
           font-size: 32px;
           font-weight: 700;
-          color: #183c6c;
+          color: #054d9b;
           margin-bottom: 8px;
           letter-spacing: -0.5px;
         }
         
         .company-tagline {
           font-size: 14px;
-          color: #4b7bbe;
+          color: #2db0ea;
           margin-bottom: 20px;
           font-weight: 500;
         }
@@ -100,7 +100,7 @@ function generateOrderPdfHtml(order: OrderResponse): string {
           font-family: 'Sora', sans-serif;
           font-size: 28px;
           font-weight: 600;
-          color: #183c6c;
+          color: #054d9b;
           margin-bottom: 10px;
         }
         
@@ -145,14 +145,14 @@ function generateOrderPdfHtml(order: OrderResponse): string {
           background: #f8fafc;
           padding: 25px;
           border-radius: 12px;
-          border-left: 4px solid #183c6c;
+          border-left: 4px solid #054d9b;
         }
         
         .section-title {
           font-family: 'Sora', sans-serif;
           font-size: 16px;
           font-weight: 600;
-          color: #183c6c;
+          color: #054d9b;
           margin-bottom: 15px;
           display: flex;
           align-items: center;
@@ -190,7 +190,7 @@ function generateOrderPdfHtml(order: OrderResponse): string {
         }
         
         .items-table th {
-          background: linear-gradient(135deg, #183c6c, #4b7bbe);
+          background: linear-gradient(135deg, #054d9b, #2db0ea);
           color: white;
           padding: 18px 15px;
           text-align: left;
@@ -230,7 +230,7 @@ function generateOrderPdfHtml(order: OrderResponse): string {
         .quantity {
           text-align: center;
           font-weight: 600;
-          color: #183c6c;
+          color: #054d9b;
         }
         
         .price, .total-price {
@@ -267,13 +267,13 @@ function generateOrderPdfHtml(order: OrderResponse): string {
         }
         
         .summary-row.total {
-          border-top: 2px solid #183c6c;
+          border-top: 2px solid #054d9b;
           margin-top: 12px;
           padding-top: 15px;
           font-family: 'Sora', sans-serif;
           font-size: 18px;
           font-weight: 700;
-          color: #183c6c;
+          color: #054d9b;
         }
         
         .summary-label {
@@ -296,12 +296,12 @@ function generateOrderPdfHtml(order: OrderResponse): string {
         }
         
         .footer-highlight {
-          color: #183c6c;
+          color: #054d9b;
           font-weight: 600;
         }
         
         .thank-you {
-          background: linear-gradient(135deg, #183c6c, #4b7bbe);
+          background: linear-gradient(135deg, #054d9b, #2db0ea);
           color: white;
           padding: 20px;
           border-radius: 12px;
@@ -321,13 +321,13 @@ function generateOrderPdfHtml(order: OrderResponse): string {
     <body>
       <div class="header">
         <div class="company-info">
-          <div class="company-name">Baladi</div>
+          <div class="company-name">Nordmat</div>
           <div class="company-tagline">Premium kvalitetsprodukter</div>
           <div class="company-details">
-            Baladi AS<br>
+            Nordmat AS<br>
             Postboks 123, 0123 Oslo<br>
             Org.nr: 123 456 789<br>
-            E-post: post@baladi.no<br>
+            E-post: post@nordmatengros.com<br>
             Telefon: +47 12 34 56 78
           </div>
         </div>
@@ -422,14 +422,14 @@ function generateOrderPdfHtml(order: OrderResponse): string {
       </div>
 
       <div class="thank-you">
-        Takk for din bestilling! Vi setter stor pris på ditt valg av Baladi.
+        Takk for din bestilling! Vi setter stor pris på ditt valg av Nordmat.
       </div>
 
       <div class="footer">
         <div>Dette dokumentet ble generert automatisk ${formatDate(new Date(), "d. MMMM yyyy 'kl.' HH:mm")}</div>
-        <div>For spørsmål om denne ordren, kontakt oss på <span class="footer-highlight">post@baladi.no</span> eller <span class="footer-highlight">+47 12 34 56 78</span></div>
+        <div>For spørsmål om denne ordren, kontakt oss på <span class="footer-highlight">post@nordmatengros.com</span> eller <span class="footer-highlight">+47 12 34 56 78</span></div>
         <div style="margin-top: 15px;">
-          <span class="footer-highlight">Baladi AS</span> • Org.nr: 123 456 789 • www.baladi.no
+          <span class="footer-highlight">Nordmat AS</span> • Org.nr: 123 456 789 • www.nordmatengros.no
         </div>
       </div>
     </body>

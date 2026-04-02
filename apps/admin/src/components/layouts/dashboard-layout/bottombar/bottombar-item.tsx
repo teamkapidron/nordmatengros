@@ -32,8 +32,8 @@ function BottomBarItem(props: LinkItem) {
       className={cn(
         'flex flex-1 flex-col items-center justify-center space-y-1 px-2 py-2 font-[family-name:var(--font-dm-sans)] transition-colors',
         isActive
-          ? 'text-[var(--baladi-primary)]'
-          : 'text-[var(--baladi-gray)] hover:text-[var(--baladi-primary)]',
+          ? 'text-[var(--nordmat-primary)]'
+          : 'text-[var(--nordmat-gray)] hover:text-[var(--nordmat-primary)]',
       )}
       aria-label={`Navigate to ${title}`}
     >
@@ -44,8 +44,8 @@ function BottomBarItem(props: LinkItem) {
         className={cn(
           'text-center text-xs font-medium',
           isActive
-            ? 'text-[var(--baladi-primary)]'
-            : 'text-[var(--baladi-gray)]',
+            ? 'text-[var(--nordmat-primary)]'
+            : 'text-[var(--nordmat-gray)]',
         )}
       >
         {title}

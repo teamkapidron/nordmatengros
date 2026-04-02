@@ -10,7 +10,7 @@ export function otpVerificationTemplate(name: string, otp: string) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bekreft din e-postadresse - Baladi</title>
+    <title>Bekreft din e-postadresse - Nordmat</title>
 </head>
 <body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f5f5f5; color: #333333;">
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f5f5f5;">
@@ -20,8 +20,8 @@ export function otpVerificationTemplate(name: string, otp: string) {
                     
                     <!-- Header -->
                     <tr>
-                        <td style="background-color: #183c6c; padding: 30px; text-align: center;">
-                            <img src="${COMPANY_LOGO}" alt="Baladi" style="max-width: 120px; height: auto; margin-bottom: 15px;">
+                        <td style="background-color: #054d9b; padding: 30px; text-align: center;">
+                            <img src="${COMPANY_LOGO}" alt="Nordmat" style="max-width: 120px; height: auto; margin-bottom: 15px;">
                             <h1 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: normal;">E-postbekreftelse</h1>
                         </td>
                     </tr>
@@ -29,10 +29,10 @@ export function otpVerificationTemplate(name: string, otp: string) {
                     <!-- Content -->
                     <tr>
                         <td style="padding: 40px 30px;">
-                            <h2 style="margin: 0 0 20px 0; color: #183c6c; font-size: 18px; font-weight: normal;">Hei ${name},</h2>
+                            <h2 style="margin: 0 0 20px 0; color: #054d9b; font-size: 18px; font-weight: normal;">Hei ${name},</h2>
                             
                             <p style="margin: 0 0 30px 0; line-height: 1.6; font-size: 16px; color: #333333;">
-                                Takk for at du registrerte deg hos Baladi. For å fullføre registreringen din, vennligst bruk følgende engangskode for å bekrefte e-postadressen din:
+                                Takk for at du registrerte deg hos Nordmat. For å fullføre registreringen din, vennligst bruk følgende engangskode for å bekrefte e-postadressen din:
                             </p>
                             
                             <!-- OTP Section -->
@@ -40,7 +40,7 @@ export function otpVerificationTemplate(name: string, otp: string) {
                                 <tr>
                                     <td style="text-align: center; padding: 20px; background-color: #f8f9fa; border: 2px solid #e9ecef;">
                                         <p style="margin: 0 0 10px 0; font-size: 14px; color: #666666;">Din engangskode:</p>
-                                        <div style="background-color: #183c6c; color: #ffffff; padding: 15px 20px; margin: 10px 0; font-size: 28px; font-weight: bold; letter-spacing: 4px; font-family: monospace; border-radius: 4px;">
+                                        <div style="background-color: #054d9b; color: #ffffff; padding: 15px 20px; margin: 10px 0; font-size: 28px; font-weight: bold; letter-spacing: 4px; font-family: monospace; border-radius: 4px;">
                                             ${otp}
                                         </div>
                                         <p style="margin: 10px 0 0 0; font-size: 14px; color: #666666;">
@@ -66,7 +66,7 @@ export function otpVerificationTemplate(name: string, otp: string) {
                             <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0;">
                                 <p style="margin: 0; color: #333333; font-size: 16px;">
                                     Med vennlig hilsen,<br>
-                                    <strong style="color: #183c6c;">Baladi Team</strong>
+                                    <strong style="color: #054d9b;">Nordmat Team</strong>
                                 </p>
                             </div>
                         </td>
@@ -79,7 +79,7 @@ export function otpVerificationTemplate(name: string, otp: string) {
                                 Dette er en automatisk e-post. Vennligst ikke svar på denne e-posten.
                             </p>
                             <p style="margin: 0; color: #666666; font-size: 12px;">
-                                © ${new Date().getFullYear()} Baladi. Alle rettigheter forbeholdt.
+                                © ${new Date().getFullYear()} Nordmat. Alle rettigheter forbeholdt.
                             </p>
                         </td>
                     </tr>
@@ -121,7 +121,7 @@ export function adminApprovalTemplate(
           body {
             font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #0f172a;
+            color: #002156;
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             padding: 20px;
             margin: 0;
@@ -137,7 +137,7 @@ export function adminApprovalTemplate(
           }
 
           .header {
-            background: linear-gradient(135deg, #183c6c 0%, #4b7bbe 100%);
+            background: linear-gradient(135deg, #054d9b 0%, #2db0ea 100%);
             padding: 40px 30px;
             text-align: center;
             color: #ffffff;
@@ -165,7 +165,7 @@ export function adminApprovalTemplate(
           .greeting {
             font-size: 18px;
             font-weight: 600;
-            color: #183c6c;
+            color: #054d9b;
             margin-bottom: 20px;
           }
 
@@ -177,7 +177,7 @@ export function adminApprovalTemplate(
 
           .user-details {
             background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-            border-left: 4px solid #183c6c;
+            border-left: 4px solid #054d9b;
             border-radius: 8px;
             padding: 25px;
             margin: 30px 0;
@@ -185,7 +185,7 @@ export function adminApprovalTemplate(
 
           .user-details h3 {
             font-family: 'Sora', sans-serif;
-            color: #183c6c;
+            color: #054d9b;
             font-size: 18px;
             margin-bottom: 15px;
             display: flex;
@@ -235,7 +235,7 @@ export function adminApprovalTemplate(
 
           .verify-button {
             display: inline-block;
-            background: linear-gradient(135deg, #183c6c 0%, #4b7bbe 100%);
+            background: linear-gradient(135deg, #054d9b 0%, #2db0ea 100%);
             color: #ffffff !important;
             text-decoration: none;
             padding: 16px 32px;
@@ -249,7 +249,7 @@ export function adminApprovalTemplate(
           }
 
           .verify-button:hover {
-            background: linear-gradient(135deg, #0f172a 0%, #183c6c 100%);
+            background: linear-gradient(135deg, #002156 0%, #054d9b 100%);
             box-shadow: 0 6px 20px rgba(24, 60, 108, 0.4);
             transform: translateY(-2px);
           }
@@ -288,7 +288,7 @@ export function adminApprovalTemplate(
           }
 
           .signature strong {
-            color: #183c6c;
+            color: #054d9b;
             font-family: 'Sora', sans-serif;
           }
 
@@ -403,7 +403,7 @@ export function adminApprovalTemplate(
         <div class="email-wrapper">
           <div class="header">
             <div class="logo">
-              <img src="${COMPANY_LOGO}" alt="Baladi Logo">
+              <img src="${COMPANY_LOGO}" alt="Nordmat Logo">
             </div>
             <h1>Ny Brukerregistrering</h1>
           </div>
@@ -446,13 +446,13 @@ export function adminApprovalTemplate(
             </div>
 
             <div class="signature">
-              <p>Med vennlig hilsen,<br><strong>Baladi System</strong></p>
+              <p>Med vennlig hilsen,<br><strong>Nordmat System</strong></p>
             </div>
           </div>
 
           <div class="footer">
             <p>Dette er en automatisk e-post. Vennligst ikke svar på denne e-posten.</p>
-            <p>© ${new Date().getFullYear()} Baladi. Alle rettigheter forbeholdt.</p>
+            <p>© ${new Date().getFullYear()} Nordmat. Alle rettigheter forbeholdt.</p>
           </div>
         </div>
       </body>
@@ -476,7 +476,7 @@ export function passwordResetTemplate(name: string, resetLink: string) {
           body {
             font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #0f172a;
+            color: #002156;
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             padding: 20px;
             margin: 0;
@@ -492,7 +492,7 @@ export function passwordResetTemplate(name: string, resetLink: string) {
           }
 
           .header {
-            background: linear-gradient(135deg, #183c6c 0%, #4b7bbe 100%);
+            background: linear-gradient(135deg, #054d9b 0%, #2db0ea 100%);
             padding: 40px 30px;
             text-align: center;
             color: #ffffff;
@@ -520,7 +520,7 @@ export function passwordResetTemplate(name: string, resetLink: string) {
           .greeting {
             font-size: 18px;
             font-weight: 600;
-            color: #183c6c;
+            color: #054d9b;
             margin-bottom: 20px;
           }
 
@@ -541,7 +541,7 @@ export function passwordResetTemplate(name: string, resetLink: string) {
 
           .reset-button {
             display: inline-block;
-            background: linear-gradient(135deg, #183c6c 0%, #4b7bbe 100%);
+            background: linear-gradient(135deg, #054d9b 0%, #2db0ea 100%);
             color: #ffffff !important;
             text-decoration: none;
             padding: 16px 32px;
@@ -555,7 +555,7 @@ export function passwordResetTemplate(name: string, resetLink: string) {
           }
 
           .reset-button:hover {
-            background: linear-gradient(135deg, #0f172a 0%, #183c6c 100%);
+            background: linear-gradient(135deg, #002156 0%, #054d9b 100%);
             box-shadow: 0 6px 20px rgba(24, 60, 108, 0.4);
             transform: translateY(-2px);
           }
@@ -652,7 +652,7 @@ export function passwordResetTemplate(name: string, resetLink: string) {
           }
 
           .signature strong {
-            color: #183c6c;
+            color: #054d9b;
             font-family: 'Sora', sans-serif;
           }
 
@@ -753,7 +753,7 @@ export function passwordResetTemplate(name: string, resetLink: string) {
         <div class="email-wrapper">
           <div class="header">
             <div class="logo">
-              <img src="${COMPANY_LOGO}" alt="Baladi Logo">
+              <img src="${COMPANY_LOGO}" alt="Nordmat Logo">
             </div>
             <h1>Tilbakestill Passord</h1>
           </div>
@@ -786,13 +786,13 @@ export function passwordResetTemplate(name: string, resetLink: string) {
             </div>
 
             <div class="signature">
-              <p>Med vennlig hilsen,<br><strong>Baladi Team</strong></p>
+              <p>Med vennlig hilsen,<br><strong>Nordmat Team</strong></p>
             </div>
           </div>
 
           <div class="footer">
             <p>Dette er en automatisk e-post. Vennligst ikke svar på denne e-posten.</p>
-            <p>© ${new Date().getFullYear()} Baladi. Alle rettigheter forbeholdt.</p>
+            <p>© ${new Date().getFullYear()} Nordmat. Alle rettigheter forbeholdt.</p>
           </div>
         </div>
       </body>
@@ -818,7 +818,7 @@ export function adminCredentialsTemplate(name: string, password: string) {
           body {
             font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #0f172a;
+            color: #002156;
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             padding: 20px;
             margin: 0;
@@ -834,7 +834,7 @@ export function adminCredentialsTemplate(name: string, password: string) {
           }
 
           .header {
-            background: linear-gradient(135deg, #183c6c 0%, #4b7bbe 100%);
+            background: linear-gradient(135deg, #054d9b 0%, #2db0ea 100%);
             padding: 40px 30px;
             text-align: center;
             color: #ffffff;
@@ -862,7 +862,7 @@ export function adminCredentialsTemplate(name: string, password: string) {
           .greeting {
             font-size: 18px;
             font-weight: 600;
-            color: #183c6c;
+            color: #054d9b;
             margin-bottom: 20px;
           }
 
@@ -874,7 +874,7 @@ export function adminCredentialsTemplate(name: string, password: string) {
 
           .credentials-section {
             background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-            border-left: 4px solid #183c6c;
+            border-left: 4px solid #054d9b;
             border-radius: 8px;
             padding: 25px;
             margin: 30px 0;
@@ -883,7 +883,7 @@ export function adminCredentialsTemplate(name: string, password: string) {
 
           .credentials-section h3 {
             font-family: 'Sora', sans-serif;
-            color: #183c6c;
+            color: #054d9b;
             font-size: 18px;
             margin-bottom: 15px;
             display: flex;
@@ -899,7 +899,7 @@ export function adminCredentialsTemplate(name: string, password: string) {
 
           .password-container {
             background: #ffffff;
-            border: 2px solid #183c6c;
+            border: 2px solid #054d9b;
             border-radius: 8px;
             padding: 20px;
             margin: 20px 0;
@@ -917,7 +917,7 @@ export function adminCredentialsTemplate(name: string, password: string) {
             font-family: 'Courier New', monospace;
             font-size: 24px;
             font-weight: bold;
-            color: #183c6c;
+            color: #054d9b;
             background: #f8fafc;
             padding: 15px;
             border-radius: 6px;
@@ -970,7 +970,7 @@ export function adminCredentialsTemplate(name: string, password: string) {
 
           .login-button {
             display: inline-block;
-            background: linear-gradient(135deg, #183c6c 0%, #4b7bbe 100%);
+            background: linear-gradient(135deg, #054d9b 0%, #2db0ea 100%);
             color: #ffffff !important;
             text-decoration: none;
             padding: 16px 32px;
@@ -984,7 +984,7 @@ export function adminCredentialsTemplate(name: string, password: string) {
           }
 
           .login-button:hover {
-            background: linear-gradient(135deg, #0f172a 0%, #183c6c 100%);
+            background: linear-gradient(135deg, #002156 0%, #054d9b 100%);
             box-shadow: 0 6px 20px rgba(24, 60, 108, 0.4);
             transform: translateY(-2px);
           }
@@ -1056,7 +1056,7 @@ export function adminCredentialsTemplate(name: string, password: string) {
           }
 
           .signature strong {
-            color: #183c6c;
+            color: #054d9b;
             font-family: 'Sora', sans-serif;
           }
 
@@ -1182,7 +1182,7 @@ export function adminCredentialsTemplate(name: string, password: string) {
         <div class="email-wrapper">
           <div class="header">
             <div class="logo">
-              <img src="${COMPANY_LOGO}" alt="Baladi Logo">
+              <img src="${COMPANY_LOGO}" alt="Nordmat Logo">
             </div>
             <h1>Admin Kontoinformasjon</h1>
           </div>
@@ -1228,14 +1228,14 @@ export function adminCredentialsTemplate(name: string, password: string) {
             </div>
 
             <div class="signature">
-              <p>Med vennlig hilsen,<br><strong>Baladi Team</strong></p>
+              <p>Med vennlig hilsen,<br><strong>Nordmat Team</strong></p>
             </div>
           </div>
 
           <div class="footer">
             <p>Dette er en automatisk e-post. Vennligst ikke svar på denne e-posten.</p>
             <p>Hvis du ikke ba om en administrator-konto, vennligst kontakt oss umiddelbart.</p>
-            <p>© ${new Date().getFullYear()} Baladi. Alle rettigheter forbeholdt.</p>
+            <p>© ${new Date().getFullYear()} Nordmat. Alle rettigheter forbeholdt.</p>
           </div>
         </div>
       </body>
@@ -1262,7 +1262,7 @@ export function userApprovalTemplate(name: string, email: string) {
           body {
             font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #0f172a;
+            color: #002156;
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             padding: 20px;
             margin: 0;
@@ -1311,7 +1311,7 @@ export function userApprovalTemplate(name: string, email: string) {
           .greeting {
             font-size: 18px;
             font-weight: 600;
-            color: #183c6c;
+            color: #054d9b;
             margin-bottom: 20px;
           }
 
@@ -1402,7 +1402,7 @@ export function userApprovalTemplate(name: string, email: string) {
 
           .login-button {
             display: inline-block;
-            background: linear-gradient(135deg, #183c6c 0%, #4b7bbe 100%);
+            background: linear-gradient(135deg, #054d9b 0%, #2db0ea 100%);
             color: #ffffff !important;
             text-decoration: none;
             padding: 16px 32px;
@@ -1416,7 +1416,7 @@ export function userApprovalTemplate(name: string, email: string) {
           }
 
           .login-button:hover {
-            background: linear-gradient(135deg, #0f172a 0%, #183c6c 100%);
+            background: linear-gradient(135deg, #002156 0%, #054d9b 100%);
             box-shadow: 0 6px 20px rgba(24, 60, 108, 0.4);
             transform: translateY(-2px);
           }
@@ -1484,7 +1484,7 @@ export function userApprovalTemplate(name: string, email: string) {
           }
 
           .signature strong {
-            color: #183c6c;
+            color: #054d9b;
             font-family: 'Sora', sans-serif;
           }
 
@@ -1630,7 +1630,7 @@ export function userApprovalTemplate(name: string, email: string) {
         <div class="email-wrapper">
           <div class="header">
             <div class="logo">
-              <img src="${COMPANY_LOGO}" alt="Baladi Logo">
+              <img src="${COMPANY_LOGO}" alt="Nordmat Logo">
             </div>
             <div class="success-icon">🎉</div>
             <h1>Konto Godkjent!</h1>
@@ -1640,7 +1640,7 @@ export function userApprovalTemplate(name: string, email: string) {
             <div class="greeting">Gratulerer ${name}!</div>
 
             <div class="message">
-              Din konto hos Baladi har blitt gjennomgått og godkjent av vår administrator. Du kan nå logge inn og begynne å bruke alle våre tjenester.
+              Din konto hos Nordmat har blitt gjennomgått og godkjent av vår administrator. Du kan nå logge inn og begynne å bruke alle våre tjenester.
             </div>
 
             <div class="approval-details">
@@ -1657,7 +1657,7 @@ export function userApprovalTemplate(name: string, email: string) {
             </div>
 
             <div class="welcome-section">
-              <h3>Velkommen til Baladi!</h3>
+              <h3>Velkommen til Nordmat!</h3>
               <p>Vi er glade for å ha deg som en del av vårt fellesskap. Du har nå full tilgang til alle funksjoner som er tilgjengelige for din brukertype.</p>
             </div>
 
@@ -1672,14 +1672,14 @@ export function userApprovalTemplate(name: string, email: string) {
             </div>
 
             <div class="signature">
-              <p>Med vennlig hilsen,<br><strong>Baladi Team</strong></p>
+              <p>Med vennlig hilsen,<br><strong>Nordmat Team</strong></p>
             </div>
           </div>
 
           <div class="footer">
             <p>Dette er en automatisk e-post. Vennligst ikke svar på denne e-posten.</p>
             <p>Hvis du har spørsmål, kan du kontakte oss via våre vanlige kanaler.</p>
-            <p>© ${new Date().getFullYear()} Baladi. Alle rettigheter forbeholdt.</p>
+            <p>© ${new Date().getFullYear()} Nordmat. Alle rettigheter forbeholdt.</p>
           </div>
         </div>
       </body>
@@ -1710,7 +1710,7 @@ export function orderPlacedTemplate(order: OrderResponse) {
           body {
             font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #0f172a;
+            color: #002156;
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             padding: 20px;
             margin: 0;
@@ -1726,7 +1726,7 @@ export function orderPlacedTemplate(order: OrderResponse) {
           }
 
           .header {
-            background: #183c6c;
+            background: #054d9b;
             padding: 40px 30px;
             text-align: center;
             color: #ffffff;
@@ -1764,7 +1764,7 @@ export function orderPlacedTemplate(order: OrderResponse) {
           .greeting {
             font-size: 18px;
             font-weight: 600;
-            color: #183c6c;
+            color: #054d9b;
             margin-bottom: 20px;
           }
 
@@ -1777,7 +1777,7 @@ export function orderPlacedTemplate(order: OrderResponse) {
 
 
           .order-total {
-            background: linear-gradient(135deg, #183c6c 0%, #4b7bbe 100%);
+            background: linear-gradient(135deg, #054d9b 0%, #2db0ea 100%);
             color: #ffffff;
             padding: 25px;
             border-radius: 8px;
@@ -1820,7 +1820,7 @@ export function orderPlacedTemplate(order: OrderResponse) {
           }
 
           .signature strong {
-            color: #183c6c;
+            color: #054d9b;
             font-family: 'Sora', sans-serif;
           }
 
@@ -1835,7 +1835,7 @@ export function orderPlacedTemplate(order: OrderResponse) {
 
           .order-details-button {
             display: inline-block;
-            background: linear-gradient(135deg, #183c6c 0%, #4b7bbe 100%);
+            background: linear-gradient(135deg, #054d9b 0%, #2db0ea 100%);
             color: #ffffff !important;
             text-decoration: none;
             padding: 14px 28px;
@@ -1849,7 +1849,7 @@ export function orderPlacedTemplate(order: OrderResponse) {
           }
 
           .order-details-button:hover {
-            background: linear-gradient(135deg, #0f172a 0%, #183c6c 100%);
+            background: linear-gradient(135deg, #002156 0%, #054d9b 100%);
             box-shadow: 0 6px 20px rgba(24, 60, 108, 0.4);
             transform: translateY(-2px);
           }
@@ -1902,7 +1902,7 @@ export function orderPlacedTemplate(order: OrderResponse) {
         <div class="email-wrapper">
           <div class="header">
             <div class="logo">
-              <img src="${COMPANY_LOGO}" alt="Baladi Logo">
+              <img src="${COMPANY_LOGO}" alt="Nordmat Logo">
             </div>
             <h1 style="color: #ffffff;">Bestilling Bekreftet</h1>
             <div class="order-number">Ordre #${order._id.toString().slice(-8).toUpperCase()}</div>
@@ -1932,14 +1932,14 @@ export function orderPlacedTemplate(order: OrderResponse) {
             </div>
 
             <div class="signature">
-              <p>Med vennlig hilsen,<br><strong>Baladi Engros</strong></p>
+              <p>Med vennlig hilsen,<br><strong>Nordmat Engros</strong></p>
             </div>
           </div>
 
           <div class="footer">
             <p>Dette er en automatisk e-post. Vennligst ikke svar på denne e-posten.</p>
             <p>Hvis du har spørsmål om din bestilling, kan du kontakte oss via våre vanlige kanaler.</p>
-            <p>© ${new Date().getFullYear()} Baladi. Alle rettigheter forbeholdt.</p>
+            <p>© ${new Date().getFullYear()} Nordmat. Alle rettigheter forbeholdt.</p>
           </div>
         </div>
       </body>
@@ -1980,7 +1980,7 @@ export function contactUsTemplate(
           body {
             font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #0f172a;
+            color: #002156;
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             padding: 20px;
             margin: 0;
@@ -1996,7 +1996,7 @@ export function contactUsTemplate(
           }
 
           .header {
-            background: linear-gradient(135deg, #183c6c 0%, #4b7bbe 100%);
+            background: linear-gradient(135deg, #054d9b 0%, #2db0ea 100%);
             padding: 40px 30px;
             text-align: center;
             color: #ffffff;
@@ -2030,7 +2030,7 @@ export function contactUsTemplate(
           .greeting {
             font-size: 18px;
             font-weight: 600;
-            color: #183c6c;
+            color: #054d9b;
             margin-bottom: 20px;
           }
 
@@ -2051,7 +2051,7 @@ export function contactUsTemplate(
 
           .contact-details h3 {
             font-family: 'Sora', sans-serif;
-            color: #183c6c;
+            color: #054d9b;
             font-size: 18px;
             margin-bottom: 15px;
             display: flex;
@@ -2100,7 +2100,7 @@ export function contactUsTemplate(
 
           .message-section {
             background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            border-left: 4px solid #183c6c;
+            border-left: 4px solid #054d9b;
             border-radius: 8px;
             padding: 25px;
             margin: 30px 0;
@@ -2108,7 +2108,7 @@ export function contactUsTemplate(
 
           .message-section h3 {
             font-family: 'Sora', sans-serif;
-            color: #183c6c;
+            color: #054d9b;
             font-size: 18px;
             margin-bottom: 15px;
             display: flex;
@@ -2181,7 +2181,7 @@ export function contactUsTemplate(
           }
 
           .timestamp {
-            color: #183c6c;
+            color: #054d9b;
             font-weight: 600;
             font-size: 16px;
           }
@@ -2207,7 +2207,7 @@ export function contactUsTemplate(
           }
 
           .signature strong {
-            color: #183c6c;
+            color: #054d9b;
             font-family: 'Sora', sans-serif;
           }
 
@@ -2324,7 +2324,7 @@ export function contactUsTemplate(
         <div class="email-wrapper">
           <div class="header">
             <div class="logo">
-              <img src="${COMPANY_LOGO}" alt="Baladi Logo">
+              <img src="${COMPANY_LOGO}" alt="Nordmat Logo">
             </div>
             <div class="notification-icon">📩</div>
             <h1>Ny Kontakthenvendelse</h1>
@@ -2334,7 +2334,7 @@ export function contactUsTemplate(
             <div class="greeting">Hei Administrator!</div>
 
             <div class="message">
-              Du har mottatt en ny kontakthenvendelse via kontaktskjemaet på Baladi Engros nettsiden.
+              Du har mottatt en ny kontakthenvendelse via kontaktskjemaet på Nordmat Engros nettsiden.
               Her er detaljene for henvendelsen som krever din oppmerksomhet.
             </div>
 
@@ -2390,14 +2390,14 @@ export function contactUsTemplate(
             </div>
 
             <div class="signature">
-              <p>Dette er en automatisk varsling fra<br><strong>Baladi Engros Kontaktskjema</strong></p>
+              <p>Dette er en automatisk varsling fra<br><strong>Nordmat Engros Kontaktskjema</strong></p>
             </div>
           </div>
 
           <div class="footer">
             <p>Dette er en automatisk e-post som varsler om ny kontakthenvendelse.</p>
             <p>For å svare kunden, vennligst bruk e-postadressen oppgitt i kontaktopplysningene ovenfor.</p>
-            <p>© ${new Date().getFullYear()} Baladi Engros. Alle rettigheter forbeholdt.</p>
+            <p>© ${new Date().getFullYear()} Nordmat Engros. Alle rettigheter forbeholdt.</p>
           </div>
         </div>
       </body>

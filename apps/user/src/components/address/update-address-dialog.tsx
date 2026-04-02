@@ -98,7 +98,7 @@ function UpdateAddressDialog({
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-lg">
         <DialogHeader>
-          <DialogTitle className="font-[family-name:var(--font-sora)] text-[var(--baladi-text)]">
+          <DialogTitle className="font-[family-name:var(--font-sora)] text-[var(--nordmat-text)]">
             Rediger adresse
           </DialogTitle>
         </DialogHeader>
@@ -110,12 +110,12 @@ function UpdateAddressDialog({
               name="label"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                     Adresse type
                   </FormLabel>
                   <Select onValueChange={field.onChange} value={field.value}>
                     <FormControl>
-                      <SelectTrigger className="h-12 rounded-lg border-[var(--baladi-border)] focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]">
+                      <SelectTrigger className="h-12 rounded-lg border-[var(--nordmat-border)] focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]">
                         <SelectValue placeholder="Velg adresse type" />
                       </SelectTrigger>
                     </FormControl>
@@ -150,15 +150,15 @@ function UpdateAddressDialog({
               name="addressLine1"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                     Adresselinje 1 *
                   </FormLabel>
                   <FormControl>
                     <div className="relative">
-                      <MapPin className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                      <MapPin className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                       <Input
                         placeholder="Gateadresse, husnummer"
-                        className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                        className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                         {...field}
                       />
                     </div>
@@ -173,15 +173,15 @@ function UpdateAddressDialog({
               name="addressLine2"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                     Adresselinje 2
                   </FormLabel>
                   <FormControl>
                     <div className="relative">
-                      <MapPin className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                      <MapPin className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                       <Input
                         placeholder="Leilighet, suite, etasje (valgfritt)"
-                        className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                        className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                         {...field}
                       />
                     </div>
@@ -197,13 +197,13 @@ function UpdateAddressDialog({
                 name="city"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                    <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                       By *
                     </FormLabel>
                     <FormControl>
                       <Input
                         placeholder="By"
-                        className="h-12 rounded-lg border-[var(--baladi-border)] focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                        className="h-12 rounded-lg border-[var(--nordmat-border)] focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                         {...field}
                       />
                     </FormControl>
@@ -217,13 +217,13 @@ function UpdateAddressDialog({
                 name="postalCode"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                    <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                       Postnummer *
                     </FormLabel>
                     <FormControl>
                       <Input
                         placeholder="0000"
-                        className="h-12 rounded-lg border-[var(--baladi-border)] focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                        className="h-12 rounded-lg border-[var(--nordmat-border)] focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                         {...field}
                       />
                     </FormControl>
@@ -239,13 +239,13 @@ function UpdateAddressDialog({
                 name="state"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                    <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                       Fylke *
                     </FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Fylke"
-                        className="h-12 rounded-lg border-[var(--baladi-border)] focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                        className="h-12 rounded-lg border-[var(--nordmat-border)] focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                         {...field}
                       />
                     </FormControl>
@@ -259,13 +259,13 @@ function UpdateAddressDialog({
                 name="country"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                    <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                       Land *
                     </FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Land"
-                        className="h-12 rounded-lg border-[var(--baladi-border)] focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                        className="h-12 rounded-lg border-[var(--nordmat-border)] focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                         {...field}
                       />
                     </FormControl>
@@ -280,16 +280,16 @@ function UpdateAddressDialog({
               name="phoneNumber"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                     Telefonnummer
                   </FormLabel>
                   <FormControl>
                     <div className="relative">
-                      <Phone className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                      <Phone className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                       <Input
                         type="tel"
                         placeholder="+47 000 00 000"
-                        className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                        className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                         {...field}
                       />
                     </div>
@@ -303,7 +303,7 @@ function UpdateAddressDialog({
               <Button
                 type="submit"
                 disabled={updateAddressMutation.isPending}
-                className="hover:bg-[var(--baladi-primary)]/90 h-12 w-full rounded-lg bg-[var(--baladi-primary)] font-[family-name:var(--font-sora)] font-semibold"
+                className="hover:bg-[var(--nordmat-primary)]/90 h-12 w-full rounded-lg bg-[var(--nordmat-primary)] font-[family-name:var(--font-sora)] font-semibold"
               >
                 {updateAddressMutation.isPending
                   ? 'Oppdaterer...'

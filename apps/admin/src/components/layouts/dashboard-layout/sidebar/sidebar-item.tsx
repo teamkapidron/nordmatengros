@@ -43,8 +43,8 @@ function SidebarItem(props: SidebarItemProps) {
             className={cn(
               'group relative flex h-9 w-9 items-center justify-center rounded-lg transition-all duration-200',
               isActive
-                ? 'bg-[var(--baladi-sidebar-item-active)] text-white shadow-lg'
-                : 'text-[var(--baladi-sidebar-text)] hover:bg-[var(--baladi-sidebar-item-hover)] hover:text-[var(--baladi-primary)]',
+                ? 'bg-[var(--nordmat-sidebar-item-active)] text-white shadow-lg'
+                : 'text-[var(--nordmat-sidebar-text)] hover:bg-[var(--nordmat-sidebar-item-hover)] hover:text-[var(--nordmat-primary)]',
             )}
           >
             <span className="size-5">{Icon}</span>
@@ -53,7 +53,7 @@ function SidebarItem(props: SidebarItemProps) {
         </TooltipTrigger>
         <TooltipContent
           side="right"
-          className="flex items-center gap-4 border-0 bg-[var(--baladi-dark)] text-white shadow-xl"
+          className="flex items-center gap-4 border-0 bg-[var(--nordmat-dark)] text-white shadow-xl"
         >
           {link.title}
           {link.label && (
@@ -70,8 +70,8 @@ function SidebarItem(props: SidebarItemProps) {
       className={cn(
         'group relative mx-3 flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition-all duration-200',
         isActive
-          ? 'bg-[var(--baladi-sidebar-item-active)] text-white shadow-md'
-          : 'text-[var(--baladi-sidebar-text)] hover:bg-[var(--baladi-sidebar-item-hover)] hover:text-[var(--baladi-primary)]',
+          ? 'bg-[var(--nordmat-sidebar-item-active)] text-white shadow-md'
+          : 'text-[var(--nordmat-sidebar-text)] hover:bg-[var(--nordmat-sidebar-item-hover)] hover:text-[var(--nordmat-primary)]',
       )}
     >
       <span className="h-5 w-5 flex-shrink-0">{Icon}</span>
@@ -82,7 +82,7 @@ function SidebarItem(props: SidebarItemProps) {
         <span
           className={cn(
             'ml-auto text-xs',
-            isActive ? 'text-white' : 'text-[var(--baladi-gray)]',
+            isActive ? 'text-white' : 'text-[var(--nordmat-gray)]',
           )}
         >
           {link.label}
@@ -90,7 +90,7 @@ function SidebarItem(props: SidebarItemProps) {
       )}
 
       {isActive && (
-        <div className="absolute left-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-r-full bg-[var(--baladi-accent)]" />
+        <div className="absolute left-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-r-full bg-[var(--nordmat-accent)]" />
       )}
     </Link>
   );

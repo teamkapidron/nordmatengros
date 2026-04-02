@@ -20,9 +20,9 @@ function ContactContent() {
     {
       icon: Mail,
       title: 'E-post',
-      content: 'baladi.engros@gmail.com',
+      content: 'post@nordmatengros.com',
       description: 'Send oss en e-post',
-      href: 'mailto:baladi.engros@gmail.com',
+      href: 'mailto:post@nordmatengros.com',
     },
     {
       icon: MapPin,
@@ -36,10 +36,10 @@ function ContactContent() {
   return (
     <main className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
       <div className="mb-12 text-center">
-        <h1 className="mb-4 font-[family-name:var(--font-sora)] text-4xl font-bold text-[var(--baladi-dark)] md:text-5xl">
+        <h1 className="mb-4 font-[family-name:var(--font-sora)] text-4xl font-bold text-[var(--nordmat-dark)] md:text-5xl">
           Kontakt oss
         </h1>
-        <p className="mx-auto max-w-3xl font-[family-name:var(--font-dm-sans)] text-lg text-[var(--baladi-gray)] md:text-xl">
+        <p className="mx-auto max-w-3xl font-[family-name:var(--font-dm-sans)] text-lg text-[var(--nordmat-gray)] md:text-xl">
           Vi er her for å hjelpe deg med alle dine engrosprodukter. Ta kontakt
           med oss i dag for å diskutere dine behov eller få svar på spørsmål.
         </p>
@@ -49,15 +49,15 @@ function ContactContent() {
         {contactInfo.map((info, index) => (
           <Card
             key={index}
-            className="group border-[var(--baladi-border)] bg-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="group border-[var(--nordmat-border)] bg-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             <CardHeader className="pb-4">
               <div className="mb-4 flex items-center justify-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[var(--baladi-primary)] to-[var(--baladi-secondary)]">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[var(--nordmat-primary)] to-[var(--nordmat-secondary)]">
                   <info.icon size={28} className="text-white" />
                 </div>
               </div>
-              <CardTitle className="text-center font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+              <CardTitle className="text-center font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
                 {info.title}
               </CardTitle>
             </CardHeader>
@@ -67,16 +67,16 @@ function ContactContent() {
                   href={info.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mb-2 block font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--baladi-primary)] transition-colors hover:text-[var(--baladi-secondary)]"
+                  className="mb-2 block font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--nordmat-primary)] transition-colors hover:text-[var(--nordmat-secondary)]"
                 >
                   {info.content}
                 </a>
               ) : (
-                <p className="mb-2 font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--baladi-primary)]">
+                <p className="mb-2 font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--nordmat-primary)]">
                   {info.content}
                 </p>
               )}
-              <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+              <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                 {info.description}
               </p>
             </CardContent>
@@ -86,7 +86,7 @@ function ContactContent() {
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-1">
         <div>
-          <h2 className="mb-6 font-[family-name:var(--font-sora)] text-3xl font-bold text-[var(--baladi-dark)]">
+          <h2 className="mb-6 font-[family-name:var(--font-sora)] text-3xl font-bold text-[var(--nordmat-dark)]">
             Send oss en melding
           </h2>
           <ContactForm />

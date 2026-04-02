@@ -79,21 +79,21 @@ function UpdateDiscountDialog(props: UpdateDiscountDialogProps) {
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="font-[family-name:var(--font-sora)] text-[var(--baladi-text)]">
+          <DialogTitle className="font-[family-name:var(--font-sora)] text-[var(--nordmat-text)]">
             Oppdater Produkt Rabatt
           </DialogTitle>
         </DialogHeader>
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <div className="rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-light)] p-4">
+            <div className="rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-light)] p-4">
               <div className="flex items-center space-x-3">
-                <Package className="h-5 w-5 text-[var(--baladi-primary)]" />
+                <Package className="h-5 w-5 text-[var(--nordmat-primary)]" />
                 <div>
-                  <p className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                  <p className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                     Produkt
                   </p>
-                  <p className="text-sm text-[var(--baladi-text)]">
+                  <p className="text-sm text-[var(--nordmat-text)]">
                     {discount.productId.name}
                   </p>
                 </div>
@@ -105,18 +105,18 @@ function UpdateDiscountDialog(props: UpdateDiscountDialogProps) {
               name="discountValue"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                     Rabatt Beløp (kr) *
                   </FormLabel>
                   <FormControl>
                     <div className="relative">
-                      <DollarSign className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--baladi-success)]" />
+                      <DollarSign className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-success)]" />
                       <Input
                         type="number"
                         min={0}
                         step="0.01"
                         placeholder="Skriv inn rabatt beløp"
-                        className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                        className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                         {...field}
                         onChange={(e) => field.onChange(Number(e.target.value))}
                         value={field.value || ''}
@@ -133,15 +133,15 @@ function UpdateDiscountDialog(props: UpdateDiscountDialogProps) {
               name="validFrom"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                     Gyldig Fra
                   </FormLabel>
                   <FormControl>
                     <div className="relative">
-                      <Calendar className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                      <Calendar className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                       <Input
                         type="date"
-                        className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                        className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                         {...field}
                       />
                     </div>
@@ -156,15 +156,15 @@ function UpdateDiscountDialog(props: UpdateDiscountDialogProps) {
               name="validTo"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                     Gyldig Til
                   </FormLabel>
                   <FormControl>
                     <div className="relative">
-                      <Calendar className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                      <Calendar className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                       <Input
                         type="date"
-                        className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                        className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                         {...field}
                       />
                     </div>
@@ -178,7 +178,7 @@ function UpdateDiscountDialog(props: UpdateDiscountDialogProps) {
               <Button
                 type="submit"
                 disabled={updateDiscountMutation.isPending}
-                className="hover:bg-[var(--baladi-primary)]/90 h-12 w-full rounded-lg bg-[var(--baladi-primary)] font-[family-name:var(--font-sora)] font-semibold"
+                className="hover:bg-[var(--nordmat-primary)]/90 h-12 w-full rounded-lg bg-[var(--nordmat-primary)] font-[family-name:var(--font-sora)] font-semibold"
               >
                 {updateDiscountMutation.isPending
                   ? 'Oppdaterer...'

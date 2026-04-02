@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function AuthSidebar() {
   return (
-    <div className="relative hidden overflow-hidden bg-gradient-to-br from-[var(--baladi-dark)] via-[var(--baladi-primary)] to-[var(--baladi-primary-dark)] lg:block lg:w-1/2">
+    <div className="relative hidden overflow-hidden bg-gradient-to-br from-[var(--nordmat-dark)] via-[var(--nordmat-primary)] to-[var(--nordmat-primary-dark)] lg:block lg:w-1/2">
       <div className="absolute inset-0 opacity-20">
         <svg
           viewBox="0 0 100 100"
@@ -89,7 +89,7 @@ function AuthSidebar() {
         <div className="animate-float-delay right-1/6 bg-white/12 absolute top-3/4 h-32 w-32 rounded-full blur-xl"></div>
         <div className="absolute bottom-1/3 left-1/4 h-24 w-24 animate-pulse rounded-full bg-white/10 blur-lg"></div>
         <div
-          className="bg-[var(--baladi-accent)]/20 absolute right-1/3 top-1/3 h-16 w-16 animate-bounce rounded-full blur-md"
+          className="bg-[var(--nordmat-accent)]/20 absolute right-1/3 top-1/3 h-16 w-16 animate-bounce rounded-full blur-md"
           style={{ animationDuration: '3s' }}
         ></div>
       </div>
@@ -112,25 +112,16 @@ function AuthSidebar() {
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-white/5 to-white/10 blur-xl"></div>
             <div className="relative flex items-center space-x-6 rounded-3xl border border-white/40 bg-gradient-to-br from-white/15 to-white/5 p-8 shadow-[0_0_50px_rgba(255,255,255,0.15)] backdrop-blur-lg">
               <div className="relative">
-                <div className="absolute inset-0 rounded-2xl bg-white/20 blur-md"></div>
-                <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-white/25 to-white/10 p-3 shadow-lg">
+                <div className="absolute inset-0 rounded-2xl"></div>
+                <div className="relative flex items-center justify-center rounded-2xl bg-gradient-to-br from-white/25 to-white/10 p-3">
                   <Image
-                    src="/images/brand/logo.png"
-                    alt="Baladi Engros Logo"
+                    src="/images/brand/icon.png"
+                    alt="Nordmat Engros Logo"
                     width={80}
                     height={80}
-                    className="h-auto w-14 drop-shadow-lg"
+                    className="h-auto w-40"
                   />
                 </div>
-              </div>
-              <div className="text-left">
-                <h1 className="font-[family-name:var(--font-sora)] text-3xl font-bold text-white drop-shadow-lg">
-                  Baladi Engros
-                </h1>
-                <p className="font-[family-name:var(--font-dm-sans)] text-base text-white/90 drop-shadow-sm">
-                  Din engros-partner
-                </p>
-                <div className="mt-2 h-0.5 w-24 rounded-full bg-gradient-to-r from-[var(--baladi-accent)] to-transparent"></div>
               </div>
             </div>
           </div>

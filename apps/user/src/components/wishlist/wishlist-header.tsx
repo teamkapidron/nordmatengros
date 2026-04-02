@@ -14,7 +14,7 @@ function WishlistHeader(props: WishlistHeaderProps) {
   return (
     <div className="mb-12 text-center">
       <div className="mb-4 flex items-center justify-center gap-3">
-        <div className="from-baladi-primary to-baladi-secondary rounded-2xl bg-gradient-to-r p-3 shadow-lg">
+        <div className="from-nordmat-primary to-nordmat-secondary rounded-2xl bg-gradient-to-r p-3 shadow-lg">
           <Heart className="h-8 w-8 fill-current text-red-600" />
         </div>
         <h1 className="font-[family-name:var(--font-sora)] text-4xl font-bold text-gray-900 md:text-5xl">

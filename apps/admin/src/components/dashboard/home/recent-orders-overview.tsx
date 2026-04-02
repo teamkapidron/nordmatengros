@@ -22,19 +22,19 @@ function RecentOrdersOverview() {
   }, [recentOrdersQuery.data]);
 
   return (
-    <div className="h-full rounded-xl bg-white p-6 shadow-lg ring-1 ring-[var(--baladi-border)]">
+    <div className="h-full rounded-xl bg-white p-6 shadow-lg ring-1 ring-[var(--nordmat-border)]">
       <div className="mb-4 flex items-center justify-between">
         <div>
-          <h3 className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+          <h3 className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
             Nylige bestillinger
           </h3>
-          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
             Siste kundebestillinger og statusoppdateringer
           </p>
         </div>
         <Link
           href="/dashboard/orders"
-          className="group flex items-center gap-1 rounded-lg bg-[var(--baladi-primary)]/10 px-3 py-1.5 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-primary)] transition-colors hover:bg-[var(--baladi-primary)]/20"
+          className="group flex items-center gap-1 rounded-lg bg-[var(--nordmat-primary)]/10 px-3 py-1.5 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-primary)] transition-colors hover:bg-[var(--nordmat-primary)]/20"
         >
           Se alle
           <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
@@ -43,13 +43,13 @@ function RecentOrdersOverview() {
 
       {recentOrders.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-20 text-center">
-          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--baladi-muted)]">
-            <ShoppingBag className="h-8 w-8 text-[var(--baladi-gray)]" />
+          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--nordmat-muted)]">
+            <ShoppingBag className="h-8 w-8 text-[var(--nordmat-gray)]" />
           </div>
-          <h4 className="mb-2 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+          <h4 className="mb-2 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
             Ingen nylige bestillinger
           </h4>
-          <p className="mb-4 font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+          <p className="mb-4 font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
             Nylige kundebestillinger vil vises her når du begynner å motta
             bestillinger.
           </p>
@@ -60,19 +60,19 @@ function RecentOrdersOverview() {
             <div
               key={order._id}
               onClick={() => router.push(`/dashboard/orders/${order._id}`)}
-              className="group cursor-pointer rounded-lg border border-[var(--baladi-border)] p-3 transition-all duration-200 hover:border-[var(--baladi-primary)]/20 hover:bg-[var(--baladi-light)]"
+              className="group cursor-pointer rounded-lg border border-[var(--nordmat-border)] p-3 transition-all duration-200 hover:border-[var(--nordmat-primary)]/20 hover:bg-[var(--nordmat-light)]"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-[var(--baladi-primary)]/10 to-[var(--baladi-secondary)]/10">
-                    <User className="h-4 w-4 text-[var(--baladi-primary)]" />
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-[var(--nordmat-primary)]/10 to-[var(--nordmat-secondary)]/10">
+                    <User className="h-4 w-4 text-[var(--nordmat-primary)]" />
                   </div>
 
                   <div className="min-w-0 flex-1">
-                    <div className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                    <div className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                       {order.user.name}
                     </div>
-                    <div className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                    <div className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                       <span>
                         #{order._id.toString().slice(-8).toUpperCase()}
                       </span>
@@ -87,7 +87,7 @@ function RecentOrdersOverview() {
                 </div>
 
                 <div className="text-right">
-                  <div className="font-[family-name:var(--font-dm-sans)] text-sm font-bold text-[var(--baladi-dark)]">
+                  <div className="font-[family-name:var(--font-dm-sans)] text-sm font-bold text-[var(--nordmat-dark)]">
                     {formatPrice(order.totalAmount)} kr
                   </div>
                 </div>

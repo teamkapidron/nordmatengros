@@ -106,18 +106,18 @@ function OrderActionsCard(props: OrderActionsCardProps) {
   );
 
   return (
-    <Card className="border-[var(--baladi-border)] shadow-lg">
-      <CardHeader className="border-b border-[var(--baladi-border)]">
+    <Card className="border-[var(--nordmat-border)] shadow-lg">
+      <CardHeader className="border-b border-[var(--nordmat-border)]">
         <div className="space-y-2">
-          <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--baladi-dark)]">
+          <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--nordmat-dark)]">
             Ordre Handling
           </h2>
-          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
             Administrer og oppdater ordrestatus
           </p>
           {order?.status && (
             <div className="flex items-center gap-2">
-              <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+              <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                 Nåværende status:
               </span>
               <Badge variant={getStatusBadgeVariant(order.status)}>
@@ -131,7 +131,7 @@ function OrderActionsCard(props: OrderActionsCardProps) {
       <CardContent className="space-y-4 p-6 pt-0">
         {order?.status === OrderStatus.PENDING && (
           <div className="space-y-2">
-            <h3 className="font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-dark)]">
+            <h3 className="font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-dark)]">
               Godkjenn Ordre
             </h3>
             <Button
@@ -150,7 +150,7 @@ function OrderActionsCard(props: OrderActionsCardProps) {
         {order?.status !== OrderStatus.PENDING &&
           order?.status !== OrderStatus.CANCELLED && (
             <div className="space-y-2">
-              <h3 className="font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-dark)]">
+              <h3 className="font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-dark)]">
                 Endre Ordrestatus
               </h3>
               <div className="space-y-3">
@@ -189,8 +189,8 @@ function OrderActionsCard(props: OrderActionsCardProps) {
           )}
 
         {order?.status !== OrderStatus.CANCELLED && (
-          <div className="space-y-2 border-t border-[var(--baladi-border)] pt-4">
-            <h3 className="font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-dark)]">
+          <div className="space-y-2 border-t border-[var(--nordmat-border)] pt-4">
+            <h3 className="font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-dark)]">
               Avbryt Ordre
             </h3>
             <ConfirmationDialog
@@ -215,7 +215,7 @@ function OrderActionsCard(props: OrderActionsCardProps) {
         )}
 
         <div className="space-y-2">
-          <h3 className="font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-dark)]">
+          <h3 className="font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-dark)]">
             Slett Ordre
           </h3>
           <ConfirmationDialog

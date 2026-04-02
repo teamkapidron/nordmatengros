@@ -29,13 +29,13 @@ function Header() {
   return (
     <nav className="flex items-center space-x-4">
       <div className="md:hidden">
-        <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-primary)]">
+        <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-primary)]">
           {label}
         </span>
       </div>
 
       <div className="hidden h-16 items-center space-x-4 md:flex">
-        <span className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--baladi-primary)]">
+        <span className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--nordmat-primary)]">
           {label}
         </span>
       </div>

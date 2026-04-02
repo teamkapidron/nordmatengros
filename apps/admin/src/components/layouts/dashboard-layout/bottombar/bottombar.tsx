@@ -20,7 +20,7 @@ function BottomBar(props: BottomBarProps) {
   return (
     <div
       className={cn(
-        'fixed bottom-0 left-0 right-0 z-50 border-t border-[var(--baladi-border)] bg-white shadow-lg',
+        'fixed bottom-0 left-0 right-0 z-50 border-t border-[var(--nordmat-border)] bg-white shadow-lg',
         className,
       )}
     >

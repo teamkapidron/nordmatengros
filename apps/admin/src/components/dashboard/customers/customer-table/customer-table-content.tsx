@@ -55,14 +55,14 @@ function CustomerTableContent() {
   );
 
   return (
-    <div className="overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-[var(--baladi-border)]">
-      <div className="bg-gradient-to-r from-[var(--baladi-light)] to-white px-8 py-6">
+    <div className="overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-[var(--nordmat-border)]">
+      <div className="bg-gradient-to-r from-[var(--nordmat-light)] to-white px-8 py-6">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <h2 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--baladi-dark)]">
+            <h2 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--nordmat-dark)]">
               Kundeoversikt
             </h2>
-            <p className="mt-1 font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <p className="mt-1 font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               Administrer dine kunder og overvåk deres status og informasjon
             </p>
           </div>
@@ -72,23 +72,23 @@ function CustomerTableContent() {
       <div className="overflow-x-auto">
         <Table className="w-full">
           <TableHeader>
-            <TableRow className="border-b border-[var(--baladi-border)]/30 bg-[var(--baladi-light)]/50">
-              <TableHead className="px-8 py-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-dark)]">
+            <TableRow className="border-b border-[var(--nordmat-border)]/30 bg-[var(--nordmat-light)]/50">
+              <TableHead className="px-8 py-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-dark)]">
                 Kundedetaljer
               </TableHead>
-              <TableHead className="px-4 py-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-dark)]">
+              <TableHead className="px-4 py-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-dark)]">
                 Bedriftsinformasjon
               </TableHead>
-              <TableHead className="px-4 py-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-dark)]">
+              <TableHead className="px-4 py-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-dark)]">
                 Kontaktinformasjon
               </TableHead>
-              <TableHead className="px-4 py-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-dark)]">
+              <TableHead className="px-4 py-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-dark)]">
                 Status
               </TableHead>
-              <TableHead className="px-4 py-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-dark)]">
+              <TableHead className="px-4 py-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-dark)]">
                 Registrert
               </TableHead>
-              <TableHead className="px-8 py-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--baladi-dark)]">
+              <TableHead className="px-8 py-4 text-left font-[family-name:var(--font-sora)] text-sm font-semibold text-[var(--nordmat-dark)]">
                 Handlinger
               </TableHead>
             </TableRow>
@@ -97,7 +97,7 @@ function CustomerTableContent() {
             {users.map((customer) => (
               <TableRow
                 key={customer._id}
-                className="group border-b border-[var(--baladi-border)]/30 transition-all duration-200 hover:bg-[var(--baladi-light)]/30"
+                className="group border-b border-[var(--nordmat-border)]/30 transition-all duration-200 hover:bg-[var(--nordmat-light)]/30"
               >
                 <TableCell
                   onClick={() =>
@@ -109,23 +109,23 @@ function CustomerTableContent() {
                 >
                   <div className="flex items-center space-x-4">
                     <div className="relative">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--baladi-primary)] to-[var(--baladi-secondary)] ring-2 ring-[var(--baladi-primary)]/20 transition-all group-hover:ring-[var(--baladi-primary)]/40">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--nordmat-primary)] to-[var(--nordmat-secondary)] ring-2 ring-[var(--nordmat-primary)]/20 transition-all group-hover:ring-[var(--nordmat-primary)]/40">
                         <User className="h-6 w-6 text-white" />
                       </div>
                       <div
                         className={`absolute -right-1 -bottom-1 h-4 w-4 rounded-full border-2 border-white ${
                           customer.isApprovedByAdmin
-                            ? 'bg-[var(--baladi-success)]'
-                            : 'bg-[var(--baladi-warning)]'
+                            ? 'bg-[var(--nordmat-success)]'
+                            : 'bg-[var(--nordmat-warning)]'
                         }`}
                       ></div>
                     </div>
                     <div className="min-w-0 flex-1">
-                      <div className="truncate font-[family-name:var(--font-sora)] font-semibold text-[var(--baladi-dark)]">
+                      <div className="truncate font-[family-name:var(--font-sora)] font-semibold text-[var(--nordmat-dark)]">
                         {customer.name}
                       </div>
                       <div className="mt-1 flex items-center gap-2">
-                        <span className="font-[family-name:var(--font-dm-sans)] text-xs font-medium text-[var(--baladi-gray)]">
+                        <span className="font-[family-name:var(--font-dm-sans)] text-xs font-medium text-[var(--nordmat-gray)]">
                           ID: #{customer._id.toUpperCase()}
                         </span>
                         <span
@@ -152,22 +152,22 @@ function CustomerTableContent() {
 
                 <TableCell className="px-4 py-6">
                   <div className="space-y-2">
-                    <div className="font-[family-name:var(--font-sora)] font-semibold text-[var(--baladi-dark)]">
+                    <div className="font-[family-name:var(--font-sora)] font-semibold text-[var(--nordmat-dark)]">
                       {customer.companyName || (
-                        <span className="text-[var(--baladi-gray)] italic">
+                        <span className="text-[var(--nordmat-gray)] italic">
                           Ikke oppgitt
                         </span>
                       )}
                     </div>
                     {customer.organizationNumber && (
-                      <div className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                      <div className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                         Org: {customer.organizationNumber}
                       </div>
                     )}
                     {customer.address && (
                       <div className="flex items-start gap-1.5">
-                        <MapPin className="mt-0.5 h-3 w-3 flex-shrink-0 text-[var(--baladi-accent)]" />
-                        <span className="line-clamp-2 font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                        <MapPin className="mt-0.5 h-3 w-3 flex-shrink-0 text-[var(--nordmat-accent)]" />
+                        <span className="line-clamp-2 font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                           {customer.address}
                         </span>
                       </div>
@@ -178,9 +178,9 @@ function CustomerTableContent() {
                 <TableCell className="px-4 py-6">
                   <div className="space-y-3">
                     <div className="flex items-center gap-2">
-                      <Mail className="h-4 w-4 text-[var(--baladi-primary)]" />
+                      <Mail className="h-4 w-4 text-[var(--nordmat-primary)]" />
                       <div className="min-w-0 flex-1">
-                        <div className="truncate font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                        <div className="truncate font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                           {customer.email}
                         </div>
                         <div className="mt-1">
@@ -190,8 +190,8 @@ function CustomerTableContent() {
                     </div>
                     {customer.phoneNumber && (
                       <div className="flex items-center gap-2">
-                        <Phone className="h-4 w-4 text-[var(--baladi-secondary)]" />
-                        <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                        <Phone className="h-4 w-4 text-[var(--nordmat-secondary)]" />
+                        <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                           {customer.phoneNumber}
                         </span>
                       </div>
@@ -214,10 +214,10 @@ function CustomerTableContent() {
 
                 <TableCell className="px-4 py-6">
                   <div className="space-y-1">
-                    <div className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                    <div className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                       {formatDate(customer.createdAt, 'MMM d, yyyy')}
                     </div>
-                    <div className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                    <div className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                       {new Date(customer.createdAt).toLocaleDateString(
                         'nb-NO',
                         {
@@ -232,7 +232,7 @@ function CustomerTableContent() {
                   <div className="flex items-center gap-2">
                     <Button
                       variant="outline"
-                      className="group/btn flex items-center justify-center rounded-lg p-2 text-[var(--baladi-gray)] transition-all hover:bg-[var(--baladi-primary)]/10 hover:text-[var(--baladi-primary)]"
+                      className="group/btn flex items-center justify-center rounded-lg p-2 text-[var(--nordmat-gray)] transition-all hover:bg-[var(--nordmat-primary)]/10 hover:text-[var(--nordmat-primary)]"
                       title="Se kundedetaljer"
                       onClick={(e) => {
                         e.stopPropagation();
@@ -245,7 +245,7 @@ function CustomerTableContent() {
                       trigger={
                         <Button
                           variant="outline"
-                          className="group/btn flex items-center justify-center rounded-lg p-2 text-[var(--baladi-gray)] transition-all hover:bg-red-50 hover:text-red-600"
+                          className="group/btn flex items-center justify-center rounded-lg p-2 text-[var(--nordmat-gray)] transition-all hover:bg-red-50 hover:text-red-600"
                           title="Slett kunde"
                           onClick={(e) => e.stopPropagation()}
                         >
@@ -293,34 +293,34 @@ export default memo(CustomerTableContent);
 
 function getStatusIcon(isApproved: boolean, isEmailVerified: boolean) {
   if (isApproved && isEmailVerified) {
-    return <CheckCircle className="h-5 w-5 text-[var(--baladi-success)]" />;
+    return <CheckCircle className="h-5 w-5 text-[var(--nordmat-success)]" />;
   }
   if (!isEmailVerified) {
-    return <XCircle className="h-5 w-5 text-[var(--baladi-error)]" />;
+    return <XCircle className="h-5 w-5 text-[var(--nordmat-error)]" />;
   }
-  return <AlertTriangle className="h-5 w-5 text-[var(--baladi-warning)]" />;
+  return <AlertTriangle className="h-5 w-5 text-[var(--nordmat-warning)]" />;
 }
 
 function getStatusBadge(isApproved: boolean, isEmailVerified: boolean) {
   if (isApproved && isEmailVerified) {
     return (
-      <div className="inline-flex items-center gap-1.5 rounded-full bg-[var(--baladi-success)]/10 px-3 py-1.5 text-xs font-semibold text-[var(--baladi-success)] ring-1 ring-[var(--baladi-success)]/20">
-        <div className="h-1.5 w-1.5 rounded-full bg-[var(--baladi-success)]"></div>
+      <div className="inline-flex items-center gap-1.5 rounded-full bg-[var(--nordmat-success)]/10 px-3 py-1.5 text-xs font-semibold text-[var(--nordmat-success)] ring-1 ring-[var(--nordmat-success)]/20">
+        <div className="h-1.5 w-1.5 rounded-full bg-[var(--nordmat-success)]"></div>
         Fullstendig Verifisert
       </div>
     );
   }
   if (!isEmailVerified) {
     return (
-      <div className="inline-flex items-center gap-1.5 rounded-full bg-[var(--baladi-error)]/10 px-3 py-1.5 text-xs font-semibold text-[var(--baladi-error)] ring-1 ring-[var(--baladi-error)]/20">
-        <div className="h-1.5 w-1.5 rounded-full bg-[var(--baladi-error)]"></div>
+      <div className="inline-flex items-center gap-1.5 rounded-full bg-[var(--nordmat-error)]/10 px-3 py-1.5 text-xs font-semibold text-[var(--nordmat-error)] ring-1 ring-[var(--nordmat-error)]/20">
+        <div className="h-1.5 w-1.5 rounded-full bg-[var(--nordmat-error)]"></div>
         E-post Ikke Verifisert
       </div>
     );
   }
   return (
-    <div className="inline-flex items-center gap-1.5 rounded-full bg-[var(--baladi-warning)]/10 px-3 py-1.5 text-xs font-semibold text-[var(--baladi-warning)] ring-1 ring-[var(--baladi-warning)]/20">
-      <div className="h-1.5 w-1.5 rounded-full bg-[var(--baladi-warning)]"></div>
+    <div className="inline-flex items-center gap-1.5 rounded-full bg-[var(--nordmat-warning)]/10 px-3 py-1.5 text-xs font-semibold text-[var(--nordmat-warning)] ring-1 ring-[var(--nordmat-warning)]/20">
+      <div className="h-1.5 w-1.5 rounded-full bg-[var(--nordmat-warning)]"></div>
       Venter på Godkjenning
     </div>
   );
@@ -329,14 +329,14 @@ function getStatusBadge(isApproved: boolean, isEmailVerified: boolean) {
 function getEmailVerificationBadge(isVerified: boolean) {
   if (isVerified) {
     return (
-      <span className="inline-flex items-center gap-1 rounded-full bg-[var(--baladi-success)]/10 px-2 py-1 text-xs font-medium text-[var(--baladi-success)]">
+      <span className="inline-flex items-center gap-1 rounded-full bg-[var(--nordmat-success)]/10 px-2 py-1 text-xs font-medium text-[var(--nordmat-success)]">
         <CheckCircle className="h-3 w-3" />
         Verifisert
       </span>
     );
   }
   return (
-    <span className="inline-flex items-center gap-1 rounded-full bg-[var(--baladi-warning)]/10 px-2 py-1 text-xs font-medium text-[var(--baladi-warning)]">
+    <span className="inline-flex items-center gap-1 rounded-full bg-[var(--nordmat-warning)]/10 px-2 py-1 text-xs font-medium text-[var(--nordmat-warning)]">
       <Clock className="h-3 w-3" />
       Uverifisert
     </span>

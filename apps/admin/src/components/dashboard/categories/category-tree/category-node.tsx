@@ -48,9 +48,9 @@ function CategoryNode(props: CategoryNodeProps) {
   return (
     <div className="space-y-1">
       <div
-        className={`group flex items-center gap-2 rounded-lg px-3 py-2 transition-all hover:bg-[var(--baladi-primary)]/5 ${
+        className={`group flex items-center gap-2 rounded-lg px-3 py-2 transition-all hover:bg-[var(--nordmat-primary)]/5 ${
           isSelected
-            ? 'border-l-4 border-[var(--baladi-primary)] bg-[var(--baladi-primary)]/10'
+            ? 'border-l-4 border-[var(--nordmat-primary)] bg-[var(--nordmat-primary)]/10'
             : ''
         }`}
         style={{ paddingLeft }}
@@ -58,23 +58,23 @@ function CategoryNode(props: CategoryNodeProps) {
         {hasChildren ? (
           <button
             onClick={() => onToggle(category._id)}
-            className="flex h-4 w-4 items-center justify-center rounded hover:bg-[var(--baladi-primary)]/10"
+            className="flex h-4 w-4 items-center justify-center rounded hover:bg-[var(--nordmat-primary)]/10"
           >
             {isExpanded ? (
-              <ChevronDown className="h-3 w-3 text-[var(--baladi-gray)]" />
+              <ChevronDown className="h-3 w-3 text-[var(--nordmat-gray)]" />
             ) : (
-              <ChevronRight className="h-3 w-3 text-[var(--baladi-gray)]" />
+              <ChevronRight className="h-3 w-3 text-[var(--nordmat-gray)]" />
             )}
           </button>
         ) : (
           <div className="h-4 w-4" />
         )}
 
-        <div className="flex h-6 w-6 items-center justify-center rounded bg-[var(--baladi-primary)]/10">
+        <div className="flex h-6 w-6 items-center justify-center rounded bg-[var(--nordmat-primary)]/10">
           {isExpanded && hasChildren ? (
-            <FolderOpenIcon className="h-4 w-4 text-[var(--baladi-primary)]" />
+            <FolderOpenIcon className="h-4 w-4 text-[var(--nordmat-primary)]" />
           ) : (
-            <FolderIcon className="h-4 w-4 text-[var(--baladi-primary)]" />
+            <FolderIcon className="h-4 w-4 text-[var(--nordmat-primary)]" />
           )}
         </div>
 
@@ -82,7 +82,7 @@ function CategoryNode(props: CategoryNodeProps) {
           onClick={handleChangeCategory}
           className="flex flex-1 cursor-pointer items-center justify-between"
         >
-          <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+          <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
             {category.name}
           </span>
         </div>

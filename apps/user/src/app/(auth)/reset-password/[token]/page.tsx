@@ -16,36 +16,36 @@ export default async function ResetPasswordPage(props: ResetPasswordPageProps) {
   const { token } = await props.params;
 
   return (
-    <div className="flex min-h-screen w-full items-center justify-center bg-[var(--baladi-light)] p-6 lg:w-1/2">
+    <div className="flex min-h-screen w-full items-center justify-center bg-[var(--nordmat-light)] p-6 lg:w-1/2">
       <div className="w-full max-w-md">
         <div className="mb-6 text-center">
           <div className="mb-4">
-            <h2 className="font-[family-name:var(--font-sora)] text-3xl font-bold tracking-tight text-[var(--baladi-dark)]">
+            <h2 className="font-[family-name:var(--font-sora)] text-3xl font-bold tracking-tight text-[var(--nordmat-dark)]">
               Nytt passord
             </h2>
             <div className="mt-2 flex items-center justify-center">
-              <div className="h-1 w-12 rounded-full bg-[var(--baladi-primary)]"></div>
+              <div className="h-1 w-12 rounded-full bg-[var(--nordmat-primary)]"></div>
             </div>
           </div>
-          <p className="font-[family-name:var(--font-dm-sans)] text-base text-[var(--baladi-gray)]">
-            Lag et nytt sikkert passord for å få tilgang til Baladi
+          <p className="font-[family-name:var(--font-dm-sans)] text-base text-[var(--nordmat-gray)]">
+            Lag et nytt sikkert passord for å få tilgang til Nordmat
             Engros-kontoen din
           </p>
         </div>
 
         <div className="relative">
-          <div className="rounded-2xl border border-[var(--baladi-border)] bg-white p-6 shadow-lg">
+          <div className="rounded-2xl border border-[var(--nordmat-border)] bg-white p-6 shadow-lg">
             <ResetPasswordForm token={token} />
           </div>
         </div>
 
         <div className="mt-6 text-center">
-          <div className="border-t border-[var(--baladi-border)] pt-4">
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+          <div className="border-t border-[var(--nordmat-border)] pt-4">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               Husket passordet ditt?{' '}
               <Link
                 href="/login"
-                className="font-medium text-[var(--baladi-primary)] transition-colors duration-200 hover:text-[var(--baladi-secondary)]"
+                className="font-medium text-[var(--nordmat-primary)] transition-colors duration-200 hover:text-[var(--nordmat-secondary)]"
               >
                 Tilbake til innlogging
               </Link>
@@ -54,12 +54,12 @@ export default async function ResetPasswordPage(props: ResetPasswordPageProps) {
         </div>
 
         <div className="mt-4 text-center">
-          <div className="inline-flex items-center space-x-1 text-xs text-[var(--baladi-gray)]">
+          <div className="inline-flex items-center space-x-1 text-xs text-[var(--nordmat-gray)]">
             <span className="font-[family-name:var(--font-dm-sans)]">
               © {new Date().getFullYear()}
             </span>
-            <span className="font-[family-name:var(--font-sora)] font-semibold text-[var(--baladi-primary)]">
-              Baladi Engros
+            <span className="font-[family-name:var(--font-sora)] font-semibold text-[var(--nordmat-primary)]">
+              Nordmat Engros
             </span>
             <span className="font-[family-name:var(--font-dm-sans)]">
               • Alle rettigheter forbeholdt

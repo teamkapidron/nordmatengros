@@ -21,10 +21,10 @@ function OrderDelivery({ order }: OrderDeliveryProps) {
   return (
     <div className="rounded-lg bg-white p-6 shadow-sm">
       <div className="mb-6 flex items-center gap-3">
-        <div className="bg-[var(--baladi-accent)]/10 flex h-8 w-8 items-center justify-center rounded-full">
-          <Truck size={16} className="text-[var(--baladi-accent)]" />
+        <div className="bg-[var(--nordmat-accent)]/10 flex h-8 w-8 items-center justify-center rounded-full">
+          <Truck size={16} className="text-[var(--nordmat-accent)]" />
         </div>
-        <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+        <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
           Leveringsinformasjon
         </h3>
       </div>
@@ -32,14 +32,14 @@ function OrderDelivery({ order }: OrderDeliveryProps) {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <MapPin size={16} className="text-[var(--baladi-primary)]" />
-            <h4 className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--baladi-dark)]">
+            <MapPin size={16} className="text-[var(--nordmat-primary)]" />
+            <h4 className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--nordmat-dark)]">
               Leveringsadresse
             </h4>
           </div>
 
-          <div className="ml-6 space-y-1 font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
-            <p className="font-medium text-[var(--baladi-dark)]">
+          <div className="ml-6 space-y-1 font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
+            <p className="font-medium text-[var(--nordmat-dark)]">
               {order.shippingAddress.addressLine1}
             </p>
             {order.shippingAddress.addressLine2 && (
@@ -55,20 +55,20 @@ function OrderDelivery({ order }: OrderDeliveryProps) {
 
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <Package size={16} className="text-[var(--baladi-secondary)]" />
-            <h4 className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--baladi-dark)]">
+            <Package size={16} className="text-[var(--nordmat-secondary)]" />
+            <h4 className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--nordmat-dark)]">
               Leveringsdetaljer
             </h4>
           </div>
 
           <div className="ml-6 space-y-3">
             <div className="flex items-center gap-3">
-              <Calendar size={14} className="text-[var(--baladi-gray)]" />
+              <Calendar size={14} className="text-[var(--nordmat-gray)]" />
               <div>
-                <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                   Ønsket leveringsdato
                 </p>
-                <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                   {order.desiredDeliveryDate
                     ? formatDate(order.desiredDeliveryDate)
                     : 'Ikke spesifisert'}
@@ -77,12 +77,12 @@ function OrderDelivery({ order }: OrderDeliveryProps) {
             </div>
 
             <div className="flex items-center gap-3">
-              <Package size={14} className="text-[var(--baladi-gray)]" />
+              <Package size={14} className="text-[var(--nordmat-gray)]" />
               <div>
-                <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                   Palltype
                 </p>
-                <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                   {order.palletType || 'Ikke spesifisert'}
                 </p>
               </div>
@@ -92,13 +92,13 @@ function OrderDelivery({ order }: OrderDeliveryProps) {
               <div className="flex items-center gap-3">
                 <MessageSquare
                   size={14}
-                  className="text-[var(--baladi-gray)]"
+                  className="text-[var(--nordmat-gray)]"
                 />
                 <div>
-                  <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                  <p className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                     Kunde kommentar
                   </p>
-                  <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                  <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                     {order.notes}
                   </p>
                 </div>

@@ -49,12 +49,12 @@ function ProductSpecifications() {
   if (isLoading) {
     return (
       <div className="mt-12 space-y-6">
-        <div className="h-8 w-48 animate-pulse rounded bg-[var(--baladi-light)]" />
+        <div className="h-8 w-48 animate-pulse rounded bg-[var(--nordmat-light)]" />
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {Array.from({ length: 6 }).map((_, i) => (
             <div key={i} className="flex justify-between">
-              <div className="h-6 w-24 animate-pulse rounded bg-[var(--baladi-light)]" />
-              <div className="h-6 w-32 animate-pulse rounded bg-[var(--baladi-light)]" />
+              <div className="h-6 w-24 animate-pulse rounded bg-[var(--nordmat-light)]" />
+              <div className="h-6 w-32 animate-pulse rounded bg-[var(--nordmat-light)]" />
             </div>
           ))}
         </div>
@@ -67,20 +67,20 @@ function ProductSpecifications() {
       <Tabs defaultValue="details" className="w-full">
         <TabsList
           className={cn(
-            'grid w-full bg-[var(--baladi-light)]/50',
+            'grid w-full bg-[var(--nordmat-light)]/50',
             hasVolumeDiscount ? 'grid-cols-2' : 'grid-cols-1',
           )}
         >
           <TabsTrigger
             value="details"
-            className="font-[family-name:var(--font-dm-sans)] data-[state=active]:bg-white data-[state=active]:text-[var(--baladi-primary)]"
+            className="font-[family-name:var(--font-dm-sans)] data-[state=active]:bg-white data-[state=active]:text-[var(--nordmat-primary)]"
           >
             Detaljer & Spesifikasjoner
           </TabsTrigger>
           {hasVolumeDiscount && (
             <TabsTrigger
               value="discounts"
-              className="font-[family-name:var(--font-dm-sans)] data-[state=active]:bg-white data-[state=active]:text-[var(--baladi-primary)]"
+              className="font-[family-name:var(--font-dm-sans)] data-[state=active]:bg-white data-[state=active]:text-[var(--nordmat-primary)]"
             >
               Mengderabatter
             </TabsTrigger>
@@ -89,19 +89,19 @@ function ProductSpecifications() {
 
         <TabsContent value="details" className="mt-6 space-y-6">
           <div className="space-y-4">
-            <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+            <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
               Produktspesifikasjoner
             </h3>
 
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div className="flex items-center justify-between py-3">
                 <div className="flex items-center gap-3">
-                  <Info size={18} className="text-[var(--baladi-primary)]" />
-                  <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-dark)]">
+                  <Info size={18} className="text-[var(--nordmat-primary)]" />
+                  <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-dark)]">
                     Kategori
                   </span>
                 </div>
-                <span className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+                <span className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
                   {category?.name}
                 </span>
               </div>
@@ -110,37 +110,37 @@ function ProductSpecifications() {
                 <div className="flex items-center gap-3">
                   <Package2
                     size={18}
-                    className="text-[var(--baladi-primary)]"
+                    className="text-[var(--nordmat-primary)]"
                   />
-                  <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-dark)]">
+                  <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-dark)]">
                     Enheter per Kartong
                   </span>
                 </div>
-                <span className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+                <span className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
                   {product?.noOfUnits}
                 </span>
               </div>
 
               <div className="flex items-center justify-between py-3">
                 <div className="flex items-center gap-3">
-                  <Scale size={18} className="text-[var(--baladi-primary)]" />
-                  <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-dark)]">
+                  <Scale size={18} className="text-[var(--nordmat-primary)]" />
+                  <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-dark)]">
                     Vekt
                   </span>
                 </div>
-                <span className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+                <span className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
                   {product?.weight}
                 </span>
               </div>
 
               <div className="flex items-center justify-between py-3">
                 <div className="flex items-center gap-3">
-                  <Ruler size={18} className="text-[var(--baladi-primary)]" />
-                  <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-dark)]">
+                  <Ruler size={18} className="text-[var(--nordmat-primary)]" />
+                  <span className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-dark)]">
                     Dimensjoner
                   </span>
                 </div>
-                <span className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+                <span className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
                   {product?.dimensions?.length} x {product?.dimensions?.width} x{' '}
                   {product?.dimensions?.height} cm
                 </span>
@@ -151,10 +151,10 @@ function ProductSpecifications() {
 
             {product?.description && (
               <div className="space-y-3">
-                <h4 className="font-[family-name:var(--font-sora)] font-semibold text-[var(--baladi-dark)]">
+                <h4 className="font-[family-name:var(--font-sora)] font-semibold text-[var(--nordmat-dark)]">
                   Produktbeskrivelse
                 </h4>
-                <p className="font-[family-name:var(--font-dm-sans)] leading-relaxed text-[var(--baladi-gray)]">
+                <p className="font-[family-name:var(--font-dm-sans)] leading-relaxed text-[var(--nordmat-gray)]">
                   {product.description}
                 </p>
               </div>
@@ -165,21 +165,21 @@ function ProductSpecifications() {
         {hasVolumeDiscount && (
           <TabsContent value="discounts" className="mt-6 space-y-6">
             <div className="space-y-4">
-              <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+              <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
                 Mengderabatter
               </h3>
 
-              <div className="mb-6 rounded-lg bg-gradient-to-r from-[var(--baladi-primary)]/10 to-[var(--baladi-accent)]/10 p-4">
+              <div className="mb-6 rounded-lg bg-gradient-to-r from-[var(--nordmat-primary)]/10 to-[var(--nordmat-accent)]/10 p-4">
                 <div className="mb-3 flex items-center gap-3">
                   <TrendingDown
                     size={24}
-                    className="text-[var(--baladi-primary)]"
+                    className="text-[var(--nordmat-primary)]"
                   />
-                  <h4 className="font-[family-name:var(--font-sora)] font-semibold text-[var(--baladi-dark)]">
+                  <h4 className="font-[family-name:var(--font-sora)] font-semibold text-[var(--nordmat-dark)]">
                     Spar mer ved større bestillinger!
                   </h4>
                 </div>
-                <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                   Jo flere enheter du kjøper, desto mer sparer du. Rabattene
                   gjelder automatisk ved kassen.
                 </p>
@@ -192,32 +192,32 @@ function ProductSpecifications() {
                     .map((discount) => (
                       <div
                         key={discount._id}
-                        className="rounded-lg border-2 border-[var(--baladi-light)] bg-white p-4 transition-colors hover:border-[var(--baladi-primary)]/30"
+                        className="rounded-lg border-2 border-[var(--nordmat-light)] bg-white p-4 transition-colors hover:border-[var(--nordmat-primary)]/30"
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-4">
-                            <div className="rounded-full bg-[var(--baladi-primary)]/10 p-3">
+                            <div className="rounded-full bg-[var(--nordmat-primary)]/10 p-3">
                               <Percent
                                 size={24}
-                                className="text-[var(--baladi-primary)]"
+                                className="text-[var(--nordmat-primary)]"
                               />
                             </div>
                             <div>
-                              <h5 className="font-[family-name:var(--font-sora)] font-semibold text-[var(--baladi-dark)]">
+                              <h5 className="font-[family-name:var(--font-sora)] font-semibold text-[var(--nordmat-dark)]">
                                 Kjøp {discount.minQuantity}+ enheter
                               </h5>
-                              <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                              <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                                 Få automatisk rabatt på hele bestillingen
                               </p>
                             </div>
                           </div>
                           <div className="text-right">
-                            <div className="rounded-full bg-[var(--baladi-accent)] px-4 py-2 text-white">
+                            <div className="rounded-full bg-[var(--nordmat-accent)] px-4 py-2 text-white">
                               <span className="font-[family-name:var(--font-sora)] text-lg font-bold">
                                 {discount.discountPercentage}%
                               </span>
                             </div>
-                            <p className="mt-1 font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                            <p className="mt-1 font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                               rabatt
                             </p>
                           </div>
@@ -229,9 +229,9 @@ function ProductSpecifications() {
                 <div className="py-8 text-center">
                   <Percent
                     size={48}
-                    className="mx-auto mb-4 text-[var(--baladi-light)]"
+                    className="mx-auto mb-4 text-[var(--nordmat-light)]"
                   />
-                  <p className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+                  <p className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
                     Ingen mengderabatter tilgjengelig for øyeblikket
                   </p>
                 </div>

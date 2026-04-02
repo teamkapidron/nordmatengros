@@ -36,7 +36,7 @@ export abstract class TripletexBase {
     return makeRequest<T>(url, {
       ...options,
       headers: {
-        'User-Agent': this.config.userAgent ?? 'baladi/1.0.0',
+        'User-Agent': this.config.userAgent ?? 'nordmatengros/1.0.0',
         Authorization: `Basic ${basicAuth}`,
         ...options.headers,
       },

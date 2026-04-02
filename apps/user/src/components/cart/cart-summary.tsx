@@ -50,8 +50,8 @@ const PriceRow = memo(
           className={cn(
             'font-[family-name:var(--font-dm-sans)]',
             isTotal
-              ? 'text-lg font-semibold text-[var(--baladi-dark)]'
-              : 'text-sm text-[var(--baladi-gray)]',
+              ? 'text-lg font-semibold text-[var(--nordmat-dark)]'
+              : 'text-sm text-[var(--nordmat-gray)]',
           )}
         >
           {label}
@@ -61,8 +61,8 @@ const PriceRow = memo(
         className={cn(
           'font-[family-name:var(--font-sora)]',
           isTotal
-            ? 'text-xl font-bold text-[var(--baladi-primary)]'
-            : 'text-sm font-medium text-[var(--baladi-dark)]',
+            ? 'text-xl font-bold text-[var(--nordmat-primary)]'
+            : 'text-sm font-medium text-[var(--nordmat-dark)]',
         )}
       >
         {formatPrice(value)} kr
@@ -114,16 +114,16 @@ function CartSummary(props: CartSummaryProps) {
 
   return (
     <div className={cn('space-y-6', className)}>
-      <div className="rounded-xl border border-[var(--baladi-border)] bg-white p-6 shadow-sm">
+      <div className="rounded-xl border border-[var(--nordmat-border)] bg-white p-6 shadow-sm">
         <div className="mb-6 flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--baladi-primary)]/10">
-            <ShoppingCart size={18} className="text-[var(--baladi-primary)]" />
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--nordmat-primary)]/10">
+            <ShoppingCart size={18} className="text-[var(--nordmat-primary)]" />
           </div>
           <div>
-            <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+            <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
               Bestillingssammendrag
             </h3>
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               {userCartItems.length}{' '}
               {userCartItems.length === 1 ? 'vare' : 'varer'} i handlekurven
             </p>
@@ -135,14 +135,14 @@ function CartSummary(props: CartSummaryProps) {
             label="Subtotal (uten MVA)"
             value={totalPriceWithoutVat}
             icon={
-              <Calculator size={16} className="text-[var(--baladi-gray)]" />
+              <Calculator size={16} className="text-[var(--nordmat-gray)]" />
             }
           />
 
           <PriceRow
             label="MVA"
             value={totalVatAmount}
-            icon={<Percent size={16} className="text-[var(--baladi-gray)]" />}
+            icon={<Percent size={16} className="text-[var(--nordmat-gray)]" />}
           />
 
           {hasDiscount && (
@@ -158,8 +158,8 @@ function CartSummary(props: CartSummaryProps) {
 
           <div className="mt-6 space-y-3">
             <div className="flex items-center gap-2">
-              <Weight size={16} className="text-[var(--baladi-gray)]" />
-              <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-gray)]">
+              <Weight size={16} className="text-[var(--nordmat-gray)]" />
+              <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-gray)]">
                 Totalvekt: {totalWeight} kg
               </span>
             </div>
@@ -167,8 +167,8 @@ function CartSummary(props: CartSummaryProps) {
 
           <div className="mt-2 space-y-3">
             <div className="flex items-center gap-2">
-              <Volume size={16} className="text-[var(--baladi-gray)]" />
-              <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-gray)]">
+              <Volume size={16} className="text-[var(--nordmat-gray)]" />
+              <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-gray)]">
                 Totalvolum: {(totalVolume / 1000000).toFixed(2)} m³
               </span>
             </div>
@@ -178,7 +178,7 @@ function CartSummary(props: CartSummaryProps) {
             label="Totalt å betale"
             value={totalPaymentAmount}
             icon={
-              <CreditCard size={18} className="text-[var(--baladi-primary)]" />
+              <CreditCard size={18} className="text-[var(--nordmat-primary)]" />
             }
             isTotal
           />
@@ -213,7 +213,7 @@ function CartSummary(props: CartSummaryProps) {
         <Button variant="outline" className="w-full">
           <Link
             href="/"
-            className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-primary)] transition-colors hover:text-[var(--baladi-primary-dark)]"
+            className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-primary)] transition-colors hover:text-[var(--nordmat-primary-dark)]"
           >
             ← Fortsett å handle
           </Link>

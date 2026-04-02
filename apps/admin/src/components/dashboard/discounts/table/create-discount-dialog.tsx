@@ -68,7 +68,7 @@ function CreateDiscountDialog({ children }: { children: React.ReactNode }) {
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="font-[family-name:var(--font-sora)] text-[var(--baladi-text)]">
+          <DialogTitle className="font-[family-name:var(--font-sora)] text-[var(--nordmat-text)]">
             Legg til Produkt Rabatt
           </DialogTitle>
         </DialogHeader>
@@ -80,14 +80,14 @@ function CreateDiscountDialog({ children }: { children: React.ReactNode }) {
               name="productId"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                     Velg Produkt *
                   </FormLabel>
                   <FormControl>
                     <ProductSearchCombobox
                       onSelect={(productId) => field.onChange(productId)}
                       placeholder="Søk og velg et produkt..."
-                      className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                      className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                     />
                   </FormControl>
                   <FormMessage />
@@ -100,7 +100,7 @@ function CreateDiscountDialog({ children }: { children: React.ReactNode }) {
               name="discountValue"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                     Rabatt Beløp (kr) *
                   </FormLabel>
                   <FormControl>
@@ -109,7 +109,7 @@ function CreateDiscountDialog({ children }: { children: React.ReactNode }) {
                       min={0}
                       step="0.01"
                       placeholder="Skriv inn rabatt beløp"
-                      className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                      className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                       {...field}
                       onChange={(e) => field.onChange(Number(e.target.value))}
                       value={field.value || ''}
@@ -125,14 +125,14 @@ function CreateDiscountDialog({ children }: { children: React.ReactNode }) {
               name="validFrom"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                     Gyldig Fra
                   </FormLabel>
                   <FormControl>
-                    <CalendarIcon className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                    <CalendarIcon className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                     <Input
                       type="date"
-                      className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                      className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                       {...field}
                     />
                   </FormControl>
@@ -146,14 +146,14 @@ function CreateDiscountDialog({ children }: { children: React.ReactNode }) {
               name="validTo"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                     Gyldig Til
                   </FormLabel>
                   <FormControl>
-                    <CalendarIcon className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                    <CalendarIcon className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                     <Input
                       type="date"
-                      className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                      className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                       {...field}
                     />
                   </FormControl>
@@ -166,7 +166,7 @@ function CreateDiscountDialog({ children }: { children: React.ReactNode }) {
               <Button
                 type="submit"
                 disabled={createDiscountMutation.isPending}
-                className="hover:bg-[var(--baladi-primary)]/90 h-12 w-full rounded-lg bg-[var(--baladi-primary)] font-[family-name:var(--font-sora)] font-semibold"
+                className="hover:bg-[var(--nordmat-primary)]/90 h-12 w-full rounded-lg bg-[var(--nordmat-primary)] font-[family-name:var(--font-sora)] font-semibold"
               >
                 {createDiscountMutation.isPending
                   ? 'Oppretter...'

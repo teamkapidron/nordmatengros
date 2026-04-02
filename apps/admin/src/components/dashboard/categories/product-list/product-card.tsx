@@ -32,8 +32,8 @@ function ProductCard(props: ProductCardProps) {
   }, [product.slug, router]);
 
   return (
-    <div className="flex items-center gap-4 rounded-lg border border-[var(--baladi-border)] bg-gray-50/50 p-4 transition-all hover:shadow-md">
-      <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-lg border border-[var(--baladi-border)] bg-white">
+    <div className="flex items-center gap-4 rounded-lg border border-[var(--nordmat-border)] bg-gray-50/50 p-4 transition-all hover:shadow-md">
+      <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-lg border border-[var(--nordmat-border)] bg-white">
         {product.images && product.images.length > 0 ? (
           <Image
             src={product.images[0]!}
@@ -43,27 +43,27 @@ function ProductCard(props: ProductCardProps) {
             className="h-full w-full object-cover"
           />
         ) : (
-          <Package className="h-8 w-8 text-[var(--baladi-gray)]" />
+          <Package className="h-8 w-8 text-[var(--nordmat-gray)]" />
         )}
       </div>
 
       <div className="flex-1 space-y-2">
         <div className="flex items-start justify-between">
-          <h3 className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+          <h3 className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
             {product.name}
           </h3>
           <Button
             variant="outline"
             size="sm"
             onClick={handleEditProduct}
-            className="ml-2 h-8 w-8 p-0 text-[var(--baladi-gray)] hover:bg-[var(--baladi-primary)] hover:text-white"
+            className="ml-2 h-8 w-8 p-0 text-[var(--nordmat-gray)] hover:bg-[var(--nordmat-primary)] hover:text-white"
             title="Rediger produkt"
           >
             <Edit className="h-4 w-4" />
           </Button>
         </div>
 
-        <div className="flex items-center gap-4 text-xs text-[var(--baladi-gray)]">
+        <div className="flex items-center gap-4 text-xs text-[var(--nordmat-gray)]">
           <div className="flex items-center gap-1">
             <span>Lagerstatus:</span>
             <span
@@ -74,7 +74,7 @@ function ProductCard(props: ProductCardProps) {
           </div>
           <div>
             Pris ekskl./inkl. MVA:{' '}
-            <span className="font-medium text-[var(--baladi-dark)]">
+            <span className="font-medium text-[var(--nordmat-dark)]">
               {formatPrice(product.salePrice)}kr /{' '}
               {formatPrice(
                 product.salePrice + (product.vat * product.salePrice) / 100,
@@ -89,7 +89,7 @@ function ProductCard(props: ProductCardProps) {
             rel="noopener noreferrer"
             target="_blank"
             href={`${STORE_URL}/product/${product.slug}`}
-            className="text-[var(--baladi-primary)] hover:underline"
+            className="text-[var(--nordmat-primary)] hover:underline"
           >
             Se produkt i nettbutikken
           </a>

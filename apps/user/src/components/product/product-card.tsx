@@ -82,7 +82,7 @@ const ProductImage = memo(({ product, isAuthenticated }: ProductImageProps) => {
   ]);
 
   return (
-    <div className="relative flex aspect-square items-center justify-center overflow-hidden bg-[var(--baladi-light)]/30">
+    <div className="relative flex aspect-square items-center justify-center overflow-hidden bg-[var(--nordmat-light)]/30">
       <div className="absolute inset-0">
         <div className="relative h-full w-full">
           <Link
@@ -107,10 +107,10 @@ const ProductImage = memo(({ product, isAuthenticated }: ProductImageProps) => {
               className={cn(
                 'absolute top-3 right-3 z-20 rounded-full p-2 transition-all duration-300',
                 'hover:scale-110 hover:shadow-md active:scale-95',
-                'bg-white/90 text-[var(--baladi-gray)] hover:bg-white hover:text-red-500',
+                'bg-white/90 text-[var(--nordmat-gray)] hover:bg-white hover:text-red-500',
                 product.isFavorite
                   ? 'text-red-500'
-                  : 'text-[var(--baladi-gray)]',
+                  : 'text-[var(--nordmat-gray)]',
               )}
               onClick={handleToggleFavorite}
             >
@@ -123,7 +123,7 @@ const ProductImage = memo(({ product, isAuthenticated }: ProductImageProps) => {
           )}
 
           {product.hasVolumeDiscount && (
-            <div className="absolute top-3 left-3 z-20 rounded-full bg-gradient-to-r from-[var(--baladi-secondary)] to-[var(--baladi-accent)] px-2 py-1 text-xs font-medium text-white shadow-sm">
+            <div className="absolute top-3 left-3 z-20 rounded-full bg-gradient-to-r from-[var(--nordmat-secondary)] to-[var(--nordmat-accent)] px-2 py-1 text-xs font-medium text-white shadow-sm">
               <BarChart3 size={12} className="mr-1 inline-block" />
               Volum rabatt
             </div>
@@ -180,15 +180,15 @@ const ProductInfoSection = memo(
     return (
       <div className="mb-3">
         <div className="mb-2">
-          <span className="font-[family-name:var(--font-dm-sans)] text-xs font-medium text-[var(--baladi-primary)]">
+          <span className="font-[family-name:var(--font-dm-sans)] text-xs font-medium text-[var(--nordmat-primary)]">
             {product.categories[0]?.name || 'Ukategoriserad'}
           </span>
         </div>
 
-        <h3 className="mb-2 line-clamp-2 min-h-[2.5rem] font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--baladi-dark)]">
+        <h3 className="mb-2 line-clamp-2 min-h-[2.5rem] font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--nordmat-dark)]">
           <Link
             href={`/product/${product.slug}`}
-            className="transition-colors hover:text-[var(--baladi-primary)]"
+            className="transition-colors hover:text-[var(--nordmat-primary)]"
           >
             {product.name}
           </Link>
@@ -198,11 +198,11 @@ const ProductInfoSection = memo(
           <div className="space-y-1">
             <div className="flex items-baseline justify-between">
               <div className="flex items-baseline">
-                <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-primary)]">
+                <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-primary)]">
                   {formatPrice(price)} kr
                 </span>
               </div>
-              <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+              <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                 {product.vat}% Inkl. mva
               </span>
             </div>
@@ -243,7 +243,7 @@ const ProductActions = memo(
     if (isOutOfStock) {
       return (
         <Button
-          className="flex w-full items-center justify-center rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)] px-3 py-2.5 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-gray)]"
+          className="flex w-full items-center justify-center rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] px-3 py-2.5 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-gray)]"
           disabled
         >
           Utsolgt
@@ -255,7 +255,7 @@ const ProductActions = memo(
       return (
         <Button
           onClick={onGoToLogin}
-          className="flex w-full items-center justify-center rounded-lg bg-[var(--baladi-primary)]/95 px-3 py-2.5 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-white transition-all duration-300 hover:bg-[var(--baladi-primary)]"
+          className="flex w-full items-center justify-center rounded-lg bg-[var(--nordmat-primary)]/95 px-3 py-2.5 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-white transition-all duration-300 hover:bg-[var(--nordmat-primary)]"
         >
           <LogIn className="mr-2 h-4 w-4" />
           Logg inn
@@ -281,7 +281,7 @@ const ProductActions = memo(
             'flex items-center justify-center rounded-lg p-2.5 text-white transition-all duration-300',
             isInCart
               ? 'bg-green-600 shadow-md hover:bg-green-700 hover:shadow-lg'
-              : 'bg-[var(--baladi-primary)] shadow-md hover:bg-[var(--baladi-primary-dark)] hover:shadow-lg',
+              : 'bg-[var(--nordmat-primary)] shadow-md hover:bg-[var(--nordmat-primary-dark)] hover:shadow-lg',
           )}
         >
           <ShoppingCart size={16} />
@@ -349,8 +349,8 @@ function ProductCard(props: ProductCardProps) {
     <div
       className={cn(
         'group relative overflow-hidden rounded-lg bg-white transition-all duration-300',
-        'border border-[var(--baladi-border)] hover:border-[var(--baladi-primary)]/30',
-        'hover:shadow-[var(--baladi-primary)]/10 hover:shadow-lg',
+        'border border-[var(--nordmat-border)] hover:border-[var(--nordmat-primary)]/30',
+        'hover:shadow-[var(--nordmat-primary)]/10 hover:shadow-lg',
         className,
       )}
     >

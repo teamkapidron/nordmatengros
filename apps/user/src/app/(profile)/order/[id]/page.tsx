@@ -15,7 +15,7 @@ export async function generateMetadata({
   const { id } = await params;
 
   return {
-    title: `Bestilling #${id} | Baladi Engros`,
+    title: `Bestilling #${id} | Nordmat Engros`,
   };
 }
 
@@ -26,7 +26,7 @@ export default async function OrderDetailPage({
 
   return (
     <Suspense>
-      <div className="min-h-screen bg-[var(--baladi-background)]">
+      <div className="min-h-screen bg-[var(--nordmat-background)]">
         <Header />
 
         <main className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">

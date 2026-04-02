@@ -21,7 +21,7 @@ function AddressListHeader(props: AddressListHeaderProps) {
     <div className="mb-8">
       <div className="mb-6 text-center">
         <div className="mb-4 flex items-center justify-center gap-3">
-          <div className="from-baladi-primary to-baladi-secondary flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br shadow-lg">
+          <div className="from-nordmat-primary to-nordmat-secondary flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br shadow-lg">
             <MapPin className="text-primary h-8 w-8" />
           </div>
           <div className="text-left">

@@ -117,7 +117,7 @@ function OrderTimeline({ order }: OrderTimelineProps) {
 
   return (
     <div className="rounded-lg bg-white p-6 shadow-sm">
-      <h2 className="mb-6 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+      <h2 className="mb-6 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
         Bestillingsstatus
       </h2>
 
@@ -129,8 +129,8 @@ function OrderTimeline({ order }: OrderTimelineProps) {
                 className={cn(
                   'absolute top-12 left-5 h-12 w-0.5',
                   step.status === 'completed'
-                    ? 'bg-[var(--baladi-primary)]'
-                    : 'bg-[var(--baladi-border)]',
+                    ? 'bg-[var(--nordmat-primary)]'
+                    : 'bg-[var(--nordmat-border)]',
                 )}
               />
             )}
@@ -139,10 +139,10 @@ function OrderTimeline({ order }: OrderTimelineProps) {
               className={cn(
                 'flex h-10 w-10 items-center justify-center rounded-full transition-all duration-300',
                 step.status === 'completed'
-                  ? 'bg-[var(--baladi-primary)] text-white'
+                  ? 'bg-[var(--nordmat-primary)] text-white'
                   : step.status === 'current'
-                    ? 'bg-[var(--baladi-secondary)] text-white ring-4 ring-[var(--baladi-secondary)]/20'
-                    : 'bg-[var(--baladi-muted)] text-[var(--baladi-gray)]',
+                    ? 'bg-[var(--nordmat-secondary)] text-white ring-4 ring-[var(--nordmat-secondary)]/20'
+                    : 'bg-[var(--nordmat-muted)] text-[var(--nordmat-gray)]',
               )}
             >
               {step.icon}
@@ -154,14 +154,14 @@ function OrderTimeline({ order }: OrderTimelineProps) {
                   className={cn(
                     'font-[family-name:var(--font-dm-sans)] font-semibold',
                     step.status === 'completed' || step.status === 'current'
-                      ? 'text-[var(--baladi-dark)]'
-                      : 'text-[var(--baladi-gray)]',
+                      ? 'text-[var(--nordmat-dark)]'
+                      : 'text-[var(--nordmat-gray)]',
                   )}
                 >
                   {step.title}
                 </h3>
                 {step.date && (
-                  <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                  <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                     {step.date}
                   </span>
                 )}
@@ -170,8 +170,8 @@ function OrderTimeline({ order }: OrderTimelineProps) {
                 className={cn(
                   'mt-1 font-[family-name:var(--font-dm-sans)] text-sm',
                   step.status === 'completed' || step.status === 'current'
-                    ? 'text-[var(--baladi-gray)]'
-                    : 'text-[var(--baladi-muted)]',
+                    ? 'text-[var(--nordmat-gray)]'
+                    : 'text-[var(--nordmat-muted)]',
                 )}
               >
                 {step.description}

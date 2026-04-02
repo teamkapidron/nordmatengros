@@ -30,14 +30,14 @@ function OrderStatusTabs() {
 
   return (
     <div className="mb-6 mt-6">
-      <div className="flex flex-wrap gap-3 rounded-xl bg-[var(--baladi-light)] p-2">
+      <div className="flex flex-wrap gap-3 rounded-xl bg-[var(--nordmat-light)] p-2">
         <button
           onClick={() => handleTabClick(OrderStatusFilter.ALL)}
           className={cn(
             'group relative flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-3 font-[family-name:var(--font-dm-sans)] text-sm font-medium transition-all duration-300',
             status === OrderStatusFilter.ALL
-              ? 'to-[var(--baladi-primary)]/80 bg-gradient-to-r from-[var(--baladi-primary)] text-white shadow-lg'
-              : 'text-[var(--baladi-gray)] hover:bg-white hover:text-[var(--baladi-dark)] hover:shadow-md',
+              ? 'to-[var(--nordmat-primary)]/80 bg-gradient-to-r from-[var(--nordmat-primary)] text-white shadow-lg'
+              : 'text-[var(--nordmat-gray)] hover:bg-white hover:text-[var(--nordmat-dark)] hover:shadow-md',
           )}
         >
           <div
@@ -45,7 +45,7 @@ function OrderStatusTabs() {
               'flex h-5 w-5 items-center justify-center rounded transition-all duration-300',
               status === OrderStatusFilter.ALL
                 ? 'bg-white/20'
-                : 'bg-[var(--baladi-primary)]/10 group-hover:bg-[var(--baladi-primary)]/20',
+                : 'bg-[var(--nordmat-primary)]/10 group-hover:bg-[var(--nordmat-primary)]/20',
             )}
           >
             <ShoppingBag
@@ -53,7 +53,7 @@ function OrderStatusTabs() {
                 'h-3.5 w-3.5 transition-colors duration-300',
                 status === OrderStatusFilter.ALL
                   ? 'text-white'
-                  : 'text-[var(--baladi-primary)]',
+                  : 'text-[var(--nordmat-primary)]',
               )}
             />
           </div>
@@ -65,8 +65,8 @@ function OrderStatusTabs() {
           className={cn(
             'group relative flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-3 font-[family-name:var(--font-dm-sans)] text-sm font-medium transition-all duration-300',
             status === OrderStatusFilter.PENDING
-              ? 'to-[var(--baladi-warning)]/80 bg-gradient-to-r from-[var(--baladi-warning)] text-white shadow-lg'
-              : 'text-[var(--baladi-gray)] hover:bg-white hover:text-[var(--baladi-dark)] hover:shadow-md',
+              ? 'to-[var(--nordmat-warning)]/80 bg-gradient-to-r from-[var(--nordmat-warning)] text-white shadow-lg'
+              : 'text-[var(--nordmat-gray)] hover:bg-white hover:text-[var(--nordmat-dark)] hover:shadow-md',
           )}
         >
           <div
@@ -74,7 +74,7 @@ function OrderStatusTabs() {
               'flex h-5 w-5 items-center justify-center rounded transition-all duration-300',
               status === OrderStatusFilter.PENDING
                 ? 'bg-white/20'
-                : 'bg-[var(--baladi-warning)]/10 group-hover:bg-[var(--baladi-warning)]/20',
+                : 'bg-[var(--nordmat-warning)]/10 group-hover:bg-[var(--nordmat-warning)]/20',
             )}
           >
             <Clock
@@ -82,7 +82,7 @@ function OrderStatusTabs() {
                 'h-3.5 w-3.5 transition-colors duration-300',
                 status === OrderStatusFilter.PENDING
                   ? 'text-white'
-                  : 'text-[var(--baladi-warning)]',
+                  : 'text-[var(--nordmat-warning)]',
               )}
             />
           </div>
@@ -94,8 +94,8 @@ function OrderStatusTabs() {
           className={cn(
             'group relative flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-3 font-[family-name:var(--font-dm-sans)] text-sm font-medium transition-all duration-300',
             status === OrderStatusFilter.CONFIRMED
-              ? 'to-[var(--baladi-secondary)]/80 bg-gradient-to-r from-[var(--baladi-secondary)] text-white shadow-lg'
-              : 'text-[var(--baladi-gray)] hover:bg-white hover:text-[var(--baladi-dark)] hover:shadow-md',
+              ? 'to-[var(--nordmat-secondary)]/80 bg-gradient-to-r from-[var(--nordmat-secondary)] text-white shadow-lg'
+              : 'text-[var(--nordmat-gray)] hover:bg-white hover:text-[var(--nordmat-dark)] hover:shadow-md',
           )}
         >
           <div
@@ -103,7 +103,7 @@ function OrderStatusTabs() {
               'flex h-5 w-5 items-center justify-center rounded transition-all duration-300',
               status === OrderStatusFilter.CONFIRMED
                 ? 'bg-white/20'
-                : 'bg-[var(--baladi-secondary)]/10 group-hover:bg-[var(--baladi-secondary)]/20',
+                : 'bg-[var(--nordmat-secondary)]/10 group-hover:bg-[var(--nordmat-secondary)]/20',
             )}
           >
             <CheckCircle
@@ -111,7 +111,7 @@ function OrderStatusTabs() {
                 'h-3.5 w-3.5 transition-colors duration-300',
                 status === OrderStatusFilter.CONFIRMED
                   ? 'text-white'
-                  : 'text-[var(--baladi-secondary)]',
+                  : 'text-[var(--nordmat-secondary)]',
               )}
             />
           </div>
@@ -123,8 +123,8 @@ function OrderStatusTabs() {
           className={cn(
             'group relative flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-3 font-[family-name:var(--font-dm-sans)] text-sm font-medium transition-all duration-300',
             status === OrderStatusFilter.SHIPPED
-              ? 'to-[var(--baladi-accent)]/80 bg-gradient-to-r from-[var(--baladi-accent)] text-white shadow-lg'
-              : 'text-[var(--baladi-gray)] hover:bg-white hover:text-[var(--baladi-dark)] hover:shadow-md',
+              ? 'to-[var(--nordmat-accent)]/80 bg-gradient-to-r from-[var(--nordmat-accent)] text-white shadow-lg'
+              : 'text-[var(--nordmat-gray)] hover:bg-white hover:text-[var(--nordmat-dark)] hover:shadow-md',
           )}
         >
           <div
@@ -132,7 +132,7 @@ function OrderStatusTabs() {
               'flex h-5 w-5 items-center justify-center rounded transition-all duration-300',
               status === OrderStatusFilter.SHIPPED
                 ? 'bg-white/20'
-                : 'bg-[var(--baladi-accent)]/10 group-hover:bg-[var(--baladi-accent)]/20',
+                : 'bg-[var(--nordmat-accent)]/10 group-hover:bg-[var(--nordmat-accent)]/20',
             )}
           >
             <TruckIcon
@@ -140,7 +140,7 @@ function OrderStatusTabs() {
                 'h-3.5 w-3.5 transition-colors duration-300',
                 status === OrderStatusFilter.SHIPPED
                   ? 'text-white'
-                  : 'text-[var(--baladi-accent)]',
+                  : 'text-[var(--nordmat-accent)]',
               )}
             />
           </div>
@@ -152,8 +152,8 @@ function OrderStatusTabs() {
           className={cn(
             'group relative flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-3 font-[family-name:var(--font-dm-sans)] text-sm font-medium transition-all duration-300',
             status === OrderStatusFilter.DELIVERED
-              ? 'to-[var(--baladi-success)]/80 bg-gradient-to-r from-[var(--baladi-success)] text-white shadow-lg'
-              : 'text-[var(--baladi-gray)] hover:bg-white hover:text-[var(--baladi-dark)] hover:shadow-md',
+              ? 'to-[var(--nordmat-success)]/80 bg-gradient-to-r from-[var(--nordmat-success)] text-white shadow-lg'
+              : 'text-[var(--nordmat-gray)] hover:bg-white hover:text-[var(--nordmat-dark)] hover:shadow-md',
           )}
         >
           <div
@@ -161,7 +161,7 @@ function OrderStatusTabs() {
               'flex h-5 w-5 items-center justify-center rounded transition-all duration-300',
               status === OrderStatusFilter.DELIVERED
                 ? 'bg-white/20'
-                : 'bg-[var(--baladi-success)]/10 group-hover:bg-[var(--baladi-success)]/20',
+                : 'bg-[var(--nordmat-success)]/10 group-hover:bg-[var(--nordmat-success)]/20',
             )}
           >
             <PackageCheck
@@ -169,7 +169,7 @@ function OrderStatusTabs() {
                 'h-3.5 w-3.5 transition-colors duration-300',
                 status === OrderStatusFilter.DELIVERED
                   ? 'text-white'
-                  : 'text-[var(--baladi-success)]',
+                  : 'text-[var(--nordmat-success)]',
               )}
             />
           </div>
@@ -181,8 +181,8 @@ function OrderStatusTabs() {
           className={cn(
             'group relative flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-3 font-[family-name:var(--font-dm-sans)] text-sm font-medium transition-all duration-300',
             status === OrderStatusFilter.CANCELLED
-              ? 'to-[var(--baladi-error)]/80 bg-gradient-to-r from-[var(--baladi-error)] text-white shadow-lg'
-              : 'text-[var(--baladi-gray)] hover:bg-white hover:text-[var(--baladi-dark)] hover:shadow-md',
+              ? 'to-[var(--nordmat-error)]/80 bg-gradient-to-r from-[var(--nordmat-error)] text-white shadow-lg'
+              : 'text-[var(--nordmat-gray)] hover:bg-white hover:text-[var(--nordmat-dark)] hover:shadow-md',
           )}
         >
           <div
@@ -190,7 +190,7 @@ function OrderStatusTabs() {
               'flex h-5 w-5 items-center justify-center rounded transition-all duration-300',
               status === OrderStatusFilter.CANCELLED
                 ? 'bg-white/20'
-                : 'bg-[var(--baladi-error)]/10 group-hover:bg-[var(--baladi-error)]/20',
+                : 'bg-[var(--nordmat-error)]/10 group-hover:bg-[var(--nordmat-error)]/20',
             )}
           >
             <XCircle
@@ -198,7 +198,7 @@ function OrderStatusTabs() {
                 'h-3.5 w-3.5 transition-colors duration-300',
                 status === OrderStatusFilter.CANCELLED
                   ? 'text-white'
-                  : 'text-[var(--baladi-error)]',
+                  : 'text-[var(--nordmat-error)]',
               )}
             />
           </div>

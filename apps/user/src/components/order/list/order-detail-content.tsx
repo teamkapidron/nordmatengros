@@ -33,10 +33,10 @@ function OrderDetailContent({ orderId }: OrderDetailContentProps) {
         <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100">
           <AlertCircle size={32} className="text-red-600" />
         </div>
-        <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--baladi-dark)]">
+        <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--nordmat-dark)]">
           Bestilling ikke funnet
         </h2>
-        <p className="mt-2 font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+        <p className="mt-2 font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
           Bestillingen du leter etter eksisterer ikke eller du har ikke tilgang
           til den.
         </p>

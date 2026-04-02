@@ -59,7 +59,7 @@ function SearchSection() {
             value={category ? category : 'all'}
             onValueChange={handleCategorySelect}
           >
-            <SelectTrigger className="w-48 rounded-full border-[var(--baladi-border)] bg-[var(--baladi-muted)] font-[family-name:var(--font-dm-sans)] text-sm transition-all duration-200 hover:border-[var(--baladi-primary)] focus:border-[var(--baladi-primary)] focus:ring-2 focus:ring-[var(--baladi-primary)]/20">
+            <SelectTrigger className="w-48 rounded-full border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] font-[family-name:var(--font-dm-sans)] text-sm transition-all duration-200 hover:border-[var(--nordmat-primary)] focus:border-[var(--nordmat-primary)] focus:ring-2 focus:ring-[var(--nordmat-primary)]/20">
               <div className="flex items-center space-x-2">
                 <SelectValue
                   placeholder="Alle kategorier"
@@ -67,13 +67,13 @@ function SearchSection() {
                 />
               </div>
             </SelectTrigger>
-            <SelectContent className="max-h-96 w-48 rounded-xl border-[var(--baladi-border)] bg-white shadow-xl">
+            <SelectContent className="max-h-96 w-48 rounded-xl border-[var(--nordmat-border)] bg-white shadow-xl">
               <SelectItem
                 value="all"
-                className="font-[family-name:var(--font-dm-sans)] text-sm hover:bg-[var(--baladi-muted)] focus:bg-[var(--baladi-muted)]"
+                className="font-[family-name:var(--font-dm-sans)] text-sm hover:bg-[var(--nordmat-muted)] focus:bg-[var(--nordmat-muted)]"
               >
                 <div className="flex items-center space-x-3">
-                  <Grid3X3 size={16} className="text-[var(--baladi-gray)]" />
+                  <Grid3X3 size={16} className="text-[var(--nordmat-gray)]" />
                   <span>Alle kategorier</span>
                 </div>
               </SelectItem>
@@ -81,7 +81,7 @@ function SearchSection() {
                 <SelectItem
                   key={cat._id}
                   value={cat._id}
-                  className="font-[family-name:var(--font-dm-sans)] text-sm hover:bg-[var(--baladi-muted)] focus:bg-[var(--baladi-muted)]"
+                  className="font-[family-name:var(--font-dm-sans)] text-sm hover:bg-[var(--nordmat-muted)] focus:bg-[var(--nordmat-muted)]"
                 >
                   <div className="flex items-center space-x-3">
                     <GetCategoryIcon categoryName={cat.name} />
@@ -95,14 +95,14 @@ function SearchSection() {
 
         <div className="relative flex-1">
           <div className="absolute inset-y-0 left-4 flex items-center">
-            <Search size={20} className="z-10 text-[var(--baladi-primary)]" />
+            <Search size={20} className="z-10 text-[var(--nordmat-primary)]" />
           </div>
           <Input
             type="text"
             placeholder="Søk etter produkter, kategorier eller merker..."
             value={searchQuery}
             onChange={handleInputChange}
-            className="w-full rounded-full border-[var(--baladi-border)] bg-[var(--baladi-muted)] py-3 pr-16 pl-12 font-[family-name:var(--font-dm-sans)] text-sm transition-all duration-200 placeholder:text-[var(--baladi-gray)] hover:border-[var(--baladi-primary)] focus:border-[var(--baladi-primary)] focus:ring-2 focus:ring-[var(--baladi-primary)]/20"
+            className="w-full rounded-full border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] py-3 pr-16 pl-12 font-[family-name:var(--font-dm-sans)] text-sm transition-all duration-200 placeholder:text-[var(--nordmat-gray)] hover:border-[var(--nordmat-primary)] focus:border-[var(--nordmat-primary)] focus:ring-2 focus:ring-[var(--nordmat-primary)]/20"
           />
 
           {searchQuery && (
@@ -112,7 +112,7 @@ function SearchSection() {
                 variant="ghost"
                 size="sm"
                 onClick={clearSearch}
-                className="h-7 w-7 rounded-full p-0 text-[var(--baladi-gray)] hover:bg-[var(--baladi-primary)]/10 hover:text-[var(--baladi-primary)]"
+                className="h-7 w-7 rounded-full p-0 text-[var(--nordmat-gray)] hover:bg-[var(--nordmat-primary)]/10 hover:text-[var(--nordmat-primary)]"
               >
                 <X className="h-4 w-4" />
               </Button>
@@ -123,18 +123,18 @@ function SearchSection() {
 
       <div className="mt-3 lg:hidden">
         <Select value={category || 'all'} onValueChange={handleCategorySelect}>
-          <SelectTrigger className="w-full rounded-full border-[var(--baladi-border)] bg-[var(--baladi-muted)] font-[family-name:var(--font-dm-sans)] text-sm transition-all duration-200 hover:border-[var(--baladi-primary)] focus:border-[var(--baladi-primary)] focus:ring-2 focus:ring-[var(--baladi-primary)]/20">
+          <SelectTrigger className="w-full rounded-full border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] font-[family-name:var(--font-dm-sans)] text-sm transition-all duration-200 hover:border-[var(--nordmat-primary)] focus:border-[var(--nordmat-primary)] focus:ring-2 focus:ring-[var(--nordmat-primary)]/20">
             <div className="flex items-center space-x-2">
               <SelectValue placeholder="Velg kategori" />
             </div>
           </SelectTrigger>
-          <SelectContent className="max-h-96 w-full rounded-xl border-[var(--baladi-border)] bg-white shadow-xl">
+          <SelectContent className="max-h-96 w-full rounded-xl border-[var(--nordmat-border)] bg-white shadow-xl">
             <SelectItem
               value="all"
-              className="font-[family-name:var(--font-dm-sans)] text-sm hover:bg-[var(--baladi-muted)] focus:bg-[var(--baladi-muted)]"
+              className="font-[family-name:var(--font-dm-sans)] text-sm hover:bg-[var(--nordmat-muted)] focus:bg-[var(--nordmat-muted)]"
             >
               <div className="flex items-center space-x-3">
-                <Grid3X3 size={16} className="text-[var(--baladi-gray)]" />
+                <Grid3X3 size={16} className="text-[var(--nordmat-gray)]" />
                 <span>Alle kategorier</span>
               </div>
             </SelectItem>
@@ -142,7 +142,7 @@ function SearchSection() {
               <SelectItem
                 key={cat._id}
                 value={cat._id}
-                className="font-[family-name:var(--font-dm-sans)] text-sm hover:bg-[var(--baladi-muted)] focus:bg-[var(--baladi-muted)]"
+                className="font-[family-name:var(--font-dm-sans)] text-sm hover:bg-[var(--nordmat-muted)] focus:bg-[var(--nordmat-muted)]"
               >
                 <div className="flex items-center space-x-3">
                   <GetCategoryIcon categoryName={cat.name} />

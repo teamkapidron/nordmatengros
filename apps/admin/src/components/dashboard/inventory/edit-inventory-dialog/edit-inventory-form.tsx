@@ -73,13 +73,13 @@ function EditInventoryForm(props: EditInventoryFormProps) {
   return (
     <div className="space-y-6">
       <div className="text-center">
-        <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[var(--baladi-primary)] to-[var(--baladi-secondary)]">
+        <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[var(--nordmat-primary)] to-[var(--nordmat-secondary)]">
           <Package className="h-8 w-8 text-white" />
         </div>
-        <h3 className="mb-2 font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--baladi-dark)]">
+        <h3 className="mb-2 font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--nordmat-dark)]">
           Rediger Lager
         </h3>
-        <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+        <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
           Oppdater lagermengde og utløpsdato
         </p>
       </div>
@@ -91,8 +91,8 @@ function EditInventoryForm(props: EditInventoryFormProps) {
             name="quantity"
             render={({ field }) => (
               <FormItem className="space-y-2">
-                <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
-                  <Hash className="h-4 w-4 text-[var(--baladi-gray)]" />
+                <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
+                  <Hash className="h-4 w-4 text-[var(--nordmat-gray)]" />
                   Antall
                 </FormLabel>
                 <FormControl>
@@ -102,10 +102,10 @@ function EditInventoryForm(props: EditInventoryFormProps) {
                     min="0"
                     placeholder="Skriv inn antall enheter"
                     onChange={(e) => field.onChange(parseInt(e.target.value))}
-                    className="w-full rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)] px-4 py-3 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--baladi-primary)] focus:bg-white focus:ring-2 focus:ring-[var(--baladi-primary)]/20"
+                    className="w-full rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] px-4 py-3 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--nordmat-primary)] focus:bg-white focus:ring-2 focus:ring-[var(--nordmat-primary)]/20"
                   />
                 </FormControl>
-                <FormMessage className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-error)]" />
+                <FormMessage className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-error)]" />
               </FormItem>
             )}
           />
@@ -115,8 +115,8 @@ function EditInventoryForm(props: EditInventoryFormProps) {
             name="expirationDate"
             render={({ field }) => (
               <FormItem className="space-y-2">
-                <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
-                  <CalendarIcon className="h-4 w-4 text-[var(--baladi-gray)]" />
+                <FormLabel className="flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
+                  <CalendarIcon className="h-4 w-4 text-[var(--nordmat-gray)]" />
                   Utløpsdato
                 </FormLabel>
                 <FormControl>
@@ -127,7 +127,7 @@ function EditInventoryForm(props: EditInventoryFormProps) {
                     <PopoverTrigger asChild>
                       <Button
                         variant="outline"
-                        className="w-full justify-start rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)] px-4 py-3 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--baladi-primary)] focus:bg-white focus:ring-2"
+                        className="w-full justify-start rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)] px-4 py-3 font-[family-name:var(--font-dm-sans)] transition-all duration-200 focus:border-[var(--nordmat-primary)] focus:bg-white focus:ring-2"
                       >
                         {field.value
                           ? new Date(field.value).toLocaleDateString('no-NO')
@@ -156,7 +156,7 @@ function EditInventoryForm(props: EditInventoryFormProps) {
                     </PopoverContent>
                   </Popover>
                 </FormControl>
-                <FormMessage className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-error)]" />
+                <FormMessage className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-error)]" />
               </FormItem>
             )}
           />
@@ -165,7 +165,7 @@ function EditInventoryForm(props: EditInventoryFormProps) {
             <Button
               type="submit"
               disabled={updateInventoryMutation.isPending}
-              className="group relative flex-1 overflow-hidden rounded-lg bg-[var(--baladi-primary)] px-6 py-4 font-[family-name:var(--font-dm-sans)] text-base font-semibold text-white shadow-md transition-all duration-200 hover:bg-[var(--baladi-secondary)] hover:shadow-lg focus:ring-4 focus:ring-[var(--baladi-primary)]/30 focus:outline-none disabled:cursor-not-allowed disabled:opacity-70"
+              className="group relative flex-1 overflow-hidden rounded-lg bg-[var(--nordmat-primary)] px-6 py-4 font-[family-name:var(--font-dm-sans)] text-base font-semibold text-white shadow-md transition-all duration-200 hover:bg-[var(--nordmat-secondary)] hover:shadow-lg focus:ring-4 focus:ring-[var(--nordmat-primary)]/30 focus:outline-none disabled:cursor-not-allowed disabled:opacity-70"
             >
               <div className="relative flex items-center justify-center space-x-2">
                 {updateInventoryMutation.isPending ? (

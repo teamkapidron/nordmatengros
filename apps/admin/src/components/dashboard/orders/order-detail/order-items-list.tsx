@@ -76,17 +76,17 @@ function OrderItemsList({ orderId }: OrderItemsListProps) {
 
   if (!order) {
     return (
-      <Card className="border-[var(--baladi-border)] shadow-lg">
-        <CardHeader className="border-b border-[var(--baladi-border)]">
-          <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--baladi-dark)]">
+      <Card className="border-[var(--nordmat-border)] shadow-lg">
+        <CardHeader className="border-b border-[var(--nordmat-border)]">
+          <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--nordmat-dark)]">
             Ordre Varer
           </h2>
         </CardHeader>
         <CardContent className="p-8">
           <div className="flex items-center justify-center py-12">
             <div className="text-center">
-              <div className="mx-auto h-12 w-12 animate-pulse rounded-full bg-[var(--baladi-muted)]"></div>
-              <p className="mt-4 font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+              <div className="mx-auto h-12 w-12 animate-pulse rounded-full bg-[var(--nordmat-muted)]"></div>
+              <p className="mt-4 font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
                 Laster ordre varer...
               </p>
             </div>
@@ -97,18 +97,18 @@ function OrderItemsList({ orderId }: OrderItemsListProps) {
   }
 
   return (
-    <Card className="border-[var(--baladi-border)] shadow-lg">
-      <CardHeader className="border-b border-[var(--baladi-border)]">
+    <Card className="border-[var(--nordmat-border)] shadow-lg">
+      <CardHeader className="border-b border-[var(--nordmat-border)]">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="from-[var(--baladi-primary)]/10 to-[var(--baladi-secondary)]/10 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br">
-              <Package className="h-5 w-5 text-[var(--baladi-primary)]" />
+            <div className="from-[var(--nordmat-primary)]/10 to-[var(--nordmat-secondary)]/10 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br">
+              <Package className="h-5 w-5 text-[var(--nordmat-primary)]" />
             </div>
             <div>
-              <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--baladi-dark)]">
+              <h2 className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--nordmat-dark)]">
                 Ordre Varer ({order.items?.length || 0})
               </h2>
-              <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+              <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                 {pricingTotals?.totalItems || 0} varer •{' '}
                 {formatPrice(pricingTotals?.finalTotal || 0)} kr
               </p>
@@ -121,10 +121,10 @@ function OrderItemsList({ orderId }: OrderItemsListProps) {
         <div className="space-y-6">
           {order.items?.map((item, index) => (
             <div key={`${item.productId._id}-${index}`}>
-              <div className="rounded-lg border border-[var(--baladi-border)] bg-white p-6 shadow-sm">
+              <div className="rounded-lg border border-[var(--nordmat-border)] bg-white p-6 shadow-sm">
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
-                    <div className="bg-[var(--baladi-light)]/30 relative h-20 w-20 overflow-hidden rounded-lg border border-[var(--baladi-border)]">
+                    <div className="bg-[var(--nordmat-light)]/30 relative h-20 w-20 overflow-hidden rounded-lg border border-[var(--nordmat-border)]">
                       {item.productId.images?.[0] ? (
                         <Image
                           src={item.productId.images[0]}
@@ -134,7 +134,7 @@ function OrderItemsList({ orderId }: OrderItemsListProps) {
                           sizes="80px"
                         />
                       ) : (
-                        <div className="flex h-full w-full items-center justify-center text-[var(--baladi-gray)]">
+                        <div className="flex h-full w-full items-center justify-center text-[var(--nordmat-gray)]">
                           <ImageIcon className="h-8 w-8" />
                         </div>
                       )}
@@ -144,11 +144,11 @@ function OrderItemsList({ orderId }: OrderItemsListProps) {
                   <div className="flex-1 space-y-4">
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
-                        <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+                        <h3 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
                           {item.productId.name ||
                             `Produkt #${item.productId._id.slice(-8)}`}
                         </h3>
-                        <div className="mt-1 flex flex-wrap items-center gap-4 text-sm text-[var(--baladi-gray)]">
+                        <div className="mt-1 flex flex-wrap items-center gap-4 text-sm text-[var(--nordmat-gray)]">
                           {item.productId.categories?.[0] && (
                             <span>
                               <Badge variant="outline" className="text-xs">
@@ -164,7 +164,7 @@ function OrderItemsList({ orderId }: OrderItemsListProps) {
 
                       <Link
                         href={`/admin/products/${item.productId._id}`}
-                        className="flex items-center gap-1 text-xs text-[var(--baladi-primary)] transition-colors hover:text-[var(--baladi-primary-dark)]"
+                        className="flex items-center gap-1 text-xs text-[var(--nordmat-primary)] transition-colors hover:text-[var(--nordmat-primary-dark)]"
                       >
                         <ExternalLink size={12} />
                         Vis produkt
@@ -173,51 +173,51 @@ function OrderItemsList({ orderId }: OrderItemsListProps) {
 
                     <div className="flex items-center gap-4">
                       <div className="flex items-center gap-2">
-                        <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                        <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                           Bestilt antall:
                         </span>
-                        <span className="bg-[var(--baladi-primary)]/10 flex h-8 w-12 items-center justify-center rounded font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--baladi-primary)]">
+                        <span className="bg-[var(--nordmat-primary)]/10 flex h-8 w-12 items-center justify-center rounded font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--nordmat-primary)]">
                           {item.quantity}
                         </span>
-                        <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                        <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                           stk
                         </span>
                       </div>
                     </div>
 
-                    <div className="bg-[var(--baladi-light)]/30 grid grid-cols-2 gap-4 rounded-lg p-4 lg:grid-cols-4">
+                    <div className="bg-[var(--nordmat-light)]/30 grid grid-cols-2 gap-4 rounded-lg p-4 lg:grid-cols-4">
                       <div className="space-y-1">
-                        <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                        <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                           Pris per stk (eks. mva)
                         </span>
-                        <div className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--baladi-dark)]">
+                        <div className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--nordmat-dark)]">
                           {formatPrice(item.price)} kr
                         </div>
                       </div>
 
                       <div className="space-y-1">
-                        <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                        <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                           MVA per stk
                         </span>
-                        <div className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--baladi-dark)]">
+                        <div className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--nordmat-dark)]">
                           {formatPrice(item.vatAmount)} kr
                         </div>
                       </div>
 
                       <div className="space-y-1">
-                        <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                        <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                           Pris per stk (inkl. mva)
                         </span>
-                        <div className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--baladi-dark)]">
+                        <div className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--nordmat-dark)]">
                           {formatPrice(item.priceWithVat)} kr
                         </div>
                       </div>
 
                       <div className="space-y-1">
-                        <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--baladi-gray)]">
+                        <span className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--nordmat-gray)]">
                           Totalt per stk
                         </span>
-                        <div className="font-[family-name:var(--font-sora)] font-bold text-[var(--baladi-primary)]">
+                        <div className="font-[family-name:var(--font-sora)] font-bold text-[var(--nordmat-primary)]">
                           {formatPrice(item.totalPrice)} kr
                         </div>
                       </div>
@@ -253,21 +253,21 @@ function OrderItemsList({ orderId }: OrderItemsListProps) {
                       )}
                     </div>
 
-                    <div className="border-[var(--baladi-primary)]/20 bg-[var(--baladi-primary)]/5 space-y-3 rounded-lg border p-4">
+                    <div className="border-[var(--nordmat-primary)]/20 bg-[var(--nordmat-primary)]/5 space-y-3 rounded-lg border p-4">
                       <div className="flex items-center justify-between">
-                        <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                        <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                           Subtotal for {item.quantity} stk (eks. mva):
                         </span>
-                        <span className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--baladi-dark)]">
+                        <span className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--nordmat-dark)]">
                           {formatPrice(item.price * item.quantity)} kr
                         </span>
                       </div>
 
                       <div className="flex items-center justify-between">
-                        <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                        <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                           Totalt MVA:
                         </span>
-                        <span className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--baladi-dark)]">
+                        <span className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--nordmat-dark)]">
                           {formatPrice(item.vatAmount * item.quantity)} kr
                         </span>
                       </div>
@@ -303,10 +303,10 @@ function OrderItemsList({ orderId }: OrderItemsListProps) {
                       <Separator />
 
                       <div className="flex items-center justify-between">
-                        <span className="font-[family-name:var(--font-sora)] text-base font-bold text-[var(--baladi-dark)]">
+                        <span className="font-[family-name:var(--font-sora)] text-base font-bold text-[var(--nordmat-dark)]">
                           Totalt for denne varen:
                         </span>
-                        <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-primary)]">
+                        <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-primary)]">
                           {formatPrice(item.totalPrice * item.quantity)} kr
                         </span>
                       </div>
@@ -320,35 +320,35 @@ function OrderItemsList({ orderId }: OrderItemsListProps) {
           ))}
 
           {pricingTotals && (
-            <div className="to-[var(--baladi-muted)]/70 rounded-lg border border-[var(--baladi-border)] bg-gradient-to-r from-[var(--baladi-muted)] p-6">
-              <h3 className="mb-4 font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+            <div className="to-[var(--nordmat-muted)]/70 rounded-lg border border-[var(--nordmat-border)] bg-gradient-to-r from-[var(--nordmat-muted)] p-6">
+              <h3 className="mb-4 font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
                 Ordre sammendrag
               </h3>
 
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                  <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                     Subtotal (eks. mva)
                   </span>
-                  <span className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--baladi-dark)]">
+                  <span className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--nordmat-dark)]">
                     {formatPrice(pricingTotals.subtotal)} kr
                   </span>
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                  <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                     Totalt MVA
                   </span>
-                  <span className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--baladi-dark)]">
+                  <span className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--nordmat-dark)]">
                     {formatPrice(pricingTotals.totalVatAmount)} kr
                   </span>
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                  <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                     Subtotal (inkl. mva)
                   </span>
-                  <span className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--baladi-dark)]">
+                  <span className="font-[family-name:var(--font-dm-sans)] font-semibold text-[var(--nordmat-dark)]">
                     {formatPrice(pricingTotals.subtotalWithVat)} kr
                   </span>
                 </div>
@@ -378,10 +378,10 @@ function OrderItemsList({ orderId }: OrderItemsListProps) {
                 <Separator />
 
                 <div className="flex items-center justify-between">
-                  <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+                  <span className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
                     Ordre totalt
                   </span>
-                  <span className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--baladi-primary)]">
+                  <span className="font-[family-name:var(--font-sora)] text-xl font-bold text-[var(--nordmat-primary)]">
                     {formatPrice(pricingTotals.finalTotal)} kr
                   </span>
                 </div>

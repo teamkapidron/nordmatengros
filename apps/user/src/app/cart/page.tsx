@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function CartPage() {
   return (
     <Suspense>
-      <div className="flex min-h-screen flex-col bg-[var(--baladi-background)]">
+      <div className="flex min-h-screen flex-col bg-[var(--nordmat-background)]">
         <Header />
         <Cart />
         <Footer />

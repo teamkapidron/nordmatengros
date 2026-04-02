@@ -79,15 +79,15 @@ function PromotionPosterCreator(props: PromotionPosterCreatorProps) {
       <CardHeader>
         <div className="flex items-center justify-between">
           <div>
-            <CardTitle className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+            <CardTitle className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
               Opprett Kampanjeplakat
             </CardTitle>
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               Design iøynefallende plakater for dine markedsføringskampanjer
             </p>
           </div>
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--baladi-primary)]/10">
-            <ImageIcon className="h-5 w-5 text-[var(--baladi-primary)]" />
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--nordmat-primary)]/10">
+            <ImageIcon className="h-5 w-5 text-[var(--nordmat-primary)]" />
           </div>
         </div>
       </CardHeader>
@@ -100,7 +100,7 @@ function PromotionPosterCreator(props: PromotionPosterCreatorProps) {
               name="posterType"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-dark)]">
+                  <FormLabel className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-dark)]">
                     Plakattype
                   </FormLabel>
                   <Select onValueChange={field.onChange} value={field.value}>
@@ -112,13 +112,13 @@ function PromotionPosterCreator(props: PromotionPosterCreatorProps) {
                     <SelectContent>
                       <SelectItem value="new-arrival">
                         <div className="flex items-center gap-2">
-                          <Sparkles className="h-4 w-4 text-[var(--baladi-info)]" />
+                          <Sparkles className="h-4 w-4 text-[var(--nordmat-info)]" />
                           Nyheter
                         </div>
                       </SelectItem>
                       <SelectItem value="promotion">
                         <div className="flex items-center gap-2">
-                          <Percent className="h-4 w-4 text-[var(--baladi-accent)]" />
+                          <Percent className="h-4 w-4 text-[var(--nordmat-accent)]" />
                           Kampanje
                         </div>
                       </SelectItem>
@@ -134,7 +134,7 @@ function PromotionPosterCreator(props: PromotionPosterCreatorProps) {
               name="title"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-dark)]">
+                  <FormLabel className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-dark)]">
                     Bildenavn
                   </FormLabel>
                   <FormControl>
@@ -152,7 +152,7 @@ function PromotionPosterCreator(props: PromotionPosterCreatorProps) {
             <div className="flex items-center justify-end gap-3">
               <Button
                 type="submit"
-                className="gap-2 bg-[var(--baladi-primary)] text-white hover:bg-[var(--baladi-primary)]/90"
+                className="gap-2 bg-[var(--nordmat-primary)] text-white hover:bg-[var(--nordmat-primary)]/90"
                 disabled={
                   !form.formState.isValid ||
                   previewPromotionPosterMutation.isPending

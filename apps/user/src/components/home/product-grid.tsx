@@ -36,11 +36,11 @@ function ProductGrid() {
   if (!products || products.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-12">
-        <div className="mb-4 rounded-lg bg-[var(--baladi-light)] p-8 text-center">
-          <h3 className="mb-2 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+        <div className="mb-4 rounded-lg bg-[var(--nordmat-light)] p-8 text-center">
+          <h3 className="mb-2 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
             Ingen produkter funnet
           </h3>
-          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
             Prøv å justere filtrene dine eller søk etter noe annet.
           </p>
         </div>
@@ -60,8 +60,8 @@ function ProductGrid() {
         <div ref={ref} className="flex justify-center py-8">
           {isFetchingNextPage ? (
             <div className="flex items-center space-x-2">
-              <div className="h-4 w-4 animate-spin rounded-full border-2 border-[var(--baladi-primary)] border-t-transparent" />
-              <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+              <div className="h-4 w-4 animate-spin rounded-full border-2 border-[var(--nordmat-primary)] border-t-transparent" />
+              <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                 Laster flere produkter...
               </span>
             </div>
@@ -73,7 +73,7 @@ function ProductGrid() {
 
       {!hasNextPage && products.length > 0 && (
         <div className="py-8 text-center">
-          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
             Du har sett alle produktene
           </p>
         </div>
@@ -90,7 +90,7 @@ const ProductLoadingSkeleton = memo(() => {
       {Array.from({ length: 8 }).map((_, index) => (
         <div
           key={index}
-          className="rounded-lg border border-[var(--baladi-border)] bg-white p-4"
+          className="rounded-lg border border-[var(--nordmat-border)] bg-white p-4"
         >
           <Skeleton className="mb-4 aspect-square w-full rounded-md" />
           <Skeleton className="mb-2 h-4 w-3/4" />

@@ -23,10 +23,10 @@ function CheckoutFormHeader(props: HeaderProps) {
         <ChevronLeft size={16} />
       </Button>
       <div>
-        <h2 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--baladi-dark)]">
+        <h2 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--nordmat-dark)]">
           Leveringsdetaljer
         </h2>
-        <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+        <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
           Velg leveringsadresse og tilpass bestillingen din
         </p>
       </div>

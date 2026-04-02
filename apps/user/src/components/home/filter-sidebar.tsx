@@ -50,13 +50,13 @@ function ProductsSidebar() {
     <div className="hidden w-full min-w-[260px] max-w-[260px] flex-shrink-0 bg-transparent md:block">
       <div
         className={cn(
-          'sticky rounded-lg border border-[var(--baladi-border)] bg-white p-5 shadow-sm',
+          'sticky rounded-lg border border-[var(--nordmat-border)] bg-white p-5 shadow-sm',
           isVisible ? 'top-24' : 'top-5',
         )}
       >
         {/* ************************************ START: Categories Section ************************************ */}
-        <div className="mb-6 border-b border-[var(--baladi-border)] pb-5">
-          <h3 className="mb-4 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+        <div className="mb-6 border-b border-[var(--nordmat-border)] pb-5">
+          <h3 className="mb-4 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
             Kategorier
           </h3>
           {isCategoriesFlattenedLoading ? (
@@ -64,7 +64,7 @@ function ProductsSidebar() {
               {Array.from({ length: 5 }).map((_, i) => (
                 <div
                   key={i}
-                  className="h-8 w-full animate-pulse rounded-md bg-[var(--baladi-light)]"
+                  className="h-8 w-full animate-pulse rounded-md bg-[var(--nordmat-light)]"
                 />
               ))}
             </div>
@@ -76,8 +76,8 @@ function ProductsSidebar() {
                   onClick={() => handleCategoryChange('')}
                   className={`flex items-center rounded-lg px-3 py-2 font-[family-name:var(--font-dm-sans)] text-sm transition-all duration-200 ${
                     !selectedCategory
-                      ? 'bg-[var(--baladi-light)] font-semibold text-[var(--baladi-primary)]'
-                      : 'text-[var(--baladi-dark)] hover:bg-[var(--baladi-light)] hover:text-[var(--baladi-primary)]'
+                      ? 'bg-[var(--nordmat-light)] font-semibold text-[var(--nordmat-primary)]'
+                      : 'text-[var(--nordmat-dark)] hover:bg-[var(--nordmat-light)] hover:text-[var(--nordmat-primary)]'
                   }`}
                 >
                   <Grid3X3 size={16} className="mr-2.5" />
@@ -91,8 +91,8 @@ function ProductsSidebar() {
                     onClick={() => handleCategoryChange(category._id)}
                     className={`flex items-center rounded-lg px-3 py-2 font-[family-name:var(--font-dm-sans)] text-sm transition-all duration-200 ${
                       selectedCategory === category._id
-                        ? 'bg-[var(--baladi-light)] font-semibold text-[var(--baladi-primary)]'
-                        : 'text-[var(--baladi-dark)] hover:bg-[var(--baladi-light)] hover:text-[var(--baladi-primary)]'
+                        ? 'bg-[var(--nordmat-light)] font-semibold text-[var(--nordmat-primary)]'
+                        : 'text-[var(--nordmat-dark)] hover:bg-[var(--nordmat-light)] hover:text-[var(--nordmat-primary)]'
                     }`}
                   >
                     <span className="mr-2.5">
@@ -108,8 +108,8 @@ function ProductsSidebar() {
         {/* ************************************ END: Categories Section ************************************ */}
 
         {/* ************************************ START: Stock Status Section ************************************ */}
-        <div className="mb-6 border-b border-[var(--baladi-border)] pb-5">
-          <h3 className="mb-4 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+        <div className="mb-6 border-b border-[var(--nordmat-border)] pb-5">
+          <h3 className="mb-4 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
             Lagerstatus
           </h3>
           <div className="space-y-3">
@@ -118,11 +118,11 @@ function ProductsSidebar() {
                 id="in-stock"
                 checked={stock === ProductStock.IN_STOCK}
                 onCheckedChange={() => handleStockChange(ProductStock.IN_STOCK)}
-                className="border-[var(--baladi-border)] data-[state=checked]:bg-[var(--baladi-primary)]"
+                className="border-[var(--nordmat-border)] data-[state=checked]:bg-[var(--nordmat-primary)]"
               />
               <label
                 htmlFor="in-stock"
-                className="cursor-pointer font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)] transition-colors hover:text-[var(--baladi-primary)]"
+                className="cursor-pointer font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)] transition-colors hover:text-[var(--nordmat-primary)]"
               >
                 På lager
               </label>
@@ -134,11 +134,11 @@ function ProductsSidebar() {
                 onCheckedChange={() =>
                   handleStockChange(ProductStock.OUT_OF_STOCK)
                 }
-                className="border-[var(--baladi-border)] data-[state=checked]:bg-[var(--baladi-primary)]"
+                className="border-[var(--nordmat-border)] data-[state=checked]:bg-[var(--nordmat-primary)]"
               />
               <label
                 htmlFor="out-of-stock"
-                className="cursor-pointer font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)] transition-colors hover:text-[var(--baladi-primary)]"
+                className="cursor-pointer font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)] transition-colors hover:text-[var(--nordmat-primary)]"
               >
                 Utsolgt
               </label>
@@ -152,7 +152,7 @@ function ProductsSidebar() {
           <Button
             variant="outline"
             onClick={handleReset}
-            className="flex w-full items-center justify-center gap-2 border-[var(--baladi-border)] font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)] transition-all duration-200 hover:border-[var(--baladi-primary)] hover:bg-[var(--baladi-light)] hover:text-[var(--baladi-primary)]"
+            className="flex w-full items-center justify-center gap-2 border-[var(--nordmat-border)] font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)] transition-all duration-200 hover:border-[var(--nordmat-primary)] hover:bg-[var(--nordmat-light)] hover:text-[var(--nordmat-primary)]"
           >
             <RefreshCw className="h-4 w-4" />
             Tilbakestill Filter

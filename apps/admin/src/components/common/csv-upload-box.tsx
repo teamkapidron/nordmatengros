@@ -117,16 +117,16 @@ function CsvUploadBox(props: CsvUploadBoxProps) {
   );
 
   return (
-    <div className="rounded-xl border border-[var(--baladi-border)] bg-white p-6 shadow-sm">
+    <div className="rounded-xl border border-[var(--nordmat-border)] bg-white p-6 shadow-sm">
       <div className="mb-6 flex items-center space-x-3">
-        <div className="bg-[var(--baladi-primary)]/10 flex h-10 w-10 items-center justify-center rounded-lg">
-          <Upload className="h-5 w-5 text-[var(--baladi-primary)]" />
+        <div className="bg-[var(--nordmat-primary)]/10 flex h-10 w-10 items-center justify-center rounded-lg">
+          <Upload className="h-5 w-5 text-[var(--nordmat-primary)]" />
         </div>
         <div>
-          <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--baladi-primary)]">
+          <h2 className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--nordmat-primary)]">
             {title}
           </h2>
-          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
             {description}
           </p>
         </div>
@@ -142,34 +142,34 @@ function CsvUploadBox(props: CsvUploadBoxProps) {
             onClick={triggerFileInput}
             className={`flex h-48 cursor-pointer items-center justify-center rounded-lg border-2 border-dashed transition-colors ${
               isDragOver
-                ? 'bg-[var(--baladi-primary)]/10 border-[var(--baladi-primary)]'
+                ? 'bg-[var(--nordmat-primary)]/10 border-[var(--nordmat-primary)]'
                 : isUploading
-                  ? 'bg-[var(--baladi-primary)]/5 cursor-not-allowed border-[var(--baladi-primary)]'
-                  : 'hover:bg-[var(--baladi-primary)]/5 border-[var(--baladi-border)] bg-gray-50 hover:border-[var(--baladi-primary)]'
+                  ? 'bg-[var(--nordmat-primary)]/5 cursor-not-allowed border-[var(--nordmat-primary)]'
+                  : 'hover:bg-[var(--nordmat-primary)]/5 border-[var(--nordmat-border)] bg-gray-50 hover:border-[var(--nordmat-primary)]'
             }`}
           >
             <div className="text-center">
               {isUploading ? (
                 <>
-                  <Loader2 className="mx-auto h-12 w-12 animate-spin text-[var(--baladi-primary)]" />
-                  <p className="mt-4 text-lg font-medium text-[var(--baladi-primary)]">
+                  <Loader2 className="mx-auto h-12 w-12 animate-spin text-[var(--nordmat-primary)]" />
+                  <p className="mt-4 text-lg font-medium text-[var(--nordmat-primary)]">
                     Behandler CSV-fil...
                   </p>
                   {fileName && (
-                    <p className="mt-2 text-sm text-[var(--baladi-gray)]">
+                    <p className="mt-2 text-sm text-[var(--nordmat-gray)]">
                       {fileName}
                     </p>
                   )}
                 </>
               ) : (
                 <>
-                  <FileText className="mx-auto h-12 w-12 text-[var(--baladi-gray)]" />
-                  <p className="mt-4 text-lg font-medium text-[var(--baladi-primary)]">
+                  <FileText className="mx-auto h-12 w-12 text-[var(--nordmat-gray)]" />
+                  <p className="mt-4 text-lg font-medium text-[var(--nordmat-primary)]">
                     {isDragOver
                       ? 'Slipp filen her'
                       : `Dra og slipp ${csvConfig.acceptedFileTypes?.join('/')} fil her eller klikk for å velge`}
                   </p>
-                  <p className="mt-2 text-sm text-[var(--baladi-gray)]">
+                  <p className="mt-2 text-sm text-[var(--nordmat-gray)]">
                     Maks {csvConfig.maxFileSize}MB • Kun{' '}
                     {csvConfig.acceptedFileTypes?.join(', ')} filer
                   </p>
@@ -194,7 +194,7 @@ function CsvUploadBox(props: CsvUploadBoxProps) {
               type="button"
               variant="outline"
               onClick={() => downloadTemplate(templateFileName)}
-              className="border-[var(--baladi-border)] text-[var(--baladi-primary)] hover:bg-[var(--baladi-primary)] hover:text-white"
+              className="border-[var(--nordmat-border)] text-[var(--nordmat-primary)] hover:bg-[var(--nordmat-primary)] hover:text-white"
               disabled={isUploading}
             >
               <Download className="mr-2 h-4 w-4" />
@@ -209,36 +209,36 @@ function CsvUploadBox(props: CsvUploadBoxProps) {
           <div
             className={`rounded-lg border p-4 ${
               parseResult.success
-                ? 'border-[var(--baladi-success)]/20 bg-[var(--baladi-success)]/5'
-                : 'border-[var(--baladi-error)]/20 bg-[var(--baladi-error)]/5'
+                ? 'border-[var(--nordmat-success)]/20 bg-[var(--nordmat-success)]/5'
+                : 'border-[var(--nordmat-error)]/20 bg-[var(--nordmat-error)]/5'
             }`}
           >
             <div className="flex items-center gap-3">
               {parseResult.success ? (
-                <CheckCircle className="h-6 w-6 text-[var(--baladi-success)]" />
+                <CheckCircle className="h-6 w-6 text-[var(--nordmat-success)]" />
               ) : (
-                <XCircle className="h-6 w-6 text-[var(--baladi-error)]" />
+                <XCircle className="h-6 w-6 text-[var(--nordmat-error)]" />
               )}
               <div>
                 <h3
                   className={`font-[family-name:var(--font-sora)] font-semibold ${
                     parseResult.success
-                      ? 'text-[var(--baladi-success)]'
-                      : 'text-[var(--baladi-error)]'
+                      ? 'text-[var(--nordmat-success)]'
+                      : 'text-[var(--nordmat-error)]'
                   }`}
                 >
                   {parseResult.success
                     ? 'CSV behandlet vellykket!'
                     : 'CSV behandling feilet'}
                 </h3>
-                <div className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                <div className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                   <span>Totale rader: {parseResult.totalRows}</span>
                   <span className="mx-2">•</span>
                   <span>Gyldige rader: {parseResult.validRows}</span>
                   {parseResult.errors.length > 0 && (
                     <>
                       <span className="mx-2">•</span>
-                      <span className="text-[var(--baladi-error)]">
+                      <span className="text-[var(--nordmat-error)]">
                         Feil: {parseResult.errors.length}
                       </span>
                     </>
@@ -249,8 +249,8 @@ function CsvUploadBox(props: CsvUploadBoxProps) {
           </div>
 
           {parseResult.missingColumns.length > 0 && (
-            <Alert className="border-[var(--baladi-warning)]/20 bg-[var(--baladi-warning)]/5">
-              <AlertTriangle className="h-4 w-4 text-[var(--baladi-warning)]" />
+            <Alert className="border-[var(--nordmat-warning)]/20 bg-[var(--nordmat-warning)]/5">
+              <AlertTriangle className="h-4 w-4 text-[var(--nordmat-warning)]" />
               <AlertDescription className="font-[family-name:var(--font-dm-sans)]">
                 <strong>Manglende påkrevde kolonner:</strong>{' '}
                 {parseResult.missingColumns.join(', ')}
@@ -261,35 +261,35 @@ function CsvUploadBox(props: CsvUploadBoxProps) {
           {parseResult.errors.length > 0 && (
             <div className="space-y-3">
               <div className="flex items-center gap-2">
-                <AlertCircle className="h-5 w-5 text-[var(--baladi-error)]" />
-                <h4 className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-error)]">
+                <AlertCircle className="h-5 w-5 text-[var(--nordmat-error)]" />
+                <h4 className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-error)]">
                   Valideringsfeil ({parseResult.errors.length})
                 </h4>
               </div>
 
-              <div className="max-h-64 overflow-y-auto rounded-lg border border-[var(--baladi-border)] bg-[var(--baladi-muted)]">
+              <div className="max-h-64 overflow-y-auto rounded-lg border border-[var(--nordmat-border)] bg-[var(--nordmat-muted)]">
                 {parseResult.errors.slice(0, 50).map((error, index) => (
                   <div
                     key={`error-${uploadKey}-${index}-${error.row}-${error.column}`}
-                    className="border-b border-[var(--baladi-border)] p-3 last:border-b-0"
+                    className="border-b border-[var(--nordmat-border)] p-3 last:border-b-0"
                   >
                     <div className="font-[family-name:var(--font-dm-sans)] text-sm">
-                      <div className="flex items-center gap-2 text-[var(--baladi-error)]">
+                      <div className="flex items-center gap-2 text-[var(--nordmat-error)]">
                         <span className="font-medium">
                           Rad {error.row} • Kolonne: {error.column}
                         </span>
                       </div>
-                      <div className="mt-1 text-[var(--baladi-gray)]">
+                      <div className="mt-1 text-[var(--nordmat-gray)]">
                         Verdi: &quot;{error.value}&quot;
                       </div>
-                      <div className="mt-1 text-[var(--baladi-dark)]">
+                      <div className="mt-1 text-[var(--nordmat-dark)]">
                         {error.error}
                       </div>
                     </div>
                   </div>
                 ))}
                 {parseResult.errors.length > 50 && (
-                  <div className="p-3 text-center text-sm text-[var(--baladi-gray)]">
+                  <div className="p-3 text-center text-sm text-[var(--nordmat-gray)]">
                     ... og {parseResult.errors.length - 50} flere feil
                   </div>
                 )}
@@ -302,7 +302,7 @@ function CsvUploadBox(props: CsvUploadBoxProps) {
               type="button"
               variant="outline"
               onClick={resetUpload}
-              className="border-[var(--baladi-border)] text-[var(--baladi-primary)] hover:bg-[var(--baladi-primary)] hover:text-white"
+              className="border-[var(--nordmat-border)] text-[var(--nordmat-primary)] hover:bg-[var(--nordmat-primary)] hover:text-white"
             >
               Last opp ny fil
             </Button>
@@ -312,7 +312,7 @@ function CsvUploadBox(props: CsvUploadBoxProps) {
               parseResult.data.length > 0 && (
                 <Button
                   type="button"
-                  className="bg-[var(--baladi-primary)] text-white hover:bg-[var(--baladi-primary-dark)]"
+                  className="bg-[var(--nordmat-primary)] text-white hover:bg-[var(--nordmat-primary-dark)]"
                   onClick={() => {
                     console.log('Processing data:', parseResult.data);
                   }}

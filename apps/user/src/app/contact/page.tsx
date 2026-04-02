@@ -6,13 +6,13 @@ import ContactContent from '@/components/contact/contact-content';
 import Footer from '@/components/common/footer/footer';
 
 export const metadata: Metadata = {
-  title: 'Kontakt oss | Baladi Engros',
+  title: 'Kontakt oss | Nordmat Engros',
 };
 
 export default function ContactPage() {
   return (
     <Suspense>
-      <div className="min-h-screen bg-[var(--baladi-background)]">
+      <div className="min-h-screen bg-[var(--nordmat-background)]">
         <Header />
         <ContactContent />
         <Footer />

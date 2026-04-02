@@ -33,10 +33,10 @@ function ConfigTab() {
 
   return (
     <div className="space-y-8">
-      <div className="relative overflow-hidden rounded-2xl border border-[var(--baladi-border)] bg-gradient-to-br from-white via-purple-50/30 to-violet-50/30 p-8 shadow-sm">
+      <div className="relative overflow-hidden rounded-2xl border border-[var(--nordmat-border)] bg-gradient-to-br from-white via-purple-50/30 to-violet-50/30 p-8 shadow-sm">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute -top-8 -right-8 h-32 w-32 rounded-full bg-purple-500"></div>
-          <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-[var(--baladi-accent)]"></div>
+          <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-[var(--nordmat-accent)]"></div>
         </div>
 
         <div className="relative flex items-center gap-6">
@@ -45,22 +45,22 @@ function ConfigTab() {
           </div>
 
           <div className="space-y-2">
-            <h3 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--baladi-dark)]">
+            <h3 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--nordmat-dark)]">
               Systemkonfigurasjon
             </h3>
-            <p className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
               Administrer systeminnstillinger og visuelle preferanser
             </p>
           </div>
         </div>
       </div>
 
-      <Card className="border-[var(--baladi-border)] shadow-lg">
-        <CardHeader className="border-b border-[var(--baladi-border)]">
-          <CardTitle className="flex items-center gap-3 font-[family-name:var(--font-sora)] text-xl text-[var(--baladi-dark)]">
+      <Card className="border-[var(--nordmat-border)] shadow-lg">
+        <CardHeader className="border-b border-[var(--nordmat-border)]">
+          <CardTitle className="flex items-center gap-3 font-[family-name:var(--font-sora)] text-xl text-[var(--nordmat-dark)]">
             Palett innstillinger
           </CardTitle>
-          <CardDescription className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)]">
+          <CardDescription className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)]">
             Styrer produktpallettinnstillingen
           </CardDescription>
         </CardHeader>
@@ -69,11 +69,11 @@ function ConfigTab() {
             <div className="space-y-1">
               <Label
                 htmlFor="custom-palette"
-                className="font-[family-name:var(--font-sora)] text-sm font-medium text-[var(--baladi-dark)]"
+                className="font-[family-name:var(--font-sora)] text-sm font-medium text-[var(--nordmat-dark)]"
               >
                 Aktiver palett
               </Label>
-              <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+              <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                 Slå på for å bruke palett
               </p>
             </div>

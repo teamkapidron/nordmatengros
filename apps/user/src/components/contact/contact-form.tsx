@@ -69,7 +69,7 @@ function ContactForm() {
   }
 
   return (
-    <Card className="border-[var(--baladi-border)] shadow-lg">
+    <Card className="border-[var(--nordmat-border)] shadow-lg">
       <CardContent className="p-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -79,13 +79,13 @@ function ContactForm() {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                    <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                       Fullt navn *
                     </FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Skriv inn ditt navn"
-                        className="border-[var(--baladi-border)] focus:border-[var(--baladi-primary)] focus:ring-[var(--baladi-primary)]"
+                        className="border-[var(--nordmat-border)] focus:border-[var(--nordmat-primary)] focus:ring-[var(--nordmat-primary)]"
                         {...field}
                       />
                     </FormControl>
@@ -99,14 +99,14 @@ function ContactForm() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                    <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                       E-postadresse *
                     </FormLabel>
                     <FormControl>
                       <Input
                         type="email"
                         placeholder="din@epost.no"
-                        className="border-[var(--baladi-border)] focus:border-[var(--baladi-primary)] focus:ring-[var(--baladi-primary)]"
+                        className="border-[var(--nordmat-border)] focus:border-[var(--nordmat-primary)] focus:ring-[var(--nordmat-primary)]"
                         {...field}
                       />
                     </FormControl>
@@ -122,14 +122,14 @@ function ContactForm() {
                 name="phone"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                    <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                       Telefonnummer
                     </FormLabel>
                     <FormControl>
                       <Input
                         type="tel"
                         placeholder="+47 123 45 678"
-                        className="border-[var(--baladi-border)] focus:border-[var(--baladi-primary)] focus:ring-[var(--baladi-primary)]"
+                        className="border-[var(--nordmat-border)] focus:border-[var(--nordmat-primary)] focus:ring-[var(--nordmat-primary)]"
                         {...field}
                       />
                     </FormControl>
@@ -143,13 +143,13 @@ function ContactForm() {
                 name="company"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                    <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                       Bedriftsnavn
                     </FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Ditt bedriftsnavn"
-                        className="border-[var(--baladi-border)] focus:border-[var(--baladi-primary)] focus:ring-[var(--baladi-primary)]"
+                        className="border-[var(--nordmat-border)] focus:border-[var(--nordmat-primary)] focus:ring-[var(--nordmat-primary)]"
                         {...field}
                       />
                     </FormControl>
@@ -164,13 +164,13 @@ function ContactForm() {
               name="subject"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                  <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                     Emne *
                   </FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Hva gjelder henvendelsen?"
-                      className="border-[var(--baladi-border)] focus:border-[var(--baladi-primary)] focus:ring-[var(--baladi-primary)]"
+                      className="border-[var(--nordmat-border)] focus:border-[var(--nordmat-primary)] focus:ring-[var(--nordmat-primary)]"
                       {...field}
                     />
                   </FormControl>
@@ -184,14 +184,14 @@ function ContactForm() {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+                  <FormLabel className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
                     Melding *
                   </FormLabel>
                   <FormControl>
                     <Textarea
                       rows={6}
                       placeholder="Beskriv din henvendelse i detalj..."
-                      className="border-[var(--baladi-border)] focus:border-[var(--baladi-primary)] focus:ring-[var(--baladi-primary)]"
+                      className="border-[var(--nordmat-border)] focus:border-[var(--nordmat-primary)] focus:ring-[var(--nordmat-primary)]"
                       {...field}
                     />
                   </FormControl>
@@ -203,7 +203,7 @@ function ContactForm() {
             <Button
               type="submit"
               disabled={sendContactFormMutation.isPending}
-              className="w-full bg-gradient-to-r from-[var(--baladi-primary)] to-[var(--baladi-secondary)] py-3 font-[family-name:var(--font-dm-sans)] text-base font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-50"
+              className="w-full bg-gradient-to-r from-[var(--nordmat-primary)] to-[var(--nordmat-secondary)] py-3 font-[family-name:var(--font-dm-sans)] text-base font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-50"
             >
               {sendContactFormMutation.isPending ? (
                 <div className="flex items-center space-x-2">

@@ -96,15 +96,15 @@ function NewsletterCreator(props: NewsletterCreatorProps) {
       <CardHeader>
         <div className="flex items-center justify-between">
           <div>
-            <CardTitle className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--baladi-dark)]">
+            <CardTitle className="font-[family-name:var(--font-sora)] text-lg font-bold text-[var(--nordmat-dark)]">
               Opprett Nyhetsbrev Kampanje
             </CardTitle>
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
               Design og send engasjerende nyhetsbrev til dine abonnenter
             </p>
           </div>
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--baladi-primary)]/10">
-            <Mail className="h-5 w-5 text-[var(--baladi-primary)]" />
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--nordmat-primary)]/10">
+            <Mail className="h-5 w-5 text-[var(--nordmat-primary)]" />
           </div>
         </div>
       </CardHeader>
@@ -117,7 +117,7 @@ function NewsletterCreator(props: NewsletterCreatorProps) {
               name="campaignType"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-dark)]">
+                  <FormLabel className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-dark)]">
                     Kampanjetype
                   </FormLabel>
                   <Select
@@ -132,13 +132,13 @@ function NewsletterCreator(props: NewsletterCreatorProps) {
                     <SelectContent>
                       <SelectItem value={CampaignType.NEW_ARRIVAL}>
                         <div className="flex items-center gap-2">
-                          <Sparkles className="h-4 w-4 text-[var(--baladi-info)]" />
+                          <Sparkles className="h-4 w-4 text-[var(--nordmat-info)]" />
                           Nyheter
                         </div>
                       </SelectItem>
                       <SelectItem value={CampaignType.PROMOTION}>
                         <div className="flex items-center gap-2">
-                          <Badge className="h-4 w-4 bg-[var(--baladi-accent)]" />
+                          <Badge className="h-4 w-4 bg-[var(--nordmat-accent)]" />
                           Produktkampanje
                         </div>
                       </SelectItem>
@@ -154,7 +154,7 @@ function NewsletterCreator(props: NewsletterCreatorProps) {
               name="subject"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-dark)]">
+                  <FormLabel className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-dark)]">
                     E-post Emnelinje
                   </FormLabel>
                   <FormControl>
@@ -169,10 +169,10 @@ function NewsletterCreator(props: NewsletterCreatorProps) {
               )}
             />
 
-            <Card className="border-[var(--baladi-border)]">
+            <Card className="border-[var(--nordmat-border)]">
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
-                  <CardTitle className="font-[family-name:var(--font-sora)] text-base font-semibold text-[var(--baladi-dark)]">
+                  <CardTitle className="font-[family-name:var(--font-sora)] text-base font-semibold text-[var(--nordmat-dark)]">
                     Nyhetsbrev Forhåndsvisning
                   </CardTitle>
                   <Button
@@ -203,13 +203,13 @@ function NewsletterCreator(props: NewsletterCreatorProps) {
                   </div>
                 ) : (
                   <div className="flex flex-col items-center justify-center py-8 text-center">
-                    <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--baladi-primary)]/10">
-                      <Eye className="h-8 w-8 text-[var(--baladi-primary)]" />
+                    <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--nordmat-primary)]/10">
+                      <Eye className="h-8 w-8 text-[var(--nordmat-primary)]" />
                     </div>
-                    <h4 className="mb-2 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--baladi-dark)]">
+                    <h4 className="mb-2 font-[family-name:var(--font-sora)] text-lg font-semibold text-[var(--nordmat-dark)]">
                       Forhåndsvis Ditt Nyhetsbrev
                     </h4>
-                    <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                    <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                       Klikk &quot;Vis Forhåndsvisning&quot; knappen ovenfor for
                       å se hvordan ditt nyhetsbrev vil se ut
                     </p>
@@ -222,7 +222,7 @@ function NewsletterCreator(props: NewsletterCreatorProps) {
               <div className="flex gap-3">
                 <Button
                   type="submit"
-                  className="gap-2 bg-[var(--baladi-primary)] text-white hover:bg-[var(--baladi-primary)]/90"
+                  className="gap-2 bg-[var(--nordmat-primary)] text-white hover:bg-[var(--nordmat-primary)]/90"
                   disabled={
                     !form.formState.isValid || createCampaignMutation.isPending
                   }

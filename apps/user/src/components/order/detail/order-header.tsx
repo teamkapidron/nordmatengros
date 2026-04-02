@@ -42,7 +42,7 @@ function OrderHeader(props: OrderHeaderProps) {
       <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
         <div className="space-y-4">
           <div className="flex items-center gap-4">
-            <h1 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--baladi-dark)] lg:text-3xl">
+            <h1 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--nordmat-dark)] lg:text-3xl">
               Bestilling #{order._id.slice(-8).toUpperCase()}
             </h1>
             <Badge
@@ -58,59 +58,59 @@ function OrderHeader(props: OrderHeaderProps) {
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div className="flex items-center gap-3">
-              <div className="bg-[var(--baladi-primary)]/10 flex h-10 w-10 items-center justify-center rounded-full">
-                <Calendar size={18} className="text-[var(--baladi-primary)]" />
+              <div className="bg-[var(--nordmat-primary)]/10 flex h-10 w-10 items-center justify-center rounded-full">
+                <Calendar size={18} className="text-[var(--nordmat-primary)]" />
               </div>
               <div>
-                <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                   Bestilt
                 </p>
-                <p className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-dark)]">
+                <p className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-dark)]">
                   {formatDate(order.createdAt)}
                 </p>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="bg-[var(--baladi-secondary)]/10 flex h-10 w-10 items-center justify-center rounded-full">
+              <div className="bg-[var(--nordmat-secondary)]/10 flex h-10 w-10 items-center justify-center rounded-full">
                 <CreditCard
                   size={18}
-                  className="text-[var(--baladi-secondary)]"
+                  className="text-[var(--nordmat-secondary)]"
                 />
               </div>
               <div>
-                <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                   Totalbeløp
                 </p>
-                <p className="font-[family-name:var(--font-sora)] font-bold text-[var(--baladi-primary)]">
+                <p className="font-[family-name:var(--font-sora)] font-bold text-[var(--nordmat-primary)]">
                   {formatPrice(order.totalAmount)} kr
                 </p>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="bg-[var(--baladi-accent)]/10 flex h-10 w-10 items-center justify-center rounded-full">
-                <Package size={18} className="text-[var(--baladi-accent)]" />
+              <div className="bg-[var(--nordmat-accent)]/10 flex h-10 w-10 items-center justify-center rounded-full">
+                <Package size={18} className="text-[var(--nordmat-accent)]" />
               </div>
               <div>
-                <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                   Antall varer
                 </p>
-                <p className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-dark)]">
+                <p className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-dark)]">
                   {order.items.length} varer
                 </p>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--baladi-light)]">
-                <MapPin size={18} className="text-[var(--baladi-primary)]" />
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--nordmat-light)]">
+                <MapPin size={18} className="text-[var(--nordmat-primary)]" />
               </div>
               <div>
-                <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+                <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
                   Levering til
                 </p>
-                <p className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--baladi-dark)]">
+                <p className="font-[family-name:var(--font-dm-sans)] font-medium text-[var(--nordmat-dark)]">
                   {order.shippingAddress.city}
                 </p>
               </div>

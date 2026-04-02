@@ -78,7 +78,7 @@ function CreateCategoryDialog(props: CreateCategoryDialogProps) {
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="sm:max-w-lg">
         <DialogHeader>
-          <DialogTitle className="font-[family-name:var(--font-sora)] text-[var(--baladi-text)]">
+          <DialogTitle className="font-[family-name:var(--font-sora)] text-[var(--nordmat-text)]">
             Legg til ny kategori
           </DialogTitle>
         </DialogHeader>
@@ -90,15 +90,15 @@ function CreateCategoryDialog(props: CreateCategoryDialogProps) {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                     Navn
                   </FormLabel>
                   <FormControl>
                     <div className="relative">
-                      <Tag className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--baladi-gray)]" />
+                      <Tag className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[var(--nordmat-gray)]" />
                       <Input
                         placeholder="Skriv inn kategorinavn"
-                        className="h-12 rounded-lg border-[var(--baladi-border)] pl-10 focus:border-[var(--baladi-primary)] focus:ring-1 focus:ring-[var(--baladi-primary)]"
+                        className="h-12 rounded-lg border-[var(--nordmat-border)] pl-10 focus:border-[var(--nordmat-primary)] focus:ring-1 focus:ring-[var(--nordmat-primary)]"
                         {...field}
                       />
                     </div>
@@ -136,7 +136,7 @@ function CreateCategoryDialog(props: CreateCategoryDialogProps) {
                 render={({ field }) => (
                   <FormItem className="flex flex-row items-center justify-between rounded-lg p-3 shadow-sm">
                     <div className="space-y-0.5">
-                      <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                      <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                         Synlig i butikk
                       </FormLabel>
                       <FormDescription>
@@ -160,7 +160,7 @@ function CreateCategoryDialog(props: CreateCategoryDialogProps) {
               name="parentId"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--baladi-primary)]">
+                  <FormLabel className="font-[family-name:var(--font-sora)] font-medium text-[var(--nordmat-primary)]">
                     Overordnet kategori
                   </FormLabel>
                   <FormControl>
@@ -182,7 +182,7 @@ function CreateCategoryDialog(props: CreateCategoryDialogProps) {
               <Button
                 type="submit"
                 disabled={createCategoryMutation.isPending}
-                className="h-12 w-full rounded-lg bg-[var(--baladi-primary)] font-[family-name:var(--font-sora)] font-semibold hover:bg-[var(--baladi-primary)]/90"
+                className="h-12 w-full rounded-lg bg-[var(--nordmat-primary)] font-[family-name:var(--font-sora)] font-semibold hover:bg-[var(--nordmat-primary)]/90"
               >
                 {createCategoryMutation.isPending
                   ? 'Legger til...'

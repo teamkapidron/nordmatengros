@@ -36,7 +36,7 @@ function ProductBreadcrumb() {
         <BreadcrumbItem>
           <BreadcrumbLink
             href="/"
-            className="flex items-center font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)] hover:text-[var(--baladi-primary)]"
+            className="flex items-center font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)] hover:text-[var(--nordmat-primary)]"
           >
             <Home size={16} className="mr-1.5" />
             <span>Hjem</span>
@@ -46,7 +46,7 @@ function ProductBreadcrumb() {
         <BreadcrumbItem>
           <BreadcrumbLink
             href="/"
-            className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)] hover:text-[var(--baladi-primary)]"
+            className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)] hover:text-[var(--nordmat-primary)]"
           >
             Produkter
           </BreadcrumbLink>
@@ -55,14 +55,14 @@ function ProductBreadcrumb() {
         <BreadcrumbItem>
           <BreadcrumbLink
             href={`/?category=${categoryId}`}
-            className="font-[family-name:var(--font-dm-sans)] text-[var(--baladi-gray)] hover:text-[var(--baladi-primary)]"
+            className="font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-gray)] hover:text-[var(--nordmat-primary)]"
           >
             {categoryName}
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage className="max-w-[200px] truncate font-[family-name:var(--font-dm-sans)] text-[var(--baladi-dark)]">
+          <BreadcrumbPage className="max-w-[200px] truncate font-[family-name:var(--font-dm-sans)] text-[var(--nordmat-dark)]">
             {productName}
           </BreadcrumbPage>
         </BreadcrumbItem>

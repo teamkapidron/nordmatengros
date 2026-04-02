@@ -29,20 +29,20 @@ function DashboardHeader() {
   } = useDatePresets({ dateRange, setDateRange });
 
   return (
-    <div className="mb-6 rounded-xl bg-white p-6 shadow-lg ring-1 ring-[var(--baladi-border)]">
+    <div className="mb-6 rounded-xl bg-white p-6 shadow-lg ring-1 ring-[var(--nordmat-border)]">
       <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--baladi-dark)]">
+          <h1 className="font-[family-name:var(--font-sora)] text-2xl font-bold text-[var(--nordmat-dark)]">
             Dashbord oversikt
           </h1>
-          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+          <p className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
             Overvåk din forretningsytelse og nøkkeltall
           </p>
         </div>
 
-        <div className="flex items-center gap-2 rounded-lg bg-[var(--baladi-light)] px-3 py-2">
-          <Clock className="h-4 w-4 text-[var(--baladi-gray)]" />
-          <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--baladi-gray)]">
+        <div className="flex items-center gap-2 rounded-lg bg-[var(--nordmat-light)] px-3 py-2">
+          <Clock className="h-4 w-4 text-[var(--nordmat-gray)]" />
+          <span className="font-[family-name:var(--font-dm-sans)] text-sm text-[var(--nordmat-gray)]">
             Oppdatert: {format(new Date(), 'MMM d, h:mm a')}
           </span>
         </div>
@@ -51,14 +51,14 @@ function DashboardHeader() {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-2">
-            <Filter className="h-5 w-5 text-[var(--baladi-primary)]" />
-            <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-dark)]">
+            <Filter className="h-5 w-5 text-[var(--nordmat-primary)]" />
+            <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-dark)]">
               Tidsperiode:
             </span>
           </div>
 
-          <div className="bg-[var(--baladi-primary)]/5 rounded-lg px-3 py-1.5">
-            <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--baladi-primary)]">
+          <div className="bg-[var(--nordmat-primary)]/5 rounded-lg px-3 py-1.5">
+            <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--nordmat-primary)]">
               {getDisplayText()}
             </span>
           </div>
@@ -66,7 +66,7 @@ function DashboardHeader() {
 
         <div className="flex items-center gap-3">
           <Select value={currentPreset} onValueChange={handlePresetChange}>
-            <SelectTrigger className="w-[160px] border-[var(--baladi-border)] bg-white font-[family-name:var(--font-dm-sans)] text-sm hover:border-[var(--baladi-primary)]">
+            <SelectTrigger className="w-[160px] border-[var(--nordmat-border)] bg-white font-[family-name:var(--font-dm-sans)] text-sm hover:border-[var(--nordmat-primary)]">
               <SelectValue placeholder="Velg periode" />
             </SelectTrigger>
             <SelectContent>
@@ -81,43 +81,43 @@ function DashboardHeader() {
       </div>
 
       <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
-        <div className="flex items-center gap-3 rounded-lg bg-[var(--baladi-light)] p-3">
-          <div className="bg-[var(--baladi-primary)]/10 flex h-10 w-10 items-center justify-center rounded-lg">
-            <Calendar className="h-5 w-5 text-[var(--baladi-primary)]" />
+        <div className="flex items-center gap-3 rounded-lg bg-[var(--nordmat-light)] p-3">
+          <div className="bg-[var(--nordmat-primary)]/10 flex h-10 w-10 items-center justify-center rounded-lg">
+            <Calendar className="h-5 w-5 text-[var(--nordmat-primary)]" />
           </div>
           <div>
-            <p className="font-[family-name:var(--font-dm-sans)] text-xs font-medium text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-xs font-medium text-[var(--nordmat-gray)]">
               Datoområde
             </p>
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--baladi-dark)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--nordmat-dark)]">
               {totalDays} dager
             </p>
           </div>
         </div>
 
-        <div className="flex items-center gap-3 rounded-lg bg-[var(--baladi-light)] p-3">
-          <div className="bg-[var(--baladi-success)]/10 flex h-10 w-10 items-center justify-center rounded-lg">
-            <Calendar className="h-5 w-5 text-[var(--baladi-success)]" />
+        <div className="flex items-center gap-3 rounded-lg bg-[var(--nordmat-light)] p-3">
+          <div className="bg-[var(--nordmat-success)]/10 flex h-10 w-10 items-center justify-center rounded-lg">
+            <Calendar className="h-5 w-5 text-[var(--nordmat-success)]" />
           </div>
           <div>
-            <p className="font-[family-name:var(--font-dm-sans)] text-xs font-medium text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-xs font-medium text-[var(--nordmat-gray)]">
               Fra dato
             </p>
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--baladi-dark)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--nordmat-dark)]">
               {format(dateRange.from, 'MMM d, yyyy')}
             </p>
           </div>
         </div>
 
-        <div className="flex items-center gap-3 rounded-lg bg-[var(--baladi-light)] p-3">
-          <div className="bg-[var(--baladi-info)]/10 flex h-10 w-10 items-center justify-center rounded-lg">
-            <Calendar className="h-5 w-5 text-[var(--baladi-info)]" />
+        <div className="flex items-center gap-3 rounded-lg bg-[var(--nordmat-light)] p-3">
+          <div className="bg-[var(--nordmat-info)]/10 flex h-10 w-10 items-center justify-center rounded-lg">
+            <Calendar className="h-5 w-5 text-[var(--nordmat-info)]" />
           </div>
           <div>
-            <p className="font-[family-name:var(--font-dm-sans)] text-xs font-medium text-[var(--baladi-gray)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-xs font-medium text-[var(--nordmat-gray)]">
               Til dato
             </p>
-            <p className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--baladi-dark)]">
+            <p className="font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[var(--nordmat-dark)]">
               {format(dateRange.to, 'MMM d, yyyy')}
             </p>
           </div>

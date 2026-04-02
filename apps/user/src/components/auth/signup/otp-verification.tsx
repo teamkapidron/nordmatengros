@@ -96,8 +96,8 @@ function OtpVerification(props: OtpVerificationProps) {
                   index={index}
                   className={cn(
                     'h-12 w-12 border-2 text-lg font-medium transition-all',
-                    'focus:border-[var(--baladi-primary)] focus:ring-2 focus:ring-[var(--baladi-primary)]/20',
-                    'data-[active=true]:border-[var(--baladi-primary)] data-[active=true]:ring-2 data-[active=true]:ring-[var(--baladi-primary)]/20',
+                    'focus:border-[var(--nordmat-primary)] focus:ring-2 focus:ring-[var(--nordmat-primary)]/20',
+                    'data-[active=true]:border-[var(--nordmat-primary)] data-[active=true]:ring-2 data-[active=true]:ring-[var(--nordmat-primary)]/20',
                   )}
                 />
               ))}
@@ -110,13 +110,13 @@ function OtpVerification(props: OtpVerificationProps) {
             onClick={handleVerify}
             isLoading={verifyOTPMutation.isPending}
             disabled={otp.length !== 6 || verifyOTPMutation.isPending}
-            className="h-11 w-full bg-[var(--baladi-primary)] font-medium text-white hover:bg-[var(--baladi-primary)]/90"
+            className="h-11 w-full bg-[var(--nordmat-primary)] font-medium text-white hover:bg-[var(--nordmat-primary)]/90"
           >
             Bekreft kode
           </Button>
 
           <div className="text-center">
-            <span className="text-sm text-[var(--baladi-gray)]">
+            <span className="text-sm text-[var(--nordmat-gray)]">
               Fikk du ikke koden?{' '}
             </span>
             {resendTimer === 0 ? (
@@ -125,14 +125,14 @@ function OtpVerification(props: OtpVerificationProps) {
                 onClick={handleResend}
                 disabled={resendOTPMutation.isPending}
                 isLoading={resendOTPMutation.isPending}
-                className="h-auto p-0 font-medium text-[var(--baladi-primary)] hover:text-[var(--baladi-primary)]/80"
+                className="h-auto p-0 font-medium text-[var(--nordmat-primary)] hover:text-[var(--nordmat-primary)]/80"
               >
                 {resendOTPMutation.isPending
                   ? 'Sender...'
                   : 'Send kode på nytt'}
               </Button>
             ) : (
-              <span className="text-sm font-medium text-[var(--baladi-gray)]">
+              <span className="text-sm font-medium text-[var(--nordmat-gray)]">
                 Send kode på nytt om {resendTimer} sekund
                 {resendTimer !== 1 ? 'er' : ''}
               </span>
@@ -156,17 +156,17 @@ function OtpVerification(props: OtpVerificationProps) {
       <Drawer open={open} onOpenChange={setOpen}>
         <DrawerContent className="max-h-[90vh]">
           <DrawerHeader className="pb-2 text-center">
-            <DrawerTitle className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--baladi-dark)]">
+            <DrawerTitle className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--nordmat-dark)]">
               Bekreft e-postadressen din
             </DrawerTitle>
-            <DrawerDescription className="font-[family-name:var(--font-dm-sans)] leading-relaxed text-[var(--baladi-gray)]">
+            <DrawerDescription className="font-[family-name:var(--font-dm-sans)] leading-relaxed text-[var(--nordmat-gray)]">
               Vi har sendt en 6-sifret bekreftelseskode til e-postadressen din.
               Skriv inn koden nedenfor for å fortsette.
             </DrawerDescription>
           </DrawerHeader>
           <div className="px-6 py-4">{ContentBody}</div>
           <DrawerFooter>
-            <div className="text-center text-xs text-[var(--baladi-gray)]/70">
+            <div className="text-center text-xs text-[var(--nordmat-gray)]/70">
               Skriv inn koden innen 5 minutter av sikkerhetsgrunner
             </div>
           </DrawerFooter>
@@ -179,10 +179,10 @@ function OtpVerification(props: OtpVerificationProps) {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader className="text-center">
-          <DialogTitle className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--baladi-dark)]">
+          <DialogTitle className="font-[family-name:var(--font-sora)] text-xl font-semibold text-[var(--nordmat-dark)]">
             Bekreft e-postadressen din
           </DialogTitle>
-          <DialogDescription className="font-[family-name:var(--font-dm-sans)] leading-relaxed text-[var(--baladi-gray)]">
+          <DialogDescription className="font-[family-name:var(--font-dm-sans)] leading-relaxed text-[var(--nordmat-gray)]">
             Vi har sendt en 6-sifret bekreftelseskode til e-postadressen din.
             Skriv inn koden nedenfor for å fortsette.
           </DialogDescription>
